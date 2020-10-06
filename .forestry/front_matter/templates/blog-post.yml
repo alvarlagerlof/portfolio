@@ -1,0 +1,27 @@
+---
+label: Blog post
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: publish_date
+  type: datetime
+  label: Publish date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: update_date
+  type: datetime
+  label: Update date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
