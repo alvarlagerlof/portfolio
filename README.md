@@ -1,2 +1,2 @@
-# portfolio
+# Portfolio
 📝 Personal portfolio and blog
