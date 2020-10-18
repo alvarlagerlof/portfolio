@@ -1,43 +1,35 @@
 import Head from "next/head";
 
+import Nav from "../components/Nav";
+import Wrapper from "../components/Wrapper";
+
 export default function Home() {
   return (
-    <div>
+    <Wrapper>
       <Head>
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav>
-        <h2>Alvar Lagerlöf</h2>
-        <ul>
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>About me</a>
-          </li>
-          <li>
-            <a>Work</a>
-          </li>
-          <li>
-            <a>Projects</a>
-          </li>
-          <li>
-            <a>Blog</a>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
 
       <main>
         <section>
           <h1>Hello There! I'm Alvar Lagerlöf</h1>
-          <h2>Best described as an 18-year-old Swedish developer who also happens to love design, my story starts with a $2 computer from a flea market.</h2>
-          <a href="/about">Learn more about me →</a> or <a href="/contact">Contact me →</a>
+          <h2>
+            Best described as an 18-year-old Swedish developer who also happens
+            to love design, my story starts with a $2 computer from a flea
+            market.
+          </h2>
+          <a href="/about">Learn more about me →</a> or{" "}
+          <a href="/contact">Contact me →</a>
         </section>
         <section>
           <h2>Projects</h2>
-          <p>Featured projects from my <a href="https://github.com/alvarlagerlof">Github →</a></p>
+          <p>
+            Featured projects from my{" "}
+            <a href="https://github.com/alvarlagerlof">Github →</a>
+          </p>
           <ul>
             <li>
               <h3>Formux</h3>
@@ -82,11 +74,9 @@ export default function Home() {
       <footer>
         <p>Reach out</p>
         <ul>
-          <li>
-
-          </li>
+          <li></li>
         </ul>
       </footer>
-    </div>
+    </Wrapper>
   );
 }
