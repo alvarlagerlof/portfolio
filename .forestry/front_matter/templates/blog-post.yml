@@ -25,3 +25,12 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
