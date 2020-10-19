@@ -35,3 +35,5 @@ fields:
     schema:
       format: markdown
   label: Body
+pages:
+- content/blog/test.md
