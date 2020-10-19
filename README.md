@@ -1,6 +1,6 @@
 # Portfolio
 
-📝 Personal portfolio and blog
+Personal portfolio and blog
 
 ## License
 
