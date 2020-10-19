@@ -1,4 +1,19 @@
 ---
 label: Project
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: github_link
+  type: text
+  config:
+    required: false
+  label: Github link
