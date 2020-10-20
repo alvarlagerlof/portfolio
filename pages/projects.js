@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
 
-export default function Home() {
+export default function Projects() {
   return (
     <Wrapper>
       <Head>
