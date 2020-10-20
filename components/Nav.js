@@ -1,26 +1,25 @@
 import styled from "styled-components";
 
+import NavLink from "./NavLink";
+
 export default function Nav() {
   return (
     <StyledNav>
-      <h2>Alvar Lagerlöf hejsan</h2>
-      <Links>
+      <h2>Alvar Lagerlöf</h2>
+      <LinkList>
         <li>
-          <a>Home</a>
+          <NavLink href="/">Home</NavLink>
         </li>
         <li>
-          <a>About me</a>
+          <NavLink href="/about">About</NavLink>
         </li>
         <li>
-          <a>Work</a>
+          <NavLink href="/projects">Projects</NavLink>
         </li>
         <li>
-          <a>Projects</a>
+          <NavLink href="/blog">Blog</NavLink>
         </li>
-        <li>
-          <a>Blog</a>
-        </li>
-      </Links>
+      </LinkList>
     </StyledNav>
   );
 }
@@ -32,10 +31,15 @@ const StyledNav = styled.nav`
   justify-content: space-between;
 `;
 
-const Links = styled.ul`
+const LinkList = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   list-style: none;
-  gap: 16px;
+
+  margin: 0 -8px;
+
+  & > li {
+    margin: 0 8px;
+  }
 `;
