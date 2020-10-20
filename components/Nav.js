@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Nav() {
   return (
     <StyledNav>
-      <h2>Alvar Lagerlöf</h2>
+      <h2>Alvar Lagerlöf hejsan</h2>
       <Links>
         <li>
           <a>Home</a>
