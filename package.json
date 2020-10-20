@@ -8,13 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
     "next": "9.5.3",
     "prettier": "^2.1.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-markdown": "^5.0.0",
     "styled-components": "^5.2.0"
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "devDependencies": {}
 }
