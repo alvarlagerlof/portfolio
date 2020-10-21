@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styled, { css } from "styled-components";
 import Link from "next/link";
+import ClickableLink from "./ClickableLink";
 
 export default function NavLink({ href, children }) {
   const router = useRouter();
@@ -10,9 +11,9 @@ export default function NavLink({ href, children }) {
   };
 
   return (
-    <Link href={href} passHref>
+    <ClickableLink href={href} passHref>
       <StyledLink active={isActive(href)}>{children}</StyledLink>
-    </Link>
+    </ClickableLink>
   );
 }
 
@@ -23,6 +24,6 @@ const StyledLink = styled.a`
   ${props =>
     props.active &&
     css`
-      color: orange;
+      color: #ff6f00;
     `}
 `;

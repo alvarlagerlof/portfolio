@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import Link from "next/link";
 
 import NavLink from "./NavLink";
+import ClickableLink from "./ClickableLink";
 
 export default function Nav() {
   return (
     <StyledNav>
-      <Link href="/">
-        <h2>Alvar Lagerlöf</h2>
-      </Link>
+      <Name href="/">Alvar Lagerlöf</Name>
       <LinkList>
         <li>
           <NavLink href="/">Home</NavLink>
@@ -26,6 +24,10 @@ export default function Nav() {
     </StyledNav>
   );
 }
+
+const Name = styled(ClickableLink)`
+  font-weight: 600;
+`;
 
 const StyledNav = styled.nav`
   display: flex;

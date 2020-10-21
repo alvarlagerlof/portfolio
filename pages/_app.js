@@ -9,11 +9,12 @@ function MyApp({ Component, pageProps }) {
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap&family=Questrial"
           rel="stylesheet"
         ></link>
       </Head>
       <GlobalStyle />
+
       <Component {...pageProps} />
     </div>
   );
