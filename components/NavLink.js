@@ -1,31 +1,28 @@
+import { useRouter } from "next/router";
+import styled, { css } from "styled-components";
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
-
 export default function NavLink({ href, children }) {
-  const [isActive, setIsActive] = useState(false);
+  const router = useRouter();
 
-  useEffect(() => {
-    setIsActive(window.location.pathname.split("/")[1] == href.split("/")[1]);
-  }, []);
+  const isActive = href => {
+    return router.pathname.split("/")[1] == href.split("/")[1];
+  };
 
   return (
-    <StyledLink active={isActive}>
-      <Link href={href}>{children}</Link>
-    </StyledLink>
+    <Link href={href} passHref>
+      <StyledLink active={isActive(href)}>{children}</StyledLink>
+    </Link>
   );
 }
 
-const StyledLink = styled.div`
-  & > a {
-    text-decoration: none;
-    color: black;
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: black;
 
-    ${props =>
-      props.active &&
-      css`
-        color: orange;
-      `}
-  }
+  ${props =>
+    props.active &&
+    css`
+      color: orange;
+    `}
 `;
