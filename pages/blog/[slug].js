@@ -1,9 +1,7 @@
-import fs from "fs";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 
-import formatDate from "../../utils/formatDate";
+import { getPosts, getPost } from "../../api/blog";
 
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
@@ -37,41 +35,20 @@ export default function BlogPost({ content, data: { title, description, date } }
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const files = fs.readdirSync(`./content/blog`);
-
-  const filename = files.find(filename => filename.replace(".md", "") == slug);
-
-  const markdownWithMetadata = fs.readFileSync(`./content/blog/${filename}`).toString();
-
-  const { data, content } = matter(markdownWithMetadata);
-
-  const frontmatter = {
-    content,
-    data: {
-      ...data,
-      date: formatDate(data.date),
-      updatedAt: formatDate(data.updatedAt),
-    },
-  };
-
   return {
     props: {
-      ...frontmatter,
+      ...(await getPost(slug)),
     },
   };
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(`./content/blog`);
+  const posts = await getPosts();
 
   return {
-    paths: files
-      .map(filename => filename.replace(".md", ""))
-      .map(slug => ({
-        params: {
-          slug,
-        },
-      })),
+    paths: posts.map(post => {
+      return { params: { slug: post.slug } };
+    }),
     fallback: false,
   };
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
@@ -9,19 +11,21 @@ export default function NavLink({ href, children }) {
   }, []);
 
   return (
-    <StyledLink active={isActive} href={href}>
-      {children}
+    <StyledLink active={isActive}>
+      <Link href={href}>{children}</Link>
     </StyledLink>
   );
 }
 
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: black;
+const StyledLink = styled.div`
+  & > a {
+    text-decoration: none;
+    color: black;
 
-  ${(props) =>
-    props.active &&
-    css`
-      color: orange;
-    `}
+    ${props =>
+      props.active &&
+      css`
+        color: orange;
+      `}
+  }
 `;

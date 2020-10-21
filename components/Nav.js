@@ -1,11 +1,14 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 import NavLink from "./NavLink";
 
 export default function Nav() {
   return (
     <StyledNav>
-      <h2>Alvar Lagerlöf</h2>
+      <Link href="/">
+        <h2>Alvar Lagerlöf</h2>
+      </Link>
       <LinkList>
         <li>
           <NavLink href="/">Home</NavLink>

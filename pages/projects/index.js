@@ -1,35 +1,33 @@
 import Head from "next/head";
-import Link from "next/link";
 
-import { getPosts } from "../../api/blog";
+import { getProjects } from "../../api/projects";
 
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 
-export default function Blog({ posts }) {
+export default function Projects({ projects }) {
   return (
     <Wrapper>
       <Head>
-        <title>Alvar Lagerlöf - Blog</title>
+        <title>Alvar Lagerlöf - Projects</title>
       </Head>
 
       <Nav />
 
       <Main>
         <section>
-          <h1>Blog</h1>
+          <h1>Projects</h1>
 
           <ul>
-            {posts.map(({ slug, title, description, date }) => (
-              <Link href={"/blog/" + slug} key={title}>
+            {projects.map(({ title, description, link }) => (
+              <a key={title} href={link} target="_blank">
                 <li>
                   <h2>{title}</h2>
-                  <h3>{date}</h3>
                   <p>{description}</p>
                 </li>
-              </Link>
+              </a>
             ))}
           </ul>
         </section>
@@ -43,7 +41,7 @@ export default function Blog({ posts }) {
 export async function getStaticProps() {
   return {
     props: {
-      posts: await getPosts(),
+      projects: await getProjects(),
     },
   };
 }
