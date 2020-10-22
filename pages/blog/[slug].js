@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { getPosts, getPost } from "../../api/blog";
 
-import Nav from "../../components/Nav";
+import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
@@ -15,7 +15,7 @@ export default function BlogPost({ content, data: { title, description, date } }
         <title>Alvar Lagerlöf - Blog</title>
       </Head>
 
-      <Nav />
+      <NavBar />
 
       <Main>
         <header>

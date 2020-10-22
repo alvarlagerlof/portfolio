@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function CtaLink({ href, children }) {
   return (
     <Link href={href} passHref>
-      <StyledLink>{children}</StyledLink>
+      <StyledLink>{children} →</StyledLink>
     </Link>
   );
 }
@@ -12,7 +12,7 @@ export default function CtaLink({ href, children }) {
 const StyledLink = styled.a`
   text-decoration: none;
   color: #ff6f00;
-  font-weight: 500;
+  font-weight: 600;
 
   :hover {
     text-decoration: underline;

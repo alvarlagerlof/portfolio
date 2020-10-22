@@ -12,6 +12,12 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap&family=Questrial"
           rel="stylesheet"
         ></link>
+        <script
+          async
+          defer
+          data-domain="alvar.dev"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
       </Head>
       <GlobalStyle />
 

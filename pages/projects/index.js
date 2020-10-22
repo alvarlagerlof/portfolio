@@ -2,10 +2,14 @@ import Head from "next/head";
 
 import { getProjects } from "../../api/projects";
 
-import Nav from "../../components/Nav";
+import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
+import ItemGrid from "../../components/ItemGrid";
+import ProjectPreview from "../../components/ProjectPreview";
+import Header from "../../components/Header";
+import CtaLink from "../../components/CtaLink";
 
 export default function Projects({ projects }) {
   return (
@@ -14,22 +18,23 @@ export default function Projects({ projects }) {
         <title>Alvar Lagerlöf - Projects</title>
       </Head>
 
-      <Nav />
+      <NavBar />
 
       <Main>
-        <section>
+        <Header>
           <h1>Projects</h1>
+          <h2>
+            These are some of my projects on{" "}
+            <CtaLink href="https://github.com/alvarlagerlof">Github</CtaLink>
+          </h2>
+        </Header>
 
-          <ul>
-            {projects.map(({ title, description, link }) => (
-              <a key={title} href={link} target="_blank">
-                <li>
-                  <h2>{title}</h2>
-                  <p>{description}</p>
-                </li>
-              </a>
+        <section>
+          <ItemGrid>
+            {projects.map(data => (
+              <ProjectPreview key={data.title} data={data} />
             ))}
-          </ul>
+          </ItemGrid>
         </section>
       </Main>
 

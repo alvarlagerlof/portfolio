@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Nav from "../components/Nav";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
@@ -12,7 +12,7 @@ export default function Contact() {
         <title>Alvar Lagerlöf - Contact</title>
       </Head>
 
-      <Nav />
+      <NavBar />
 
       <Main>
         <section>

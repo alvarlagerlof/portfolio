@@ -1,8 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-import formatDate from "./utils/formatDate";
-
 async function getPost(slug) {
   const files = fs.readdirSync(`./content/blog`);
 
@@ -14,11 +12,12 @@ async function getPost(slug) {
 
   return {
     content,
-    data: {
-      ...data,
-      date: formatDate(data.date),
-      updatedAt: formatDate(data.updatedAt),
-    },
+    data,
+    // data: {
+    //   ...data,
+    //   date: Date.parse(data.date).getTime(),
+    //   updatedAt: Date.parse(data.updatedAt).getTime(),
+    // },
   };
 }
 
@@ -34,7 +33,7 @@ async function getPosts() {
       slug: filename.replace(".md", ""),
       title: data.title,
       description: data.description,
-      date: formatDate(data.date),
+      date: data.date,
     };
   });
 }

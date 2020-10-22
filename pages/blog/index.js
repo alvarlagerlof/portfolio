@@ -1,35 +1,30 @@
 import Head from "next/head";
-import Link from "next/link";
+const { DateTime } = require("luxon");
 
 import { getPosts } from "../../api/blog";
 
-import Nav from "../../components/Nav";
+import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
+import BlogPreview from "../../components/BlogPreview";
 
-export default function Blog({ posts }) {
+export default function Blog({ postsSectioned }) {
   return (
     <Wrapper>
       <Head>
         <title>Alvar Lagerlöf - Blog</title>
       </Head>
 
-      <Nav />
+      <NavBar />
 
       <Main>
         <section>
           <h1>Blog</h1>
 
           <ul>
-            {posts.map(({ slug, title, description, date }) => (
-              <Link href={"/blog/" + slug} key={title}>
-                <li>
-                  <h2>{title}</h2>
-                  <h3>{date}</h3>
-                  <p>{description}</p>
-                </li>
-              </Link>
+            {Object.entries(postsSectioned).map(([year, posts]) => (
+              <Year year={year} posts={posts} />
             ))}
           </ul>
         </section>
@@ -40,10 +35,33 @@ export default function Blog({ posts }) {
   );
 }
 
+function Year({ year, posts }) {
+  return (
+    <li>
+      <h3>{year}</h3>
+      {posts.map(post => {
+        <BlogPreview key={post.title} data={post} />;
+      })}
+    </li>
+  );
+}
+
 export async function getStaticProps() {
+  const sectionByYear = posts => {
+    return posts.reduce((acc = {}, curr) => {
+      console.log(curr.date);
+      const year = DateTime.fromISO(curr.date).year;
+      console.log(year);
+
+      return {
+        [year]: [...(acc[year] ? acc[year] : []), curr],
+      };
+    });
+  };
+
   return {
     props: {
-      posts: await getPosts(),
+      postsSectioned: sectionByYear(await getPosts()),
     },
   };
 }

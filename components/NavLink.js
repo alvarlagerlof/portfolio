@@ -17,13 +17,13 @@ export default function NavLink({ href, children }) {
   );
 }
 
-const StyledLink = styled.a`
+const StyledLink = styled.span`
   text-decoration: none;
   color: black;
 
   ${props =>
     props.active &&
     css`
-      color: #ff6f00;
+      font-weight: 600;
     `}
 `;

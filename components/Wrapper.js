@@ -8,11 +8,12 @@ export default function Wrapper({ children }) {
   );
 }
 
-const Background = styled.main`
+const Background = styled.div`
   background: #f7f7f7;
+  min-height: 100vh;
 `;
 
-const Content = styled.main`
+const Content = styled.div`
   margin: 32px auto;
   max-width: 900px;
   width: 70%;

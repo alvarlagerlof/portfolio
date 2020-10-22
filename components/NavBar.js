@@ -3,7 +3,7 @@ import styled from "styled-components";
 import NavLink from "./NavLink";
 import ClickableLink from "./ClickableLink";
 
-export default function Nav() {
+export default function NavBar() {
   return (
     <StyledNav>
       <Name href="/">Alvar Lagerlöf</Name>

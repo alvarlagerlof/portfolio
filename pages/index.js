@@ -1,17 +1,20 @@
 import styled from "styled-components";
 
 import Head from "next/head";
-import Link from "next/link";
 
 import { getPosts } from "../api/blog";
 import { getProjects } from "../api/projects";
 
-import Nav from "../components/Nav";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
 import PageLink from "../components/CtaLink";
-import ClickableLink from "../components/ClickableLink";
+import ItemGrid from "../components/ItemGrid";
+import ProjectPreview from "../components/ProjectPreview";
+import BlogPreview from "../components/BlogPreview";
+import Header from "../components/Header";
+import Section from "../components/Section";
 
 export default function Home({ posts, projects }) {
   return (
@@ -20,85 +23,63 @@ export default function Home({ posts, projects }) {
         <title>Alvar Lagerlöf</title>
       </Head>
 
-      <Nav />
+      <NavBar />
 
       <Main>
         <Header>
-          <HeaderTitle>
+          <h1>
             Hello There!
             <br />
             I'm Alvar Lagerlöf
-          </HeaderTitle>
-          <HeaderText>
+          </h1>
+          <h2>
             Best described as an 18-year-old Swedish developer who also happens to love design, my
             story starts with a $2 computer from a flea market.
-          </HeaderText>
+          </h2>
           <HeaderButtons>
-            <PageLink href="/about">Learn more about me →</PageLink> or{" "}
-            <PageLink href="/contact">Contact me →</PageLink>
+            <PageLink href="/about">Learn more about me</PageLink>
+            <PageLink href="/contact">Contact me</PageLink>
           </HeaderButtons>
         </Header>
-        <ContentFeature>
+        <Feature>
           <h2>Projects</h2>
           <p>
             Featured projects from my{" "}
-            <PageLink href="https://github.com/alvarlagerlof">Github →</PageLink>
+            <PageLink href="https://github.com/alvarlagerlof">GitHub</PageLink>
           </p>
-          <FeatureGrid>
-            {projects.map(({ title, description, link }) => (
-              <FeatureItem key={title}>
-                <ClickableLink href={link} target="_blank">
-                  <h3>{title}</h3>
-                </ClickableLink>
-                <p>{description}</p>
-              </FeatureItem>
+          <ItemGrid>
+            {projects.map(data => (
+              <ProjectPreview key={data.title} data={data} />
             ))}
-          </FeatureGrid>
-        </ContentFeature>
-        <ContentFeature>
+          </ItemGrid>
+        </Feature>
+        <Feature>
           <h2>Recent blog posts</h2>
-          <p>Sometimes I try taking time to write down my thoughs</p>
-          <FeatureGrid>
-            {posts.map(({ slug, title, description, date }) => (
-              <FeatureItem key={title}>
-                <ClickableLink href={"/blog/" + slug}>
-                  <h3>{title}</h3>
-                </ClickableLink>
-                <p>{description}</p>
-              </FeatureItem>
+          <p>Sometimes I try to time to write down my thoughs.</p>
+          <ItemGrid>
+            {posts.map(data => (
+              <BlogPreview key={data.title} data={data} />
             ))}
-          </FeatureGrid>
-        </ContentFeature>
+          </ItemGrid>
+        </Feature>
       </Main>
-
       <Footer />
     </Wrapper>
   );
 }
 
-const HeaderTitle = styled.h1`
-  margin-bottom: 16px;
-`;
-
-const HeaderText = styled.h2`
-  max-width: 50ch;
-  margin-bottom: 32px;
-  font-weight: 400;
-`;
-
 const HeaderButtons = styled.div`
-  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  font-size: 1.3rem;
+
+  & > :first-child {
+    margin-bottom: 8px;
+  }
 `;
 
-const Header = styled.header`
-  margin: 64px 0;
-`;
-
-const Section = styled.section`
-  margin: 64px 0;
-`;
-
-const ContentFeature = styled(Section)`
+const Feature = styled(Section)`
   & > h2 {
     font-size: 2rem;
     margin-bottom: 8px;
@@ -106,24 +87,6 @@ const ContentFeature = styled(Section)`
 
   & > p {
     margin-bottom: 32px;
-  }
-`;
-
-const FeatureGrid = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: auto;
-  grid-gap: 16px;
-  list-style-type: none;
-`;
-
-const FeatureItem = styled.li`
-  & > a {
-    margin-bottom: 4px;
-  }
-  & > a > h3 {
-    font-size: 1rem;
-    font-weight: 600;
   }
 `;
 
