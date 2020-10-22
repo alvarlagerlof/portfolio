@@ -10,6 +10,7 @@ import ItemGrid from "../../components/ItemGrid";
 import ProjectPreview from "../../components/ProjectPreview";
 import Header from "../../components/Header";
 import CtaLink from "../../components/CtaLink";
+import Section from "../../components/Section";
 
 export default function Projects({ projects }) {
   return (
@@ -29,13 +30,15 @@ export default function Projects({ projects }) {
           </h2>
         </Header>
 
-        <section>
+        <Section>
           <ItemGrid>
             {projects.map(data => (
-              <ProjectPreview key={data.title} data={data} />
+              <li key={data.title}>
+                <ProjectPreview data={data} />
+              </li>
             ))}
           </ItemGrid>
-        </section>
+        </Section>
       </Main>
 
       <Footer />

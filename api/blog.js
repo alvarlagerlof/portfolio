@@ -1,10 +1,12 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-async function getPost(slug) {
-  const files = fs.readdirSync(`./content/blog`);
+import { formatDate } from "./utils/date";
 
-  const filename = files.find(filename => filename.replace(".md", "") == slug);
+async function getPost(slug) {
+  const filename = fs
+    .readdirSync(`./content/blog`)
+    .find(filename => filename.replace(".md", "") == slug);
 
   const markdownWithMetadata = fs.readFileSync(`./content/blog/${filename}`).toString();
 
@@ -12,12 +14,11 @@ async function getPost(slug) {
 
   return {
     content,
-    data,
-    // data: {
-    //   ...data,
-    //   date: Date.parse(data.date).getTime(),
-    //   updatedAt: Date.parse(data.updatedAt).getTime(),
-    // },
+    data: {
+      ...data,
+      date: data.date.getTime(),
+      updatedAt: data.updatedAt.getTime(),
+    },
   };
 }
 
@@ -33,9 +34,29 @@ async function getPosts() {
       slug: filename.replace(".md", ""),
       title: data.title,
       description: data.description,
-      date: data.date,
+      date: data.date.getTime(),
     };
   });
 }
 
-export { getPosts, getPost };
+async function getPostsSectioned() {
+  const posts = await getPosts();
+
+  return posts.reduce((acc, curr) => {
+    const year = formatDate(curr.date).year;
+
+    if (acc[year]) {
+      return {
+        ...acc,
+        [year]: [...acc[year], curr],
+      };
+    } else {
+      return {
+        ...acc,
+        [year]: [curr],
+      };
+    }
+  }, {});
+}
+
+export { getPosts, getPostsSectioned, getPost };

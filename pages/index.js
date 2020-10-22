@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import Head from "next/head";
-
 import { getPosts } from "../api/blog";
 import { getProjects } from "../api/projects";
+
+import Head from "next/head";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -49,16 +49,20 @@ export default function Home({ posts, projects }) {
           </p>
           <ItemGrid>
             {projects.map(data => (
-              <ProjectPreview key={data.title} data={data} />
+              <li key={data.title}>
+                <ProjectPreview data={data} />
+              </li>
             ))}
           </ItemGrid>
         </Feature>
         <Feature>
           <h2>Recent blog posts</h2>
-          <p>Sometimes I try to time to write down my thoughs.</p>
+          <p>Sometimes I try to time to write down my thoughts.</p>
           <ItemGrid>
             {posts.map(data => (
-              <BlogPreview key={data.title} data={data} />
+              <li key={data.title}>
+                <BlogPreview data={data} />
+              </li>
             ))}
           </ItemGrid>
         </Feature>

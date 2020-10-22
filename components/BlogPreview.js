@@ -3,18 +3,18 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import ClickableLink from "./ClickableLink";
-import formatDate from "../api/utils/formatDate";
+import { prettyPrintDate } from "../api/utils/date";
 
 export default function BlogPreview({ data: { slug, title, description, date } }) {
   return (
     <Link href={"blog/" + slug}>
-      <li>
+      <React.Fragment>
         <Title>
           <ClickableLink href={"blog/" + slug}>{title}</ClickableLink>
         </Title>
-        <Date>{formatDate(date)}</Date>
+        <Date>{prettyPrintDate(date)}</Date>
         <p>{description}</p>
-      </li>
+      </React.Fragment>
     </Link>
   );
 }

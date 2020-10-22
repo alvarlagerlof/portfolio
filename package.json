@@ -20,5 +20,7 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "fs": "^0.0.1-security"
+  }
 }
