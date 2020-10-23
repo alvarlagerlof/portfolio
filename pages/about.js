@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 import Head from "next/head";
 
 import NavBar from "../components/NavBar";
@@ -15,9 +17,9 @@ export default function About() {
       <NavBar />
 
       <Main>
-        <header>
+        <Header>
           <h1>About me</h1>
-        </header>
+        </Header>
         <article>
           <p>What does a $2 computer at a flea market have to do with me writing this?</p>
           <p>In my case, turns out, everything! </p>
