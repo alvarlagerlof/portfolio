@@ -1,6 +1,6 @@
 ---
 title: Looping Donuts
 description: Code experiments with a few friends
-link: https://github.com/loopingdontus
+link: https://github.com/loopingdonuts
 image: loopingdonuts.png
 ---

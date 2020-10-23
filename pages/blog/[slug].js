@@ -1,12 +1,16 @@
 import ReactMarkdown from "react-markdown";
 import Head from "next/head";
+import styled from "styled-components";
 
+import { formatDate } from "../../api/utils/date";
 import { getPosts, getPost } from "../../api/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
+import Header from "../../components/Header";
+import Section from "../../components/Section";
 
 export default function BlogPost({ content, data: { title, description, date } }) {
   return (
@@ -18,21 +22,30 @@ export default function BlogPost({ content, data: { title, description, date } }
       <NavBar />
 
       <Main>
-        <header>
-          <h1>{title}</h1>
-          <h3>{description}</h3>
-          <h4>{date}</h4>
-        </header>
+        <Header>
+          <HeaderDate>{formatDate(date)}</HeaderDate>
 
-        <article>
+          <h1>{title}</h1>
+          <h2>{description}</h2>
+        </Header>
+
+        <Article>
           <ReactMarkdown>{content}</ReactMarkdown>
-        </article>
+        </Article>
       </Main>
 
       <Footer />
     </Wrapper>
   );
 }
+
+const HeaderDate = styled.h3`
+  margin-bottom: 32px;
+`;
+
+const Article = styled.article`
+  margin-top: 64px;
+`;
 
 export async function getStaticProps({ params: { slug } }) {
   return {

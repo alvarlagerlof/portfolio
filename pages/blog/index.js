@@ -9,7 +9,6 @@ import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import BlogPreview from "../../components/BlogPreview";
-import Header from "../../components/Header";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
 
@@ -30,9 +29,11 @@ export default function Blog({ postsSectioned }) {
 
         <Section>
           <YearList>
-            {Object.entries(postsSectioned).map(([year, posts]) => {
-              return <Year key={year} year={year} posts={posts} />;
-            })}
+            {Object.entries(postsSectioned)
+              .sort((a, b) => b[0] - a[0])
+              .map(([year, posts]) => {
+                return <Year key={year} year={year} posts={posts} />;
+              })}
           </YearList>
         </Section>
       </Main>

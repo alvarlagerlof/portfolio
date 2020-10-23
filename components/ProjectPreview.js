@@ -7,7 +7,7 @@ import ClickableLink from "./ClickableLink";
 export default function ProjectPreview({ data: { title, description, link, image } }) {
   return (
     <Link href={link} target="_blank">
-      <React.Fragment>
+      <div>
         <Image alt="Project image" src={"images/" + image} />
         <Title>
           <ClickableLink href={link} target="_blank">
@@ -15,7 +15,7 @@ export default function ProjectPreview({ data: { title, description, link, image
           </ClickableLink>
         </Title>
         <p>{description}</p>
-      </React.Fragment>
+      </div>
     </Link>
   );
 }

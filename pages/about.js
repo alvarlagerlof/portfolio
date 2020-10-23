@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
+import Section from "../components/Section";
 
 export default function About() {
   return (
@@ -15,9 +16,9 @@ export default function About() {
       <NavBar />
 
       <Main>
-        <section>
-          <h1>About</h1>
-        </section>
+        <Section>
+          <h1>About me</h1>
+        </Section>
       </Main>
 
       <Footer />

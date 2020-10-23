@@ -23,7 +23,7 @@ export default function Projects({ projects }) {
 
       <Main>
         <Header>
-          <h1>Projects</h1>
+          <h1>Things I've worked on</h1>
           <h2>
             These are some of my projects on{" "}
             <CtaLink href="https://github.com/alvarlagerlof">Github</CtaLink>

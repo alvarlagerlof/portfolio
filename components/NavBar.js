@@ -34,6 +34,8 @@ const StyledNav = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid #dedede;
+  padding-bottom: 32px;
 `;
 
 const LinkList = styled.ul`

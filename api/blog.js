@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-import { formatDate } from "./utils/date";
+import { formatDate, parseDate } from "./utils/date";
 
 async function getPost(slug) {
   const filename = fs
@@ -17,33 +17,34 @@ async function getPost(slug) {
     data: {
       ...data,
       date: data.date.getTime(),
-      updatedAt: data.updatedAt.getTime(),
+      updatedAt: data.updatedAt != undefined ?? data.updatedAt.getTime(),
     },
   };
 }
 
 async function getPosts() {
-  const files = fs.readdirSync(`./content/blog`);
+  return fs
+    .readdirSync(`./content/blog`)
+    .map(filename => {
+      const markdownWithMetadata = fs.readFileSync(`./content/blog/${filename}`).toString();
 
-  return files.map(filename => {
-    const markdownWithMetadata = fs.readFileSync(`./content/blog/${filename}`).toString();
+      const { data } = matter(markdownWithMetadata);
 
-    const { data } = matter(markdownWithMetadata);
-
-    return {
-      slug: filename.replace(".md", ""),
-      title: data.title,
-      description: data.description,
-      date: data.date.getTime(),
-    };
-  });
+      return {
+        slug: filename.replace(".md", ""),
+        title: data.title,
+        description: data.description,
+        date: data.date.getTime(),
+      };
+    })
+    .sort((a, b) => b.date - a.date);
 }
 
 async function getPostsSectioned() {
   const posts = await getPosts();
 
   return posts.reduce((acc, curr) => {
-    const year = formatDate(curr.date).year;
+    const year = parseDate(curr.date).year;
 
     if (acc[year]) {
       return {
