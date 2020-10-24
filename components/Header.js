@@ -6,6 +6,7 @@ const Header = styled.header`
   }
 
   & > h2 {
+    font-size: 1.5rem;
     font-weight: 400;
   }
 `;

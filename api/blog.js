@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-import { formatDate, parseDate } from "./utils/date";
+import { parseDate } from "./utils/date";
 
 async function getPost(slug) {
   const filename = fs

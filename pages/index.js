@@ -9,12 +9,13 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
-import PageLink from "../components/CtaLink";
 import ItemGrid from "../components/ItemGrid";
 import ProjectPreview from "../components/ProjectPreview";
 import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
+import CtaLink from "../components/CtaLink";
+import CtaLinkGroup from "../components/CtaLinkGroup";
 
 export default function Home({ posts, projects }) {
   return (
@@ -36,16 +37,17 @@ export default function Home({ posts, projects }) {
             Best described as an 18-year-old Swedish developer who also happens to love design, my
             story starts with a $2 computer from a flea market.
           </h2>
-          <HeaderButtons>
-            <PageLink href="/about">Learn more about me</PageLink>
-            <PageLink href="/contact">Contact me</PageLink>
-          </HeaderButtons>
+          <CtaLinkGroup>
+            <CtaLink href="/about">Learn more about me</CtaLink>
+            <CtaLink href="/contact">Contact me</CtaLink>
+          </CtaLinkGroup>
         </Header>
+
         <Feature>
           <h2>Projects</h2>
           <p>
             Featured projects from my{" "}
-            <PageLink href="https://github.com/alvarlagerlof">GitHub</PageLink>
+            <CtaLink href="https://github.com/alvarlagerlof">GitHub</CtaLink>
           </p>
           <ItemGrid>
             {projects.map(data => (
@@ -55,6 +57,7 @@ export default function Home({ posts, projects }) {
             ))}
           </ItemGrid>
         </Feature>
+
         <Feature>
           <h2>Recent blog posts</h2>
           <p>Sometimes I try to time to write down my thoughts.</p>
@@ -85,7 +88,6 @@ const HeaderButtons = styled.div`
 
 const Feature = styled(Section)`
   & > h2 {
-    font-size: 2rem;
     margin-bottom: 8px;
   }
 

@@ -9,19 +9,23 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     h4 {
         font-size: 1rem;
+    }
+
+    p, em, strong {
+        line-height: 1.5;
     }
 `;
 
