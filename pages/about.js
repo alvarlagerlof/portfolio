@@ -54,16 +54,6 @@ export default function About({ experience }) {
             </ExperienceList>
           </Text>
         </Section>
-
-        <Section>
-          <Text>
-            <h2>What I do in my free-time</h2>
-            <p>I like to dabble in code and these are some of the thingss I've worked on</p>
-          </Text>
-          <CtaLinkGroup>
-            <CtaLink href="/projects">View projects</CtaLink>
-          </CtaLinkGroup>
-        </Section>
       </Main>
 
       <Footer />
