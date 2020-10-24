@@ -16,6 +16,7 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
 import CtaLinkGroup from "../components/CtaLinkGroup";
+import ClickableLink from "../components/ClickableLink";
 
 export default function Home({ posts, projects }) {
   return (
@@ -34,7 +35,7 @@ export default function Home({ posts, projects }) {
             I'm Alvar Lagerlöf
           </h1>
           <h2>
-            Best described as an 18-year-old Swedish developer who also happens to love design, my
+            Best described as an 18 year old Swedish developer who also happens to love design, my
             story starts with a $2 computer from a flea market.
           </h2>
           <CtaLinkGroup>
@@ -44,10 +45,11 @@ export default function Home({ posts, projects }) {
         </Header>
 
         <Feature>
-          <h2>Projects</h2>
+          <ClickableLink href="/projects">
+            <h2>Featured projects</h2>{" "}
+          </ClickableLink>
           <p>
-            Featured projects from my{" "}
-            <CtaLink href="https://github.com/alvarlagerlof">GitHub</CtaLink>
+            View all projects <CtaLink href="/projects">here</CtaLink>
           </p>
           <ItemGrid>
             {projects.map(data => (
@@ -59,8 +61,13 @@ export default function Home({ posts, projects }) {
         </Feature>
 
         <Feature>
-          <h2>Recent blog posts</h2>
-          <p>Sometimes I try to time to write down my thoughts.</p>
+          <ClickableLink href="/blog">
+            <h2>Latest blog posts</h2>
+          </ClickableLink>
+          <p>
+            Sometimes I try to time to write down my thoughts. View all posts{" "}
+            <CtaLink href="/blog">here</CtaLink>
+          </p>
           <ItemGrid>
             {posts.map(data => (
               <li key={data.title}>
@@ -75,19 +82,8 @@ export default function Home({ posts, projects }) {
   );
 }
 
-const HeaderButtons = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-  font-size: 1.3rem;
-
-  & > :first-child {
-    margin-bottom: 8px;
-  }
-`;
-
 const Feature = styled(Section)`
-  & > h2 {
+  & > a {
     margin-bottom: 8px;
   }
 

@@ -8,11 +8,9 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
-import Section from "../components/Main";
-import CtaLink from "../components/CtaLink";
-import CtaLinkGroup from "../components/CtaLinkGroup";
+import Section from "../components/Section";
+
 import Experience from "../components/Experience";
-import Header from "../components/Header";
 
 export default function About({ experience }) {
   return (
@@ -24,21 +22,23 @@ export default function About({ experience }) {
       <NavBar />
 
       <Main>
-        <Section>
-          <Header>
+        <Split>
+          <CustomHeader>
             <h1>About me</h1>
-          </Header>
-          <Text>
-            <p>What does a $2 computer at a flea market have to do with me writing this?</p>
-            <p>In my case, turns out, everything! </p>
-            <p>
-              Proin ligula ipsum, rutrum ut tellus in, venenatis vestibulum elit. Donec a sagittis
-              augue. Nullam at molestie eros. Aliquam quis neque varius, facilisis erat sagittis,
-              cursus lacus. Curabitur nec libero turpis. Sed ut nibh justo. Sed eu dictum ex. Proin
-              semper a tellus non hendrerit. Mauris malesuada pellentesque lacinia.
-            </p>
-          </Text>
-        </Section>
+            <Text>
+              <p>What does a $2 computer at a flea market have to do with me writing this?</p>
+              <p>In my case, turns out, everything! </p>
+              <p>
+                Proin ligula ipsum, rutrum ut tellus in, venenatis vestibulum elit. Donec a sagittis
+                augue. Nullam at molestie eros. Aliquam quis neque varius, facilisis erat sagittis,
+                cursus lacus. Curabitur nec libero turpis. Sed ut nibh justo. Sed eu dictum ex.
+                Proin semper a tellus non hendrerit. Mauris malesuada pellentesque lacinia.
+              </p>
+            </Text>
+          </CustomHeader>
+          <img src="/images/profile.jpg" alt="Profile" />
+        </Split>
+
         <Section>
           <Text>
             <h2>Work experience</h2>
@@ -60,6 +60,35 @@ export default function About({ experience }) {
     </Wrapper>
   );
 }
+
+const Split = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  & > img {
+    border-radius: 8px;
+    width: 50%;
+    object-fit: cover;
+    margin-left: 64px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+
+    & > img {
+      width: 100%;
+      margin-left: unset;
+      margin-bottom: 64px;
+    }
+  }
+`;
+
+const CustomHeader = styled.header`
+  & > h1 {
+    margin-bottom: 16px;
+  }
+`;
 
 const ExperienceList = styled.ul`
   margin-top: 32px;

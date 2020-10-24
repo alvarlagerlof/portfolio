@@ -25,8 +25,10 @@ export default function Projects({ projects }) {
         <Header>
           <h1>Things I've worked on</h1>
           <h2>
-            These are some of my projects on{" "}
-            <CtaLink href="https://github.com/alvarlagerlof">Github</CtaLink>
+            In my free-time I like to work on variuos things, including everything from game-plugins
+            imitating Quake to apps. I make it a habit to post these various projects on my{" "}
+            <CtaLink href="https://github.com/alvarlagerlof">Github</CtaLink> to let others see what
+            I'm doing.
           </h2>
         </Header>
 

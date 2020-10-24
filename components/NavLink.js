@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import styled, { css } from "styled-components";
-import Link from "next/link";
 import ClickableLink from "./ClickableLink";
 
 export default function NavLink({ href, children }) {

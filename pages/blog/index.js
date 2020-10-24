@@ -22,11 +22,6 @@ export default function Blog({ postsSectioned }) {
       <NavBar />
 
       <Main>
-        {/* <Header>
-          <h1>Blog</h1>
-          <h2>Sometimes I try to time to write down my thoughts.</h2>
-        </Header> */}
-
         <Section>
           <YearList>
             {Object.entries(postsSectioned)

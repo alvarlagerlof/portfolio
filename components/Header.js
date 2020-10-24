@@ -7,7 +7,14 @@ const Header = styled.header`
 
   & > h2 {
     font-size: 1.5rem;
+    line-height: 1.5;
     font-weight: 400;
+  }
+
+  @media screen and (max-width: 700px) {
+    & > h2 {
+      font-size: 1.2rem;
+    }
   }
 `;
 

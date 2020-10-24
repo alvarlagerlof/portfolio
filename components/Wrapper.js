@@ -14,7 +14,17 @@ const Background = styled.div`
 `;
 
 const Content = styled.div`
-  margin: 32px auto;
-  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  max-width: 1200px;
   width: 70%;
+
+  @media screen and (max-width: 1000px) {
+    padding: 32px 64px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 32px 24px;
+  }
 `;
