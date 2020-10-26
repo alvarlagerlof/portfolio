@@ -1,7 +1,7 @@
 ---
 title: News Intern
 company: SvD
-type: Intern
+type: Internship
 startDate: 2016-06-00
 endDate: 2016-06-00
 ---

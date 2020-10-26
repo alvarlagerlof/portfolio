@@ -2,6 +2,7 @@
 title: App developer
 company: Roboro
 type: Internship
+link: https://koda.nu/app
 startDate: 2016-11-00
 endDate: 2016-11-00
 ---

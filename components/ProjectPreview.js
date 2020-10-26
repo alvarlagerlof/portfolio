@@ -23,7 +23,6 @@ export default function ProjectPreview({ data: { title, description, link, image
 const Image = styled.img`
   width: 100%;
   margin-bottom: 8px;
-  border-radius: 8px;
 `;
 
 const Title = styled.h3`

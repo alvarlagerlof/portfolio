@@ -30,9 +30,8 @@ export default function NavBar() {
 const Name = styled.div`
   @media screen and (max-width: 700px) {
     & > a {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
     }
   }
 `;
@@ -42,11 +41,12 @@ const StyledNav = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid #dedede;
+  border-bottom: 2px solid black;
   padding-bottom: 32px;
 
   @media screen and (max-width: 700px) {
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
 

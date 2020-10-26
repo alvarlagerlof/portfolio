@@ -17,6 +17,8 @@ const StyledLink = styled.a`
   margin: -4px -8px;
   border-radius: 8px;
   transition: all 100ms ease-in-out;
+  font-weight: inherit;
+  font-family: inherit;
 
   :hover {
     background: rgba(0, 0, 0, 0.1);

@@ -11,7 +11,7 @@ const StyledList = styled.div`
   font-size: 1.5rem;
 
   & > a + a {
-    margin-top: 16px;
+    margin-top: 8px;
   }
 
   @media screen and (max-width: 700px) {

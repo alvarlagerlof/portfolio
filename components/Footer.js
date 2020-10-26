@@ -56,7 +56,7 @@ export default function Footer() {
 }
 
 const StyledFooter = styled.footer`
-  border-top: 2px solid #dedede;
+  border-top: 2px solid black;
   padding-top: 64px;
 `;
 
@@ -85,8 +85,7 @@ const SocialList = styled.ul`
 
   & > li {
     margin: 8px 0;
-    font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `;
 

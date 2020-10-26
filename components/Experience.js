@@ -1,8 +1,9 @@
 import { DateTime } from "luxon";
 import styled from "styled-components";
+import CtaLink from "./CtaLink";
 
 export default function Experience({
-  data: { title, company, type, startDate, endDate, content },
+  data: { title, company, type, link, startDate, endDate, content },
 }) {
   const formatDate = dateString => {
     return DateTime.fromMillis(dateString).toFormat("MMM yyyy");
@@ -27,6 +28,7 @@ export default function Experience({
       <em>{type}</em>
       <p>{getDate()}</p>
       <Description>{content}</Description>
+      <LearnMore>{link && <CtaLink href={link}>Learn more</CtaLink>}</LearnMore>
     </StyledExperience>
   );
 }
@@ -41,4 +43,8 @@ const Title = styled.h3`
 
 const Description = styled.p`
   margin-top: 16px;
+`;
+
+const LearnMore = styled.p`
+  margin-top: 4px;
 `;

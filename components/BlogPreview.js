@@ -26,6 +26,6 @@ const Title = styled.h3`
 
 const Date = styled.h4`
   margin-bottom: 16px;
-  color: grey;
+  color: rgba(0, 0, 0, 0.7);
   font-weight: 400;
 `;

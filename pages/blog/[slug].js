@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import Head from "next/head";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import { formatDate } from "../../api/utils/date";
 import { getPosts, getPost } from "../../api/blog";
@@ -10,32 +10,35 @@ import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import Header from "../../components/Header";
-import Section from "../../components/Section";
 
 export default function BlogPost({ content, data: { title, description, date } }) {
   return (
-    <Wrapper>
-      <Head>
-        <title>Alvar Lagerlöf - Blog</title>
-      </Head>
+    <ThemeProvider
+      theme={{ backgroundTop: "#FCFCFC", backgroundBottom: "#D9D9D9 ", accent: "#AD0B26" }}
+    >
+      <Wrapper>
+        <Head>
+          <title>Alvar Lagerlöf - Blog</title>
+        </Head>
 
-      <NavBar />
+        <NavBar />
 
-      <Main>
-        <Header>
-          <HeaderDate>{formatDate(date)}</HeaderDate>
+        <Main>
+          <Header>
+            <HeaderDate>{formatDate(date)}</HeaderDate>
 
-          <h1>{title}</h1>
-          <h2>{description}</h2>
-        </Header>
+            <h1>{title}</h1>
+            <h2>{description}</h2>
+          </Header>
 
-        <Article>
-          <ReactMarkdown>{content}</ReactMarkdown>
-        </Article>
-      </Main>
+          <Article>
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </Article>
+        </Main>
 
-      <Footer />
-    </Wrapper>
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 

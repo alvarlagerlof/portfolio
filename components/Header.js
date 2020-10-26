@@ -9,6 +9,7 @@ const Header = styled.header`
     font-size: 1.5rem;
     line-height: 1.5;
     font-weight: 400;
+    font-family: "Inter", sans-serif;
   }
 
   @media screen and (max-width: 700px) {

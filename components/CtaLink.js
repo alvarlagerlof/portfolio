@@ -11,8 +11,9 @@ export default function CtaLink({ href, children }) {
 
 const StyledLink = styled.a`
   text-decoration: none;
-  color: #ff6f00;
-  font-weight: 600;
+  color: ${props => props.theme.accent};
+  font-weight: 550;
+  font-family: inherit;
 
   :hover {
     text-decoration: underline;

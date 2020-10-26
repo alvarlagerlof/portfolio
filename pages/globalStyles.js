@@ -8,12 +8,21 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Inter", sans-serif;
     }
 
+    h1, h2 {
+        font-family: "PT Serif", serif;
+        font-weight: 500;
+    }
+
     h1 {
         font-size: 3.2rem;
     }
 
     h2 {
         font-size: 2.2rem;
+    }
+
+    h3, h4 {
+        font-weight: 550;
     }
 
     h3 {
@@ -26,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
     p, em, strong, a {
         line-height: 1.5;
-        font-size: 1.1em
+        font-size: 1.1em;
     }
 
     @media screen and (max-width: 700px) {

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
 
@@ -14,50 +14,55 @@ import Experience from "../components/Experience";
 
 export default function About({ experience }) {
   return (
-    <Wrapper>
-      <Head>
-        <title>Alvar Lagerlöf - About</title>
-      </Head>
+    <ThemeProvider
+      theme={{ backgroundTop: "#F6F7FE", backgroundBottom: "#CBD4FB", accent: "#AD0B26" }}
+    >
+      <Wrapper>
+        <Head>
+          <title>Alvar Lagerlöf - About</title>
+        </Head>
 
-      <NavBar />
+        <NavBar />
 
-      <Main>
-        <Split>
-          <CustomHeader>
-            <h1>About me</h1>
+        <Main>
+          <Split>
+            <CustomHeader>
+              <h1>About me</h1>
+              <Text>
+                <p>What does a $2 computer at a flea market have to do with me writing this?</p>
+                <p>In my case, turns out, everything!</p>
+                <p>
+                  Proin ligula ipsum, rutrum ut tellus in, venenatis vestibulum elit. Donec a
+                  sagittis augue. Nullam at molestie eros. Aliquam quis neque varius, facilisis erat
+                  sagittis, cursus lacus. Curabitur nec libero turpis. Sed ut nibh justo. Sed eu
+                  dictum ex. Proin semper a tellus non hendrerit. Mauris malesuada pellentesque
+                  lacinia.
+                </p>
+              </Text>
+            </CustomHeader>
+            <img src="/images/profile.jpg" alt="Profile" />
+          </Split>
+
+          <Section>
             <Text>
-              <p>What does a $2 computer at a flea market have to do with me writing this?</p>
-              <p>In my case, turns out, everything! </p>
+              <h2>Work experience</h2>
               <p>
-                Proin ligula ipsum, rutrum ut tellus in, venenatis vestibulum elit. Donec a sagittis
-                augue. Nullam at molestie eros. Aliquam quis neque varius, facilisis erat sagittis,
-                cursus lacus. Curabitur nec libero turpis. Sed ut nibh justo. Sed eu dictum ex.
-                Proin semper a tellus non hendrerit. Mauris malesuada pellentesque lacinia.
+                While I’m still in currently in Highschool, I’ve worked professionally on two
+                occations.
               </p>
+
+              <ExperienceList>
+                {experience.map(data => (
+                  <Experience key={data.description} data={data} />
+                ))}
+              </ExperienceList>
             </Text>
-          </CustomHeader>
-          <img src="/images/profile.jpg" alt="Profile" />
-        </Split>
+          </Section>
+        </Main>
 
-        <Section>
-          <Text>
-            <h2>Work experience</h2>
-            <p>
-              While I’m still in currently in Highschool, I’ve worked professionally on two
-              occations.
-            </p>
-
-            <ExperienceList>
-              {experience.map(data => (
-                <Experience key={data.description} data={data} />
-              ))}
-            </ExperienceList>
-          </Text>
-        </Section>
-      </Main>
-
-      <Footer />
-    </Wrapper>
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 
@@ -67,7 +72,6 @@ const Split = styled.div`
   align-items: flex-start;
 
   & > img {
-    border-radius: 8px;
     width: 50%;
     object-fit: cover;
     margin-left: 64px;

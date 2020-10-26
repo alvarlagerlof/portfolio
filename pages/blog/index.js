@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
 
@@ -14,26 +14,30 @@ import ItemGrid from "../../components/ItemGrid";
 
 export default function Blog({ postsSectioned }) {
   return (
-    <Wrapper>
-      <Head>
-        <title>Alvar Lagerlöf - Blog</title>
-      </Head>
+    <ThemeProvider
+      theme={{ backgroundTop: "#FCFCFC", backgroundBottom: "#D9D9D9 ", accent: "#AD0B26" }}
+    >
+      <Wrapper>
+        <Head>
+          <title>Alvar Lagerlöf - Blog</title>
+        </Head>
 
-      <NavBar />
+        <NavBar />
 
-      <Main>
-        <Section>
-          <YearList>
-            {Object.entries(postsSectioned)
-              .sort((a, b) => b[0] - a[0])
-              .map(([year, posts]) => {
-                return <Year key={year} year={year} posts={posts} />;
-              })}
-          </YearList>
-        </Section>
-      </Main>
-      <Footer />
-    </Wrapper>
+        <Main>
+          <Section>
+            <YearList>
+              {Object.entries(postsSectioned)
+                .sort((a, b) => b[0] - a[0])
+                .map(([year, posts]) => {
+                  return <Year key={year} year={year} posts={posts} />;
+                })}
+            </YearList>
+          </Section>
+        </Main>
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 
