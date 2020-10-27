@@ -35,10 +35,10 @@ export default function Home({ image, posts, projects }) {
             content="Developer and designer living in Stockholm who likes working with React and Linux"
           ></meta>
           <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
-          <meta property="og:image" content={image}></meta>
+          <meta property="og:image" content={"https://alvar.dev/" + image}></meta>
           <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
           <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-          <meta name="twitter:image" content={image}></meta>
         </Head>
 
         <NavBar />
