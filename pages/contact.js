@@ -7,8 +7,9 @@ import Main from "../components/Main";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
 import { ThemeProvider } from "styled-components";
+import { getImage } from "../api/image";
 
-export default function Contact() {
+export default function Contact({ image }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#9ADBA1", backgroundBottom: "#F5FFF6", accent: "#5455B0" }}
@@ -17,6 +18,10 @@ export default function Contact() {
         <Head>
           <title>Contact me - Alvar Lagerlöf</title>
           <meta name="description" content="Reach me at hi@alvar.dev"></meta>
+          <meta property="og:title" content="Contact me"></meta>
+          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
+          <meta property="og:image" content={image}></meta>
+          <meta name="twitter:card" content="summary"></meta>
         </Head>
 
         <NavBar />
@@ -44,4 +49,12 @@ export default function Contact() {
       </Wrapper>
     </ThemeProvider>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      image: await getImage("contact", "Contact me", "Reach me at hi@alvar.dev", "#9ADBA1"),
+    },
+  };
 }

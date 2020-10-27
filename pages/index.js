@@ -15,8 +15,9 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
+import { getImage } from "../api/image";
 
-export default function Home({ posts, projects }) {
+export default function Home({ image, posts, projects }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#FFC2C2", backgroundBottom: "#FFF5F5", accent: "#6938B7" }}
@@ -26,8 +27,12 @@ export default function Home({ posts, projects }) {
           <title>Alvar Lagerlöf: Developer and Designer</title>
           <meta
             name="description"
-            content="Developer and designer living in Stockholm who working with React and Linux"
+            content="Developer and designer living in Stockholm who likes working with React and Linux"
           ></meta>
+          <meta property="og:title" content="Home"></meta>
+          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
+          <meta property="og:image" content={image}></meta>
+          <meta name="twitter:card" content="summary"></meta>
         </Head>
 
         <NavBar />
@@ -102,6 +107,12 @@ export async function getStaticProps() {
     props: {
       projects: await getProjects(),
       posts: await getPosts(),
+      image: await getImage(
+        "home",
+        "Alvar Lagerlöf",
+        "Developer and designer living in Stockholm who likes working with React and Linux",
+        "#FFC2C2"
+      ),
     },
   };
 }

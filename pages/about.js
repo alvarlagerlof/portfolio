@@ -12,8 +12,9 @@ import Section from "../components/Section";
 import Experience from "../components/Experience";
 import CtaLink from "../components/CtaLink";
 import Header from "../components/Header";
+import { getImage } from "../api/image";
 
-export default function About({ experience }) {
+export default function About({ image, experience }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#AEBCF9", backgroundBottom: "#F6F7FE", accent: "#AD0B26" }}
@@ -25,6 +26,10 @@ export default function About({ experience }) {
             name="description"
             content="What does a $2 computer at a flea market have to do with me writing this? Turns out... everything!"
           ></meta>
+          <meta property="og:title" content="About me"></meta>
+          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
+          <meta property="og:image" content={image}></meta>
+          <meta name="twitter:card" content="summary"></meta>
         </Head>
 
         <NavBar />
@@ -32,7 +37,7 @@ export default function About({ experience }) {
         <Main>
           <Header>
             <StoryText>
-              <img src="/images/profile.jpg" alt="Profile" />
+              <img src="/profile.jpg" alt="Profile" />
               <h1>Who am I?</h1>
               <p>What does a $2 computer at a flea market have to do with me writing this?</p>
               <p>Turns out... everything!</p>
@@ -181,6 +186,12 @@ export async function getStaticProps() {
   return {
     props: {
       experience: await getExperience(),
+      image: await getImage(
+        "about",
+        "About me",
+        "What does a $2 computer at a flea market have to do with me writing this? Turns out... everything!",
+        "#AEBCF9"
+      ),
     },
   };
 }

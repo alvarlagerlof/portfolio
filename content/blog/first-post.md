@@ -1,6 +1,6 @@
 ---
-title: Under construction
-description: Fleshing things out
+title: Under construction.
+description: Fleshing things out.
 date: 2020-10-23
 ---
 
