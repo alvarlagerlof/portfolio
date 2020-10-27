@@ -34,7 +34,7 @@ export default function Home({ posts, projects }) {
 
         <Main>
           <Header>
-            <h1>Hello There! DEV</h1>
+            <h1>Hello There!</h1>
             <h2>
               I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
               designs. I love to work with React. My story starts with a $2 computer from a flea
