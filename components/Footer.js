@@ -77,6 +77,24 @@ export default function Footer() {
               hoverText="@alvarlagerlof"
             />
           </li>
+
+          <li>
+            <HoverLink
+              newTab
+              href="https://unsplash.com/@alvarlagerlof"
+              text="Unsplash"
+              hoverText="@alvarlagerlof"
+            />
+          </li>
+
+          <li>
+            <HoverLink
+              newTab
+              href="https://www.artstation.com/alvarlagerlof"
+              text="ArtStation"
+              hoverText="@alvarlagerlof"
+            />
+          </li>
         </SocialList>
       </Links>
       <MadeWithLove>
