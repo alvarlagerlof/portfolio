@@ -26,6 +26,7 @@ export default function Blog({ image, postsSectioned }) {
           <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
           <meta property="og:image" content={image}></meta>
           <meta name="twitter:card" content="summary"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />

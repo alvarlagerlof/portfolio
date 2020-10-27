@@ -28,9 +28,11 @@ export default function BlogPost({
           <title>{title} - Alvar Lagerlöf</title>
           <meta name="description" content={description}></meta>
           <meta property="og:title" content={title}></meta>
+          <meta property="og:type" content="acticle"></meta>
           <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
           <meta property="og:image" content={image}></meta>
           <meta name="twitter:card" content="summary"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />

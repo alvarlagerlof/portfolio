@@ -15,6 +15,7 @@ export default function Contact({ image }) {
       <Wrapper>
         <Head>
           <title>404 - Alvar Lagerlöf</title>
+          <meta name="robots" content="noindex, nofollow"></meta>
         </Head>
 
         <NavBar />
