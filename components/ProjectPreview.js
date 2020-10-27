@@ -8,7 +8,7 @@ export default function ProjectPreview({ data: { title, description, link, image
   return (
     <Link href={link} passHref>
       <StyledProjectPreview target="_blank">
-        <Image alt="Project image" src={"images/" + image} />
+        <Image alt="Project image" src={"content/projects/" + image} />
         <Title>
           <ClickableLink newTab href={link}>
             {title}

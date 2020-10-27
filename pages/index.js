@@ -15,8 +15,9 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
+import { getImage } from "../api/image";
 
-export default function Home({ posts, projects }) {
+export default function Home({ image, posts, projects }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#FFC2C2", backgroundBottom: "#FFF5F5", accent: "#6938B7" }}
@@ -26,8 +27,13 @@ export default function Home({ posts, projects }) {
           <title>Alvar Lagerlöf: Developer and Designer</title>
           <meta
             name="description"
-            content="Developer and designer living in Stockholm who working with React and Linux"
+            content="Developer and designer living in Stockholm who likes working with React and Linux"
           ></meta>
+          <meta property="og:title" content="Home"></meta>
+          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
+          <meta property="og:image" content={image}></meta>
+          <meta name="twitter:card" content="summary"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />
@@ -38,7 +44,7 @@ export default function Home({ posts, projects }) {
             <h2>
               I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
               designs. I love to work with React. My story starts with a $2 computer from a flea
-              market. <CtaLink href="/about">Learn more</CtaLink>
+              market. <CtaLink href="/about">Learn more here</CtaLink>
             </h2>
 
             <h2>
@@ -102,6 +108,12 @@ export async function getStaticProps() {
     props: {
       projects: await getProjects(),
       posts: await getPosts(),
+      image: await getImage(
+        "home",
+        "Alvar Lagerlöf",
+        "Developer and designer living in Stockholm who likes working with React and Linux",
+        "#FFC2C2"
+      ),
     },
   };
 }

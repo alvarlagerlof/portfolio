@@ -13,8 +13,9 @@ import ProjectPreview from "../components/ProjectPreview";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
 import Section from "../components/Section";
+import { getImage } from "../api/image";
 
-export default function Projects({ projects }) {
+export default function Projects({ image, projects }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#D7B498", backgroundBottom: "#FDFAF7", accent: "#297A62" }}
@@ -23,6 +24,11 @@ export default function Projects({ projects }) {
         <Head>
           <title>Projects - Alvar Lagerlöf</title>
           <meta name="description" content="Projects from my GitHub I've worked on"></meta>
+          <meta property="og:title" content="Projects"></meta>
+          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
+          <meta property="og:image" content={image}></meta>
+          <meta name="twitter:card" content="summary"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />
@@ -62,6 +68,12 @@ export async function getStaticProps() {
   return {
     props: {
       projects: await getProjects(),
+      image: await getImage(
+        "projects",
+        "Projects",
+        "Stuff from my GitHub I've worked on",
+        "#D7B498"
+      ),
     },
   };
 }

@@ -11,16 +11,22 @@ import Main from "../../components/Main";
 import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
+import { getImage } from "../../api/image";
 
-export default function Blog({ postsSectioned }) {
+export default function Blog({ image, postsSectioned }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9 ", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
     >
       <Wrapper>
         <Head>
-          <title>Alvar Lagerlöf's blog</title>
+          <title>Blog - Alvar Lagerlöf</title>
           <meta name="description" content="Personal blog"></meta>
+          <meta property="og:title" content="Blog"></meta>
+          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
+          <meta property="og:image" content={image}></meta>
+          <meta name="twitter:card" content="summary"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />
@@ -79,6 +85,12 @@ export async function getStaticProps() {
   return {
     props: {
       postsSectioned: await getPostsSectioned(),
+      image: await getImage(
+        "blog",
+        "Personal blog",
+        "Here I'll write down my thoughts sometimes",
+        "#D9D9D9"
+      ),
     },
   };
 }
