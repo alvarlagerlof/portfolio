@@ -1,7 +1,7 @@
 # Portfolio
 Personal portfolio and blog
 
-# Getting started
+## Getting started
 ```bash
 yarn install
 ```
