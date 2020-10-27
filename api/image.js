@@ -8,12 +8,12 @@ function truncate(source, size) {
 }
 
 async function getImage(path, title, description, color) {
-  title = truncate(title, 48);
+  title = truncate(title, 35);
   description = truncate(description, 110);
   color = Color(color).darken(0.4).hex();
 
   const width = 1200;
-  const height = 700;
+  const height = 630;
 
   const canvas = createCanvas(width, height);
   const context = canvas.getContext("2d");
@@ -31,14 +31,14 @@ async function getImage(path, title, description, color) {
   context.textAlign = "left";
   context.fillStyle = color;
   context.font = "25pt Inter";
-  context.fillText("alvar.dev", 100, 100);
+  context.fillText("alvar.dev", 100, 70 + 15);
 
   context.fillStyle = "#000";
 
   drawMultilineText(context, title, {
     rect: {
       x: 100,
-      y: 130,
+      y: 100,
       width: canvas.width - 200,
       height: 300,
     },
@@ -55,7 +55,7 @@ async function getImage(path, title, description, color) {
       x: 100,
       y: 370,
       width: canvas.width - 200,
-      height: canvas.height - 350 - 100,
+      height: canvas.height - 350 - 70,
     },
     font: "Inter",
     verbose: true,

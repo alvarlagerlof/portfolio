@@ -14,7 +14,7 @@ export default function Footer() {
     <StyledFooter>
       {isBlog() && (
         <About>
-          <img src="/images/profile.jpg" alt="Profile" />
+          <Profile src="/profile.jpg" alt="Profile" />
           <p>
             I am Alvar Lagerlöf, an 18 year old developer and designer living in Stockholm, Sweden.
             I like to experiment with code to make cool stuff. To learn more about me you can check
@@ -111,14 +111,14 @@ const StyledFooter = styled.footer`
 
 const About = styled.section`
   margin-bottom: 32px;
+`;
 
-  & > img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 16px;
-  }
+const Profile = styled.img`
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
 `;
 
 const Links = styled.section`
