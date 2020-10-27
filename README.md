@@ -1,7 +1,13 @@
 # Portfolio
-
 Personal portfolio and blog
 
-## License
+## Getting started
+```bash
+yarn install
+```
+```bash
+yarn dev
+```
 
+## License
 [MIT](LICENSE)

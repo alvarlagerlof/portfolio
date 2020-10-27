@@ -108,6 +108,13 @@ export default function About({ experience }) {
                 mostly with React, but I've experimented with Vue.js and Svelte and find declarative
                 interactive UI as a whole quite interesting.
               </p>
+              <p>
+                When I'm not coding or designing, I like to take{" "}
+                <CtaLink href="https://unsplash.com/@alvarlagerlof">photos</CtaLink> and I have also
+                experimented with rendering some cool{" "}
+                <CtaLink href="https://www.artstation.com/alvarlagerlof">things</CtaLink> in
+                blender.
+              </p>
             </StoryText>
           </Header>
 
