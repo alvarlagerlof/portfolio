@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-import ClickableLink from "./ClickableLink";
 import HoverLink from "./HoverLink";
 import CtaLink from "./CtaLink";
 
