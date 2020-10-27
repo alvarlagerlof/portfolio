@@ -3,9 +3,11 @@ Personal portfolio and blog
 
 # Getting started
 ```bash
-yarn install```
+yarn install
+```
 ```bash
-yarn dev```
+yarn dev
+```
 
 ## License
 [MIT](LICENSE)
