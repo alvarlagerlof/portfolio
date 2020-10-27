@@ -15,7 +15,13 @@ export default function Contact({ image }) {
       <Wrapper>
         <Head>
           <title>404 - Alvar Lagerlöf</title>
+          <meta property="og:title" content="404"></meta>
+          <meta property="og:description" content="Page not found"></meta>
           <meta name="robots" content="noindex, nofollow"></meta>
+          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />

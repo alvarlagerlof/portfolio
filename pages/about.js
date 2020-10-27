@@ -27,9 +27,13 @@ export default function About({ image, experience }) {
             content="What does a $2 computer at a flea market have to do with me writing this? Turns out... everything!"
           ></meta>
           <meta property="og:title" content="About me"></meta>
-          <meta property="og:site_name" content="Alvar Lagerlöf"></meta>
-          <meta property="og:image" content={image}></meta>
-          <meta name="twitter:card" content="summary"></meta>
+          <meta
+            property="og:description"
+            content="What does a $2 computer at a flea market have to do with me writing this? Turns out... everything!"
+          ></meta>
+          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
           <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
