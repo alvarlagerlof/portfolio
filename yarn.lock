@@ -2164,6 +2164,11 @@ data-uri-to-buffer@3.0.0:
   dependencies:
     buffer-from "^1.1.1"
 
+date-fns@^2.9.0:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+
 debug@4, debug@^4.0.0, debug@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.2.0.tgz#7f150f93920e94c58f5574c2fd01a3110effe7f1"
@@ -3684,6 +3689,13 @@ next@9.5.4:
     web-vitals "0.2.4"
     webpack "4.44.1"
     webpack-sources "1.4.3"
+
+nextjs-sitemap-generator@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/nextjs-sitemap-generator/-/nextjs-sitemap-generator-1.1.0.tgz#838863cd42bdab0ff1f88a1c19e3b44c03d6001e"
+  integrity sha512-l3/MGvgfJIoY+ZEDU3jLRueh0YWIgtH59LDKX4Ky69JjJvlgizA1U2g5HRhnmWan6HFgOIGtsvGTL2rs4fB2IA==
+  dependencies:
+    date-fns "^2.9.0"
 
 node-fetch@2.6.0:
   version "2.6.0"
@@ -5258,6 +5270,18 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+xml-formatter@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/xml-formatter/-/xml-formatter-2.3.1.tgz#79201637dad4fe4b2e58fbd6bf1524ac830ea505"
+  integrity sha512-jvqmM7aowtzgi05LfvWjXLqajeRNu50/dX6Q26a4jwdpMwuCz6FRYRkvqvPBThe7bordClp35jiR/zxRrtM0NQ==
+  dependencies:
+    xml-parser-xo "^3.1.1"
+
+xml-parser-xo@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/xml-parser-xo/-/xml-parser-xo-3.1.1.tgz#a87d92e44fa8ad3ba7242517df96e6b0893f1f47"
+  integrity sha512-gq1nDlJxjKQpPPZUhLbJ52pghtlB4Rz6LAQULm3SF6xzOYVnUloBglNhJR9vtZB3vIxMN/R3nZTf3qmun+6GCg==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"
