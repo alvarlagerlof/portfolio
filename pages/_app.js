@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#ffffff"></meta>
         <link
           href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap&"
           rel="stylesheet"
