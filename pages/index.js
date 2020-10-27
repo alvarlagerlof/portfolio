@@ -29,7 +29,7 @@ export default function Home({ image, posts, projects }) {
             name="description"
             content="Developer and designer living in Stockholm who likes working with React and Linux"
           ></meta>
-          <meta property="og:title" content="Home"></meta>
+          <meta property="og:title" content="Alvar Lagerlöf: Developer and Designer"></meta>
           <meta
             property="og:description"
             content="Developer and designer living in Stockholm who likes working with React and Linux"
