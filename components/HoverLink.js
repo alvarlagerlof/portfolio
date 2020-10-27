@@ -1,15 +1,27 @@
 import { useState } from "react";
+import styled from "styled-components";
 
 import ClickableLink from "./ClickableLink";
 
-export default function HoverLink({ href, text, hoverText }) {
+export default function HoverLink({ href, text, hoverText, newTab }) {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
-      <ClickableLink isHovering={isHovering} href={href}>
+    <StyledHoverLink
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      <ClickableLink href={href} newTab={newTab}>
         {isHovering ? hoverText : text}
       </ClickableLink>
-    </div>
+    </StyledHoverLink>
   );
 }
+
+const StyledHoverLink = styled.div`
+  display: inline-block;
+  & > a {
+    color: ${props => props.theme.accent};
+    font-weight: 550;
+  }
+`;

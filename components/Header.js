@@ -10,6 +10,11 @@ const Header = styled.header`
     line-height: 1.5;
     font-weight: 400;
     font-family: "Inter", sans-serif;
+    max-width: 800px;
+  }
+
+  & > h2 + h2 {
+    margin-top: 24px;
   }
 
   @media screen and (max-width: 700px) {

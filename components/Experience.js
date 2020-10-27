@@ -11,13 +11,9 @@ export default function Experience({
 
   const getDate = () => {
     if (startDate == endDate) {
-      return <p>{formatDate(startDate)}</p>;
+      return `${formatDate(startDate)}`;
     }
-    return (
-      <p>
-        {formatDate(startDate)} - {formatDate(endDate)}
-      </p>
-    );
+    return `${formatDate(startDate)} - ${formatDate(endDate)}`;
   };
 
   return (

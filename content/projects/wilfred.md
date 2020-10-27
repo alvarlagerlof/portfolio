@@ -1,6 +1,6 @@
 ---
 title: Wildred
-description: Game server managger website
-link: https://github.com/wilfred-dev/website
+description: Game server manager website
+link: https://wilfredproject.org/
 image: wilfred.png
 ---

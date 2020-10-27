@@ -15,42 +15,44 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
-import CtaLinkGroup from "../components/CtaLinkGroup";
-import ClickableLink from "../components/ClickableLink";
 
 export default function Home({ posts, projects }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#FFF5F5", backgroundBottom: "#FFC2C2", accent: "#6938B7" }}
+      theme={{ backgroundTop: "#FFC2C2", backgroundBottom: "#FFF5F5", accent: "#6938B7" }}
     >
       <Wrapper>
         <Head>
-          <title>Alvar Lagerlöf</title>
+          <title>Alvar Lagerlöf: Developer and Designer</title>
+          <meta
+            name="description"
+            content="Developer and designer living in Stockholm who working with React and Linux"
+          ></meta>
         </Head>
 
         <NavBar />
 
         <Main>
           <Header>
-            <h1>
-              Hello There!
-              <br />
-              I'm Alvar Lagerlöf
-            </h1>
+            <h1>Hello There!</h1>
             <h2>
-              Best described as an 18 year old Swedish developer who also happens to love design, my
-              story starts with a $2 computer from a flea market.
+              I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
+              designs. I love to work with React. My story starts with a $2 computer from a flea
+              market. <CtaLink href="/about">Learn more</CtaLink>
             </h2>
-            <CtaLinkGroup>
-              <CtaLink href="/about">Learn more about me</CtaLink>
-              <CtaLink href="/contact">Contact me</CtaLink>
-            </CtaLinkGroup>
+
+            <h2>
+              Love to work with: React, Next.js, styled-components, TypeScript, Node, Kotlin,
+              Switft, Linux, Docker, Firebase, Figma
+            </h2>
+
+            <h2>
+              Want to reach out? <CtaLink href="/contact">Contact me</CtaLink>
+            </h2>
           </Header>
 
           <Feature>
-            <ClickableLink href="/projects">
-              <h2>Featured projects</h2>{" "}
-            </ClickableLink>
+            <h2>Featured projects</h2>{" "}
             <p>
               View all projects <CtaLink href="/projects">here</CtaLink>
             </p>
@@ -64,9 +66,7 @@ export default function Home({ posts, projects }) {
           </Feature>
 
           <Feature>
-            <ClickableLink href="/blog">
-              <h2>Latest blog posts</h2>
-            </ClickableLink>
+            <h2>Latest blog posts</h2>
             <p>
               Sometimes I try to time to write down my thoughts. View all posts{" "}
               <CtaLink href="/blog">here</CtaLink>
@@ -93,6 +93,7 @@ const Feature = styled(Section)`
 
   & > p {
     margin-bottom: 32px;
+    max-width: 45ch;
   }
 `;
 

@@ -15,11 +15,12 @@ import ItemGrid from "../../components/ItemGrid";
 export default function Blog({ postsSectioned }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#FCFCFC", backgroundBottom: "#D9D9D9 ", accent: "#AD0B26" }}
+      theme={{ backgroundTop: "#D9D9D9 ", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
     >
       <Wrapper>
         <Head>
-          <title>Alvar Lagerlöf - Blog</title>
+          <title>Alvar Lagerlöf's blog</title>
+          <meta name="description" content="Personal blog"></meta>
         </Head>
 
         <NavBar />

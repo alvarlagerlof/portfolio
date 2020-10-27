@@ -1,10 +1,10 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-export default function CtaLink({ href, children }) {
+export default function CtaLink({ href, newTab, children }) {
   return (
     <Link href={href} passHref>
-      <StyledLink>{children} →</StyledLink>
+      <StyledLink target={newTab ? "_blank" : "_self"}>{children} →</StyledLink>
     </Link>
   );
 }

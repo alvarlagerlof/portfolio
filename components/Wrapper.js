@@ -14,7 +14,7 @@ const Background = styled.div`
   background: linear-gradient(
     180deg,
     ${props => props.theme.backgroundTop} 200px,
-    ${props => props.theme.backgroundBottom} 1500px
+    ${props => props.theme.backgroundBottom} 800px
   );
   background-size: 50px;
 `;
@@ -22,10 +22,10 @@ const Background = styled.div`
 const Content = styled.div`
   margin: 0 auto;
   padding: 32px 16px;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 70%;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 900px) {
     padding: 32px 64px;
     width: 100%;
   }

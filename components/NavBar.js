@@ -17,6 +17,9 @@ export default function NavBar() {
           <NavLink href="/about">About</NavLink>
         </li>
         <li>
+          <NavLink href="/contact">Contact</NavLink>
+        </li>
+        <li>
           <NavLink href="/projects">Projects</NavLink>
         </li>
         <li>
@@ -26,15 +29,6 @@ export default function NavBar() {
     </StyledNav>
   );
 }
-
-const Name = styled.div`
-  @media screen and (max-width: 700px) {
-    & > a {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-    }
-  }
-`;
 
 const StyledNav = styled.nav`
   display: flex;
@@ -50,11 +44,21 @@ const StyledNav = styled.nav`
   }
 `;
 
+const Name = styled.div`
+  @media screen and (max-width: 700px) {
+    & > a {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+  }
+`;
+
 const LinkList = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   list-style: none;
+  flex-wrap: wrap;
 
   margin: 0 -8px;
 

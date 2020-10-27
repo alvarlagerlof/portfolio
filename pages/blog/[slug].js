@@ -14,11 +14,12 @@ import Header from "../../components/Header";
 export default function BlogPost({ content, data: { title, description, date } }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#FCFCFC", backgroundBottom: "#D9D9D9 ", accent: "#AD0B26" }}
+      theme={{ backgroundTop: "#D9D9D9 ", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
     >
       <Wrapper>
         <Head>
-          <title>Alvar Lagerlöf - Blog</title>
+          <title>{title} - Alvar Lagerlöf's blog</title>
+          <meta name="description" content={description}></meta>
         </Head>
 
         <NavBar />
