@@ -38,6 +38,7 @@ export default function Home({ image, posts, projects }) {
           <meta property="og:image" content={image}></meta>
           <meta name="twitter:card" content="summary_large_image"></meta>
           <meta name="twitter:creator" content="@alvarlagerlof"></meta>
+          <meta name="twitter:image" content={image}></meta>
         </Head>
 
         <NavBar />
