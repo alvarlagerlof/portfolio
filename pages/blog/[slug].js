@@ -18,7 +18,7 @@ export default function BlogPost({ content, data: { title, description, date } }
     >
       <Wrapper>
         <Head>
-          <title>{title} - Alvar Lagerlöf's blog</title>
+          <title>{title} - Blog - Alvar Lagerlöf</title>
           <meta name="description" content={description}></meta>
         </Head>
 

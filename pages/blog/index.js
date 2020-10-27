@@ -19,7 +19,7 @@ export default function Blog({ postsSectioned }) {
     >
       <Wrapper>
         <Head>
-          <title>Alvar Lagerlöf's blog</title>
+          <title>Blog - Alvar Lagerlöf</title>
           <meta name="description" content="Personal blog"></meta>
         </Head>
 
