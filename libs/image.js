@@ -18,10 +18,10 @@ async function getImage(path, title, description, color) {
   const canvas = createCanvas(width, height);
   const context = canvas.getContext("2d");
 
-  registerFont("api/opengraph-assets/inter.ttf", { family: "Inter" });
-  registerFont("api/opengraph-assets/pt-serif.ttf", { family: "PT Serif" });
+  registerFont("libs/opengraph-assets/inter.ttf", { family: "Inter" });
+  registerFont("libs/opengraph-assets/pt-serif.ttf", { family: "PT Serif" });
 
-  const image = await loadImage("api/opengraph-assets/background.png");
+  const image = await loadImage("libs/opengraph-assets/background.png");
 
   context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
