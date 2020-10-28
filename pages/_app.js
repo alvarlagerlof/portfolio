@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* <link
+        <link
           rel="preload"
           href="/fonts/Inter-roman.var.woff2?v=3.15"
           as="font"
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           as="font"
           type="font/woff2"
           crossorigin
-        /> */}
+        />
         <meta name="theme-color" content="#ffffff"></meta>
 
         <script
