@@ -1,6 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
+import Image from "next/image";
 
 import { getExperience } from "../api/experience";
 
@@ -42,7 +43,17 @@ export default function About({ image, experience }) {
         <Main>
           <Header>
             <StoryText>
-              <img src="/profile.jpg" alt="Profile" />
+              <ImageContainer>
+                <Image
+                  src="/profile.jpg"
+                  alt="Profile"
+                  priority
+                  loading="eager"
+                  width={5408}
+                  height={4000}
+                />
+              </ImageContainer>
+
               <h1>Who am I?</h1>
               <p>What does a $2 computer at a flea market have to do with me writing this?</p>
               <p>Turns out... everything!</p>
@@ -149,6 +160,22 @@ export default function About({ image, experience }) {
   );
 }
 
+const ImageContainer = styled.div`
+  float: right;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  width: 50%;
+
+  & img {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
+`;
+
 const ExperienceList = styled.ul`
   margin-top: 32px;
 
@@ -168,22 +195,10 @@ const StoryText = styled.div`
 
   & > p + p {
     margin-top: 24px;
-  }
-
-  & > img {
-    width: 50%;
-    float: right;
-    border-radius: 8px;
-    margin-left: 32px;
-    margin-bottom: 32px;
-  }
+  
 
   @media screen and (max-width: 1200px) {
     flex-direction: column-reverse;
-
-    & > img {
-      width: 100%;
-    }
   }
 `;
 

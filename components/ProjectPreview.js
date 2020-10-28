@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import ClickableLink from "./ClickableLink";
 
 export default function ProjectPreview({ data: { title, description, link, image } }) {
   return (
     <Link href={link} passHref>
-      <StyledProjectPreview target="_blank">
-        <Image alt="Project image" src={"content/projects/" + image} />
+      <StyledProjectPreview target="_blank" rel="noopener">
+        <ImageContainer>
+          <Image
+            alt="Project preview"
+            src={"/content/projects/" + image}
+            loading="lazy"
+            width={500}
+            height={300}
+          />
+        </ImageContainer>
+
         <Title>
           <ClickableLink newTab href={link}>
             {title}
@@ -26,10 +36,13 @@ const StyledProjectPreview = styled.a`
   text-decoration: none;
 `;
 
-const Image = styled.img`
-  width: 100%;
+const ImageContainer = styled.div`
   margin-bottom: 8px;
-  border-radius: 8px;
+
+  & img {
+    width: 100%;
+    border-radius: 8px;
+  }
 `;
 
 const Title = styled.h3`
