@@ -48,7 +48,7 @@ export default function Home({ image, posts, projects }) {
             <h2>
               I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
               designs. I love to work with React. My story starts with a $2 computer from a flea
-              market. <CtaLink href="/about">Learn more here</CtaLink>
+              market. <CtaLink href="/about">Learn more</CtaLink>
             </h2>
 
             <h2>
