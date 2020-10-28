@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Link from "next/link";
 
-import { formatDate } from "../api/utils/date";
+import { formatDate } from "../libs/utils/date";
 
 import ClickableLink from "./ClickableLink";
 
