@@ -8,29 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* <link
-          rel="preload"
-          href="/fonts/Inter-roman.var.woff2?v=3.15"
-          as="font"
-          type="font/woff2"
-          crossorigin
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter-italic.var.woff2?v=3.15"
-          as="font"
-          type="font/woff2"
-          crossorigin
-        />
-        <link
-          rel="preload"
-          href="/fonts/Pt-Serif-regular-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossorigin
-        /> */}
         <meta name="theme-color" content="#ffffff"></meta>
-
         <script
           async
           defer
