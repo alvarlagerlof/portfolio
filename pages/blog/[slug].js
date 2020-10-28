@@ -2,15 +2,15 @@ import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 import styled, { ThemeProvider } from "styled-components";
 
-import { formatDate } from "../../api/utils/date";
-import { getPosts, getPost } from "../../api/blog";
+import { formatDate } from "../../libs/utils/date";
+import { getPosts, getPost } from "../../libs/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import Header from "../../components/Header";
-import { getImage } from "../../api/image";
+import { getImage } from "../../libs/image";
 
 export default function BlogPost({
   image,

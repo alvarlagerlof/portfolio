@@ -1,40 +1,31 @@
 import styled from "styled-components";
 
-import Link from "next/link";
 import Image from "next/image";
 
 import ClickableLink from "./ClickableLink";
 
 export default function ProjectPreview({ data: { title, description, link, image } }) {
   return (
-    <Link href={link} passHref>
-      <StyledProjectPreview target="_blank" rel="noopener">
-        <ImageContainer>
-          <Image
-            alt="Project preview"
-            src={"/content/projects/" + image}
-            loading="lazy"
-            width={500}
-            height={300}
-          />
-        </ImageContainer>
+    <div>
+      <ImageContainer>
+        <Image
+          alt="Project preview"
+          src={"/content/projects/" + image}
+          loading="lazy"
+          width={500}
+          height={300}
+        />
+      </ImageContainer>
 
-        <Title>
-          <ClickableLink newTab href={link}>
-            {title}
-          </ClickableLink>
-        </Title>
-        <p>{description}</p>
-      </StyledProjectPreview>
-    </Link>
+      <Title>
+        <ClickableLink newTab href={link}>
+          {title}
+        </ClickableLink>
+      </Title>
+      <p>{description}</p>
+    </div>
   );
 }
-
-const StyledProjectPreview = styled.a`
-  cursor: pointer;
-  color: black;
-  text-decoration: none;
-`;
 
 const ImageContainer = styled.div`
   margin-bottom: 8px;

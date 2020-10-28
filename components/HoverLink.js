@@ -22,6 +22,6 @@ const StyledHoverLink = styled.div`
   display: inline-block;
   & > a {
     color: ${props => props.theme.accent};
-    font-weight: 550;
+    font-weight: 500;
   }
 `;
