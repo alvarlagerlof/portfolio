@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Head from "next/head";
 
 import { getProjects } from "../libs/projects";
+import { getImage } from "../libs/image";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -13,7 +14,6 @@ import ProjectPreview from "../components/ProjectPreview";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
 import Section from "../components/Section";
-import { getImage } from "../libs/image";
 
 export default function Projects({ image, projects }) {
   return (

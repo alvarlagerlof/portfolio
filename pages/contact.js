@@ -1,4 +1,8 @@
+import { ThemeProvider } from "styled-components";
+
 import Head from "next/head";
+
+import { getImage } from "../libs/image";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -6,8 +10,6 @@ import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
-import { ThemeProvider } from "styled-components";
-import { getImage } from "../libs/image";
 
 export default function Contact({ image }) {
   return (

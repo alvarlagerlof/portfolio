@@ -2,6 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 import { getPosts } from "../libs/blog";
 import { getProjects } from "../libs/projects";
+import { getImage } from "../libs/image";
 
 import Head from "next/head";
 
@@ -15,7 +16,6 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
-import { getImage } from "../libs/image";
 
 export default function Home({ image, posts, projects }) {
   return (
