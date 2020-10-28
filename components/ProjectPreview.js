@@ -7,7 +7,7 @@ import ClickableLink from "./ClickableLink";
 export default function ProjectPreview({ data: { title, description, link, image } }) {
   return (
     <Link href={link} passHref>
-      <StyledProjectPreview target="_blank">
+      <StyledProjectPreview target="_blank" rel="noopener">
         <Image alt="Project image" src={"content/projects/" + image} />
         <Title>
           <ClickableLink newTab href={link}>
