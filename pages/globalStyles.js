@@ -1,6 +1,33 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'Inter var';
+        font-weight: 400 600;
+        font-display: swap;
+        font-style: normal;
+        font-named-instance: 'Regular';
+        src: url("/fonts/Inter-roman.var.woff2?v=3.15") format("woff2");
+    }
+
+    @font-face {
+        font-family: 'Inter var';
+        font-weight: 400 600;
+        font-display: swap;
+        font-style: italic;
+        font-named-instance: 'Italic';
+        src: url("/fonts/Inter-italic.var.woff2?v=3.15") format("woff2");
+    }
+
+       
+    @font-face {
+        font-family: 'PT Serif';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/Pt-Serif-regular-latin.woff2") format("woff2");
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -22,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h3, h4 {
-        font-weight: 550;
+        font-weight: 600;
     }
 
     h3 {
