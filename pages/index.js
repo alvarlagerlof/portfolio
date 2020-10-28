@@ -53,7 +53,7 @@ export default function Home({ image, posts, projects }) {
 
             <h2>
               Love to work with: React, Redux, Next.js, styled-components, TypeScript, Node, Kotlin,
-              Switft, Linux, Docker, Firebase, Figma
+              Swift, Linux, Docker, Firebase, Figma
             </h2>
 
             <h2>
