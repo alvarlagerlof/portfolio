@@ -7,7 +7,7 @@ import Main from "../components/Main";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
 import { ThemeProvider } from "styled-components";
-import { getImage } from "../api/image";
+import { getImage } from "../libs/image";
 
 export default function Contact({ image }) {
   return (

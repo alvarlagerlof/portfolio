@@ -2,7 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
 
-import { getPostsSectioned } from "../../api/blog";
+import { getPostsSectioned } from "../../libs/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -11,7 +11,7 @@ import Main from "../../components/Main";
 import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
-import { getImage } from "../../api/image";
+import { getImage } from "../../libs/image";
 
 export default function Blog({ image, postsSectioned }) {
   return (

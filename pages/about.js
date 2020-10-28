@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Head from "next/head";
 import Image from "next/image";
 
-import { getExperience } from "../api/experience";
+import { getExperience } from "../libs/experience";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -13,7 +13,7 @@ import Section from "../components/Section";
 import Experience from "../components/Experience";
 import CtaLink from "../components/CtaLink";
 import Header from "../components/Header";
-import { getImage } from "../api/image";
+import { getImage } from "../libs/image";
 
 export default function About({ image, experience }) {
   return (

@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 
-import { getPosts } from "../api/blog";
-import { getProjects } from "../api/projects";
+import { getPosts } from "../libs/blog";
+import { getProjects } from "../libs/projects";
 
 import Head from "next/head";
 
@@ -15,7 +15,7 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
-import { getImage } from "../api/image";
+import { getImage } from "../libs/image";
 
 export default function Home({ image, posts, projects }) {
   return (
