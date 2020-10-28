@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Inter var';
-        font-weight: 400 600;
+        font-weight: 400 500;
         font-display: swap;
         font-style: normal;
         font-named-instance: 'Regular';
@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h3, h4 {
-        font-weight: 600;
+        font-weight: 500;
     }
 
     h3 {
