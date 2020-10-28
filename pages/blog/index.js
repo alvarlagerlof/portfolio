@@ -2,7 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
 
-import { getPostsSectioned } from "../../api/blog";
+import { getPostsSectioned } from "../../libs/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -11,16 +11,23 @@ import Main from "../../components/Main";
 import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
+import { getImage } from "../../libs/image";
 
-export default function Blog({ postsSectioned }) {
+export default function Blog({ image, postsSectioned }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9 ", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
     >
       <Wrapper>
         <Head>
-          <title>Alvar Lagerlöf's blog</title>
+          <title>Blog - Alvar Lagerlöf</title>
           <meta name="description" content="Personal blog"></meta>
+          <meta property="og:title" content="Alvar Lagerlöf's blog"></meta>
+          <meta property="og:description" content="Personal blog"></meta>
+          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />
@@ -79,6 +86,12 @@ export async function getStaticProps() {
   return {
     props: {
       postsSectioned: await getPostsSectioned(),
+      image: await getImage(
+        "blog",
+        "Personal blog",
+        "Here I'll write down my thoughts sometimes",
+        "#D9D9D9"
+      ),
     },
   };
 }

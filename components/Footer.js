@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-import ClickableLink from "./ClickableLink";
+import Image from "next/image";
+
 import HoverLink from "./HoverLink";
 import CtaLink from "./CtaLink";
 
@@ -14,7 +15,9 @@ export default function Footer() {
     <StyledFooter>
       {isBlog() && (
         <About>
-          <img src="/images/profile.jpg" alt="Profile" />
+          <Profile>
+            <Image src="/profile-small.jpg" alt="Profile" loading="lazy" width={400} height={400} />
+          </Profile>
           <p>
             I am Alvar Lagerlöf, an 18 year old developer and designer living in Stockholm, Sweden.
             I like to experiment with code to make cool stuff. To learn more about me you can check
@@ -28,8 +31,8 @@ export default function Footer() {
         <TechInfo>
           <p>
             Hosted on{" "}
-            <CtaLink newTab href="https://netlify.com">
-              Netlify
+            <CtaLink newTab href="https://vercel.com/">
+              Vercel
             </CtaLink>
           </p>
           <p>
@@ -111,13 +114,16 @@ const StyledFooter = styled.footer`
 
 const About = styled.section`
   margin-bottom: 32px;
+`;
 
-  & > img {
-    width: 80px;
-    height: 80px;
+const Profile = styled.div`
+  margin-bottom: 16px;
+  width: 80px;
+  height: 80px;
+
+  & img {
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 16px;
   }
 `;
 

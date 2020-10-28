@@ -2,24 +2,38 @@ import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 import styled, { ThemeProvider } from "styled-components";
 
-import { formatDate } from "../../api/utils/date";
-import { getPosts, getPost } from "../../api/blog";
+import { formatDate } from "../../libs/utils/date";
+import { getPosts, getPost } from "../../libs/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import Header from "../../components/Header";
+import { getImage } from "../../libs/image";
 
-export default function BlogPost({ content, data: { title, description, date } }) {
+export default function BlogPost({
+  image,
+  post: {
+    data: { title, description, date },
+    content,
+  },
+}) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9 ", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
     >
       <Wrapper>
         <Head>
-          <title>{title} - Alvar Lagerlöf's blog</title>
+          <title>{title} - Alvar Lagerlöf</title>
           <meta name="description" content={description}></meta>
+          <meta property="og:title" content={title}></meta>
+          <meta property="og:type" content="acticle"></meta>
+          <meta property="og:description" content={description}></meta>
+          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />
@@ -52,9 +66,12 @@ const Article = styled.article`
 `;
 
 export async function getStaticProps({ params: { slug } }) {
+  const post = await getPost(slug);
+
   return {
     props: {
-      ...(await getPost(slug)),
+      post,
+      image: await getImage("blog/" + slug, post.data.title, post.data.description, "#D9D9D9"),
     },
   };
 }

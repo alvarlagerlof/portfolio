@@ -11,15 +11,12 @@ import { getImage } from "../libs/image";
 
 export default function Contact({ image }) {
   return (
-    <ThemeProvider
-      theme={{ backgroundTop: "#9ADBA1", backgroundBottom: "#F5FFF6", accent: "#5455B0" }}
-    >
+    <ThemeProvider theme={{ backgroundTop: "white", backgroundBottom: "white", accent: "#6c20b3" }}>
       <Wrapper>
         <Head>
-          <title>Contact me - Alvar Lagerlöf</title>
-          <meta name="description" content="Reach me at hi@alvar.dev"></meta>
-          <meta property="og:title" content="Contact me"></meta>
-          <meta property="og:description" content="Reach me at hi@alvar.dev"></meta>
+          <title>404 - Alvar Lagerlöf</title>
+          <meta property="og:title" content="404"></meta>
+          <meta property="og:description" content="Page not found"></meta>
           <meta property="og:image" content={"https://alvar.dev" + image}></meta>
           <meta name="twitter:card" content="summary_large_image"></meta>
           <meta name="twitter:site" content="@alvarlagerlof"></meta>
@@ -30,20 +27,9 @@ export default function Contact({ image }) {
 
         <Main>
           <Header>
-            <h1>Want to talk?</h1>
+            <h1>404 Not found</h1>
             <h2>
-              I'm reachable in multple ways. You can send me a message on{" "}
-              <CtaLink newTab href="https://linkedin.com/in/alvarlagerlof">
-                LinkedIn
-              </CtaLink>
-              , a DM on{" "}
-              <CtaLink newTab href="https://twitter.com/alvarlagerlof">
-                Twitter
-              </CtaLink>{" "}
-              or an email to{" "}
-              <CtaLink newTab href="mailto:hi@alvar.dev">
-                hi@alvar.dev
-              </CtaLink>
+              Perhaps you want to <CtaLink href="/">go home</CtaLink>
             </h2>
           </Header>
         </Main>
@@ -56,7 +42,7 @@ export default function Contact({ image }) {
 export async function getStaticProps() {
   return {
     props: {
-      image: await getImage("contact", "Contact me", "Reach me at hi@alvar.dev", "#9ADBA1"),
+      image: await getImage("404", "404", "Not found", "#FFF"),
     },
   };
 }

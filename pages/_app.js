@@ -9,11 +9,6 @@ function MyApp({ Component, pageProps }) {
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#ffffff"></meta>
-        <link
-          href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap&"
-          rel="stylesheet"
-        ></link>
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         <script
           async
           defer

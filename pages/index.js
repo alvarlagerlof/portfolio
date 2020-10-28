@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 
-import { getPosts } from "../api/blog";
-import { getProjects } from "../api/projects";
+import { getPosts } from "../libs/blog";
+import { getProjects } from "../libs/projects";
 
 import Head from "next/head";
 
@@ -15,8 +15,9 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
+import { getImage } from "../libs/image";
 
-export default function Home({ posts, projects }) {
+export default function Home({ image, posts, projects }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#FFC2C2", backgroundBottom: "#FFF5F5", accent: "#6938B7" }}
@@ -26,15 +27,24 @@ export default function Home({ posts, projects }) {
           <title>Alvar Lagerlöf: Developer and Designer</title>
           <meta
             name="description"
-            content="Developer and designer living in Stockholm who working with React and Linux"
+            content="Developer and designer living in Stockholm who likes working with React and Linux"
           ></meta>
+          <meta property="og:title" content="Alvar Lagerlöf"></meta>
+          <meta
+            property="og:description"
+            content="Developer and designer living in Stockholm who likes working with React and Linux"
+          ></meta>
+          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
         </Head>
 
         <NavBar />
 
         <Main>
           <Header>
-            <h1>Hello There!</h1>
+            <h1>Hello there!</h1>
             <h2>
               I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
               designs. I love to work with React. My story starts with a $2 computer from a flea
@@ -102,6 +112,12 @@ export async function getStaticProps() {
     props: {
       projects: await getProjects(),
       posts: await getPosts(),
+      image: await getImage(
+        "home",
+        "Alvar Lagerlöf",
+        "Developer and designer living in Stockholm who likes working with React and Linux",
+        "#FFC2C2"
+      ),
     },
   };
 }

@@ -1,28 +1,20 @@
 import styled from "styled-components";
 
-import Link from "next/link";
-
-import { formatDate } from "../api/utils/date";
+import { formatDate } from "../libs/utils/date";
 
 import ClickableLink from "./ClickableLink";
 
 export default function BlogPreview({ data: { slug, title, description, date } }) {
   return (
-    <Link href={"blog/" + slug}>
-      <StyledBlogPreview>
-        <Title>
-          <ClickableLink href={"blog/" + slug}>{title}</ClickableLink>
-        </Title>
-        <Date>{formatDate(date)}</Date>
-        <p>{description}</p>
-      </StyledBlogPreview>
-    </Link>
+    <div>
+      <Title>
+        <ClickableLink href={"blog/" + slug}>{title}</ClickableLink>
+      </Title>
+      <Date>{formatDate(date)}</Date>
+      <p>{description}</p>
+    </div>
   );
 }
-
-const StyledBlogPreview = styled.div`
-  cursor: pointer;
-`;
 
 const Title = styled.h3`
   margin-bottom: 4px;
