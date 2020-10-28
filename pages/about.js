@@ -195,7 +195,7 @@ const StoryText = styled.div`
 
   & > p + p {
     margin-top: 24px;
-  
+  }
 
   @media screen and (max-width: 1200px) {
     flex-direction: column-reverse;
