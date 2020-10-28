@@ -23,6 +23,6 @@ const StyledLink = styled.span`
   ${props =>
     props.active &&
     css`
-      font-weight: 500;
+      font-weight: 550;
     `}
 `;
