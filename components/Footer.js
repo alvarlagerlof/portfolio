@@ -31,8 +31,8 @@ export default function Footer() {
         <TechInfo>
           <p>
             Hosted on{" "}
-            <CtaLink newTab href="https://netlify.com">
-              Netlify
+            <CtaLink newTab href="https://vercel.com/">
+              Vercel
             </CtaLink>
           </p>
           <p>
