@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }) {
         <title>Alvar Lagerlöf</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#ffffff"></meta>
-        <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link rel="preconnect" href="https://rsms.me/" crossorigin>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin></link>
+        <link rel="preconnect" href="https://rsms.me/" crossorigin></link>
         <link
           href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400&display=swap&"
           rel="stylesheet"
