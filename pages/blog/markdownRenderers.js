@@ -42,4 +42,4 @@ const renderers = {
   },
 };
 
-export default renderers;
+export { renderers };
