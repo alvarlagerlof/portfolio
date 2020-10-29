@@ -19,7 +19,7 @@ export default function Blog({ image, postsSectioned, drafts }) {
   const isDev =
     !process.env.NODE_ENV ||
     process.env.NODE_ENV === "development" ||
-    process.env.GIT_BRANCH !== "main";
+    process.env.GIT_BRANCH != "main";
 
   return (
     <ThemeProvider
@@ -40,6 +40,7 @@ export default function Blog({ image, postsSectioned, drafts }) {
         <NavBar />
 
         <Main>
+          {process.env.GIT_BRANCH}
           {isDev && (
             <Section>
               <ItemGrid>
