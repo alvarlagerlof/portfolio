@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Head from "next/head";
 
 import { getProjects } from "../libs/projects";
+import { getImage } from "../libs/image";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -13,7 +14,7 @@ import ProjectPreview from "../components/ProjectPreview";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
 import Section from "../components/Section";
-import { getImage } from "../libs/image";
+import { Subtitle, Title } from "../components/Headings";
 
 export default function Projects({ image, projects }) {
   return (
@@ -36,8 +37,8 @@ export default function Projects({ image, projects }) {
 
         <Main>
           <Header>
-            <h1>Things I've worked on</h1>
-            <h2>
+            <Title>Things I've worked on</Title>
+            <Subtitle>
               In my free-time I like to work on variuos things, including everything from
               game-plugins imitating Quake to apps. I make it a habit to post these various projects
               on my{" "}
@@ -45,7 +46,7 @@ export default function Projects({ image, projects }) {
                 Github
               </CtaLink>{" "}
               to let others see what I'm doing.
-            </h2>
+            </Subtitle>
           </Header>
 
           <Section>
@@ -68,7 +69,7 @@ export default function Projects({ image, projects }) {
 export async function getStaticProps() {
   return {
     props: {
-      projects: await getProjects(),
+      projects: await getProjects(false),
       image: await getImage(
         "projects",
         "Projects",

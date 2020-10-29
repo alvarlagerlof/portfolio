@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import { getExperience } from "../libs/experience";
+import { getImage } from "../libs/image";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -13,7 +14,7 @@ import Section from "../components/Section";
 import Experience from "../components/Experience";
 import CtaLink from "../components/CtaLink";
 import Header from "../components/Header";
-import { getImage } from "../libs/image";
+import { Heading, Title } from "../components/Headings";
 
 export default function About({ image, experience }) {
   return (
@@ -54,7 +55,7 @@ export default function About({ image, experience }) {
                 />
               </ImageContainer>
 
-              <h1>Who am I?</h1>
+              <Title>Who am I?</Title>
               <p>What does a $2 computer at a flea market have to do with me writing this?</p>
               <p>Turns out... everything!</p>
               <p>
@@ -140,7 +141,7 @@ export default function About({ image, experience }) {
           </Header>
 
           <Section>
-            <h2>Experience</h2>
+            <Heading>Experience</Heading>
             <p>
               While I’m still in currently in Highschool, I’ve worked professionally on two
               occations.
@@ -176,29 +177,21 @@ const ImageContainer = styled.div`
   }
 `;
 
+const StoryText = styled.div`
+  & > p + p {
+    margin-top: 24px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+  }
+`;
+
 const ExperienceList = styled.ul`
   margin-top: 32px;
 
   & > li {
     margin-bottom: 32px;
-  }
-`;
-
-const StoryText = styled.div`
-  & > h1 {
-    margin-bottom: 16px;
-  }
-
-  & > h2 {
-    margin-bottom: 16px;
-  }
-
-  & > p + p {
-    margin-top: 24px;
-  
-
-  @media screen and (max-width: 1200px) {
-    flex-direction: column-reverse;
   }
 `;
 

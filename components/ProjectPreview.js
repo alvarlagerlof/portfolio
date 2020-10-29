@@ -1,21 +1,24 @@
 import styled from "styled-components";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import ClickableLink from "./ClickableLink";
 
 export default function ProjectPreview({ data: { title, description, link, image } }) {
   return (
     <div>
-      <ImageContainer>
-        <Image
-          alt="Project preview"
-          src={"/content/projects/" + image}
-          loading="lazy"
-          width={500}
-          height={300}
-        />
-      </ImageContainer>
+      <a href={link} target="_blank" rel="noopener">
+        <ImageContainer>
+          <Image
+            alt="Project preview"
+            src={"/content/projects/" + image}
+            loading="lazy"
+            width={500}
+            height={300}
+          />
+        </ImageContainer>
+      </a>
 
       <Title>
         <ClickableLink newTab href={link}>
@@ -29,6 +32,7 @@ export default function ProjectPreview({ data: { title, description, link, image
 
 const ImageContainer = styled.div`
   margin-bottom: 8px;
+  cursor: pointer;
 
   & img {
     width: 100%;
