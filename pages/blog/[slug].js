@@ -7,7 +7,7 @@ import branchName from "current-git-branch";
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPost } from "../../libs/blog";
 import { getImage } from "../../libs/image";
-import { renderers } from "./markdownRenderers";
+import { renderers } from "../../components/markdownRenderers";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -52,7 +52,6 @@ export default function BlogPost({
             <Title>{title}</Title>
             <Subtitle>{description}</Subtitle>
           </Header>
-
           <Article>
             <ReactMarkdown plugins={[gfm]} renderers={renderers}>
               {content}
