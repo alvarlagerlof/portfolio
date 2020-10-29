@@ -1,7 +1,7 @@
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
-import CtaLink from "../../components/CtaLink";
+import CtaLink from "./CtaLink";
 
 const renderers = {
   heading: ({ level, children }) => {
