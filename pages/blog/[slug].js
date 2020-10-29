@@ -52,7 +52,6 @@ export default function BlogPost({
             <Title>{title}</Title>
             <Subtitle>{description}</Subtitle>
           </Header>
-
           <Article>
             <ReactMarkdown plugins={[gfm]} renderers={renderers}>
               {content}
