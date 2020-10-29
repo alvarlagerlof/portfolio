@@ -4,13 +4,16 @@ import styled, { ThemeProvider } from "styled-components";
 
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPost } from "../../libs/blog";
+import { getImage } from "../../libs/image";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import Header from "../../components/Header";
-import { getImage } from "../../libs/image";
+import Section from "../../components/Section";
+
+import { Title, Subtitle, Caption } from "../../components/Headings";
 
 export default function BlogPost({
   image,
@@ -40,15 +43,14 @@ export default function BlogPost({
 
         <Main>
           <Header>
-            <HeaderDate>{formatDate(date)}</HeaderDate>
-
-            <h1>{title}</h1>
-            <h2>{description}</h2>
+            <Caption>{formatDate(date)}</Caption>
+            <Title>{title}</Title>
+            <Subtitle>{description}</Subtitle>
           </Header>
 
-          <Article>
+          <Section as="article">
             <ReactMarkdown>{content}</ReactMarkdown>
-          </Article>
+          </Section>
         </Main>
 
         <Footer />
@@ -56,14 +58,6 @@ export default function BlogPost({
     </ThemeProvider>
   );
 }
-
-const HeaderDate = styled.h3`
-  margin-bottom: 32px;
-`;
-
-const Article = styled.article`
-  margin-top: 64px;
-`;
 
 export async function getStaticProps({ params: { slug } }) {
   const post = await getPost(slug);

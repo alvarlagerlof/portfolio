@@ -10,6 +10,7 @@ import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
+import { Subtitle, Title } from "../components/Headings";
 
 export default function Contact({ image }) {
   return (
@@ -32,8 +33,8 @@ export default function Contact({ image }) {
 
         <Main>
           <Header>
-            <h1>Want to talk?</h1>
-            <h2>
+            <Title>Want to talk?</Title>
+            <Subtitle>
               I'm reachable in multple ways. You can send me a message on{" "}
               <CtaLink newTab href="https://linkedin.com/in/alvarlagerlof">
                 LinkedIn
@@ -46,7 +47,7 @@ export default function Contact({ image }) {
               <CtaLink newTab href="mailto:hi@alvar.dev">
                 hi@alvar.dev
               </CtaLink>
-            </h2>
+            </Subtitle>
           </Header>
         </Main>
         <Footer />

@@ -3,14 +3,15 @@ import styled from "styled-components";
 import { formatDate } from "../libs/utils/date";
 
 import ClickableLink from "./ClickableLink";
+import { Subheading, Caption } from "./Headings";
 
 export default function BlogPreview({ data: { slug, title, description, date } }) {
   return (
     <div>
-      <Title>
+      <Subheading as="h2" spacing>
         <ClickableLink href={"blog/" + slug}>{title}</ClickableLink>
-      </Title>
-      <Date>{formatDate(date)}</Date>
+      </Subheading>
+      <Caption>{formatDate(date)}</Caption>
       <p>{description}</p>
     </div>
   );

@@ -12,6 +12,7 @@ import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
 import { getImage } from "../../libs/image";
+import { Title } from "../../components/Headings";
 
 export default function Blog({ image, postsSectioned }) {
   return (
@@ -52,7 +53,7 @@ export default function Blog({ image, postsSectioned }) {
 function Year({ year, posts }) {
   return (
     <StyledYear>
-      <h1>{year}</h1>
+      <Title>{year}</Title>
       <ItemGrid>
         {posts.map(post => {
           return (

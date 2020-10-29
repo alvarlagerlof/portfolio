@@ -16,6 +16,7 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
+import { Heading, Subtitle, Title } from "../components/Headings";
 
 export default function Home({ image, posts, projects }) {
   return (
@@ -44,25 +45,25 @@ export default function Home({ image, posts, projects }) {
 
         <Main>
           <Header>
-            <h1>Hello there!</h1>
-            <h2>
+            <Title>Hello there!</Title>
+            <Subtitle>
               I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
               designs. I love to work with React. My story starts with a $2 computer from a flea
               market. <CtaLink href="/about">Learn more</CtaLink>
-            </h2>
+            </Subtitle>
 
-            <h2>
+            <Subtitle>
               Love to work with: React, Redux, Next.js, styled-components, TypeScript, Node, Kotlin,
               Swift, Linux, Docker, Firebase, Figma
-            </h2>
+            </Subtitle>
 
-            <h2>
+            <Subtitle>
               Want to reach out? <CtaLink href="/contact">Contact me</CtaLink>
-            </h2>
+            </Subtitle>
           </Header>
 
-          <Feature>
-            <h2>Featured projects</h2>{" "}
+          <Section>
+            <Heading>Featured projects</Heading>{" "}
             <p>
               View all projects <CtaLink href="/projects">here</CtaLink>
             </p>
@@ -73,10 +74,10 @@ export default function Home({ image, posts, projects }) {
                 </li>
               ))}
             </ItemGrid>
-          </Feature>
+          </Section>
 
-          <Feature>
-            <h2>Latest blog posts</h2>
+          <Section>
+            <Heading>Latest blog posts</Heading>
             <p>
               Sometimes I try to time to write down my thoughts. View all posts{" "}
               <CtaLink href="/blog">here</CtaLink>
@@ -88,24 +89,13 @@ export default function Home({ image, posts, projects }) {
                 </li>
               ))}
             </ItemGrid>
-          </Feature>
+          </Section>
         </Main>
         <Footer />
       </Wrapper>
     </ThemeProvider>
   );
 }
-
-const Feature = styled(Section)`
-  & > a {
-    margin-bottom: 8px;
-  }
-
-  & > p {
-    margin-bottom: 32px;
-    max-width: 45ch;
-  }
-`;
 
 export async function getStaticProps() {
   return {
