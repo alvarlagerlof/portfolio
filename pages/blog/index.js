@@ -1,5 +1,6 @@
 import styled, { ThemeProvider } from "styled-components";
 import process from "process";
+import branchName from "current-git-branch";
 
 import Head from "next/head";
 
@@ -15,11 +16,9 @@ import ItemGrid from "../../components/ItemGrid";
 import { getImage } from "../../libs/image";
 import { Title } from "../../components/Headings";
 
-export default function Blog({ image, postsSectioned, drafts }) {
+export default function Blog({ image, postsSectioned, drafts, branch }) {
   const isDev =
-    !process.env.NODE_ENV ||
-    process.env.NODE_ENV === "development" ||
-    process.env.GIT_BRANCH != "main";
+    !process.env.NODE_ENV || process.env.NODE_ENV === "development" || branch !== "main";
 
   return (
     <ThemeProvider
@@ -40,7 +39,6 @@ export default function Blog({ image, postsSectioned, drafts }) {
         <NavBar />
 
         <Main>
-          <p>Branch: {process.env.GIT_BRANCH}</p>
           {isDev && (
             <Section>
               <ItemGrid>
@@ -115,6 +113,7 @@ export async function getStaticProps() {
         "Here I'll write down my thoughts sometimes",
         "#D9D9D9"
       ),
+      branch: branchName(),
     },
   };
 }
