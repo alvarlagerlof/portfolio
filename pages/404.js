@@ -9,6 +9,7 @@ import Wrapper from "../components/Wrapper";
 import Main from "../components/Main";
 import Header from "../components/Header";
 import CtaLink from "../components/CtaLink";
+import { Subtitle, Title } from "../components/Headings";
 
 export default function Contact({ image }) {
   return (
@@ -28,10 +29,10 @@ export default function Contact({ image }) {
 
         <Main>
           <Header>
-            <h1>404 Not found</h1>
-            <h2>
+            <Title>404 Not found</Title>
+            <Subtitle>
               Perhaps you want to <CtaLink href="/">go home</CtaLink>
-            </h2>
+            </Subtitle>
           </Header>
         </Main>
         <Footer />

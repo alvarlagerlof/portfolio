@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Wrapper({ children }) {
   return (
     <Background>
-      <Content>{children}</Content>;
+      <Content>{children}</Content>
     </Background>
   );
 }
