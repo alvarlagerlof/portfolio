@@ -1,8 +1,9 @@
 import styled, { ThemeProvider } from "styled-components";
+import process from "process";
 
 import Head from "next/head";
 
-import { getPostsSectioned } from "../../libs/blog";
+import { getDrafts, getPostsSectioned } from "../../libs/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -14,10 +15,15 @@ import ItemGrid from "../../components/ItemGrid";
 import { getImage } from "../../libs/image";
 import { Title } from "../../components/Headings";
 
-export default function Blog({ image, postsSectioned }) {
+export default function Blog({ image, postsSectioned, drafts }) {
+  const isDev =
+    !process.env.NODE_ENV ||
+    process.env.NODE_ENV === "development" ||
+    process.env.GIT_BRANCH !== "main";
+
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
     >
       <Wrapper>
         <Head>
@@ -34,6 +40,20 @@ export default function Blog({ image, postsSectioned }) {
         <NavBar />
 
         <Main>
+          {isDev && (
+            <Section>
+              <ItemGrid>
+                {drafts.map(post => {
+                  return (
+                    <li key={post.title}>
+                      <BlogPreview data={post} />
+                    </li>
+                  );
+                })}
+              </ItemGrid>
+            </Section>
+          )}
+
           <Section>
             <YearList>
               {Object.entries(postsSectioned)
@@ -86,6 +106,7 @@ const StyledYear = styled.li`
 export async function getStaticProps() {
   return {
     props: {
+      drafts: await getDrafts(),
       postsSectioned: await getPostsSectioned(),
       image: await getImage(
         "blog",

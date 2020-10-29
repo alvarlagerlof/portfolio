@@ -17,13 +17,13 @@ import Main from "../../components/Main";
 import Header from "../../components/Header";
 import Section from "../../components/Section";
 import CtaLink from "../../components/CtaLink";
-
 import { Serif, SansSerif, Bold, Title, Subtitle, Caption } from "../../components/Headings";
+import InfoTag from "../../components/InfoTag";
 
 export default function BlogPost({
   image,
   post: {
-    data: { title, description, date },
+    data: { title, description, date, draft },
     content,
   },
 }) {
@@ -68,7 +68,7 @@ export default function BlogPost({
 
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
     >
       <Wrapper>
         <Head>
@@ -87,18 +87,17 @@ export default function BlogPost({
 
         <Main>
           <Header>
+            {draft && <InfoTag spacedBottom>Draft</InfoTag>}
             <Caption>{formatDate(date)}</Caption>
             <Title>{title}</Title>
             <Subtitle>{description}</Subtitle>
           </Header>
 
-          <Section as="article">
-            <ArticleContent>
-              <ReactMarkdown plugins={[gfm]} renderers={renderers}>
-                {content}
-              </ReactMarkdown>
-            </ArticleContent>
-          </Section>
+          <ArticleContent>
+            <ReactMarkdown plugins={[gfm]} renderers={renderers}>
+              {content}
+            </ReactMarkdown>
+          </ArticleContent>
         </Main>
 
         <Footer />
@@ -107,7 +106,7 @@ export default function BlogPost({
   );
 }
 
-const ArticleContent = styled.div`
+const ArticleContent = styled.article`
   & h3,
   & h4,
   & h5 {

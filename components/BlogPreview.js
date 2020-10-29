@@ -1,14 +1,14 @@
-import styled from "styled-components";
-
 import { formatDate } from "../libs/utils/date";
 
 import ClickableLink from "./ClickableLink";
+import InfoTag from "./InfoTag";
 import { Subheading, Caption } from "./Headings";
 
-export default function BlogPreview({ data: { slug, title, description, date } }) {
+export default function BlogPreview({ data: { slug, title, description, date, draft } }) {
   return (
     <div>
-      <Subheading as="h2" spacing>
+      {draft && <InfoTag>Draft</InfoTag>}
+      <Subheading as="h2">
         <ClickableLink href={"blog/" + slug}>{title}</ClickableLink>
       </Subheading>
       <Caption>{formatDate(date)}</Caption>
@@ -16,13 +16,3 @@ export default function BlogPreview({ data: { slug, title, description, date } }
     </div>
   );
 }
-
-const Title = styled.h3`
-  margin-bottom: 4px;
-`;
-
-const Date = styled.h4`
-  margin-bottom: 16px;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: 400;
-`;

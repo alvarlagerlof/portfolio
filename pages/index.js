@@ -1,6 +1,6 @@
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
-import { getPosts } from "../libs/blog";
+import { getLatest } from "../libs/blog";
 import { getProjects } from "../libs/projects";
 import { getImage } from "../libs/image";
 
@@ -101,7 +101,7 @@ export async function getStaticProps() {
   return {
     props: {
       projects: await getProjects(),
-      posts: await getPosts(),
+      posts: await getLatest(),
       image: await getImage(
         "home",
         "Alvar Lagerlöf",
