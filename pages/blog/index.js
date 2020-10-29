@@ -40,7 +40,7 @@ export default function Blog({ image, postsSectioned, drafts }) {
         <NavBar />
 
         <Main>
-          {process.env.GIT_BRANCH}
+          <p>Branch: {process.env.GIT_BRANCH}</p>
           {isDev && (
             <Section>
               <ItemGrid>
