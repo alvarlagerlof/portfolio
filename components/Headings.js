@@ -64,4 +64,4 @@ const Caption = styled.h4`
   font-size: 1.1rem;
 `;
 
-export { Title, Subtitle, Heading, Subheading, Caption };
+export { Thin, Bold, SansSerif, Serif, Title, Subtitle, Heading, Subheading, Caption };
