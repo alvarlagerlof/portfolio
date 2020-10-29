@@ -53,8 +53,7 @@ const Heading = styled.h3`
 const Subheading = styled.h4`
   ${Bold}
   ${SansSerif}
-  margin-bottom: 4px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 `;
 
 const Caption = styled.h4`
