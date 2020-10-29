@@ -5,7 +5,7 @@ import gfm from "remark-gfm";
 import branchName from "current-git-branch";
 
 import { formatDate } from "../../libs/utils/date";
-import { getPosts, getPost } from "../../libs/blog";
+import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
 import { getImage } from "../../libs/image";
 import { renderers } from "../../components/markdownRenderers";
 
