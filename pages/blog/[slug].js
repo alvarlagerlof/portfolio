@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import gfm from "remark-gfm";
+import branchName from "current-git-branch";
 
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPost } from "../../libs/blog";
@@ -65,6 +66,17 @@ export default function BlogPost({
   );
 }
 
+export async function getStaticPaths() {
+  const posts = await getPosts(branchName() != "main");
+
+  return {
+    paths: posts.map(post => {
+      return { params: { slug: post.slug } };
+    }),
+    fallback: false,
+  };
+}
+
 export async function getStaticProps({ params: { slug } }) {
   const post = await getPost(slug);
 
@@ -73,16 +85,5 @@ export async function getStaticProps({ params: { slug } }) {
       post,
       image: await getImage("blog/" + slug, post.data.title, post.data.description, "#D9D9D9"),
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const posts = await getPosts();
-
-  return {
-    paths: posts.map(post => {
-      return { params: { slug: post.slug } };
-    }),
-    fallback: false,
   };
 }

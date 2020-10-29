@@ -17,9 +17,6 @@ import { getImage } from "../../libs/image";
 import { Title } from "../../components/Headings";
 
 export default function Blog({ image, postsSectioned, drafts, branch }) {
-  const isDev =
-    !process.env.NODE_ENV || process.env.NODE_ENV === "development" || branch !== "main";
-
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
@@ -39,7 +36,7 @@ export default function Blog({ image, postsSectioned, drafts, branch }) {
         <NavBar />
 
         <Main>
-          {isDev && (
+          {branch !== "main" && (
             <Section>
               <ItemGrid>
                 {drafts.map(post => {
