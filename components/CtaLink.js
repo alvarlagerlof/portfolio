@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 
+import { Bold, SansSerif } from "./Headings";
+
 export default function CtaLink({ href, newTab, children }) {
   return (
     <Link href={href} passHref>
@@ -12,10 +14,10 @@ export default function CtaLink({ href, newTab, children }) {
 }
 
 const StyledLink = styled.a`
+  ${SansSerif}
+  ${Bold}
   text-decoration: none;
   color: ${props => props.theme.accent};
-  font-weight: 550;
-  font-family: inherit;
 
   :hover {
     text-decoration: underline;

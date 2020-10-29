@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
 
+import { SansSerif } from "./Headings";
+
 export default function ClickableLink({ href, newTab, children }) {
   return (
     <Link href={href} passHref>
@@ -19,8 +21,8 @@ const StyledLink = styled.a`
   margin: -2px -8px;
   border-radius: 8px;
   transition: all 100ms ease-in-out;
+  ${SansSerif}
   font-weight: inherit;
-  font-family: inherit;
   font-size: inherit;
 
   :hover {

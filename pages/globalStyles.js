@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { SansSerif } from "../components/Headings";
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -32,19 +33,13 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Inter", sans-serif;
     }
 
-    p, em, strong, a {
+    p, em, strong, li {
+        ${SansSerif}
         line-height: 1.5;
-        font-size: 1.1em;
     }
 
-    @media screen and (max-width: 700px) {
-        p, em, strong, a {
-            font-size: 1em
-        }
-    }
 `;
 
 export default GlobalStyle;
