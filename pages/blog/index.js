@@ -4,7 +4,7 @@ import branchName from "current-git-branch";
 
 import Head from "next/head";
 
-import { getDrafts, getPostsSectioned } from "../../libs/blog";
+import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -102,7 +102,7 @@ const StyledYear = styled.li`
 export async function getStaticProps() {
   return {
     props: {
-      drafts: await getDrafts(),
+      drafts: await getPostsDrafts(),
       postsSectioned: await getPostsSectioned(),
       image: await getImage(
         "blog",

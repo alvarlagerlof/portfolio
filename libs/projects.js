@@ -1,20 +1,22 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-async function getProjects(onlyFeatured) {
+async function getProjects() {
   const files = fs.readdirSync(`./content/projects`);
 
-  return files
-    .map(filename => {
-      const markdownWithMetadata = fs.readFileSync(`./content/projects/${filename}`).toString();
+  return files.map(filename => {
+    const markdownWithMetadata = fs.readFileSync(`./content/projects/${filename}`).toString();
 
-      const { data } = matter(markdownWithMetadata);
+    const { data } = matter(markdownWithMetadata);
 
-      return {
-        ...data,
-      };
-    })
-    .filter(project => (onlyFeatured ? project.featured : true));
+    return {
+      ...data,
+    };
+  });
 }
 
-export { getProjects };
+async function getProjectsFeatured() {
+  return (await getProjects()).filter(project => project.featured);
+}
+
+export { getProjects, getProjectsFeatured };

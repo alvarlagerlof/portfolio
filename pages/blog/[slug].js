@@ -66,7 +66,7 @@ export default function BlogPost({
 }
 
 export async function getStaticPaths() {
-  const posts = await getPosts(branchName() != "main");
+  const posts = branchName() == "main" ? await getPostsPublished() : await getPosts();
 
   return {
     paths: posts.map(post => {

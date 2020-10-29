@@ -69,7 +69,7 @@ export default function Projects({ image, projects }) {
 export async function getStaticProps() {
   return {
     props: {
-      projects: await getProjects(false),
+      projects: await getProjects(),
       image: await getImage(
         "projects",
         "Projects",

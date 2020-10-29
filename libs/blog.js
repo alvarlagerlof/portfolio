@@ -22,7 +22,7 @@ async function getPost(slug) {
   };
 }
 
-async function getPosts(includeDrafts) {
+async function getPosts() {
   return fs
     .readdirSync(`./content/blog`)
     .map(filename => {
@@ -36,22 +36,25 @@ async function getPosts(includeDrafts) {
         date: data.date.getTime(),
       };
     })
-    .filter(post => (includeDrafts ? true : post.draft == false))
     .sort((a, b) => b.date - a.date);
 }
 
-async function getDrafts() {
-  return await getPosts(true);
+async function getPostsDrafts() {
+  return await (await getPosts()).filter(post => post.draft == true);
 }
 
-async function getLatest() {
-  const allPublished = await getPosts(false);
+async function getPostsPublished() {
+  return await (await getPosts()).filter(post => post.draft == false);
+}
+
+async function getPostsLatest() {
+  const allPublished = await getPostsPublished();
   allPublished.length == 6;
   return allPublished;
 }
 
 async function getPostsSectioned() {
-  const posts = await getPosts(false);
+  const posts = await getPostsPublished();
 
   return posts.reduce((acc, curr) => {
     const year = parseDate(curr.date).year;
@@ -70,4 +73,4 @@ async function getPostsSectioned() {
   }, {});
 }
 
-export { getPosts, getDrafts, getLatest, getPostsSectioned, getPost };
+export { getPosts, getPostsPublished, getPostsDrafts, getPostsLatest, getPostsSectioned, getPost };
