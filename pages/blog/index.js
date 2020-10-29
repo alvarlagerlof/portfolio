@@ -36,7 +36,7 @@ export default function Blog({ image, postsSectioned, drafts, branch }) {
         <NavBar />
 
         <Main>
-          {branch !== "main" && (
+          {branch != "main" && (
             <Section>
               <ItemGrid>
                 {drafts.map(post => {
