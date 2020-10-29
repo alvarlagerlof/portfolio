@@ -15,7 +15,6 @@ import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import Header from "../../components/Header";
-import Section from "../../components/Section";
 import CtaLink from "../../components/CtaLink";
 import { Serif, SansSerif, Bold, Title, Subtitle, Caption } from "../../components/Headings";
 import InfoTag from "../../components/InfoTag";

@@ -100,7 +100,7 @@ export default function Home({ image, posts, projects }) {
 export async function getStaticProps() {
   return {
     props: {
-      projects: await getProjects(),
+      projects: await getProjects(true),
       posts: await getLatest(),
       image: await getImage(
         "home",
