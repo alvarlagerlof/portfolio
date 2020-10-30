@@ -8,7 +8,7 @@ export default function BlogPreview({ data: { slug, title, description, date, dr
   return (
     <div>
       {draft && <InfoTag>Draft</InfoTag>}
-      <Subheading as="h2">
+      <Subheading>
         <ClickableLink href={"blog/" + slug}>{title}</ClickableLink>
       </Subheading>
       <Caption>{formatDate(date)}</Caption>

@@ -82,7 +82,7 @@ export default function Blog({ image, postsSectioned, drafts, branch }) {
 function Year({ year, posts }) {
   return (
     <StyledYear>
-      <Title>{year}</Title>
+      <Title as="h3">{year}</Title>
       <ItemGrid>
         {posts.map(post => {
           return (
