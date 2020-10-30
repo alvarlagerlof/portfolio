@@ -30,6 +30,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^9.0.1",
     "gray-matter": "^4.0.2",
+    "markdown-it": "^12.0.2",
     "nextjs-sitemap-generator": "^1.1.0",
     "prettier": "^2.1.2",
     "rss": "^1.2.2",
