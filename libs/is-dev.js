@@ -2,12 +2,11 @@ import process from "process";
 import branchName from "current-git-branch";
 
 export default function isDev() {
-  console.log("ref", process.env.VERCEL_GITHUB_COMMIT_REF);
+  console.log("ref", process.env.IS_DEV);
   console.log("brancName()", branchName());
 
   return (
-    (process.env.VERCEL_GITHUB_COMMIT_REF != undefined &&
-      process.env.VERCEL_GITHUB_COMMIT_REF != "main") ||
+    (process.env.IS_DEV != undefined && process.env.IS_DEV != "main") ||
     (branchName() != false && branchName() != "main")
   );
 }
