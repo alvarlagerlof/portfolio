@@ -1,14 +1,11 @@
-import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
-import gfm from "remark-gfm";
 
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
 import { getImage } from "../../libs/image";
 import isDev from "../../libs/is-dev";
 
-import { renderers } from "../../components/markdownRenderers";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
@@ -16,6 +13,7 @@ import Main from "../../components/Main";
 import Header from "../../components/Header";
 import Article from "../../components/Article";
 import InfoTag from "../../components/InfoTag";
+import CustomReactMarkdown from "../../components/CustomReactMarkdown";
 
 import { Title, Subtitle, Caption } from "../../components/Headings";
 
@@ -53,9 +51,7 @@ export default function BlogPost({
             <Subtitle>{description}</Subtitle>
           </Header>
           <Article>
-            <ReactMarkdown plugins={[gfm]} renderers={renderers}>
-              {content}
-            </ReactMarkdown>
+            <CustomReactMarkdown>{content}</CustomReactMarkdown>
           </Article>
         </Main>
 
