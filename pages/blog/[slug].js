@@ -45,7 +45,7 @@ export default function BlogPost({
 
         <Main>
           <Header>
-            {draft && <InfoTag spacedBottom>Draft</InfoTag>}
+            {draft && <InfoTag spacedBottom>This is a draft</InfoTag>}
             <Caption>{formatDate(published)}</Caption>
             <Title>{title}</Title>
             <Subtitle>{description}</Subtitle>
