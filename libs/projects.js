@@ -15,4 +15,8 @@ async function getProjects() {
   });
 }
 
-export { getProjects };
+async function getProjectsFeatured() {
+  return (await getProjects()).filter(project => project.featured);
+}
+
+export { getProjects, getProjectsFeatured };

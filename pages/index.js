@@ -1,7 +1,8 @@
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
-import { getPosts } from "../libs/blog";
-import { getProjects } from "../libs/projects";
+import { getPostsLatest } from "../libs/blog";
+import { getProjectsFeatured } from "../libs/projects";
+import getImage from "../libs/image";
 
 import Head from "next/head";
 
@@ -15,7 +16,7 @@ import BlogPreview from "../components/BlogPreview";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import CtaLink from "../components/CtaLink";
-import { getImage } from "../libs/image";
+import { Heading, Subtitle, Title } from "../components/Headings";
 
 export default function Home({ image, posts, projects }) {
   return (
@@ -44,25 +45,21 @@ export default function Home({ image, posts, projects }) {
 
         <Main>
           <Header>
-            <h1>Hello there!</h1>
-            <h2>
-              I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
-              designs. I love to work with React. My story starts with a $2 computer from a flea
-              market. <CtaLink href="/about">Learn more</CtaLink>
-            </h2>
+            <Title>Hi there!</Title>
+            <Subtitle>
+              I'm Alvar Lagerlöf, best described as an 18 year old Swedish developer who also
+              designs. My story starts with a $2 computer from a flea market.{" "}
+              <CtaLink href="/about">Learn more</CtaLink>
+            </Subtitle>
 
-            <h2>
-              Love to work with: React, Next.js, styled-components, TypeScript, Node, Kotlin,
-              Switft, Linux, Docker, Firebase, Figma
-            </h2>
-
-            <h2>
-              Want to reach out? <CtaLink href="/contact">Contact me</CtaLink>
-            </h2>
+            <Subtitle>
+              Love to work with: React, Redux, Next.js, styled-components, TypeScript, Node, Kotlin,
+              Swift, Linux, Docker, Firebase, Figma
+            </Subtitle>
           </Header>
 
-          <Feature>
-            <h2>Featured projects</h2>{" "}
+          <Section>
+            <Heading>Featured projects</Heading>{" "}
             <p>
               View all projects <CtaLink href="/projects">here</CtaLink>
             </p>
@@ -73,10 +70,10 @@ export default function Home({ image, posts, projects }) {
                 </li>
               ))}
             </ItemGrid>
-          </Feature>
+          </Section>
 
-          <Feature>
-            <h2>Latest blog posts</h2>
+          <Section>
+            <Heading>Latest blog posts</Heading>
             <p>
               Sometimes I try to time to write down my thoughts. View all posts{" "}
               <CtaLink href="/blog">here</CtaLink>
@@ -88,7 +85,7 @@ export default function Home({ image, posts, projects }) {
                 </li>
               ))}
             </ItemGrid>
-          </Feature>
+          </Section>
         </Main>
         <Footer />
       </Wrapper>
@@ -96,22 +93,11 @@ export default function Home({ image, posts, projects }) {
   );
 }
 
-const Feature = styled(Section)`
-  & > a {
-    margin-bottom: 8px;
-  }
-
-  & > p {
-    margin-bottom: 32px;
-    max-width: 45ch;
-  }
-`;
-
 export async function getStaticProps() {
   return {
     props: {
-      projects: await getProjects(),
-      posts: await getPosts(),
+      projects: await getProjectsFeatured(),
+      posts: await getPostsLatest(),
       image: await getImage(
         "home",
         "Alvar Lagerlöf",

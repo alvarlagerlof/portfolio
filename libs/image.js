@@ -7,7 +7,7 @@ function truncate(source, size) {
   return source.length > size ? source.slice(0, size - 1) + "…" : source;
 }
 
-async function getImage(path, title, description, color) {
+export default async function getImage(path, title, description, color) {
   title = truncate(title, 35);
   description = truncate(description, 110);
   color = Color(color).darken(0.4).hex();
@@ -75,5 +75,3 @@ async function getImage(path, title, description, color) {
 
   return `/opengraph/${path}.jpeg`;
 }
-
-export { getImage };

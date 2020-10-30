@@ -17,7 +17,7 @@ async function getPost(slug) {
     data: {
       ...data,
       date: data.date.getTime(),
-      updatedAt: data.updatedAt != undefined ?? data.updatedAt.getTime(),
+      updatedAt: data.updatedAt ? data.updatedAt.getTime() : null,
     },
   };
 }
@@ -31,17 +31,31 @@ async function getPosts() {
       const { data } = matter(markdownWithMetadata);
 
       return {
+        ...data,
         slug: filename.replace(".md", ""),
-        title: data.title,
-        description: data.description,
         date: data.date.getTime(),
+        updatedAt: data.updatedAt ? data.updatedAt.getTime() : null,
       };
     })
     .sort((a, b) => b.date - a.date);
 }
 
+async function getPostsDrafts() {
+  return await (await getPosts()).filter(post => post.draft == true);
+}
+
+async function getPostsPublished() {
+  return await (await getPosts()).filter(post => post.draft == false);
+}
+
+async function getPostsLatest() {
+  const allPublished = await getPostsPublished();
+  allPublished.length == 6;
+  return allPublished;
+}
+
 async function getPostsSectioned() {
-  const posts = await getPosts();
+  const posts = await getPostsPublished();
 
   return posts.reduce((acc, curr) => {
     const year = parseDate(curr.date).year;
@@ -60,4 +74,4 @@ async function getPostsSectioned() {
   }, {});
 }
 
-export { getPosts, getPostsSectioned, getPost };
+export { getPosts, getPostsPublished, getPostsDrafts, getPostsLatest, getPostsSectioned, getPost };

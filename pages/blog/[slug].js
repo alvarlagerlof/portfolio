@@ -1,27 +1,32 @@
-import ReactMarkdown from "react-markdown";
 import Head from "next/head";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 import { formatDate } from "../../libs/utils/date";
-import { getPosts, getPost } from "../../libs/blog";
+import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
+import getImage from "../../libs/image";
+import isDev from "../../libs/is-dev";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import Main from "../../components/Main";
 import Header from "../../components/Header";
-import { getImage } from "../../libs/image";
+import Article from "../../components/Article";
+import InfoTag from "../../components/InfoTag";
+import CustomReactMarkdown from "../../components/CustomReactMarkdown";
+
+import { Title, Subtitle, Caption } from "../../components/Headings";
 
 export default function BlogPost({
   image,
   post: {
-    data: { title, description, date },
+    data: { title, description, date, draft },
     content,
   },
 }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
     >
       <Wrapper>
         <Head>
@@ -40,14 +45,13 @@ export default function BlogPost({
 
         <Main>
           <Header>
-            <HeaderDate>{formatDate(date)}</HeaderDate>
-
-            <h1>{title}</h1>
-            <h2>{description}</h2>
+            {draft && <InfoTag spacedBottom>Draft</InfoTag>}
+            <Caption>{formatDate(date)}</Caption>
+            <Title>{title}</Title>
+            <Subtitle>{description}</Subtitle>
           </Header>
-
           <Article>
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <CustomReactMarkdown>{content}</CustomReactMarkdown>
           </Article>
         </Main>
 
@@ -57,13 +61,16 @@ export default function BlogPost({
   );
 }
 
-const HeaderDate = styled.h3`
-  margin-bottom: 32px;
-`;
+export async function getStaticPaths() {
+  const posts = isDev() ? await getPosts() : await getPostsPublished();
 
-const Article = styled.article`
-  margin-top: 64px;
-`;
+  return {
+    paths: posts.map(post => {
+      return { params: { slug: post.slug } };
+    }),
+    fallback: false,
+  };
+}
 
 export async function getStaticProps({ params: { slug } }) {
   const post = await getPost(slug);
@@ -73,16 +80,5 @@ export async function getStaticProps({ params: { slug } }) {
       post,
       image: await getImage("blog/" + slug, post.data.title, post.data.description, "#D9D9D9"),
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const posts = await getPosts();
-
-  return {
-    paths: posts.map(post => {
-      return { params: { slug: post.slug } };
-    }),
-    fallback: false,
   };
 }

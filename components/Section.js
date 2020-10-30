@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Heading } from "./Headings";
 
 const Section = styled.section`
   margin: 128px 0;
 
-  & > p {
-    margin-top: 8px;
+  & ${Heading} + p {
+    margin-bottom: 32px;
   }
 
   @media screen and (max-width: 700px) {

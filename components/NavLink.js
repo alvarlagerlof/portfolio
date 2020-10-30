@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import styled, { css } from "styled-components";
 import ClickableLink from "./ClickableLink";
 
-export default function NavLink({ href, children }) {
+export default function NavLink({ href, children, cta }) {
   const router = useRouter();
 
   const isActive = href => {
@@ -10,15 +10,16 @@ export default function NavLink({ href, children }) {
   };
 
   return (
-    <ClickableLink href={href} passHref>
-      <StyledLink active={isActive(href)}>{children}</StyledLink>
+    <ClickableLink colored={cta} href={href} passHref>
+      <StyledLink cta={cta} active={isActive(href)}>
+        {children}
+      </StyledLink>
     </ClickableLink>
   );
 }
 
 const StyledLink = styled.span`
   text-decoration: none;
-  color: black;
 
   ${props =>
     props.active &&

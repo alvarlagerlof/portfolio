@@ -5,7 +5,7 @@ function parseDate(dateString) {
 }
 
 function formatDate(dateString) {
-  return DateTime.fromMillis(dateString).toFormat("MMM M, yyyy");
+  return DateTime.fromMillis(dateString).toFormat("MMM d, yyyy");
 }
 
 export { formatDate, parseDate };

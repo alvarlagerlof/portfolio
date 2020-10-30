@@ -2,7 +2,9 @@ import styled, { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
 
-import { getPostsSectioned } from "../../libs/blog";
+import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
+import getImage from "../../libs/image";
+import isDev from "../../libs/is-dev";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -11,12 +13,15 @@ import Main from "../../components/Main";
 import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
-import { getImage } from "../../libs/image";
+import Header from "../../components/Header";
+import CtaLink from "../../components/CtaLink";
 
-export default function Blog({ image, postsSectioned }) {
+import { Title, Subtitle } from "../../components/Headings";
+
+export default function Blog({ image, postsSectioned, drafts, isDev }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#AD3A00" }}
+      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
     >
       <Wrapper>
         <Head>
@@ -33,6 +38,31 @@ export default function Blog({ image, postsSectioned }) {
         <NavBar />
 
         <Main>
+          <Header>
+            <Title>My blog</Title>
+            <Subtitle>
+              This is a place where I'll try to put my thoughts into words sometimes. Let's see
+              where it goes. RSS is available{" "}
+              <CtaLink newTag href="https://alvar.dev/feed.xml">
+                here
+              </CtaLink>
+            </Subtitle>
+          </Header>
+
+          {isDev && (
+            <Section>
+              <ItemGrid>
+                {drafts.map(post => {
+                  return (
+                    <li key={post.title}>
+                      <BlogPreview data={post} />
+                    </li>
+                  );
+                })}
+              </ItemGrid>
+            </Section>
+          )}
+
           <Section>
             <YearList>
               {Object.entries(postsSectioned)
@@ -52,7 +82,7 @@ export default function Blog({ image, postsSectioned }) {
 function Year({ year, posts }) {
   return (
     <StyledYear>
-      <h1>{year}</h1>
+      <Title as="h3">{year}</Title>
       <ItemGrid>
         {posts.map(post => {
           return (
@@ -85,6 +115,7 @@ const StyledYear = styled.li`
 export async function getStaticProps() {
   return {
     props: {
+      drafts: await getPostsDrafts(),
       postsSectioned: await getPostsSectioned(),
       image: await getImage(
         "blog",
@@ -92,6 +123,7 @@ export async function getStaticProps() {
         "Here I'll write down my thoughts sometimes",
         "#D9D9D9"
       ),
+      isDev: isDev(),
     },
   };
 }

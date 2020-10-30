@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Wrapper({ children }) {
   return (
     <Background>
-      <Content>{children}</Content>;
+      <Content>{children}</Content>
     </Background>
   );
 }
@@ -23,7 +23,7 @@ const Content = styled.div`
   margin: 0 auto;
   padding: 32px 16px;
   max-width: 1000px;
-  width: 70%;
+  width: 80%;
 
   @media screen and (max-width: 900px) {
     padding: 32px 64px;
