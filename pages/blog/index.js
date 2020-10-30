@@ -18,7 +18,7 @@ import CtaLink from "../../components/CtaLink";
 
 import { Title, Subtitle } from "../../components/Headings";
 
-export default function Blog({ image, postsSectioned, drafts, branch }) {
+export default function Blog({ image, postsSectioned, drafts, isDev }) {
   return (
     <ThemeProvider
       theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
@@ -49,7 +49,7 @@ export default function Blog({ image, postsSectioned, drafts, branch }) {
             </Subtitle>
           </Header>
 
-          {branch != "main" && (
+          {isDev && (
             <Section>
               <ItemGrid>
                 {drafts.map(post => {
