@@ -4,9 +4,9 @@ const matter = require("gray-matter");
 
 try {
   const posts = fs
-    .readdirSync(`./content/blog`)
+    .readdirSync(`content/blog`)
     .map(filename => {
-      const markdownWithMetadata = fs.readFileSync(`./content/blog/${filename}`).toString();
+      const markdownWithMetadata = fs.readFileSync(`content/blog/${filename}`).toString();
 
       const { data } = matter(markdownWithMetadata);
 
@@ -38,7 +38,7 @@ try {
   });
 
   const rss = feed.xml({ indent: true });
-  fs.writeFileSync("./public/feed.xml", rss);
+  fs.writeFileSync("public/feed.xml", rss);
 
   console.log("✅ feed.xml generated");
 } catch (e) {
