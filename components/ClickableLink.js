@@ -38,7 +38,6 @@ const StyledLink = styled.a`
       props.colored &&
       css`
         border: 2px solid black;
-        ${"" /* color: white; */}
         margin-left: 4px;
         margin-right: 4px;
       `}
