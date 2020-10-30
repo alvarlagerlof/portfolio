@@ -5,7 +5,7 @@ const format = require("xml-formatter");
 sitemap({
   baseUrl: "https://alvar.dev",
   pagesDirectory: "out/",
-  targetDirectory: "public/",
+  targetDirectory: "out/",
   ignoredExtensions: ["jpg", "jpeg", "png", "svg", "ico"],
   extraPaths: ["/"],
   ignoredPaths: ["[fallback]", "404", "globalStyles", "index", "sitemap"],
@@ -16,10 +16,10 @@ sitemap({
   },
 })
   .then(() => {
-    const file = fs.readFileSync("public/sitemap.xml", "utf8");
+    const file = fs.readFileSync("out/sitemap.xml", "utf8");
 
     fs.writeFileSync(
-      "public/sitemap.xml",
+      "out/sitemap.xml",
       format(file, {
         indentation: "  ",
         collapseContent: true,

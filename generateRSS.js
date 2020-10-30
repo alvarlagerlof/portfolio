@@ -38,7 +38,7 @@ try {
   });
 
   const rss = feed.xml({ indent: true });
-  fs.writeFileSync("public/feed.xml", rss);
+  fs.writeFileSync("out/feed.xml", rss);
 
   console.log("✅ feed.xml generated");
 } catch (e) {
