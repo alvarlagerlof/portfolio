@@ -29,5 +29,5 @@ sitemap({
     console.log("✅ sitemap.xml generated!");
   })
   .catch(e => {
-    console.log("❌ sitemap.xml failed to generate");
+    console.log("❌ sitemap.xml failed to generate: ", e.message);
   });
