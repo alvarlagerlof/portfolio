@@ -1,9 +1,8 @@
 ---
-title: Under construction.
-description: Fleshing things out.
-date: 2020-10-23
+title: Test
+description: Testing
+date: 2020-10-24
 draft: false
 ---
 
-This website is currenly under construction. More things come here soon.
-Test
+This is some test content
