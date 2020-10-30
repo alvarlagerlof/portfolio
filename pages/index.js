@@ -45,20 +45,16 @@ export default function Home({ image, posts, projects }) {
 
         <Main>
           <Header>
-            <Title>Hello there!</Title>
+            <Title>Hi there!</Title>
             <Subtitle>
-              I'm Alvar Lagerlöf. Best described as an 18 year old Swedish developer who also
-              designs. I love to work with React. My story starts with a $2 computer from a flea
-              market. <CtaLink href="/about">Learn more</CtaLink>
+              I'm Alvar Lagerlöf, best described as an 18 year old Swedish developer who also
+              designs. My story starts with a $2 computer from a flea market.{" "}
+              <CtaLink href="/about">Learn more</CtaLink>
             </Subtitle>
 
             <Subtitle>
               Love to work with: React, Redux, Next.js, styled-components, TypeScript, Node, Kotlin,
               Swift, Linux, Docker, Firebase, Figma
-            </Subtitle>
-
-            <Subtitle>
-              Want to reach out? <CtaLink href="/contact">Contact me</CtaLink>
             </Subtitle>
           </Header>
 
