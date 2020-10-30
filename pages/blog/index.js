@@ -1,5 +1,4 @@
 import styled, { ThemeProvider } from "styled-components";
-import process from "process";
 import branchName from "current-git-branch";
 
 import Head from "next/head";
