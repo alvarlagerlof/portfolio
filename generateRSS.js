@@ -23,7 +23,8 @@ try {
 
   const feed = new RSS({
     title: "Alvar Lagerlöf's Blog",
-    link: "https://alvar.dev",
+    site_url: "https://alvar.dev",
+    feed_url: "https://alvar.dev/feed.xml",
     language: "en-us",
     description: "Developer and designer living in Stockholm",
   });
