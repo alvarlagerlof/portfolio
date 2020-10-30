@@ -17,7 +17,7 @@ async function getPost(slug) {
     data: {
       ...data,
       date: data.date.getTime(),
-      updatedAt: data.updatedAt != undefined ?? data.updatedAt.getTime(),
+      updatedAt: data.updatedAt ? data.updatedAt.getTime() : null,
     },
   };
 }
@@ -34,6 +34,7 @@ async function getPosts() {
         ...data,
         slug: filename.replace(".md", ""),
         date: data.date.getTime(),
+        updatedAt: data.updatedAt ? data.updatedAt.getTime() : null,
       };
     })
     .sort((a, b) => b.date - a.date);
