@@ -18,7 +18,7 @@ try {
         published: data.published,
       };
     })
-    .filter(post => post.draft == true)
+    .filter(post => post.draft == false)
     .sort((a, b) => b.published - a.published);
 
   const feed = new RSS({
