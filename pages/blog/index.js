@@ -44,7 +44,7 @@ export default function Blog({ image, postsSectioned, drafts, branch }) {
               This is a place where I'll try to put my thoughts into words sometimes. Let's see
               where it goes. RSS is available{" "}
               <CtaLink newTag href="https://alvar.dev/feed.xml">
-                Here
+                here
               </CtaLink>
             </Subtitle>
           </Header>
