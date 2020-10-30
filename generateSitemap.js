@@ -7,7 +7,7 @@ const BUILD_ID = fs.readFileSync(".next/BUILD_ID").toString();
 sitemap({
   baseUrl: "https://alvar.dev",
   pagesDirectory: "out/",
-  targetDirectory: "out/",
+  targetDirectory: "public/",
   ignoredExtensions: ["jpg", "jpeg", "png", "svg", "ico"],
   extraPaths: ["/"],
   ignoredPaths: ["[fallback]", "404", "globalStyles", "index", "sitemap"],
@@ -18,10 +18,10 @@ sitemap({
   },
 })
   .then(() => {
-    const file = fs.readFileSync("out/sitemap.xml", "utf8");
+    const file = fs.readFileSync("public/sitemap.xml", "utf8");
 
     fs.writeFileSync(
-      "out/sitemap.xml",
+      "public/sitemap.xml",
       format(file, {
         indentation: "  ",
         collapseContent: true,

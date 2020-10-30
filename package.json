@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && node sitemapGenerator.js",
+    "build": "next build && next export && yarn run generate",
+    "generate": "node generateSitemap.js && node generateRSS.js",
     "start": "next start"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "gray-matter": "^4.0.2",
     "nextjs-sitemap-generator": "^1.1.0",
     "prettier": "^2.1.2",
+    "rss": "^1.2.2",
     "xml-formatter": "^2.3.1"
   }
 }
