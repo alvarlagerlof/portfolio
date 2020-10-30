@@ -1,7 +1,7 @@
 ---
 title: Example post
 description: Lorem deserunt sit exercitation in dolor id veniam dolore. Deserunt amet duis et do est. Laboris excepteur esse ipsum occaecat eu nulla commodo occaecat dolore consectetur. Nostrud nostrud ut amet ad quis excepteur laborum.
-date: 2020-10-29
+published: 2020-10-29
 draft: true
 ---
 

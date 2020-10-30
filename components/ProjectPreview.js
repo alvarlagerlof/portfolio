@@ -31,7 +31,7 @@ export default function ProjectPreview({ data: { title, description, link, image
 }
 
 const ImageContainer = styled.div`
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   cursor: pointer;
 
   & img {
@@ -41,5 +41,5 @@ const ImageContainer = styled.div`
 `;
 
 const Title = styled.h3`
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 `;

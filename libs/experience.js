@@ -16,5 +16,5 @@ export default async function getExperience() {
         endDate: data.endDate.getTime(),
       };
     })
-    .sort((a, b) => b.date - a.date);
+    .sort((a, b) => b.published - a.published);
 }
