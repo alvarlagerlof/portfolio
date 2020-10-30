@@ -20,7 +20,7 @@ import { Title, Subtitle, Caption } from "../../components/Headings";
 export default function BlogPost({
   image,
   post: {
-    data: { title, description, date, draft },
+    data: { title, description, published, draft },
     content,
   },
 }) {
@@ -46,7 +46,7 @@ export default function BlogPost({
         <Main>
           <Header>
             {draft && <InfoTag spacedBottom>Draft</InfoTag>}
-            <Caption>{formatDate(date)}</Caption>
+            <Caption>{formatDate(published)}</Caption>
             <Title>{title}</Title>
             <Subtitle>{description}</Subtitle>
           </Header>

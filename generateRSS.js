@@ -15,11 +15,11 @@ try {
         ...data,
         content,
         slug: filename.replace(".md", ""),
-        date: data.date,
+        published: data.published,
       };
     })
     .filter(post => post.draft == true)
-    .sort((a, b) => b.date - a.date);
+    .sort((a, b) => b.published - a.published);
 
   const feed = new RSS({
     title: "Alvar Lagerlöf's Blog",
@@ -36,7 +36,7 @@ try {
     feed.item({
       title: post.title,
       url: `https://alvar.dev/blog/${post.slug}`,
-      date: post.date,
+      published: post.published,
       description: post.description,
       author: "Alvar Lagerlöf",
       custom_elements: [{ "content:encoded": content }],
