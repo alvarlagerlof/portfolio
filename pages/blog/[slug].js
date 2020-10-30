@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
-import { getImage } from "../../libs/image";
+import getImage from "../../libs/image";
 import isDev from "../../libs/is-dev";
 
 import NavBar from "../../components/NavBar";

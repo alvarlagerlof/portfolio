@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 
 import Head from "next/head";
 
-import { getImage } from "../libs/image";
+import getImage from "../libs/image";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";

@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 
 import { getPostsLatest } from "../libs/blog";
 import { getProjectsFeatured } from "../libs/projects";
-import { getImage } from "../libs/image";
+import getImage from "../libs/image";
 
 import Head from "next/head";
 

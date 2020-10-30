@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Head from "next/head";
 
 import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
-import { getImage } from "../../libs/image";
+import getImage from "../../libs/image";
 import isDev from "../../libs/is-dev";
 
 import NavBar from "../../components/NavBar";
