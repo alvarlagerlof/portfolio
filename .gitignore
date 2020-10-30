@@ -34,3 +34,5 @@ yarn-error.log*
 .vercel
 
 /public/opengraph
+sitemap.xml
+feed.xml

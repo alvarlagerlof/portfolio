@@ -26,7 +26,7 @@ try {
     language: "en-us",
   });
 
-  posts.map(post => {
+  posts.forEach(post => {
     feed.item({
       title: post.title,
       guid: post.slug,
@@ -40,7 +40,7 @@ try {
   const rss = feed.xml({ indent: true });
   fs.writeFileSync("./public/feed.xml", rss);
 
-  console.log("✅ Generated feed.xml");
+  console.log("✅ feed.xml generated");
 } catch (e) {
   console.log("❌ Failed to generate rss: " + e.message);
 }
