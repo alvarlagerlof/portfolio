@@ -1,10 +1,10 @@
 import styled, { ThemeProvider } from "styled-components";
-import branchName from "current-git-branch";
 
 import Head from "next/head";
 
 import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
 import { getImage } from "../../libs/image";
+import isDev from "../../libs/is-dev";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -14,9 +14,9 @@ import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
 import Header from "../../components/Header";
+import CtaLink from "../../components/CtaLink";
 
 import { Title, Subtitle } from "../../components/Headings";
-import CtaLink from "../../components/CtaLink";
 
 export default function Blog({ image, postsSectioned, drafts, branch }) {
   return (
@@ -123,7 +123,7 @@ export async function getStaticProps() {
         "Here I'll write down my thoughts sometimes",
         "#D9D9D9"
       ),
-      branch: branchName(),
+      isDev: isDev(),
     },
   };
 }

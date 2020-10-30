@@ -2,13 +2,13 @@ import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import gfm from "remark-gfm";
-import branchName from "current-git-branch";
 
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
 import { getImage } from "../../libs/image";
-import { renderers } from "../../components/markdownRenderers";
+import isDev from "../../libs/is-dev";
 
+import { renderers } from "../../components/markdownRenderers";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
@@ -66,7 +66,7 @@ export default function BlogPost({
 }
 
 export async function getStaticPaths() {
-  const posts = branchName() == "main" ? await getPostsPublished() : await getPosts();
+  const posts = isDev() ? await getPosts() : await getPostsPublished();
 
   return {
     paths: posts.map(post => {
