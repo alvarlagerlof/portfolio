@@ -23,6 +23,7 @@ try {
     title: "Alvar Lagerlöf's Blog",
     site_url: "https://alvar.dev",
     feed_url: "https://alvar.dev/feed.xml",
+    language: "en-us",
   });
 
   posts.map(post => {
