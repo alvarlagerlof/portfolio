@@ -1,10 +1,10 @@
 import styled, { ThemeProvider } from "styled-components";
-import process from "process";
 import branchName from "current-git-branch";
 
 import Head from "next/head";
 
 import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
+import { getImage } from "../../libs/image";
 
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -13,8 +13,10 @@ import Main from "../../components/Main";
 import BlogPreview from "../../components/BlogPreview";
 import Section from "../../components/Section";
 import ItemGrid from "../../components/ItemGrid";
-import { getImage } from "../../libs/image";
-import { Title } from "../../components/Headings";
+import Header from "../../components/Header";
+
+import { Title, Subtitle } from "../../components/Headings";
+import CtaLink from "../../components/CtaLink";
 
 export default function Blog({ image, postsSectioned, drafts, branch }) {
   return (
@@ -36,6 +38,17 @@ export default function Blog({ image, postsSectioned, drafts, branch }) {
         <NavBar />
 
         <Main>
+          <Header>
+            <Title>My blog</Title>
+            <Subtitle>
+              This is a place where I'll try to put my thoughts into words sometimes. Let's see
+              where it goes. RSS is available{" "}
+              <CtaLink newTag href="https://alvar.dev/feed.xml">
+                here
+              </CtaLink>
+            </Subtitle>
+          </Header>
+
           {branch != "main" && (
             <Section>
               <ItemGrid>
