@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-async function getExperience() {
+export default async function getExperience() {
   return fs
     .readdirSync(`./content/experience`)
     .map(filename => {
@@ -18,5 +18,3 @@ async function getExperience() {
     })
     .sort((a, b) => b.date - a.date);
 }
-
-export { getExperience };
