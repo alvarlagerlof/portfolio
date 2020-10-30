@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn run generate && next build && next export ",
+    "build": "next build && next export && yarn run generate",
     "generate": "node generateSitemap.js && node generateRSS.js",
     "start": "next start"
   },
