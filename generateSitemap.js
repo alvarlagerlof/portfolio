@@ -2,8 +2,6 @@ const sitemap = require("nextjs-sitemap-generator");
 const fs = require("fs");
 const format = require("xml-formatter");
 
-const BUILD_ID = fs.readFileSync(".next/BUILD_ID").toString();
-
 sitemap({
   baseUrl: "https://alvar.dev",
   pagesDirectory: "out/",
