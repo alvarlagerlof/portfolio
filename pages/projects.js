@@ -44,7 +44,8 @@ export default function Projects({ image, projects }) {
             <Title>Things I've worked on</Title>
             <Subtitle>
               In my free time experiement with things, including everything from game-plugins
-              imitating Quake to apps. I make it a habit to post these various projects on my{" "}
+              imitating Quake to neural networks. I make it a habit to post these various projects
+              on my{" "}
               <CtaLink newTab href="https://github.com/alvarlagerlof">
                 Github
               </CtaLink>{" "}
