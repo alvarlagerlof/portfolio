@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Serif, SansSerif, Bold } from "./Headings";
+import { SansSerif, Bold } from "./Headings";
 
 const Article = styled.article`
   margin: 64px 0;
@@ -63,7 +63,6 @@ const Article = styled.article`
     border-left: 4px solid ${props => props.theme.accent};
 
     & p {
-      ${Serif}
       margin: 0;
       font-size: 1.3rem;
     }
