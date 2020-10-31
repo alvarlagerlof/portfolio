@@ -3,11 +3,11 @@ import styled, { css } from "styled-components";
 
 import { SansSerif } from "./Headings";
 
-export default function ClickableLink({ href, newTab, children, colored }) {
+export default function ClickableLink({ href, newTab, children, border }) {
   return (
     <Link href={href} passHref>
       <StyledLink
-        colored={colored}
+        border={border}
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noopener" : ""}
       >
@@ -35,7 +35,7 @@ const StyledLink = styled.a`
 
   @media screen and (min-width: 700px) {
     ${props =>
-      props.colored &&
+      props.border &&
       css`
         border: 2px solid black;
         margin-left: 4px;

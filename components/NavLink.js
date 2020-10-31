@@ -10,7 +10,7 @@ export default function NavLink({ href, children, cta }) {
   };
 
   return (
-    <ClickableLink colored={cta} href={href} passHref>
+    <ClickableLink border={cta} href={href} passHref>
       <StyledLink cta={cta} active={isActive(href)}>
         {children}
       </StyledLink>
