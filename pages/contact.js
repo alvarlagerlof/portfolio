@@ -16,7 +16,7 @@ export default function Contact({ image }) {
   return (
     <ThemeProvider
       theme={{
-        backgroundTop: "#9ADBA1",
+        backgroundTop: "#e7fadc",
         backgroundBottom: "#F5FFF6",
         accent: "#5455B0",
       }}
