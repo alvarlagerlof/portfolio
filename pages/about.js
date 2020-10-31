@@ -23,7 +23,7 @@ export default function About({ image, experience }) {
         backgroundTop: "#AEBCF9",
         backgroundBottom: "#F6F7FE",
         accent: "#AD0B26",
-        background: "#dbe2ff",
+        background: "#edf1ff",
       }}
     >
       <Wrapper>
