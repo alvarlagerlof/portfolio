@@ -118,7 +118,7 @@ export default function About({ image, experience }) {
           <Section>
             <Heading>Experience</Heading>
             <p>
-              While I’m still in currently in Highschool, I’ve worked professionally on two
+              While I’m still in currently in high school, I’ve worked professionally on two
               occations.
             </p>
 
