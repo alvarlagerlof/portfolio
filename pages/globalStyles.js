@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 import { SansSerif } from "../components/Headings";
 
 const GlobalStyle = createGlobalStyle`
+
+
     @font-face {
         font-family: 'Inter';
         font-weight: 400 550;

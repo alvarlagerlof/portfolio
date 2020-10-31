@@ -5,7 +5,7 @@ const SansSerif = css`
 `;
 
 const Serif = css`
-  font-family: "PT Serif", serif;
+  font-family: "Inter", serif;
 `;
 
 const Thin = css`
@@ -18,7 +18,7 @@ const Bold = css`
 
 const Title = styled.h1`
   ${Serif}
-  ${Thin}
+  ${Bold}
   margin-bottom: 32px;
   font-size: 3.2rem;
 
@@ -31,8 +31,8 @@ const Subtitle = styled.h2`
   ${SansSerif}
   ${Thin}
   line-height: 1.5;
-  font-size: 1.5rem;
-  margin-bottom: 24px;
+  font-size: 1.7rem;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 700px) {
     font-size: 1.2rem;

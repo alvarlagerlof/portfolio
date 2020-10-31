@@ -21,7 +21,12 @@ import { Title, Subtitle } from "../../components/Headings";
 export default function Blog({ image, postsSectioned, drafts, isDev }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
+      theme={{
+        backgroundTop: "#D9D9D9",
+        backgroundBottom: "#FAFAFA",
+        accent: "#b11226",
+        background: "#ebebeb",
+      }}
     >
       <Wrapper>
         <Head>

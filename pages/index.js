@@ -21,7 +21,12 @@ import { Heading, Subtitle, Title } from "../components/Headings";
 export default function Home({ image, posts, projects }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#FFC2C2", backgroundBottom: "#FFF5F5", accent: "#6938B7" }}
+      theme={{
+        backgroundTop: "#FFC2C2",
+        backgroundBottom: "#FFF5F5",
+        accent: "#6938B7",
+        background: "#FFFFFF",
+      }}
     >
       <Wrapper>
         <Head>
@@ -45,7 +50,7 @@ export default function Home({ image, posts, projects }) {
 
         <Main>
           <Header>
-            <Title>Hi there!</Title>
+            <Title>Hi there! 👋</Title>
             <Subtitle>
               I'm Alvar Lagerlöf, best described as an 18 year old Swedish developer who also
               designs. My story starts with a $2 computer from a flea market.{" "}

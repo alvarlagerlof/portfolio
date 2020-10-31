@@ -19,7 +19,12 @@ import { Subtitle, Title } from "../components/Headings";
 export default function Projects({ image, projects }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D7B498", backgroundBottom: "#FDFAF7", accent: "#297A62" }}
+      theme={{
+        backgroundTop: "#D7B498",
+        backgroundBottom: "#FDFAF7",
+        accent: "#297A62",
+        background: "#ffedde",
+      }}
     >
       <Wrapper>
         <Head>
