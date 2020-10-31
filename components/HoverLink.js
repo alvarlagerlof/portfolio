@@ -21,7 +21,5 @@ export default function HoverLink({ href, text, hoverText, newTab }) {
 const StyledHoverLink = styled.div`
   display: inline-block;
   & > a {
-    color: ${props => props.theme.accent};
-    font-weight: 550;
   }
 `;
