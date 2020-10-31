@@ -45,8 +45,8 @@ export default function Blog({ image, postsSectioned, drafts, isDev }) {
           <Header>
             <Title>My blog</Title>
             <Subtitle>
-              This is a place where I'll try to put my thoughts into words sometimes. Let's see
-              where it goes. RSS is available{" "}
+              I try to put my thoughts into words sometimes. Let's see where it goes. RSS is
+              available{" "}
               <CtaLink newTag href="https://alvar.dev/feed.xml">
                 here
               </CtaLink>

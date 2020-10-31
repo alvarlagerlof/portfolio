@@ -162,7 +162,6 @@ const TechInfo = styled.div`
 
   & > p {
     margin-bottom: 16px;
-    max-width: 29ch;
   }
 `;
 
