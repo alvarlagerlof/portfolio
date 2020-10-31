@@ -42,14 +42,14 @@ const Heading = styled.h3`
   margin-bottom: 8px;
 
   @media screen and (max-width: 700px) {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 `;
 
 const Subheading = styled.h4`
   ${Bold}
   ${SansSerif}
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 `;
 
 const Caption = styled.h4`

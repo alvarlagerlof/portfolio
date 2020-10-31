@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import NavLink from "./NavLink";
 import ClickableLink from "./ClickableLink";
+import { Bold } from "./Headings";
 
 export default function NavBar() {
   return (
@@ -54,6 +55,7 @@ const Name = styled.div`
     & > a {
       font-size: 1.5rem;
       margin-bottom: 8px;
+      ${Bold}
     }
   }
 `;
