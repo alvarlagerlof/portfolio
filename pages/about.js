@@ -47,7 +47,7 @@ export default function About({ image, experience }) {
 
         <Main>
           <Header>
-            <Title>Who am I?</Title>
+            <Title>My history</Title>
             <Subtitle>
               What does a $2 computer at a flea market have to do with me writing this? Turns out...
               everything!
@@ -67,11 +67,11 @@ export default function About({ image, experience }) {
 
             <p>
               My story starts with, believe it or not, Minecraft. I was playing it a lot when I was
-              younger. Naturally, I wanted to play with friends. I bought the $2 computer at a flea
-              market and installed <em>Ubuntu Server</em> on it. Now of course, every proper
-              Minecraft server has a website. So I installed <em>LAMP</em> and started reading up on
-              how to code in something called HTML. Quickly, <em>w3schools.com</em> became my guide.
-              Before I knew it, making websites.
+              13. Naturally, I wanted to play with friends. I bought the $2 computer at a flea
+              market and installed Ubuntu Server on it. Now of course, every proper Minecraft server
+              has a website. I installed LAMP and started reading up on how to code in something
+              called HTML. Quickly, w3schools.com became my guide. Before I knew it, I was making
+              websites.
             </p>
             <p>
               Then started my wild ride of app development on{" "}
@@ -82,37 +82,36 @@ export default function About({ image, experience }) {
               <CtaLink newTab href="https://koda.nu/app">
                 projects
               </CtaLink>
-              . So I learned of Java (later Kotlin) and Swift development. One of the apps needed
-              offline support with writes, so I implemented a local database using <em>Realm</em>{" "}
-              and worked on syncing with basic time-based diffing.
+              . I learned Java (and later Kotlin) and Swift development. One of the apps needed
+              offline support with writes, so I implemented a local database using Realm and worked
+              on syncing with basic time-based diffing.
             </p>
             <p>
-              I also experimented with retraining <em>ImageNet</em> to do what classify things I
-              wanted. Using <em>IFPS</em> as a data source for web apps was also really interesting.
-              Also had some fun with{" "}
+              Some years later I started experimenting with retraining ImageNet to do what classify
+              things I wanted. Using IFPS as a data source for web apps was also really interesting.
+              Also had some fun with trying to make a{" "}
               <CtaLink newTab href="https://github.com/alvarlagerlof/ball-pid">
-                trying
+                ball balance
               </CtaLink>{" "}
-              to make a ball balance on a plate with two servos mounted under it. Somewhere along
-              the way, I got briefly back into Minecraft and started to make <em>Bukkit</em>{" "}
-              plugins. I{" "}
+              on a plate with two servos mounted under it. Somewhere along the way, I got briefly
+              back into Minecraft and started to make Bukkit plugins. I made a working Quake-like{" "}
               <CtaLink newTab href="https://github.com/alvarlagerlof/quake">
-                made
+                FPS
               </CtaLink>{" "}
-              a working Quake-like FPS in <em>Java.</em>
+              in Java.
             </p>
             <p>
               During my journey, I've grown interested in UI and UX design and do now enjoy
               iterating on mockups in Figma before starting to code. In recent years I've worked
-              mostly with <em>React</em>, but I've experimented with <em>Vue.js</em> and{" "}
-              <em>Svelte</em> and find declarative interactive UI as a whole quite interesting.
+              mostly with React, but I've also tried Vue.js and Svelte and find declarative
+              interactive UI as a whole quite interesting.
             </p>
             <p>
               When I'm not coding or designing, I like to take{" "}
-              <CtaLink href="https://unsplash.com/@alvarlagerlof">photos</CtaLink> and I have also
-              experimented with rendering some cool{" "}
-              <CtaLink href="https://www.artstation.com/alvarlagerlof">things</CtaLink> in{" "}
-              <em>Blender</em>.
+              <CtaLink href="https://unsplash.com/@alvarlagerlof">photos</CtaLink> or experiment
+              with rendering some{" "}
+              <CtaLink href="https://www.artstation.com/alvarlagerlof">cool things</CtaLink> in
+              Blender.
             </p>
           </StoryText>
 

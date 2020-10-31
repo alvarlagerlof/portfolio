@@ -43,13 +43,12 @@ export default function Projects({ image, projects }) {
           <Header>
             <Title>Things I've worked on</Title>
             <Subtitle>
-              In my free-time I like to work on variuos things, including everything from
-              game-plugins imitating Quake to apps. I make it a habit to post these various projects
-              on my{" "}
+              In my free time experiement with things, including everything from game-plugins
+              imitating Quake to apps. I make it a habit to post these various projects on my{" "}
               <CtaLink newTab href="https://github.com/alvarlagerlof">
                 Github
               </CtaLink>{" "}
-              to let others see what I'm doing.
+              .
             </Subtitle>
           </Header>
 

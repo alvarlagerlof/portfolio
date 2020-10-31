@@ -39,7 +39,7 @@ export default function Contact({ image }) {
           <Header>
             <Title>Want to talk?</Title>
             <Subtitle>
-              I'm reachable in multple ways. You can send me a message on{" "}
+              Feel free to contact me! You can send me a message on{" "}
               <CtaLink newTab href="https://linkedin.com/in/alvarlagerlof">
                 LinkedIn
               </CtaLink>
