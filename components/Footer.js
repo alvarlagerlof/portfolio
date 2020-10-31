@@ -149,7 +149,7 @@ const SocialList = styled.ul`
   }
 
   @media screen and (max-width: 500px) {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 
     & > li {
       text-align: start;
