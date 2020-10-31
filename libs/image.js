@@ -19,7 +19,6 @@ export default async function getImage(path, title, description, color) {
   const context = canvas.getContext("2d");
 
   registerFont("libs/opengraph-assets/inter.ttf", { family: "Inter" });
-  registerFont("libs/opengraph-assets/pt-serif.ttf", { family: "PT Serif" });
 
   const image = await loadImage("libs/opengraph-assets/background.png");
 

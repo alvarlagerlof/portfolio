@@ -4,11 +4,6 @@ const SansSerif = css`
   font-family: "Inter", sans-serif;
 `;
 
-const Serif = css`
-  ${"" /* font-family: "PT Serif", serif; */}
-  font-family: "Inter", sans-serif;
-`;
-
 const Thin = css`
   font-weight: 400;
 `;
@@ -18,7 +13,7 @@ const Bold = css`
 `;
 
 const Title = styled.h1`
-  ${Serif}
+  ${SansSerif}
   ${Bold}
   margin-bottom: 32px;
   font-size: 3.2rem;
@@ -65,4 +60,4 @@ const Caption = styled.h4`
   font-size: 1.1rem;
 `;
 
-export { Thin, Bold, SansSerif, Serif, Title, Subtitle, Heading, Subheading, Caption };
+export { Thin, Bold, SansSerif, Title, Subtitle, Heading, Subheading, Caption };

@@ -19,16 +19,7 @@ const GlobalStyle = createGlobalStyle`
         font-named-instance: 'Italic';
         src: url("/fonts/Inter-italic.var.woff2?v=3.15") format("woff2");
     }
-
-       
-    @font-face {
-        font-family: 'PT Serif';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url("/fonts/Pt-Serif-regular-latin.woff2") format("woff2");
-    }
-
+    
     * {
         margin: 0;
         padding: 0;

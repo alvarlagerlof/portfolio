@@ -1,4 +1,4 @@
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import { getPostsLatest } from "../libs/blog";
 import { getProjectsFeatured } from "../libs/projects";
@@ -96,6 +96,16 @@ export default function Home({ image, posts, projects }) {
     </ThemeProvider>
   );
 }
+
+const Split = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: -24px;
+
+  & div {
+    margin: 24px;
+  }
+`;
 
 export async function getStaticProps() {
   return {
