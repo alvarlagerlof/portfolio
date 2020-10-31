@@ -1,4 +1,4 @@
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 import { getPostsLatest } from "../libs/blog";
 import { getProjectsFeatured } from "../libs/projects";
@@ -21,7 +21,11 @@ import { Heading, Subtitle, Title } from "../components/Headings";
 export default function Home({ image, posts, projects }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#FFC2C2", backgroundBottom: "#FFF5F5", accent: "#6938B7" }}
+      theme={{
+        backgroundTop: "#ffdede",
+        backgroundBottom: "#FFF5F5",
+        accent: "#6938B7",
+      }}
     >
       <Wrapper>
         <Head>
@@ -45,7 +49,7 @@ export default function Home({ image, posts, projects }) {
 
         <Main>
           <Header>
-            <Title>Hi there!</Title>
+            <Title>Hi there! 👋</Title>
             <Subtitle>
               I'm Alvar Lagerlöf, best described as an 18 year old Swedish developer who also
               designs. My story starts with a $2 computer from a flea market.{" "}
@@ -92,6 +96,16 @@ export default function Home({ image, posts, projects }) {
     </ThemeProvider>
   );
 }
+
+const Split = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: -24px;
+
+  & div {
+    margin: 24px;
+  }
+`;
 
 export async function getStaticProps() {
   return {

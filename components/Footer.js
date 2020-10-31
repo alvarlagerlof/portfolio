@@ -55,7 +55,7 @@ export default function Footer() {
               newTab
               href="https://twitter.com/alvarlagerlof"
               text="Twitter"
-              hoverText="@alvarlagerlof"
+              hoverText="/alvarlagerlof"
             />
           </li>
 
@@ -64,7 +64,7 @@ export default function Footer() {
               newTab
               href="https://linkedin.com/in/alvarlagerlof"
               text="LinkedIn"
-              hoverText="in/alvarlagerlof"
+              hoverText="/in/alvarlagerlof"
             />
           </li>
 
@@ -77,7 +77,7 @@ export default function Footer() {
               newTab
               href="https://github.com/alvarlagerlof"
               text="Github"
-              hoverText="@alvarlagerlof"
+              hoverText="/alvarlagerlof"
             />
           </li>
 
@@ -86,7 +86,7 @@ export default function Footer() {
               newTab
               href="https://unsplash.com/@alvarlagerlof"
               text="Unsplash"
-              hoverText="@alvarlagerlof"
+              hoverText="/@alvarlagerlof"
             />
           </li>
 
@@ -95,7 +95,7 @@ export default function Footer() {
               newTab
               href="https://www.artstation.com/alvarlagerlof"
               text="ArtStation"
-              hoverText="@alvarlagerlof"
+              hoverText="/alvarlagerlof"
             />
           </li>
         </SocialList>

@@ -4,10 +4,6 @@ const SansSerif = css`
   font-family: "Inter", sans-serif;
 `;
 
-const Serif = css`
-  font-family: "PT Serif", serif;
-`;
-
 const Thin = css`
   font-weight: 400;
 `;
@@ -17,8 +13,8 @@ const Bold = css`
 `;
 
 const Title = styled.h1`
-  ${Serif}
-  ${Thin}
+  ${SansSerif}
+  ${Bold}
   margin-bottom: 32px;
   font-size: 3.2rem;
 
@@ -31,8 +27,8 @@ const Subtitle = styled.h2`
   ${SansSerif}
   ${Thin}
   line-height: 1.5;
-  font-size: 1.5rem;
-  margin-bottom: 24px;
+  font-size: 1.7rem;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 700px) {
     font-size: 1.2rem;
@@ -64,4 +60,4 @@ const Caption = styled.h4`
   font-size: 1.1rem;
 `;
 
-export { Thin, Bold, SansSerif, Serif, Title, Subtitle, Heading, Subheading, Caption };
+export { Thin, Bold, SansSerif, Title, Subtitle, Heading, Subheading, Caption };

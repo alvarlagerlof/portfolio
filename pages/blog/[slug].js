@@ -26,7 +26,11 @@ export default function BlogPost({
 }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#D9D9D9", backgroundBottom: "#FAFAFA", accent: "#b11226" }}
+      theme={{
+        backgroundTop: "#ededed",
+        backgroundBottom: "#FAFAFA",
+        accent: "#b11226",
+      }}
     >
       <Wrapper>
         <Head>

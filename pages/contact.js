@@ -15,7 +15,11 @@ import { Subtitle, Title } from "../components/Headings";
 export default function Contact({ image }) {
   return (
     <ThemeProvider
-      theme={{ backgroundTop: "#9ADBA1", backgroundBottom: "#F5FFF6", accent: "#5455B0" }}
+      theme={{
+        backgroundTop: "#e7fadc",
+        backgroundBottom: "#F5FFF6",
+        accent: "#5455B0",
+      }}
     >
       <Wrapper>
         <Head>
