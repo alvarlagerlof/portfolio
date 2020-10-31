@@ -22,10 +22,9 @@ export default function Home({ image, posts, projects }) {
   return (
     <ThemeProvider
       theme={{
-        backgroundTop: "#FFC2C2",
+        backgroundTop: "#ffdede",
         backgroundBottom: "#FFF5F5",
         accent: "#6938B7",
-        background: "#FFFFFF",
       }}
     >
       <Wrapper>

@@ -20,10 +20,9 @@ export default function Projects({ image, projects }) {
   return (
     <ThemeProvider
       theme={{
-        backgroundTop: "#D7B498",
+        backgroundTop: "#ffead9",
         backgroundBottom: "#FDFAF7",
         accent: "#297A62",
-        background: "#ffedde",
       }}
     >
       <Wrapper>

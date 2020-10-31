@@ -27,10 +27,9 @@ export default function BlogPost({
   return (
     <ThemeProvider
       theme={{
-        backgroundTop: "#D9D9D9",
+        backgroundTop: "#ededed",
         backgroundBottom: "#FAFAFA",
         accent: "#b11226",
-        background: "#ffffff",
       }}
     >
       <Wrapper>

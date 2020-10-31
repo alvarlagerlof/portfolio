@@ -10,12 +10,11 @@ export default function Wrapper({ children }) {
 
 const Background = styled.div`
   min-height: 100vh;
-  /* background: linear-gradient(
+  background: linear-gradient(
     180deg,
     ${props => props.theme.backgroundTop} 200px,
     ${props => props.theme.backgroundBottom} 800px
-  ); */
-  background: ${props => props.theme.background};
+  );
   background-size: 50px;
 `;
 

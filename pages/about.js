@@ -20,10 +20,9 @@ export default function About({ image, experience }) {
   return (
     <ThemeProvider
       theme={{
-        backgroundTop: "#AEBCF9",
+        backgroundTop: "#dee4ff",
         backgroundBottom: "#F6F7FE",
         accent: "#AD0B26",
-        background: "#edf1ff",
       }}
     >
       <Wrapper>

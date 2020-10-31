@@ -5,7 +5,8 @@ const SansSerif = css`
 `;
 
 const Serif = css`
-  font-family: "Inter", serif;
+  ${"" /* font-family: "PT Serif", serif; */}
+  font-family: "Inter", sans-serif;
 `;
 
 const Thin = css`

@@ -19,7 +19,6 @@ export default function Contact({ image }) {
         backgroundTop: "#9ADBA1",
         backgroundBottom: "#F5FFF6",
         accent: "#5455B0",
-        background: "#d9ffdd",
       }}
     >
       <Wrapper>
