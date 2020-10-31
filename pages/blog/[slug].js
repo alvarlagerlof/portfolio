@@ -30,7 +30,7 @@ export default function BlogPost({
         backgroundTop: "#D9D9D9",
         backgroundBottom: "#FAFAFA",
         accent: "#b11226",
-        background: "#ebebeb",
+        background: "#ffffff",
       }}
     >
       <Wrapper>
