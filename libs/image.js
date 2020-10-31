@@ -42,7 +42,7 @@ export default async function getImage(path, title, description, color) {
       width: canvas.width - 200,
       height: 300,
     },
-    font: "PT Serif",
+    font: "Inter",
     verbose: true,
     lineHeight: 1.1,
     minFontSize: 70,
