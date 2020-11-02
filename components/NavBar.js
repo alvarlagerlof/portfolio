@@ -52,7 +52,7 @@ const Name = styled.div`
   line-height: 1.5;
 
   @media screen and (max-width: 700px) {
-    & > a {
+    & a {
       font-size: 1.5rem;
       margin-bottom: 8px;
       ${Bold}
