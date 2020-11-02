@@ -1,33 +1,49 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
+import "react-tippy/dist/tippy.css";
+import { Tooltip } from "react-tippy";
+import { default as copyToClipboard } from "copy-to-clipboard";
 
 import { SansSerif } from "./Headings";
 
-export default function ClickableLink({ href, newTab, children, border }) {
+export default function ClickableLink({ href, newTab, children, border, copy }) {
   return (
-    <Link href={href} passHref>
-      <StyledLink
-        border={border}
-        target={newTab ? "_blank" : "_self"}
-        rel={newTab ? "noopener" : ""}
-      >
-        {children}
-      </StyledLink>
-    </Link>
+    <div>
+      {copy ? (
+        <Tooltip title="Copied to clipboard" position="bottom" trigger="click">
+          <StyledLink as="button" onClick={() => copyToClipboard(href)}>
+            {children}
+          </StyledLink>
+        </Tooltip>
+      ) : (
+        <Link href={href} passHref>
+          <StyledLink
+            border={border}
+            target={newTab ? "_blank" : "_self"}
+            rel={newTab ? "noopener" : ""}
+          >
+            {children}
+          </StyledLink>
+        </Link>
+      )}
+    </div>
   );
 }
 
 const StyledLink = styled.a`
   display: inline-block;
+  border: none;
+  background: none;
+  cursor: pointer;
   text-decoration: none;
   color: black;
   padding: 2px 8px;
   margin: -2px -8px;
   border-radius: 8px;
   transition: all 100ms ease-in-out;
-  ${SansSerif}
   font-weight: inherit;
   font-size: inherit;
+  ${SansSerif}
 
   :hover {
     background: rgba(0, 0, 0, 0.1);

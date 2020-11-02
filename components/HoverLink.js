@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import ClickableLink from "./ClickableLink";
 
-export default function HoverLink({ href, text, hoverText, newTab }) {
+export default function HoverLink({ href, text, hoverText, newTab, copy }) {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -11,7 +11,7 @@ export default function HoverLink({ href, text, hoverText, newTab }) {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <ClickableLink href={href} newTab={newTab}>
+      <ClickableLink href={href} newTab={newTab} copy={copy}>
         {isHovering ? hoverText : text}
       </ClickableLink>
     </StyledHoverLink>
@@ -20,6 +20,4 @@ export default function HoverLink({ href, text, hoverText, newTab }) {
 
 const StyledHoverLink = styled.div`
   display: inline-block;
-  & > a {
-  }
 `;

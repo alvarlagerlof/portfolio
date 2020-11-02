@@ -82,6 +82,10 @@ export default function Footer() {
           </li>
 
           <li>
+            <HoverLink copy href="alvar#6125" text="Discord" hoverText="alvar#6125" />
+          </li>
+
+          <li>
             <HoverLink
               newTab
               href="https://unsplash.com/@alvarlagerlof"

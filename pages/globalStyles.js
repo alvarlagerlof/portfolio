@@ -24,10 +24,10 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        ${SansSerif}
     }
 
-    p, em, strong, li {
-        ${SansSerif}
+    p, em, strong, li, button {
         line-height: 1.5;
     }
 
