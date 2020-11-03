@@ -69,7 +69,7 @@ export default function About({ image, experience }) {
               My story starts with, believe it or not, Minecraft. I was playing it a lot when I was
               13. Naturally, I wanted to play with friends. I bought the $2 computer at a flea
               market and installed Ubuntu Server on it. Now of course, every proper Minecraft server
-              has a website. I installed LAMP and started reading up on how to code in something
+              has a website. So I installed LAMP and started reading up on how to code in something
               called HTML. Quickly, w3schools.com became my guide. Before I knew it, I was making
               websites.
             </p>
