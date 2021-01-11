@@ -43,6 +43,7 @@ export default function BlogPost({
           <meta name="twitter:card" content="summary_large_image"></meta>
           <meta name="twitter:site" content="@alvarlagerlof"></meta>
           <meta name="twitter:creator" content="@alvarlagerlof"></meta>
+          <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
         </Head>
 
         <NavBar />
