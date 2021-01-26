@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
           async
           defer
           data-domain="alvar.dev"
-          src="https://plausible.io/js/plausible.outbound-links.js"
+          src="https://stats.alvar.dev/js/index.outbound-links.js"
         ></script>
       </Head>
       <GlobalStyle />
