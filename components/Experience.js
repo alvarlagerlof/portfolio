@@ -17,7 +17,7 @@ export default function Experience({
   };
 
   return (
-    <StyledExperience>
+    <StyledExperience key={content}>
       <Title>
         {title} at {company}
       </Title>
