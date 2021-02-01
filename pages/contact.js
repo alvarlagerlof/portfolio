@@ -24,9 +24,9 @@ export default function Contact({ image }) {
       <Wrapper>
         <Head>
           <title>Contact me - Alvar Lagerlöf</title>
-          <meta name="description" content="Reach me at hi@alvar.dev"></meta>
+          <meta name="description" content="Reach me at hello@alvar.dev"></meta>
           <meta property="og:title" content="Contact me"></meta>
-          <meta property="og:description" content="Reach me at hi@alvar.dev"></meta>
+          <meta property="og:description" content="Reach me at hello@alvar.dev"></meta>
           <meta property="og:image" content={"https://alvar.dev" + image}></meta>
           <meta name="twitter:card" content="summary_large_image"></meta>
           <meta name="twitter:site" content="@alvarlagerlof"></meta>
@@ -48,8 +48,8 @@ export default function Contact({ image }) {
                 Twitter
               </CtaLink>{" "}
               or an email to{" "}
-              <CtaLink newTab href="mailto:hi@alvar.dev">
-                hi@alvar.dev
+              <CtaLink newTab href="mailto:hello@alvar.dev">
+                hello@alvar.dev
               </CtaLink>
             </Subtitle>
           </Header>
@@ -63,7 +63,7 @@ export default function Contact({ image }) {
 export async function getStaticProps() {
   return {
     props: {
-      image: await getImage("contact", "Contact me", "Reach me at hi@alvar.dev", "#9ADBA1"),
+      image: await getImage("contact", "Contact me", "Reach me at hello@alvar.dev", "#9ADBA1"),
     },
   };
 }

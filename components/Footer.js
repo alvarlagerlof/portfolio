@@ -66,7 +66,12 @@ export default function Footer() {
           </li>
 
           <li>
-            <HoverLink newTab href="mailto:hi@alvar.dev" text="Email" hoverText="hi@alvar.dev" />
+            <HoverLink
+              newTab
+              href="mailto:hello@alvar.dev"
+              text="Email"
+              hoverText="hello@alvar.dev"
+            />
           </li>
 
           <li>
