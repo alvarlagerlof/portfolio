@@ -15,6 +15,9 @@ function MyApp({ Component, pageProps }) {
           data-domain="alvar.dev"
           src="https://stats.alvar.dev/js/index.outbound-links.js"
         ></script>
+        {process.env.NODE_ENV === "devlopment" && (
+          <script async src="https://arc.io/widget.min.js#oACa1JCN"></script>
+        )}
       </Head>
       <GlobalStyle />
 
