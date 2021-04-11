@@ -14,7 +14,7 @@ import Section from "../components/Section";
 import Experience from "../components/Experience";
 import CtaLink from "../components/CtaLink";
 import Header from "../components/Header";
-import { Heading, Title, Subtitle, Subheading } from "../components/Headings";
+import { Heading, Title, Subtitle } from "../components/Headings";
 
 export default function About({ image, experience }) {
   return (

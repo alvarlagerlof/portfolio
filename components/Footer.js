@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
-
-import Image from "next/image";
+import { useMemo } from "react";
 
 import HoverLink from "./HoverLink";
 import CtaLink from "./CtaLink";
@@ -9,15 +8,16 @@ import CtaLink from "./CtaLink";
 export default function Footer() {
   const router = useRouter();
 
-  const isBlog = () => router.pathname.includes("blog/");
+  const isBlog = useMemo(() => router.pathname.includes("blog/"), [router]);
+  const age = useMemo(() => getAge());
 
   return (
     <StyledFooter>
       {isBlog() && (
         <About>
           <p>
-            I am Alvar Lagerlöf, an 18 year old developer and designer living in Stockholm, Sweden.
-            I like to experiment with code to make cool stuff. To learn more about me you can check
+            I am Alvar Lagerlöf, an {age} old developer and designer living in Stockholm, Sweden. I
+            like to experiment with code to make cool stuff. To learn more about me you can check
             out the <CtaLink href="/about">about </CtaLink> page. If you'd rather check out some
             things I've made you can go to the <CtaLink href="/projects">projects</CtaLink> page.
           </p>

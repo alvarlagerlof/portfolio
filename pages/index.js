@@ -6,6 +6,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { getPostsLatest } from "../libs/blog";
 import { getProjectsFeatured } from "../libs/projects";
 import getImage from "../libs/image";
+import { getAge } from "../libs/utils/date";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -20,12 +21,7 @@ import CtaLink from "../components/CtaLink";
 import { Heading, Subtitle, Title } from "../components/Headings";
 
 export default function Home({ image, posts, projects }) {
-  const age = useMemo(() => {
-    const birthday = new Date("2002-02-01");
-    var ageDifMs = Date.now() - birthday.getTime();
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
-  });
+  const age = useMemo(() => getAge());
 
   return (
     <ThemeProvider
