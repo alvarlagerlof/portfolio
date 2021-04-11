@@ -1,7 +1,7 @@
 ---
 title: wilfredproject.org
 description: Website for game server manager
-link: https://github.com/wilfred-dev/website
+link: https://wilfredproject.org/
 image: wilfred.png
 featured: true
 ---

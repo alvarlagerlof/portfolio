@@ -47,7 +47,7 @@ export default function About({ image, experience }) {
 
         <Main>
           <Header>
-            <Title>My history</Title>
+            <Title>My story</Title>
             <Subtitle>
               What does a $2 computer at a flea market have to do with me writing this? Turns out...
               everything!

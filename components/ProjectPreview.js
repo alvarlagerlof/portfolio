@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import Image from "next/image";
-import Link from "next/link";
 
 import ClickableLink from "./ClickableLink";
 
@@ -21,9 +19,13 @@ export default function ProjectPreview({ data: { title, description, link, image
       </a>
 
       <Title>
-        <ClickableLink newTab href={link}>
-          {title}
-        </ClickableLink>
+        {link ? (
+          <ClickableLink newTab href={link}>
+            {title}
+          </ClickableLink>
+        ) : (
+          title
+        )}
       </Title>
       <p>{description}</p>
     </div>
@@ -32,7 +34,6 @@ export default function ProjectPreview({ data: { title, description, link, image
 
 const ImageContainer = styled.div`
   margin-bottom: 16px;
-  cursor: pointer;
 
   & img {
     width: 100%;

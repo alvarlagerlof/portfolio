@@ -1,6 +1,6 @@
 ---
 title: Formux
-description: Generative form design
+description: An experiement with generative form design
 link: https://github.com/formux-dev
 image: formux.png
 featured: true

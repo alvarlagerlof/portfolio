@@ -1,10 +1,11 @@
+import { useMemo } from "react";
+import Head from "next/head";
+
 import styled, { ThemeProvider } from "styled-components";
 
 import { getPostsLatest } from "../libs/blog";
 import { getProjectsFeatured } from "../libs/projects";
 import getImage from "../libs/image";
-
-import Head from "next/head";
 
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -19,6 +20,13 @@ import CtaLink from "../components/CtaLink";
 import { Heading, Subtitle, Title } from "../components/Headings";
 
 export default function Home({ image, posts, projects }) {
+  const age = useMemo(() => {
+    const birthday = new Date("2002-02-01");
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  });
+
   return (
     <ThemeProvider
       theme={{
@@ -51,8 +59,8 @@ export default function Home({ image, posts, projects }) {
           <Header>
             <Title>Hi there! 👋</Title>
             <Subtitle>
-              I'm Alvar Lagerlöf, best described as an 18 year old Swedish developer who also likes
-              to design. My story starts with a $2 computer from a flea market.{" "}
+              I'm Alvar Lagerlöf, best described as an {age} year old Swedish developer who also
+              likes to design. My story starts with a $2 computer from a flea market.{" "}
               <CtaLink href="/about">Learn more</CtaLink>
             </Subtitle>
 
