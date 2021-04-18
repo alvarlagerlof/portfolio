@@ -5,6 +5,8 @@ import { useMemo } from "react";
 import HoverLink from "./HoverLink";
 import CtaLink from "./CtaLink";
 
+import { getAge } from "../libs/utils/date";
+
 export default function Footer() {
   const router = useRouter();
 
