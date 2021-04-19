@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         ${SansSerif}
+        -webkit-tap-highlight-color: tansparent;
     }
 
     p, em, strong, li, button {
