@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <StyledFooter>
-      {isBlog() && (
+      {isBlog && (
         <About>
           <p>
             I am Alvar Lagerlöf, an {age} old developer and designer living in Stockholm, Sweden. I
