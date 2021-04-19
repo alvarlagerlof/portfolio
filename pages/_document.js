@@ -30,7 +30,17 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="theme-color" content="#ffffff"></meta>
+          <script
+            async
+            defer
+            data-domain="alvar.dev"
+            src="https://stats.alvar.dev/js/index.outbound-links.js"
+          ></script>
+        </Head>
+
         <body>
           <Main />
           <NextScript />

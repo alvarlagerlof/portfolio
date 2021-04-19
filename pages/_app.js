@@ -1,26 +1,7 @@
-import Head from "next/head";
-
-import GlobalStyle from "./globalStyles";
+import "../globalStyles.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <div>
-      <Head>
-        <title>Alvar Lagerlöf</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#ffffff"></meta>
-        <script
-          async
-          defer
-          data-domain="alvar.dev"
-          src="https://stats.alvar.dev/js/index.outbound-links.js"
-        ></script>
-      </Head>
-      <GlobalStyle />
-
-      <Component {...pageProps} />
-    </div>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
