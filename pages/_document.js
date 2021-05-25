@@ -33,12 +33,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#ffffff"></meta>
-          <script
-            async
-            defer
-            data-domain="alvar.dev"
-            src="https://stats.alvar.dev/js/index.outbound-links.js"
-          ></script>
+          <script defer data-domain="alvar.dev" src="https://plausible.io/js/plausible.js"></script>
         </Head>
 
         <body>
