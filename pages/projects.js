@@ -18,55 +18,54 @@ import { Subtitle, Title } from "../components/Headings";
 
 export default function Projects({ image, projects }) {
   return (
-    <ThemeProvider
-      theme={{
-        backgroundTop: "#ffead9",
-        backgroundBottom: "#FDFAF7",
-        accent: "#297A62",
-      }}
-    >
-      <Wrapper>
-        <Head>
-          <title>Projects - Alvar Lagerlöf</title>
-          <meta name="description" content="Projects from my GitHub I've worked on"></meta>
-          <meta property="og:title" content="Projects"></meta>
-          <meta property="og:description" content="Stuff from my GitHub I've worked on"></meta>
-          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
-          <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta name="twitter:site" content="@alvarlagerlof"></meta>
-          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-        </Head>
+    <>
+      <Head>
+        <title>Projects - Alvar Lagerlöf</title>
+        <meta name="description" content="Projects from my GitHub I've worked on"></meta>
+        <meta property="og:title" content="Projects"></meta>
+        <meta property="og:description" content="Stuff from my GitHub I've worked on"></meta>
+        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+      </Head>
 
-        <NavBar />
+      <ThemeProvider
+        theme={{
+          backgroundTop: "#ffead9",
+          backgroundBottom: "#FDFAF7",
+          accent: "#297A62",
+        }}
+      >
+        <Wrapper>
+          <NavBar />
 
-        <Main>
-          <Header>
-            <Title>Things I've worked on</Title>
-            <Subtitle>
-              In my free time experiement with things, including everything from game-plugins
-              imitating Quake to neural networks. I make it a habit to post these various projects
-              on my{" "}
-              <CtaLink newTab href="https://github.com/alvarlagerlof">
-                Github
-              </CtaLink>{" "}
-              .
-            </Subtitle>
-          </Header>
+          <Main>
+            <Header>
+              <Title>Things I've worked on</Title>
+              <Subtitle>
+                In my free time experiement with things, including everything from game-plugins
+                imitating Quake to neural networks. I make it a habit to post these various projects
+                on my{" "}
+                <CtaLink newTab href="https://github.com/alvarlagerlof">
+                  Github
+                </CtaLink>{" "}
+                .
+              </Subtitle>
+            </Header>
 
-          <Section>
-            <ItemGrid>
-              {projects.map(data => (
-                <li key={data.title}>
-                  <ProjectPreview data={data} />
-                </li>
-              ))}
-            </ItemGrid>
-          </Section>
-        </Main>
+            <Section>
+              <ItemGrid>
+                {projects.map(data => (
+                  <li key={data.title}>
+                    <ProjectPreview data={data} />
+                  </li>
+                ))}
+              </ItemGrid>
+            </Section>
+          </Main>
 
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
+    </>
   );
 }
 

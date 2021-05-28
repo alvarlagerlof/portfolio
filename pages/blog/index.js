@@ -20,67 +20,69 @@ import { Title, Subtitle } from "../../components/Headings";
 
 export default function Blog({ image, postsSectioned, drafts, isDev }) {
   return (
-    <ThemeProvider
-      theme={{
-        backgroundTop: "#ededed",
-        backgroundBottom: "#FAFAFA",
-        accent: "#b11226",
-      }}
-    >
-      <Wrapper>
-        <Head>
-          <title>Blog - Alvar Lagerlöf</title>
-          <meta name="description" content="Personal blog"></meta>
-          <meta property="og:title" content="Alvar Lagerlöf's blog"></meta>
-          <meta property="og:description" content="Personal blog"></meta>
-          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
-          <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta name="twitter:site" content="@alvarlagerlof"></meta>
-          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-          <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
-        </Head>
+    <>
+      <Head>
+        <title>Blog - Alvar Lagerlöf</title>
+        <meta name="description" content="Personal blog"></meta>
+        <meta property="og:title" content="Alvar Lagerlöf's blog"></meta>
+        <meta property="og:description" content="Personal blog"></meta>
+        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:site" content="@alvarlagerlof"></meta>
+        <meta name="twitter:creator" content="@alvarlagerlof"></meta>
+        <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
+      </Head>
 
-        <NavBar />
+      <ThemeProvider
+        theme={{
+          backgroundTop: "#ededed",
+          backgroundBottom: "#FAFAFA",
+          accent: "#b11226",
+        }}
+      >
+        <Wrapper>
+          <NavBar />
 
-        <Main>
-          <Header>
-            <Title>My blog</Title>
-            <Subtitle>
-              I try to put my thoughts into words sometimes. Let's see where it goes. RSS is
-              available{" "}
-              <CtaLink newTag href="https://alvar.dev/feed.xml">
-                here
-              </CtaLink>
-            </Subtitle>
-          </Header>
+          <Main>
+            <Header>
+              <Title>My blog</Title>
+              <Subtitle>
+                I try to put my thoughts into words sometimes. Let's see where it goes. RSS is
+                available{" "}
+                <CtaLink newTag href="https://alvar.dev/feed.xml">
+                  here
+                </CtaLink>
+              </Subtitle>
+            </Header>
 
-          {isDev && (
+            {isDev && (
+              <Section>
+                <ItemGrid>
+                  {drafts.map(post => {
+                    return (
+                      <li key={post.title}>
+                        <BlogPreview data={post} />
+                      </li>
+                    );
+                  })}
+                </ItemGrid>
+              </Section>
+            )}
+
             <Section>
-              <ItemGrid>
-                {drafts.map(post => {
-                  return (
-                    <li key={post.title}>
-                      <BlogPreview data={post} />
-                    </li>
-                  );
-                })}
-              </ItemGrid>
+              <YearList>
+                {Object.entries(postsSectioned)
+                  .sort((a, b) => b[0] - a[0])
+                  .map(([year, posts]) => {
+                    return <Year key={year} year={year} posts={posts} />;
+                  })}
+              </YearList>
             </Section>
-          )}
-
-          <Section>
-            <YearList>
-              {Object.entries(postsSectioned)
-                .sort((a, b) => b[0] - a[0])
-                .map(([year, posts]) => {
-                  return <Year key={year} year={year} posts={posts} />;
-                })}
-            </YearList>
-          </Section>
-        </Main>
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+          </Main>
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
+    </>
   );
 }
 

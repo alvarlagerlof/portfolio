@@ -13,31 +13,32 @@ import { Subtitle, Title } from "../components/Headings";
 
 export default function Contact({ image }) {
   return (
-    <ThemeProvider theme={{ backgroundTop: "white", backgroundBottom: "white", accent: "#6c20b3" }}>
-      <Wrapper>
-        <Head>
-          <title>404 - Alvar Lagerlöf</title>
-          <meta property="og:title" content="404"></meta>
-          <meta property="og:description" content="Page not found"></meta>
-          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
-          <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta name="twitter:site" content="@alvarlagerlof"></meta>
-          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-        </Head>
+    <>
+      <Head>
+        <title>404 - Alvar Lagerlöf</title>
+        <meta property="og:title" content="404"></meta>
+        <meta property="og:description" content="Page not found"></meta>
+        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+      </Head>
 
-        <NavBar />
+      <ThemeProvider
+        theme={{ backgroundTop: "white", backgroundBottom: "white", accent: "#6c20b3" }}
+      >
+        <Wrapper>
+          <NavBar />
 
-        <Main>
-          <Header>
-            <Title>404 Not found</Title>
-            <Subtitle>
-              Perhaps you want to <CtaLink href="/">go home</CtaLink>
-            </Subtitle>
-          </Header>
-        </Main>
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+          <Main>
+            <Header>
+              <Title>404 Not found</Title>
+              <Subtitle>
+                Perhaps you want to <CtaLink href="/">go home</CtaLink>
+              </Subtitle>
+            </Header>
+          </Main>
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
+    </>
   );
 }
 

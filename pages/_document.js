@@ -31,9 +31,24 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#ffffff"></meta>
-          <script defer data-domain="alvar.dev" src="https://plausible.io/js/plausible.js"></script>
+
+          <link rel="icon" href="/favicons/favicon.ico"></link>
+          <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16"></link>
+          <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32"></link>
+          <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96"></link>
+          <link
+            rel="icon"
+            type="image/png"
+            href="/favicons/favicon-192x192.png"
+            sizes="192x192"
+          ></link>
+
+          <meta name="twitter:site" content="@alvarlagerlof"></meta>
+          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
+
+          <script defer data-domain="neurodiversity.wiki" src="/js/script.js"></script>
         </Head>
 
         <body>

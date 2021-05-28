@@ -14,49 +14,56 @@ import { Subtitle, Title } from "../components/Headings";
 
 export default function Contact({ image }) {
   return (
-    <ThemeProvider
-      theme={{
-        backgroundTop: "#e7fadc",
-        backgroundBottom: "#F5FFF6",
-        accent: "#5455B0",
-      }}
-    >
-      <Wrapper>
-        <Head>
-          <title>Contact me - Alvar Lagerlöf</title>
-          <meta name="description" content="Reach me at hello@alvar.dev"></meta>
-          <meta property="og:title" content="Contact me"></meta>
-          <meta property="og:description" content="Reach me at hello@alvar.dev"></meta>
-          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
-          <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta name="twitter:site" content="@alvarlagerlof"></meta>
-          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-        </Head>
+    <>
+      <Head>
+        <title>Contact me - Alvar Lagerlöf</title>
+        <meta name="description" content="Reach me at hello@alvar.dev"></meta>
+        <meta property="og:title" content="Contact me"></meta>
+        <meta property="og:description" content="Reach me at hello@alvar.dev"></meta>
+        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+      </Head>
 
-        <NavBar />
+      <ThemeProvider
+        theme={{
+          backgroundTop: "#e7fadc",
+          backgroundBottom: "#F5FFF6",
+          accent: "#5455B0",
+        }}
+      >
+        <Wrapper>
+          <Head>
+            <title>Contact me - Alvar Lagerlöf</title>
+            <meta name="description" content="Reach me at hello@alvar.dev"></meta>
+            <meta property="og:title" content="Contact me"></meta>
+            <meta property="og:description" content="Reach me at hello@alvar.dev"></meta>
+            <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+          </Head>
 
-        <Main>
-          <Header>
-            <Title>Want to talk?</Title>
-            <Subtitle>
-              Feel free to contact me! You can send me a message on{" "}
-              <CtaLink newTab href="https://linkedin.com/in/alvarlagerlof">
-                LinkedIn
-              </CtaLink>
-              , a DM on{" "}
-              <CtaLink newTab href="https://twitter.com/alvarlagerlof">
-                Twitter
-              </CtaLink>{" "}
-              or an email to{" "}
-              <CtaLink newTab href="mailto:hello@alvar.dev">
-                hello@alvar.dev
-              </CtaLink>
-            </Subtitle>
-          </Header>
-        </Main>
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+          <NavBar />
+
+          <Main>
+            <Header>
+              <Title>Want to talk?</Title>
+              <Subtitle>
+                Feel free to contact me! You can send me a message on{" "}
+                <CtaLink newTab href="https://linkedin.com/in/alvarlagerlof">
+                  LinkedIn
+                </CtaLink>
+                , a DM on{" "}
+                <CtaLink newTab href="https://twitter.com/alvarlagerlof">
+                  Twitter
+                </CtaLink>{" "}
+                or an email to{" "}
+                <CtaLink newTab href="mailto:hello@alvar.dev">
+                  hello@alvar.dev
+                </CtaLink>
+              </Subtitle>
+            </Header>
+          </Main>
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
+    </>
   );
 }
 

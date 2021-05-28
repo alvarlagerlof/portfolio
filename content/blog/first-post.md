@@ -5,4 +5,4 @@ published: 2020-10-23
 draft: false
 ---
 
-This website is currenly under construction. More things come here soon.
+This website is currently under construction. More things come here soon.

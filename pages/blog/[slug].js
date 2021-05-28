@@ -25,44 +25,42 @@ export default function BlogPost({
   },
 }) {
   return (
-    <ThemeProvider
-      theme={{
-        backgroundTop: "#ededed",
-        backgroundBottom: "#FAFAFA",
-        accent: "#b11226",
-      }}
-    >
-      <Wrapper>
-        <Head>
-          <title>{title} - Alvar Lagerlöf</title>
-          <meta name="description" content={description}></meta>
-          <meta property="og:title" content={title}></meta>
-          <meta property="og:type" content="acticle"></meta>
-          <meta property="og:description" content={description}></meta>
-          <meta property="og:image" content={"https://alvar.dev" + image}></meta>
-          <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta name="twitter:site" content="@alvarlagerlof"></meta>
-          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-          <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
-        </Head>
+    <>
+      <Head>
+        <title>{title} - Alvar Lagerlöf</title>
+        <meta name="description" content={description}></meta>
+        <meta property="og:title" content={title}></meta>
+        <meta property="og:type" content="acticle"></meta>
+        <meta property="og:description" content={description}></meta>
+        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
+      </Head>
 
-        <NavBar />
+      <ThemeProvider
+        theme={{
+          backgroundTop: "#ededed",
+          backgroundBottom: "#FAFAFA",
+          accent: "#b11226",
+        }}
+      >
+        <Wrapper>
+          <NavBar />
 
-        <Main>
-          <Header>
-            {draft && <InfoTag spacedBottom>This is a draft</InfoTag>}
-            <Caption>{formatDate(published)}</Caption>
-            <Title>{title}</Title>
-            <Subtitle>{description}</Subtitle>
-          </Header>
-          <Article>
-            <CustomReactMarkdown>{content}</CustomReactMarkdown>
-          </Article>
-        </Main>
+          <Main>
+            <Header>
+              {draft && <InfoTag spacedBottom>This is a draft</InfoTag>}
+              <Caption>{formatDate(published)}</Caption>
+              <Title>{title}</Title>
+              <Subtitle>{description}</Subtitle>
+            </Header>
+            <Article>
+              <CustomReactMarkdown>{content}</CustomReactMarkdown>
+            </Article>
+          </Main>
 
-        <Footer />
-      </Wrapper>
-    </ThemeProvider>
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
+    </>
   );
 }
 
