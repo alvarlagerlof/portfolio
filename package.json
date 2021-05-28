@@ -15,7 +15,7 @@
     "highlight.js": "^10.4.1",
     "luxon": "^1.25.0",
     "next": "^10.0.0",
-    "react": "16.13.1",
+    "react": "16.14.0",
     "react-dom": "16.13.1",
     "react-markdown": "^5.0.0",
     "react-syntax-highlighter": "^15.2.1",
