@@ -81,7 +81,7 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       post,
-      image: await getImage("blog/" + slug, post.data.title, post.data.description, "#D9D9D9"),
+      image: await getImage(`blog/${slug}`, post.data.title, post.data.description, "#D9D9D9"),
     },
   };
 }

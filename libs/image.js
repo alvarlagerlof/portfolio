@@ -8,6 +8,14 @@ function truncate(source, size) {
 }
 
 export default async function getImage(path, title, description, color) {
+  try {
+    if (fse.existsSync(`./public/opengraph/${path}.jpeg`)) {
+      return `./public/opengraph/${path}.jpeg`;
+    }
+  } catch (err) {
+    console.log(`❌ Error while searching for alreadt existing opengraph image: ${e.message}`);
+  }
+
   title = truncate(title, 35);
   description = truncate(description, 110);
   color = Color(color).darken(0.4).hex();
