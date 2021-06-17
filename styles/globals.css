@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: "MADE Dillan";
+  src: url(/fonts/made-dillan.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Space Text";
+  src: url(/fonts/space-text-medium.woff) format("woff");
+}
+
+@import url("https://rsms.me/inter/inter.css");
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+@tailwind utilities;

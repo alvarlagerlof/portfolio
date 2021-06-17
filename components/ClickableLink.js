@@ -2,7 +2,6 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 import "react-tippy/dist/tippy.css";
 import { Tooltip } from "react-tippy";
-import { default as copyToClipboard } from "copy-to-clipboard";
 
 import { SansSerif } from "./Headings";
 
@@ -11,7 +10,7 @@ export default function ClickableLink({ href, newTab, children, border, copy }) 
     <div>
       {copy ? (
         <Tooltip title="Copied to clipboard" position="bottom" trigger="click">
-          <StyledLink as="button" onClick={() => copyToClipboard(href)}>
+          <StyledLink as="button" onClick={() => console.log(href)}>
             {children}
           </StyledLink>
         </Tooltip>

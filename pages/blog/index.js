@@ -1,9 +1,8 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 
 import Head from "next/head";
 
 import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
-import getImage from "../../libs/image";
 import isDev from "../../libs/is-dev";
 
 import NavBar from "../../components/NavBar";
@@ -18,7 +17,7 @@ import CtaLink from "../../components/CtaLink";
 
 import { Title, Subtitle } from "../../components/Headings";
 
-export default function Blog({ image, postsSectioned, drafts, isDev }) {
+export default function Blog({ postsSectioned, drafts, isDev }) {
   return (
     <>
       <Head>
@@ -26,62 +25,49 @@ export default function Blog({ image, postsSectioned, drafts, isDev }) {
         <meta name="description" content="Personal blog"></meta>
         <meta property="og:title" content="Alvar Lagerlöf's blog"></meta>
         <meta property="og:description" content="Personal blog"></meta>
-        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
-        <meta name="twitter:card" content="summary_large_image"></meta>
-        <meta name="twitter:site" content="@alvarlagerlof"></meta>
-        <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-        <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
       </Head>
 
-      <ThemeProvider
-        theme={{
-          backgroundTop: "#ededed",
-          backgroundBottom: "#FAFAFA",
-          accent: "#b11226",
-        }}
-      >
-        <Wrapper>
-          <NavBar />
+      <Wrapper>
+        <NavBar />
 
-          <Main>
-            <Header>
-              <Title>My blog</Title>
-              <Subtitle>
-                I try to put my thoughts into words sometimes. Let's see where it goes. RSS is
-                available{" "}
-                <CtaLink newTag href="https://alvar.dev/feed.xml">
-                  here
-                </CtaLink>
-              </Subtitle>
-            </Header>
+        <Main>
+          <Header>
+            <Title>My blog</Title>
+            <Subtitle>
+              I try to put my thoughts into words sometimes. Let's see where it goes. RSS is
+              available{" "}
+              <CtaLink newTag href="https://alvar.dev/feed.xml">
+                here
+              </CtaLink>
+            </Subtitle>
+          </Header>
 
-            {isDev && (
-              <Section>
-                <ItemGrid>
-                  {drafts.map(post => {
-                    return (
-                      <li key={post.title}>
-                        <BlogPreview data={post} />
-                      </li>
-                    );
-                  })}
-                </ItemGrid>
-              </Section>
-            )}
-
+          {isDev && (
             <Section>
-              <YearList>
-                {Object.entries(postsSectioned)
-                  .sort((a, b) => b[0] - a[0])
-                  .map(([year, posts]) => {
-                    return <Year key={year} year={year} posts={posts} />;
-                  })}
-              </YearList>
+              <ItemGrid>
+                {drafts.map(post => {
+                  return (
+                    <li key={post.title}>
+                      <BlogPreview data={post} />
+                    </li>
+                  );
+                })}
+              </ItemGrid>
             </Section>
-          </Main>
-          <Footer />
-        </Wrapper>
-      </ThemeProvider>
+          )}
+
+          <Section>
+            <YearList>
+              {Object.entries(postsSectioned)
+                .sort((a, b) => b[0] - a[0])
+                .map(([year, posts]) => {
+                  return <Year key={year} year={year} posts={posts} />;
+                })}
+            </YearList>
+          </Section>
+        </Main>
+        <Footer />
+      </Wrapper>
     </>
   );
 }
@@ -124,12 +110,7 @@ export async function getStaticProps() {
     props: {
       drafts: await getPostsDrafts(),
       postsSectioned: await getPostsSectioned(),
-      image: await getImage(
-        "blog",
-        "Personal blog",
-        "Here I'll write down my thoughts sometimes",
-        "#D9D9D9"
-      ),
+
       isDev: isDev(),
     },
   };

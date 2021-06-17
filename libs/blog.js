@@ -48,10 +48,12 @@ async function getPostsPublished() {
   return await (await getPosts()).filter(post => post.draft == false);
 }
 
+const truncate = (input, len) => (input.length > len ? `${input.substring(0, len)}...` : input);
+
 async function getPostsLatest() {
   const allPublished = await getPostsPublished();
-  allPublished.length == 6;
-  return allPublished;
+  allPublished.length == 3;
+  return allPublished.map(post => ({ ...post, description: truncate(post.description, 50) }));
 }
 
 async function getPostsSectioned() {

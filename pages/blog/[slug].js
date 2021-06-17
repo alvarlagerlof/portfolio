@@ -35,31 +35,23 @@ export default function BlogPost({
         <meta property="og:image" content={"https://alvar.dev" + image}></meta>
       </Head>
 
-      <ThemeProvider
-        theme={{
-          backgroundTop: "#ededed",
-          backgroundBottom: "#FAFAFA",
-          accent: "#b11226",
-        }}
-      >
-        <Wrapper>
-          <NavBar />
+      <Wrapper>
+        <NavBar />
 
-          <Main>
-            <Header>
-              {draft && <InfoTag spacedBottom>This is a draft</InfoTag>}
-              <Caption>{formatDate(published)}</Caption>
-              <Title>{title}</Title>
-              <Subtitle>{description}</Subtitle>
-            </Header>
-            <Article>
-              <CustomReactMarkdown>{content}</CustomReactMarkdown>
-            </Article>
-          </Main>
+        <Main>
+          <Header>
+            {draft && <InfoTag spacedBottom>This is a draft</InfoTag>}
+            <Caption>{formatDate(published)}</Caption>
+            <Title>{title}</Title>
+            <Subtitle>{description}</Subtitle>
+          </Header>
+          <Article>
+            <CustomReactMarkdown>{content}</CustomReactMarkdown>
+          </Article>
+        </Main>
 
-          <Footer />
-        </Wrapper>
-      </ThemeProvider>
+        <Footer />
+      </Wrapper>
     </>
   );
 }
@@ -81,7 +73,6 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       post,
-      image: await getImage(`blog/${slug}`, post.data.title, post.data.description, "#D9D9D9"),
     },
   };
 }
