@@ -51,7 +51,13 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="https://alvar.dev/opengraph.jpg"></meta>
           <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
 
-          <script defer src="/js/script.js"></script>
+          <script defer data-domain="neurodiversity.wiki" src="/js/script.js"></script>
+
+          {/* <Script
+            src="/js/script.js"
+            data-domain="neurodiversity.wiki"
+            strategy="lazyOnload"
+          ></Script> */}
         </Head>
 
         <body>
