@@ -40,6 +40,16 @@ function Experience({ data: { title, company, type, link, startDate, endDate, co
   );
 }
 
+function SocialIcon({ name, href, icon }) {
+  return (
+    <li>
+      <a href={href} aria-label={name}>
+        <img className="w-6 h-6 md:w-8 md:h-8" src={icon} />
+      </a>
+    </li>
+  );
+}
+
 export default function About({ experience }) {
   return (
     <>
@@ -56,41 +66,42 @@ export default function About({ experience }) {
         ></meta>
       </Head>
 
-      <header className="flex flex-row items-center">
-        <div className="mr-12">
-          <h1 className="font-heading text-7xl mb-4">Hej</h1>
-          <h2 className="font-subheading text-2xl mb-12">
+      <header className="flex flex-col-reverse md:flex-row items-center">
+        <div className="mt-8 md:mr-12 md:mt-0">
+          <h1 className="font-heading text-4xl md:text-7xl mb-4">Hej</h1>
+          <h2 className="font-subheading text-xl md:text-2xl mb-12">
             I’m a swedish he/him living in Stockholm, Sweden. I like to code and design.
           </h2>
           <ul className="flex flex-row space-x-6">
-            <li>
-              <a href="https://twitter.com/alvarlagerlof">
-                <img className="w-8 h-8" src="/icons/twitter.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/alvarlagerlof">
-                <img className="w-8 h-8" src="/icons/linkedin.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/alvarlagerlof">
-                <img className="w-8 h-8" src="/icons/github.svg" />
-              </a>
-            </li>
-            <li>
-              <a href="mailto:hello@alvar.dev">
-                <img className="w-8 h-8" src="/icons/email.svg" />
-              </a>
-            </li>
+            <SocialIcon
+              name="Twitter"
+              href="https://twitter.com/alvarlagerlof"
+              icon="/icons/twitter.svg"
+            />
+            <SocialIcon
+              name="LinkedIn"
+              href="ttps://linkedin.com/in/alvarlagerlof"
+              icon="/icons/linkedin.svg"
+            />
+            <SocialIcon
+              name="GitHub"
+              href="https://github.com/alvarlagerlof"
+              icon="/icons/github.svg"
+            />
+            <SocialIcon name="Email" href="mailto:hello@alvar.dev" icon="/icons/email.svg" />
           </ul>
         </div>
-        <Image src="/profile.png" className="rounded-3xl bordered" width="400" height="400" />
+        <Image
+          src="/profile.png"
+          className="rounded-3xl bordered w-full"
+          width="400"
+          height="400"
+        />
       </header>
 
       <Separator />
 
-      <div className="space-x-10 flex flex-row">
+      <div className=" flex flex-col xl:flex-row space-y-8 xl:space-x-10 xl:space-y-0">
         <section>
           <h3 className="font-heading text-4xl mb-8">Experience</h3>
           <ul className="space-y-8">
@@ -102,7 +113,7 @@ export default function About({ experience }) {
 
         <Separator vertical />
 
-        <section className="max-w-[50%]">
+        <section className="xl:max-w-[50%]">
           <h3 className="font-heading text-4xl mb-8">My story</h3>
           <div className="space-y-4">
             <p>

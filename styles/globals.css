@@ -15,13 +15,14 @@
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
 /* TODO: Figure out how to do this in tailwind */
 
 img.bordered {
-  border: 3px solid black !important;
+  border: 2px solid black !important;
 }
 
 blockquote p:last-child {

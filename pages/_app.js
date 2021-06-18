@@ -20,10 +20,10 @@ function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
       ></Script>
 
-      <div className="flex flex-col items-center">
-        <div className="w-3/4	max-w-6xl">
+      <div className="flex flex-col items-center px-4 md:px-8">
+        <div className="w-full xl:w-3/4 max-w-6xl  ">
           <NavBar />
-          <main className="space-y-14 my-14">
+          <main className="space-y-8 my-8 md:space-y-14 md:my-14">
             <Component {...pageProps} />
           </main>
           <Footer />

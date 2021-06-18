@@ -17,9 +17,9 @@ export default function Projects({ projects }) {
       </Head>
 
       <header>
-        <h1 className="font-heading text-7xl mb-4">Projects</h1>
+        <h1 className="font-heading text-4xl md:text-7xl mb-4">Projects</h1>
 
-        <h2 className="font-subheading text-2xl">
+        <h2 className="font-subheading text-xl md:text-2xl">
           You can also check out my{" "}
           <ArrowLink href="https://github.com/alvarlagerlof">Github</ArrowLink>,{" "}
           <ArrowLink href="https://unsplash.com/@alvarlagerlof">Unsplash</ArrowLink> and{" "}
@@ -30,7 +30,7 @@ export default function Projects({ projects }) {
       <Separator />
 
       <section>
-        <ul className="grid grid-cols-2 gap-12">
+        <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
           {projects.map(({ title, description, link, image, blurhash }) => (
             <li key={title}>
               <a href={link} target="_blank" rel="noopener">
@@ -45,7 +45,9 @@ export default function Projects({ projects }) {
                   // blurDataURL={blurhash}
                 />
 
-                <h3 className="font-heading text-4xl mt-4 mb-2">{title}</h3>
+                <h3 className="font-heading text-2xl xl:text-4xl mt-2 xl:mt-4 mb-1 xl:mb-2">
+                  {title}
+                </h3>
                 <p>{description}</p>
               </a>
             </li>

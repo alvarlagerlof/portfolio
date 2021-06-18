@@ -10,11 +10,21 @@ export default function CustomReactMarkdown({ children }) {
     heading: ({ level, children }) => {
       switch (level) {
         case 1:
-          return <h3 className="font-subheading font-semibold text-4xl mt-12 mb-2">{children}</h3>;
+          return (
+            <h3 className="font-subheading font-semibold text-2xl md:text-4xl mt-8 mb-2">
+              {children}
+            </h3>
+          );
         case 2:
-          return <h4 className="font-subheading font-semibold text-3xl mt-8 mb-2">{children}</h4>;
+          return (
+            <h4 className="font-subheading font-semibold text-xl md:text-3xl mt-8 mb-2">
+              {children}
+            </h4>
+          );
         case 3:
-          return <h5 className="font-subheading font-semibold text-2xl mt-12 mb-2">{children}</h5>;
+          return (
+            <h5 className="font-subheading font-semibold md:text-2xl mt-8 mb-2">{children}</h5>
+          );
         default:
           return <p>Heading {level} not implemented</p>;
       }
@@ -67,6 +77,7 @@ export default function CustomReactMarkdown({ children }) {
             borderRadius: "8px",
             padding: "16px",
             fontFamily: "unset",
+            fontSize: "0.9em",
           }}
           style={style}
           language={language}

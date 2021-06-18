@@ -1,6 +1,5 @@
 import fs from "fs";
 import matter from "gray-matter";
-import isDev from "./is-dev";
 
 import { parseDate } from "./utils/date";
 

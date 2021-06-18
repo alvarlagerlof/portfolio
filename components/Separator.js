@@ -1,7 +1,16 @@
 export default function Separator({ vertical }) {
   if (vertical) {
-    return <div className="block w-[3px] min-w-[3px] bg-separator"></div>;
+    return (
+      <>
+        <div className={vertical + ":hidden"}>
+          <div className="block w-full h-[2px] min-h-[2px] bg-separator"></div>
+        </div>
+        <div className={"hidden " + vertical + ":block"}>
+          <div className={`block h-full w-[2px] min-w-[2px] bg-separator`}></div>
+        </div>
+      </>
+    );
   }
 
-  return <div className="block w-full h-[3px] min-h-[3px] bg-separator"></div>;
+  return <div className="block w-full h-[2px] min-h-[2px] bg-separator"></div>;
 }

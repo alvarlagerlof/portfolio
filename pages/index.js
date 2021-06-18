@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { useRef } from "react";
 
 import Separator from "../components/Separator";
 import ArrowLink from "../components/ArrowLink";
@@ -9,6 +10,13 @@ import { getPostsLatest } from "../libs/blog";
 import { getProjectsFeatured } from "../libs/projects";
 
 export default function Home({ posts, projects }) {
+  const audioRef = useRef(null);
+
+  const play = () => {
+    console.log(audioRef.current);
+    audioRef.current.play();
+  };
+
   return (
     <>
       <Head>
@@ -24,13 +32,19 @@ export default function Home({ posts, projects }) {
         ></meta>
       </Head>
 
+      <audio ref={audioRef}>
+        <source src="/name.flac" type="audio/flac" />
+        Your browser does not support the audio element.
+      </audio>
+
       <header>
-        <h1 className="font-heading text-7xl mb-2">I'm Alvar Lagerlöf</h1>
-        <button className="flex flex-row space-x-2 items-center mb-8">
-          <span className="text-xl font-bold text-primary ">Hear the pronunciation</span>
+        <h1 className="font-heading text-4xl md:text-7xl mb-2">I'm Alvar Lagerlöf</h1>
+        <button className="flex flex-row space-x-2 items-center mb-8" onClick={play}>
+          <span className="md:text-xl font-bold text-primary ">Hear the pronunciation</span>
           <img alt="speaker" src="/icons/speaker.svg" />
         </button>
-        <h2 className="font-subheading text-2xl">
+
+        <h2 className="font-subheading text-xl md:text-2xl">
           My story starts with a $2 computer from a flea market.{" "}
           <ArrowLink href="/about">Learn more</ArrowLink>
         </h2>
@@ -38,10 +52,10 @@ export default function Home({ posts, projects }) {
 
       <Separator />
 
-      <div className="space-x-10 flex flex-row">
+      <div className="space-y-10 xl:space-x-10 xl:space-y-0 flex flex-col xl:flex-row">
         <section className="min-w-[400px]">
-          <h3 className="font-heading text-4xl mb-8">Featured projects</h3>
-          <ul className="space-y-8">
+          <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
+          <ul className="space-y-4 md:space-y-8">
             {projects.map(({ title, description, link, image }) => (
               <li key={title}>
                 <Link href={link ?? ""}>
@@ -54,21 +68,23 @@ export default function Home({ posts, projects }) {
                     />
                     <div>
                       <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
-                      <p>{description}</p>
+                      <p className="whitespace-pre">{description}</p>
                     </div>
                   </div>
                 </Link>
               </li>
             ))}
           </ul>
-          <h4 className="text-2xl font-subheading mt-12">
+          <h4 className="text-xl xl:text-2xl font-subheading mt-12">
             <ArrowLink href="/projects">All projects</ArrowLink>
           </h4>
         </section>
-        <Separator vertical />
+
+        <Separator vertical="xl" />
+
         <section>
-          <h3 className="font-heading text-4xl mb-8">Recent blog posts</h3>
-          <ul className="space-y-8">
+          <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
+          <ul className="space-y-4 md:space-y-8">
             {posts.map(({ slug, title, description, published, draft }) => (
               <li key={title}>
                 <Link href={"/blog" + slug}>
@@ -80,7 +96,7 @@ export default function Home({ posts, projects }) {
               </li>
             ))}
           </ul>
-          <h4 className="text-2xl font-subheading mt-12">
+          <h4 className="text-xl xl:text-2xl font-subheading mt-12">
             <ArrowLink href="/blog">All posts</ArrowLink>
           </h4>
         </section>

@@ -3,22 +3,6 @@ import { useRouter } from "next/router";
 
 import Separator from "./Separator";
 
-function NavLink({ href, name, icon: Icon }) {
-  const router = useRouter();
-  const active = router.pathname == href;
-
-  return (
-    <li>
-      <Link href={href}>
-        <a className="flex flex-row space-x-2 items-center">
-          <Icon active={active} />
-          <span className={"font-medium" + (active ? " text-primary" : "")}>{name}</span>
-        </a>
-      </Link>
-    </li>
-  );
-}
-
 function IconHome({ active }) {
   return (
     <svg
@@ -86,7 +70,7 @@ function IconBlog({ active }) {
     <svg
       aria-hidden
       xmlns="http://www.w3.org/2000/svg"
-      enable-background="new 0 0 24 24"
+      enableBackground="new 0 0 24 24"
       height="24px"
       viewBox="0 0 24 24"
       width="24px"
@@ -103,17 +87,45 @@ function IconBlog({ active }) {
   );
 }
 
+function NavLink({ href, name, icon: Icon }) {
+  const router = useRouter();
+  const active = router.pathname == href;
+
+  return (
+    <li className="m-2 md:m-4">
+      <Link href={href}>
+        <a className="flex flex-row space-x-1 md:space-x-2 items-center">
+          <Icon active={active} />
+          <span className={"font-medium" + (active ? " text-primary" : "")}>{name}</span>
+        </a>
+      </Link>
+    </li>
+  );
+}
+
 export default function NavBar() {
   return (
     <>
-      <nav className="py-8">
-        <ul className="flex flex-row space-x-6">
-          <NavLink href="/" name="Home" icon={IconHome} />
-          <NavLink href="/about" name="About" icon={IconAbout} />
-          <NavLink href="/projects" name="Projects" icon={IconProjects} />
-          <NavLink href="/blog" name="Blog" icon={IconBlog} />
-        </ul>
-      </nav>
+      <div className="flex flex-col md:flex-row md:justify-between py-8 space-y-8 md:space-y-0 items-center">
+        <Link href="/">
+          <a>
+            <div className="flex flex-row items-center space-x-2">
+              <img src="/icons/star.svg" />
+              <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
+            </div>
+          </a>
+        </Link>
+
+        <nav>
+          <ul className="flex flex-wrap flex-row justify-center -m-2 md:-m-4">
+            <NavLink href="/" name="Home" icon={IconHome} />
+            <NavLink href="/about" name="About" icon={IconAbout} />
+            <NavLink href="/projects" name="Projects" icon={IconProjects} />
+            <NavLink href="/blog" name="Blog" icon={IconBlog} />
+          </ul>
+        </nav>
+      </div>
+
       <Separator />
     </>
   );
