@@ -10,24 +10,55 @@ export default function CustomReactMarkdown({ children }) {
     heading: ({ level, children }) => {
       switch (level) {
         case 1:
-          return <h3>{children}</h3>;
+          return <h3 className="font-subheading font-semibold text-4xl mt-12 mb-2">{children}</h3>;
         case 2:
-          return <h4>{children}</h4>;
+          return <h4 className="font-subheading font-semibold text-3xl mt-8 mb-2">{children}</h4>;
         case 3:
-          return <h5>{children}</h5>;
+          return <h5 className="font-subheading font-semibold text-2xl mt-12 mb-2">{children}</h5>;
         default:
           return <p>Heading {level} not implemented</p>;
       }
     },
+    paragraph: ({ children }) => {
+      return <p className="mb-8">{children}</p>;
+    },
+    list: ({ ordered, children }) => {
+      if (!ordered) {
+        return <ul className="list-disc ml-4 space-y-2 my-4">{children}</ul>;
+      }
+      if (ordered) {
+        return <ol className="list-decimal ml-4 space-y-2 my-4">{children}</ol>;
+      }
+    },
     image: ({ src, alt }) => {
-      return <Image src={src} alt={alt} unsized loading="lazy" layout="fill" />;
+      return (
+        <div className="my-12">
+          <Image
+            src={src}
+            alt={alt}
+            loading="lazy"
+            width="1000"
+            height="600"
+            objectFit="cover"
+            className="rounded-3xl bordered"
+          />
+        </div>
+      );
     },
     link: ({ href, children }) => (
       <ArrowLink newTab href={href}>
         {children}
       </ArrowLink>
     ),
-    code: ({ language, value }) => {
+    blockquote: ({ children }) => {
+      return (
+        <blockquote className="py-2 px-4 border-l-[3px] border-separator flex flex-col mb-8">
+          {children}
+        </blockquote>
+      );
+    },
+    code: ({ language, value, ...rest }) => {
+      console.log(rest);
       return (
         <SyntaxHighlighter
           customStyle={{

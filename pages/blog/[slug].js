@@ -34,10 +34,14 @@ export default function BlogPost({
       </header>
 
       <Separator />
-
+      {/* 
       <Article>
         <CustomReactMarkdown>{content}</CustomReactMarkdown>
-      </Article>
+      </Article> */}
+
+      <div>
+        <CustomReactMarkdown>{content}</CustomReactMarkdown>
+      </div>
     </>
   );
 }

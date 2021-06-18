@@ -5,7 +5,7 @@ import { SansSerif, Bold } from "./Headings";
 const Article = styled.article`
   margin: 64px 0;
 
-  & h3,
+  /* & h3,
   & h4,
   & h5 {
     ${Bold}
@@ -24,7 +24,7 @@ const Article = styled.article`
 
   & h5 {
     font-size: 1.3rem;
-  }
+  } */
 
   & p + p {
     margin-top: 16px;
