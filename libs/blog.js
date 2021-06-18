@@ -55,7 +55,7 @@ function truncate(input, len) {
 
 async function getPostsLatest() {
   const allPublished = await getPostsPublished();
-  allPublished.length == 3;
+  allPublished.length == 6;
   return allPublished.map(post => ({ ...post, description: truncate(post.description, 50) }));
 }
 
