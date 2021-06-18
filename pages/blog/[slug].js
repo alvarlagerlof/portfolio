@@ -4,7 +4,6 @@ import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
 import isDev from "../../libs/is-dev";
 
-import Article from "../../components/Article";
 import CustomReactMarkdown from "../../components/CustomReactMarkdown";
 import Separator from "../../components/Separator";
 
@@ -34,10 +33,6 @@ export default function BlogPost({
       </header>
 
       <Separator />
-      {/* 
-      <Article>
-        <CustomReactMarkdown>{content}</CustomReactMarkdown>
-      </Article> */}
 
       <div>
         <CustomReactMarkdown>{content}</CustomReactMarkdown>
