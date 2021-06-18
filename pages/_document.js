@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -50,7 +51,11 @@ export default class MyDocument extends Document {
           <meta property="og:image" content="https://alvar.dev/opengraph.jpg"></meta>
           <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
 
-          <script defer data-domain="neurodiversity.wiki" src="/js/script.js"></script>
+          <Script
+            src="/js/script.js"
+            data-domain="neurodiversity.wiki"
+            strategy="afterInteractive" // lazyOnload, afterInteractive
+          />
         </Head>
 
         <body>
