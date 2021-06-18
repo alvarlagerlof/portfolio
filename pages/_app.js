@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Script from "next/script";
+
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -11,6 +13,12 @@ function MyApp({ Component, pageProps }) {
         {/* Next.js complains if this isn't here */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
+
+      <Script
+        src="/js/script.js"
+        data-domain="neurodiversity.wiki"
+        strategy="afterInteractive"
+      ></Script>
 
       <div className="flex flex-col items-center">
         <div className="w-3/4	max-w-6xl">

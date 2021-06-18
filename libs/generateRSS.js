@@ -5,9 +5,9 @@ const md = require("markdown-it")();
 
 try {
   const posts = fs
-    .readdirSync(`content/blog`)
+    .readdirSync(`./content/blog`)
     .map(filename => {
-      const markdownWithMetadata = fs.readFileSync(`content/blog/${filename}`).toString();
+      const markdownWithMetadata = fs.readFileSync(`./content/blog/${filename}`).toString();
 
       const { data, content } = matter(markdownWithMetadata);
 
@@ -44,7 +44,7 @@ try {
   });
 
   const rss = feed.xml({ indent: true });
-  fs.writeFileSync("out/feed.xml", rss);
+  fs.writeFileSync("./out/feed.xml", rss);
 
   console.log("✅ feed.xml generated");
 } catch (e) {
