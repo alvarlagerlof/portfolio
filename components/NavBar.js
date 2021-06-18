@@ -110,7 +110,10 @@ export default function NavBar() {
         <Link href="/">
           <a>
             <div className="flex flex-row items-center space-x-2">
-              <img src="/icons/star.svg" />
+              <img
+                src="/icons/star.svg"
+                className="z-10 hover:scale-[170] hover:rotate-180 transition duration-[1500ms] ease-in-out"
+              />
               <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
             </div>
           </a>

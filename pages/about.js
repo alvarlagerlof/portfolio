@@ -111,7 +111,7 @@ export default function About({ experience }) {
           </ul>
         </section>
 
-        <Separator vertical />
+        <Separator vertical="xl" />
 
         <section className="xl:max-w-[50%]">
           <h3 className="font-heading text-4xl mb-8">My story</h3>
