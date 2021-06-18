@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
+
 import Separator from "../components/Separator";
 import ArrowLink from "../components/ArrowLink";
 
@@ -39,14 +41,16 @@ export default function Home({ posts, projects }) {
       <div className="space-x-10 flex flex-row">
         <section className="min-w-[400px]">
           <h3 className="font-heading text-4xl mb-8">Featured projects</h3>
-          <ul className="space-y-4">
+          <ul className="space-y-8">
             {projects.map(({ title, description, link, image }) => (
               <li key={title}>
                 <Link href={link ?? ""}>
                   <div className="flex flex-row items-center space-x-4 cursor-pointer">
-                    <img
-                      className="w-35 h-20 border-2 border-black rounded-xl object-cover"
+                    <Image
+                      className="bordered rounded-xl object-cover"
                       src={"/content/projects/" + image}
+                      width="130"
+                      height="80"
                     />
                     <div>
                       <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
@@ -61,14 +65,14 @@ export default function Home({ posts, projects }) {
         <Separator vertical />
         <section>
           <h3 className="font-heading text-4xl mb-8">Recent blog posts</h3>
-          <ul className="space-y-4">
+          <ul className="space-y-8">
             {posts.map(({ slug, title, description, published, draft }) => (
               <li key={title}>
                 <Link href={"/new/blog" + slug}>
                   <div className="cursor-pointer">
-                    <div className="flex flex-row space-x-2 mb-2">
+                    <div className="flex flex-row space-x-2">
                       {draft && (
-                        <p className="bg-primary px-2 rounded-2xl text-white inline h-6">Draft</p>
+                        <p className="bg-primary px-2 rounded-full text-white inline h-6">Draft</p>
                       )}
                       <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
                     </div>

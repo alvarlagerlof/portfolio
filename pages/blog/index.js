@@ -1,21 +1,16 @@
-import styled from "styled-components";
-
+import Link from "next/link";
 import Head from "next/head";
 
+import ArrowLink from "../../components/ArrowLink";
+import Separator from "../../components/Separator";
+
+import { formatDate } from "../../libs/utils/date";
 import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
 import isDev from "../../libs/is-dev";
 
-import NavBar from "../../components/NavBar";
-import Footer from "../../components/Footer";
-import Wrapper from "../../components/Wrapper";
-import Main from "../../components/Main";
-import BlogPreview from "../../components/BlogPreview";
-import Section from "../../components/Section";
-import ItemGrid from "../../components/ItemGrid";
-import Header from "../../components/Header";
-import CtaLink from "../../components/CtaLink";
-
-import { Title, Subtitle } from "../../components/Headings";
+function truncate(input, len) {
+  return input.length > len ? `${input.substring(0, len)}...` : input;
+}
 
 export default function Blog({ postsSectioned, drafts, isDev }) {
   return (
@@ -27,83 +22,51 @@ export default function Blog({ postsSectioned, drafts, isDev }) {
         <meta property="og:description" content="Personal blog"></meta>
       </Head>
 
-      <Wrapper>
-        <NavBar />
+      <header>
+        <h1 className="font-heading text-7xl mb-4">Alvar's Blog</h1>
 
-        <Main>
-          <Header>
-            <Title>My blog</Title>
-            <Subtitle>
-              I try to put my thoughts into words sometimes. Let's see where it goes. RSS is
-              available{" "}
-              <CtaLink newTag href="https://alvar.dev/feed.xml">
-                here
-              </CtaLink>
-            </Subtitle>
-          </Header>
+        <h2 className="font-subheading text-2xl">
+          I try to put my thoughts into words sometimes. RSS is available{" "}
+          <ArrowLink href="https://alvar.dev/feed.xml">here</ArrowLink>
+        </h2>
+      </header>
 
-          {isDev && (
-            <Section>
-              <ItemGrid>
-                {drafts.map(post => {
-                  return (
-                    <li key={post.title}>
-                      <BlogPreview data={post} />
-                    </li>
-                  );
-                })}
-              </ItemGrid>
-            </Section>
-          )}
+      <Separator />
 
-          <Section>
-            <YearList>
-              {Object.entries(postsSectioned)
-                .sort((a, b) => b[0] - a[0])
-                .map(([year, posts]) => {
-                  return <Year key={year} year={year} posts={posts} />;
-                })}
-            </YearList>
-          </Section>
-        </Main>
-        <Footer />
-      </Wrapper>
+      <ul>
+        {Object.entries(postsSectioned)
+          .sort((a, b) => b[0] - a[0])
+          .map(([year, posts]) => {
+            return (
+              <li key={year} className="flex flex-row items-start space-x-12">
+                <h3 className="font-heading text-5xl">{year}</h3>
+                <ul className="space-y-8">
+                  {posts.map(({ slug, title, description, published, draft }) => {
+                    return (
+                      <li key={title}>
+                        <Link href={"blog/" + slug}>
+                          <a>
+                            {draft && (
+                              <p className="bg-primary px-2 rounded-full inline text-white h-6">
+                                Draft
+                              </p>
+                            )}
+                            <em className="block">{formatDate(published)}</em>
+                            <h4 className="font-subheading font-semibold text-2xl mb-2">{title}</h4>
+                            <p>{truncate(description, 100)}</p>
+                          </a>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+            );
+          })}
+      </ul>
     </>
   );
 }
-
-function Year({ year, posts }) {
-  return (
-    <StyledYear>
-      <Title as="h3">{year}</Title>
-      <ItemGrid>
-        {posts.map(post => {
-          return (
-            <li key={post.title}>
-              <BlogPreview data={post} />
-            </li>
-          );
-        })}
-      </ItemGrid>
-    </StyledYear>
-  );
-}
-
-const YearList = styled.ul`
-  list-style: none;
-`;
-
-const StyledYear = styled.li`
-  margin: 64px 0;
-
-  & > h1 {
-    margin-bottom: 16px;
-  }
-
-  & > ul {
-    list-style: none;
-  }
-`;
 
 export async function getStaticProps() {
   return {

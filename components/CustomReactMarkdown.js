@@ -2,8 +2,8 @@ import ReactMarkdown from "react-markdown";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
-import CtaLink from "./CtaLink";
 import gfm from "remark-gfm";
+import ArrowLink from "./ArrowLink";
 
 export default function CustomReactMarkdown({ children }) {
   const renderers = {
@@ -20,12 +20,12 @@ export default function CustomReactMarkdown({ children }) {
       }
     },
     image: ({ src, alt }) => {
-      return <Image src={src} alt={alt} unsized loading="lazy" />;
+      return <Image src={src} alt={alt} unsized loading="lazy" layout="fill" />;
     },
     link: ({ href, children }) => (
-      <CtaLink newTab href={href}>
+      <ArrowLink newTab href={href}>
         {children}
-      </CtaLink>
+      </ArrowLink>
     ),
     code: ({ language, value }) => {
       return (

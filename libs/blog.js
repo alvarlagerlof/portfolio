@@ -45,10 +45,12 @@ async function getPostsDrafts() {
 }
 
 async function getPostsPublished() {
-  return await (await getPosts()).filter(post => post.draft == false);
+  return await (await getPosts()).filter(post => true);
 }
 
-const truncate = (input, len) => (input.length > len ? `${input.substring(0, len)}...` : input);
+function truncate(input, len) {
+  return input.length > len ? `${input.substring(0, len)}...` : input;
+}
 
 async function getPostsLatest() {
   const allPublished = await getPostsPublished();

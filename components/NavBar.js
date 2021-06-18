@@ -4,7 +4,7 @@ import Separator from "./Separator";
 export default function NavBar() {
   return (
     <>
-      <nav>
+      <nav className="py-8">
         <ul className="flex flex-row space-x-6">
           <li>
             <Link href="/">

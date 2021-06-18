@@ -1,24 +1,14 @@
 import Head from "next/head";
-import { ThemeProvider } from "styled-components";
 
 import { formatDate } from "../../libs/utils/date";
 import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
-import getImage from "../../libs/image";
 import isDev from "../../libs/is-dev";
 
-import NavBar from "../../components/NavBar";
-import Footer from "../../components/Footer";
-import Wrapper from "../../components/Wrapper";
-import Main from "../../components/Main";
-import Header from "../../components/Header";
 import Article from "../../components/Article";
-import InfoTag from "../../components/InfoTag";
 import CustomReactMarkdown from "../../components/CustomReactMarkdown";
-
-import { Title, Subtitle, Caption } from "../../components/Headings";
+import Separator from "../../components/Separator";
 
 export default function BlogPost({
-  image,
   post: {
     data: { title, description, published, draft },
     content,
@@ -32,26 +22,22 @@ export default function BlogPost({
         <meta property="og:title" content={title}></meta>
         <meta property="og:type" content="acticle"></meta>
         <meta property="og:description" content={description}></meta>
-        <meta property="og:image" content={"https://alvar.dev" + image}></meta>
       </Head>
 
-      <Wrapper>
-        <NavBar />
+      <header>
+        {draft && (
+          <p className=" bg-primary px-2 rounded-full inline-block text-white h-6 mb-20">Draft</p>
+        )}{" "}
+        <p className="font-medium text-xl mb-4">{formatDate(published)}</p>
+        <h1 className="font-heading text-7xl mb-12">{title}</h1>
+        <h2 className="font-subheading text-2xl">{description}</h2>
+      </header>
 
-        <Main>
-          <Header>
-            {draft && <InfoTag spacedBottom>This is a draft</InfoTag>}
-            <Caption>{formatDate(published)}</Caption>
-            <Title>{title}</Title>
-            <Subtitle>{description}</Subtitle>
-          </Header>
-          <Article>
-            <CustomReactMarkdown>{content}</CustomReactMarkdown>
-          </Article>
-        </Main>
+      <Separator />
 
-        <Footer />
-      </Wrapper>
+      <Article>
+        <CustomReactMarkdown>{content}</CustomReactMarkdown>
+      </Article>
     </>
   );
 }

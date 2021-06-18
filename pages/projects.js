@@ -2,58 +2,56 @@ import Head from "next/head";
 
 import { getProjects } from "../libs/projects";
 
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import Wrapper from "../components/Wrapper";
-import Main from "../components/Main";
-import ItemGrid from "../components/ItemGrid";
-import ProjectPreview from "../components/ProjectPreview";
-import Header from "../components/Header";
-import CtaLink from "../components/CtaLink";
-import Section from "../components/Section";
-import { Subtitle, Title } from "../components/Headings";
+import ArrowLink from "../components/ArrowLink";
+import Separator from "../components/Separator";
+import Image from "next/image";
 
 export default function Projects({ projects }) {
   return (
     <>
       <Head>
         <title>Projects - Alvar Lagerlöf</title>
-        <meta name="description" content="Projects from my GitHub I've worked on"></meta>
+        <meta name="description" content="Projects I've worked on"></meta>
         <meta property="og:title" content="Projects"></meta>
-        <meta property="og:description" content="Stuff from my GitHub I've worked on"></meta>
-        <meta property="og:image" content="https://alvar.dev/opengraph.jpg"></meta>
+        <meta property="og:description" content="Projects I've worked on"></meta>
       </Head>
 
-      <Wrapper>
-        <NavBar />
+      <header>
+        <h1 className="font-heading text-7xl mb-4">Projects</h1>
 
-        <Main>
-          <Header>
-            <Title>Things I've worked on</Title>
-            <Subtitle>
-              In my free time experiement with things, including everything from game-plugins
-              imitating Quake to neural networks. I make it a habit to post these various projects
-              on my{" "}
-              <CtaLink newTab href="https://github.com/alvarlagerlof">
-                Github
-              </CtaLink>{" "}
-              .
-            </Subtitle>
-          </Header>
+        <h2 className="font-subheading text-2xl">
+          You can also check out my{" "}
+          <ArrowLink href="https://github.com/alvarlagerlof">Github</ArrowLink>,{" "}
+          <ArrowLink href="https://unsplash.com/@alvarlagerlof">Unsplash</ArrowLink> and{" "}
+          <ArrowLink href="https://www.artstation.com/alvarlagerlof">ArtStation</ArrowLink>
+        </h2>
+      </header>
 
-          <Section>
-            <ItemGrid>
-              {projects.map(data => (
-                <li key={data.title}>
-                  <ProjectPreview data={data} />
-                </li>
-              ))}
-            </ItemGrid>
-          </Section>
-        </Main>
+      <Separator />
 
-        <Footer />
-      </Wrapper>
+      <section>
+        <ul className="grid grid-cols-2 gap-12">
+          {projects.map(({ title, description, link, image, blurhash }) => (
+            <li key={title}>
+              <a href={link} target="_blank" rel="noopener">
+                <Image
+                  className="rounded-3xl bordered"
+                  alt="Project logo banner"
+                  src={"/content/projects/" + image}
+                  width="1000"
+                  height="650"
+                  objectFit="cover"
+                  // placeholder="blur"
+                  // blurDataURL={blurhash}
+                />
+
+                <h3 className="font-heading text-4xl mt-4 mb-2">{title}</h3>
+                <p>{description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }

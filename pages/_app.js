@@ -12,10 +12,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
 
-      <div className="flex flex-col items-center my-14">
-        <div className="w-3/4	max-w-6xl space-y-14 ">
+      <div className="flex flex-col items-center">
+        <div className="w-3/4	max-w-6xl">
           <NavBar />
-          <Component {...pageProps} />
+          <main className="space-y-14 my-14">
+            <Component {...pageProps} />
+          </main>
           <Footer />
         </div>
       </div>

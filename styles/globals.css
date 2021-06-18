@@ -18,4 +18,8 @@
   }
 }
 
+img.bordered {
+  border: 3px solid black !important;
+}
+
 @tailwind utilities;

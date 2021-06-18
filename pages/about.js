@@ -1,20 +1,44 @@
-import styled from "styled-components";
-
+import { DateTime } from "luxon";
 import Head from "next/head";
+import Image from "next/image";
+
+import ArrowLink from "../components/ArrowLink";
+import Separator from "../components/Separator";
 
 import getExperience from "../libs/experience";
 
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import Wrapper from "../components/Wrapper";
-import Main from "../components/Main";
-import Section from "../components/Section";
-import Experience from "../components/Experience";
-import CtaLink from "../components/CtaLink";
-import Header from "../components/Header";
-import { Heading, Title, Subtitle } from "../components/Headings";
-import ArrowLink from "../components/ArrowLink";
-import Separator from "../components/Separator";
+function Experience({ data: { title, company, type, link, startDate, endDate, content } }) {
+  const formatDate = dateString => {
+    return DateTime.fromMillis(dateString).toFormat("MMM yyyy");
+  };
+
+  const getDate = () => {
+    if (startDate == endDate) {
+      return `${formatDate(startDate)}`;
+    }
+    return `${formatDate(startDate)} - ${formatDate(endDate)}`;
+  };
+
+  return (
+    <li key={content} className="flex flex-row items-start">
+      <img src="/icons/star.svg" className="w-6 h-6 mr-2" />
+      <div>
+        <h4 className="text-xl font-subheading font-semibold mb-1">
+          {title} at {company}
+        </h4>
+        <em className="block mb-2">
+          {type} • {getDate()}
+        </em>
+        <p>{content}</p>
+        {link && (
+          <div className="mt-4">
+            <ArrowLink href={link}>Learn more</ArrowLink>
+          </div>
+        )}
+      </div>
+    </li>
+  );
+}
 
 export default function About({ experience }) {
   return (
@@ -61,33 +85,26 @@ export default function About({ experience }) {
             </li>
           </ul>
         </div>
-        <img src="/profile.png" className="rounded-3xl border-black border-[3px]" />
+        <Image src="/profile.png" className="rounded-3xl bordered" width="400" height="400" />
       </header>
 
       <Separator />
 
       <div className="space-x-10 flex flex-row">
-        <section className="min-w-[400px]">
-          <h3 className="font-heading text-4xl mb-8">My story</h3>
-        </section>
-        <Separator vertical />
         <section>
           <h3 className="font-heading text-4xl mb-8">Experience</h3>
+          <ul className="space-y-8">
+            {experience.map(data => (
+              <Experience key={data.title + data.company} data={data} />
+            ))}
+          </ul>
         </section>
-      </div>
 
-      {/* <Wrapper>
-        <NavBar />
+        <Separator vertical />
 
-        <Main>
-          <Header>
-            <Title>My story</Title>
-            <Subtitle>
-              What does a $2 computer at a flea market have to do with me writing this? Turns out...
-              everything!
-            </Subtitle>
-          </Header>
-          <StoryText>
+        <section className="max-w-[50%]">
+          <h3 className="font-heading text-4xl mb-8">My story</h3>
+          <div className="space-y-4">
             <p>
               My story starts with, believe it or not, Minecraft. I was playing it a lot when I was
               13. Naturally, I wanted to play with friends. I bought the $2 computer at a flea
@@ -98,13 +115,13 @@ export default function About({ experience }) {
             </p>
             <p>
               Then started my wild ride of app development on{" "}
-              <CtaLink newTab href="https://github.com/alvarlagerlof/temadagar-android">
+              <ArrowLink newTab href="https://github.com/alvarlagerlof/temadagar-android">
                 two
-              </CtaLink>{" "}
+              </ArrowLink>{" "}
               different{" "}
-              <CtaLink newTab href="https://koda.nu/app">
+              <ArrowLink newTab href="https://koda.nu/app">
                 projects
-              </CtaLink>
+              </ArrowLink>
               . I learned Java (and later Kotlin) and Swift development. One of the apps needed
               offline support with writes, so I implemented a local database using Realm and worked
               on syncing with basic time-based diffing.
@@ -113,14 +130,14 @@ export default function About({ experience }) {
               Some years later I started experimenting with retraining ImageNet to do what classify
               things I wanted. Using IFPS as a data source for web apps was also really interesting.
               Also had some fun with trying to make a{" "}
-              <CtaLink newTab href="https://github.com/alvarlagerlof/ball-pid">
+              <ArrowLink newTab href="https://github.com/alvarlagerlof/ball-pid">
                 ball balance
-              </CtaLink>{" "}
+              </ArrowLink>{" "}
               on a plate with two servos mounted under it. Somewhere along the way, I got briefly
               back into Minecraft and started to make Bukkit plugins. I made a working Quake-like{" "}
-              <CtaLink newTab href="https://github.com/alvarlagerlof/quake">
+              <ArrowLink newTab href="https://github.com/alvarlagerlof/quake">
                 FPS
-              </CtaLink>{" "}
+              </ArrowLink>{" "}
               in Java.
             </p>
             <p>
@@ -131,68 +148,18 @@ export default function About({ experience }) {
             </p>
             <p>
               When I'm not coding or designing, I like to take{" "}
-              <CtaLink href="https://unsplash.com/@alvarlagerlof">photos</CtaLink> or experiment
+              <ArrowLink href="https://unsplash.com/@alvarlagerlof">photos</ArrowLink> or experiment
               with rendering some{" "}
-              <CtaLink href="https://www.artstation.com/alvarlagerlof">cool things</CtaLink> in
+              <ArrowLink href="https://www.artstation.com/alvarlagerlof">cool things</ArrowLink> in
               Blender.
             </p>
-          </StoryText>
-
-          <Section>
-            <Heading>Experience</Heading>
-            <p>I'm still young, byt I’ve worked professionally on two occations.</p>
-
-            <ExperienceList>
-              {experience.map(data => (
-                <Experience key={data.title + data.company} data={data} />
-              ))}
-            </ExperienceList>
-          </Section>
-        </Main>
-
-        <Footer />
-      </Wrapper> */}
+            <p>TODO: Make this shorter</p>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
-
-const ImageContainer = styled.div`
-  float: right;
-  margin-left: 32px;
-  margin-bottom: 32px;
-  width: 50%;
-
-  & img {
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-  }
-`;
-
-const StoryText = styled.div`
-  & > p + p {
-    margin-top: 24px;
-  }
-
-  & h4 {
-    margin-bottom: 8px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    flex-direction: column-reverse;
-  }
-`;
-
-const ExperienceList = styled.ul`
-  margin-top: 32px;
-
-  & > li {
-    margin-bottom: 32px;
-  }
-`;
 
 export async function getStaticProps() {
   return {
