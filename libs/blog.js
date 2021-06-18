@@ -1,5 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
+import isDev from "./is-dev";
 
 import { parseDate } from "./utils/date";
 
@@ -45,7 +46,7 @@ async function getPostsDrafts() {
 }
 
 async function getPostsPublished() {
-  return await (await getPosts()).filter(post => true);
+  return await (await getPosts()).filter(post => !post.draft);
 }
 
 function truncate(input, len) {

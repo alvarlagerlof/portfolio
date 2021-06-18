@@ -70,12 +70,7 @@ export default function Home({ posts, projects }) {
               <li key={title}>
                 <Link href={"/new/blog" + slug}>
                   <div className="cursor-pointer">
-                    <div className="flex flex-row space-x-2">
-                      {draft && (
-                        <p className="bg-primary px-2 rounded-full text-white inline h-6">Draft</p>
-                      )}
-                      <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
-                    </div>
+                    <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
                     <p>{description}</p>
                   </div>
                 </Link>

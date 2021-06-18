@@ -8,10 +8,6 @@ import { formatDate } from "../../libs/utils/date";
 import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
 import isDev from "../../libs/is-dev";
 
-function truncate(input, len) {
-  return input.length > len ? `${input.substring(0, len)}...` : input;
-}
-
 export default function Blog({ postsSectioned, drafts, isDev }) {
   return (
     <>
@@ -31,35 +27,27 @@ export default function Blog({ postsSectioned, drafts, isDev }) {
         </h2>
       </header>
 
-      <Separator />
-
       <ul>
+        {isDev && (
+          <li key="Drafts" className="mt-14">
+            <Separator />
+            <div className="flex flex-row items-start mt-14">
+              <h3 className="font-heading text-5xl w-48">Drafts</h3>
+              <PostList posts={drafts} />
+            </div>
+          </li>
+        )}
+
         {Object.entries(postsSectioned)
           .sort((a, b) => b[0] - a[0])
           .map(([year, posts]) => {
             return (
-              <li key={year} className="flex flex-row items-start space-x-12">
-                <h3 className="font-heading text-5xl">{year}</h3>
-                <ul className="space-y-8">
-                  {posts.map(({ slug, title, description, published, draft }) => {
-                    return (
-                      <li key={title}>
-                        <Link href={"blog/" + slug}>
-                          <a>
-                            {draft && (
-                              <p className="bg-primary px-2 rounded-full inline text-white h-6">
-                                Draft
-                              </p>
-                            )}
-                            <em className="block">{formatDate(published)}</em>
-                            <h4 className="font-subheading font-semibold text-2xl mb-2">{title}</h4>
-                            <p>{truncate(description, 100)}</p>
-                          </a>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+              <li key={year} className="mt-14">
+                <Separator />
+                <div className="flex flex-row items-start mt-14">
+                  <h3 className="font-heading text-5xl w-48">{year}</h3>
+                  <PostList posts={posts} />
+                </div>
               </li>
             );
           })}
@@ -68,12 +56,35 @@ export default function Blog({ postsSectioned, drafts, isDev }) {
   );
 }
 
+function PostList({ posts }) {
+  const truncate = (input, len) => {
+    return input.length > len ? `${input.substring(0, len)}...` : input;
+  };
+
+  return (
+    <ul className="space-y-8">
+      {posts.map(({ slug, title, description, published }) => {
+        return (
+          <li key={title}>
+            <Link href={"blog/" + slug}>
+              <a>
+                <em className="block">{formatDate(published)}</em>
+                <h4 className="font-subheading font-semibold text-2xl mb-2">{title}</h4>
+                <p>{truncate(description, 100)}</p>
+              </a>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export async function getStaticProps() {
   return {
     props: {
       drafts: await getPostsDrafts(),
       postsSectioned: await getPostsSectioned(),
-
       isDev: isDev(),
     },
   };
