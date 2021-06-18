@@ -32,7 +32,7 @@ export default function Home({ posts, projects }) {
         </button>
         <h2 className="font-subheading text-2xl">
           My story starts with a $2 computer from a flea market.{" "}
-          <ArrowLink href="/new/about">Learn more</ArrowLink>
+          <ArrowLink href="/about">Learn more</ArrowLink>
         </h2>
       </header>
 
@@ -61,6 +61,9 @@ export default function Home({ posts, projects }) {
               </li>
             ))}
           </ul>
+          <h4 className="text-2xl font-subheading mt-12">
+            <ArrowLink href="/projects">All projects</ArrowLink>
+          </h4>
         </section>
         <Separator vertical />
         <section>
@@ -68,7 +71,7 @@ export default function Home({ posts, projects }) {
           <ul className="space-y-8">
             {posts.map(({ slug, title, description, published, draft }) => (
               <li key={title}>
-                <Link href={"/new/blog" + slug}>
+                <Link href={"/blog" + slug}>
                   <div className="cursor-pointer">
                     <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
                     <p>{description}</p>
@@ -77,6 +80,9 @@ export default function Home({ posts, projects }) {
               </li>
             ))}
           </ul>
+          <h4 className="text-2xl font-subheading mt-12">
+            <ArrowLink href="/blog">All posts</ArrowLink>
+          </h4>
         </section>
       </div>
     </>
