@@ -87,7 +87,7 @@ export default function Home({ posts, projects }) {
           <ul className="space-y-4 md:space-y-8">
             {posts.map(({ slug, title, description, published, draft }) => (
               <li key={title}>
-                <Link href={"/blog" + slug}>
+                <Link href={"/blog/" + slug}>
                   <div className="cursor-pointer">
                     <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
                     <p>{description}</p>
