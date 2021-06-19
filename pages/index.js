@@ -46,7 +46,7 @@ export default function Home({ posts, projects }) {
 
       <Separator />
 
-      <div className="space-y-14 xl:space-x-14 xl:space-y-0 flex flex-col xl:flex-row">
+      <div className="space-y-8 md:space-y-14 xl:space-x-14 xl:space-y-0 flex flex-col xl:flex-row">
         <section className="min-w-[400px]">
           <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
           <ul className="space-y-4 md:space-y-8">

@@ -119,7 +119,7 @@ export default function About({ experience }) {
 
       <Separator />
 
-      <div className=" flex flex-col md:flex-row space-y-8 md:space-x-10 md:space-y-0">
+      <div className="flex flex-col md:flex-row space-y-8 md:space-x-14 md:space-y-0">
         <section>
           <h3 className="font-heading text-4xl mb-8">Experience</h3>
           <ul className="space-y-8">
