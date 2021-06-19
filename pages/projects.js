@@ -34,7 +34,7 @@ export default function Projects({ projects }) {
         <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
           {projects.map(({ title, description, link, image, blurhash }) => (
             <li key={title}>
-              <Link href={link}>
+              <Link href={link ?? "#"}>
                 <a target="_blank" rel="noreferrer">
                   <Image
                     className="rounded-3xl bordered"

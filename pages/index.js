@@ -52,7 +52,7 @@ export default function Home({ posts, projects }) {
           <ul className="space-y-4 md:space-y-8">
             {projects.map(({ title, description, link, image }) => (
               <li key={title}>
-                <Link href={link ?? ""}>
+                <Link href={link ?? "#"}>
                   <a className="flex flex-row items-center space-x-4 cursor-pointer">
                     <Image
                       className="bordered rounded-xl object-cover"
