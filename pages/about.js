@@ -21,7 +21,7 @@ function Experience({ data: { title, company, type, link, startDate, endDate, co
 
   return (
     <li key={content} className="flex flex-row items-start">
-      <img src="/icons/star.svg" className="w-6 h-6 mr-2" />
+      <Image src="/icons/star.svg" className="w-6 h-6 mr-2" alt="" height="6" width="6" />
       <div>
         <h4 className="text-xl font-subheading font-semibold mb-1">
           {title} at {company}
@@ -48,8 +48,11 @@ function SocialLink({ name, href, icon }) {
           <img className="w-6 h-6" src={icon} />
           <span className="font-subheading font-semibold text-xl">{name}</span>
         </div> */}
-        <img className="w-6 h-6 inline-block mr-3 -mt-2" src={icon} />
-        <span className="font-subheading font-semibold text-xl">{name}</span>
+        <div className="inline-block mr-3 translate-y-1 ">
+          <Image src={icon} alt={name + " logo"} height="22" width="22" />
+        </div>
+
+        <span className="font-subheading font-semibold text-xl -mt-4">{name}</span>
       </ArrowLink>
     </li>
   );
@@ -79,6 +82,7 @@ export default function About({ experience }) {
             width="1000"
             height="800"
             objectFit="cover"
+            alt="Portrait of Alvar Lagerlöf"
           />
         </div>
       </header>

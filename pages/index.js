@@ -27,10 +27,10 @@ export default function Home({ posts, projects }) {
       </Head>
 
       <header>
-        <h1 className="font-heading text-4xl md:text-7xl mb-2">I'm Alvar Lagerlöf</h1>
+        <h1 className="font-heading text-4xl md:text-7xl mb-4">I'm Alvar Lagerlöf</h1>
         <button className="flex flex-row space-x-2 items-center mb-8" onClick={play}>
-          <span className="md:text-xl font-bold text-primary ">Hear the pronunciation</span>
-          <img alt="speaker" src="/icons/speaker.svg" />
+          <span className="md:text-xl font-bold text-primary mr-2">Hear the pronunciation</span>
+          <Image alt="Speaker" src="/icons/speaker.svg" width="24" height="24" />
         </button>
 
         <audio ref={audioRef} aria-hidden>
@@ -53,18 +53,19 @@ export default function Home({ posts, projects }) {
             {projects.map(({ title, description, link, image }) => (
               <li key={title}>
                 <Link href={link ?? ""}>
-                  <div className="flex flex-row items-center space-x-4 cursor-pointer">
+                  <a className="flex flex-row items-center space-x-4 cursor-pointer">
                     <Image
                       className="bordered rounded-xl object-cover"
                       src={"/content/projects/" + image}
                       width="130"
                       height="80"
+                      alt="Project banner"
                     />
                     <div>
                       <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
                       <p className="whitespace-pre">{description}</p>
                     </div>
-                  </div>
+                  </a>
                 </Link>
               </li>
             ))}
@@ -82,10 +83,10 @@ export default function Home({ posts, projects }) {
             {posts.map(({ slug, title, description, published, draft }) => (
               <li key={title}>
                 <Link href={"/blog/" + slug}>
-                  <div className="cursor-pointer">
+                  <a>
                     <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
                     <p>{description}</p>
-                  </div>
+                  </a>
                 </Link>
               </li>
             ))}

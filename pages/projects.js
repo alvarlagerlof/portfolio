@@ -1,10 +1,11 @@
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
 import { getProjects } from "../libs/projects";
 
 import ArrowLink from "../components/ArrowLink";
 import Separator from "../components/Separator";
-import Image from "next/image";
 
 export default function Projects({ projects }) {
   return (
@@ -33,23 +34,24 @@ export default function Projects({ projects }) {
         <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
           {projects.map(({ title, description, link, image, blurhash }) => (
             <li key={title}>
-              <a href={link} target="_blank" rel="noopener">
-                <Image
-                  className="rounded-3xl bordered"
-                  alt="Project logo banner"
-                  src={"/content/projects/" + image}
-                  width="400"
-                  height="250"
-                  objectFit="cover"
-                  // placeholder="blur"
-                  // blurDataURL={blurhash}
-                />
-
-                <h3 className="font-heading text-2xl xl:text-4xl mt-2 xl:mt-4 mb-1 xl:mb-2">
-                  {title}
-                </h3>
-                <p>{description}</p>
-              </a>
+              <Link href={link}>
+                <a target="_blank" rel="noreferrer">
+                  <Image
+                    className="rounded-3xl bordered"
+                    alt="Project logo banner"
+                    src={"/content/projects/" + image}
+                    width="400"
+                    height="250"
+                    objectFit="cover"
+                    // placeholder="blur"
+                    // blurDataURL={blurhash}
+                  />
+                  <h3 className="font-heading text-2xl xl:text-4xl mt-2 xl:mt-4 mb-1 xl:mb-2">
+                    {title}
+                  </h3>
+                  <p>{description}</p>
+                </a>
+              </Link>
             </li>
           ))}
         </ul>

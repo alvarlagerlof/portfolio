@@ -5,7 +5,7 @@ export default function ArrowLink({ href, children, newTab }) {
     <Link href={href}>
       <a
         target={newTab ? "_blank" : "_self"}
-        rel={newTab ? "noopener" : ""}
+        rel={newTab ? "noreferrer" : ""}
         className="text-primary font-semibold hover:underline"
       >
         {children} →
