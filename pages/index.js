@@ -26,11 +26,6 @@ export default function Home({ posts, projects }) {
         <meta property="og:description" content="Developer and designer living in Stockholm"></meta>
       </Head>
 
-      <audio ref={audioRef} aria-hidden>
-        <source src="/name.flac" type="audio/flac" />
-        Your browser does not support the audio element.
-      </audio>
-
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-2">I'm Alvar Lagerlöf</h1>
         <button className="flex flex-row space-x-2 items-center mb-8" onClick={play}>
@@ -38,8 +33,13 @@ export default function Home({ posts, projects }) {
           <img alt="speaker" src="/icons/speaker.svg" />
         </button>
 
+        <audio ref={audioRef} aria-hidden>
+          <source src="/name.flac" type="audio/flac" />
+          Your browser does not support the audio element.
+        </audio>
+
         <h2 className="font-subheading text-xl md:text-2xl max-w-[50ch]">
-          I do code and design. My story starts with a $2 computer from a flea market.{" "}
+          A developer and designer. My story starts with a $2 computer from a flea market.{" "}
           <ArrowLink href="/about">Learn more about me</ArrowLink>
         </h2>
       </header>
