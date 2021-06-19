@@ -65,19 +65,22 @@ export default function About({ experience }) {
         <meta property="og:description" content="I’m a he/him living in Stockholm, Sweden"></meta>
       </Head>
 
-      <header className="flex flex-col-reverse md:flex-row items-center justify-between">
+      <header className="flex flex-col-reverse md:flex-row md:items-center justify-between">
         <div className="mt-8 md:mr-12 md:mt-0">
           <h1 className="font-heading text-4xl md:text-7xl mb-4">Hej</h1>
-          <h2 className="font-subheading text-xl md:text-2xl mb-12">
+          <h2 className="font-subheading text-xl md:text-2xl">
             I’m a he/him living in Stockholm, Sweden.
           </h2>
         </div>
-        <Image
-          src="/profile.png"
-          className="rounded-3xl bordered w-full"
-          width="400"
-          height="400"
-        />
+        <div className="max-w-[500px]">
+          <Image
+            src="/profile.png"
+            className="rounded-3xl bordered w-full"
+            width="1000"
+            height="800"
+            objectFit="cover"
+          />
+        </div>
       </header>
 
       <Separator />
