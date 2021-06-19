@@ -38,8 +38,8 @@ export default function Projects({ projects }) {
                   className="rounded-3xl bordered"
                   alt="Project logo banner"
                   src={"/content/projects/" + image}
-                  width="1000"
-                  height="650"
+                  width="400"
+                  height="250"
                   objectFit="cover"
                   // placeholder="blur"
                   // blurDataURL={blurhash}
