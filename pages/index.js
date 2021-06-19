@@ -21,18 +21,12 @@ export default function Home({ posts, projects }) {
     <>
       <Head>
         <title>Alvar Lagerlöf: Developer and Designer</title>
-        <meta
-          name="description"
-          content="Developer and designer living in Stockholm who likes working with React and Linux"
-        ></meta>
+        <meta name="description" content="Developer and designer living in Stockholm "></meta>
         <meta property="og:title" content="Alvar Lagerlöf"></meta>
-        <meta
-          property="og:description"
-          content="Developer and designer living in Stockholm who likes working with React and Linux"
-        ></meta>
+        <meta property="og:description" content="Developer and designer living in Stockholm"></meta>
       </Head>
 
-      <audio ref={audioRef}>
+      <audio ref={audioRef} aria-hidden>
         <source src="/name.flac" type="audio/flac" />
         Your browser does not support the audio element.
       </audio>
@@ -44,15 +38,15 @@ export default function Home({ posts, projects }) {
           <img alt="speaker" src="/icons/speaker.svg" />
         </button>
 
-        <h2 className="font-subheading text-xl md:text-2xl">
-          My story starts with a $2 computer from a flea market.{" "}
-          <ArrowLink href="/about">Learn more</ArrowLink>
+        <h2 className="font-subheading text-xl md:text-2xl max-w-[50ch]">
+          I do code and design. My story starts with a $2 computer from a flea market.{" "}
+          <ArrowLink href="/about">Learn more about me</ArrowLink>
         </h2>
       </header>
 
       <Separator />
 
-      <div className="space-y-10 xl:space-x-10 xl:space-y-0 flex flex-col xl:flex-row">
+      <div className="space-y-14 xl:space-x-14 xl:space-y-0 flex flex-col xl:flex-row">
         <section className="min-w-[400px]">
           <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
           <ul className="space-y-4 md:space-y-8">
@@ -80,7 +74,7 @@ export default function Home({ posts, projects }) {
           </h4>
         </section>
 
-        <Separator vertical="xl" />
+        <Separator verticalAt="xl" />
 
         <section>
           <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
