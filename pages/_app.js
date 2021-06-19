@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
       ></Script>
 
-      <div className="flex flex-col items-center mx-6 md:mx-8">
+      <div className="flex flex-col items-center mx-4 sm:mx-8 md:mx-12">
         <div className="w-full xl:w-3/4 max-w-6xl  ">
           <NavBar />
           <main className="space-y-8 my-8 md:space-y-14 md:my-14">
