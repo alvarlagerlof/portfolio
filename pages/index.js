@@ -40,7 +40,7 @@ export default function Home({ posts, projects }) {
 
         <h2 className="font-subheading text-xl md:text-2xl max-w-[50ch]">
           A developer and designer. My story starts with a $2 computer from a flea market.{" "}
-          <ArrowLink href="/about">Learn more about me</ArrowLink>
+          <ArrowLink href="/about">Learn more</ArrowLink>
         </h2>
       </header>
 
