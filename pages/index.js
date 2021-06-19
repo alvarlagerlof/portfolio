@@ -70,7 +70,7 @@ export default function Home({ posts, projects }) {
               </li>
             ))}
           </ul>
-          <h4 className="text-xl xl:text-2xl font-subheading mt-12">
+          <h4 className="text-xl font-subheading mt-12">
             <ArrowLink href="/projects">All projects</ArrowLink>
           </h4>
         </section>
@@ -91,7 +91,7 @@ export default function Home({ posts, projects }) {
               </li>
             ))}
           </ul>
-          <h4 className="text-xl xl:text-2xl font-subheading mt-12">
+          <h4 className="text-xl font-subheading mt-12">
             <ArrowLink href="/blog">All posts</ArrowLink>
           </h4>
         </section>

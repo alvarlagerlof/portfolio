@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import { useRouter } from "next/router";
 
 import Separator from "./Separator";
@@ -110,7 +112,7 @@ export default function NavBar() {
         <Link href="/">
           <a>
             <div className="flex flex-row items-center space-x-2">
-              <img src="/icons/star.svg" />
+              <Image src="/icons/star.svg" width="24" height="24" alt="Star logo" />
               <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
             </div>
           </a>

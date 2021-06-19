@@ -40,6 +40,7 @@ export default function Projects({ projects }) {
                     className="rounded-3xl bordered"
                     alt="Project logo banner"
                     src={"/content/projects/" + image}
+                    loading="lazy"
                     width="400"
                     height="250"
                     objectFit="cover"
