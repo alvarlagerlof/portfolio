@@ -63,7 +63,7 @@ export default function Home({ posts, projects }) {
                     />
                     <div>
                       <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
-                      <p className="whitespace-pre">{description}</p>
+                      <p className="whitespace-pre-line">{description}</p>
                     </div>
                   </a>
                 </Link>
@@ -85,7 +85,7 @@ export default function Home({ posts, projects }) {
                 <Link href={"/blog/" + slug}>
                   <a>
                     <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
-                    <p>{description}</p>
+                    <p className="whitespace-pre-line">{description}</p>
                   </a>
                 </Link>
               </li>
