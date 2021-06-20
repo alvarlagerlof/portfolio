@@ -47,7 +47,7 @@ export default function Home({ posts, projects }) {
       <Separator />
 
       <div className="space-y-8 md:space-y-14 xl:space-x-14 xl:space-y-0 flex flex-col xl:flex-row">
-        <section className="min-w-[400px]">
+        <section className="md:min-w-[400px]">
           <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
           <ul className="space-y-4 md:space-y-8">
             {projects.map(({ title, description, link, image }) => (
@@ -62,8 +62,10 @@ export default function Home({ posts, projects }) {
                       alt="Project banner"
                     />
                     <div>
-                      <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
-                      <p className="whitespace-pre-line">{description}</p>
+                      <h4 className="text-xl font-subheading font-semibold break-all mb-1">
+                        {title}
+                      </h4>
+                      <p>{description}</p>
                     </div>
                   </a>
                 </Link>
@@ -84,8 +86,10 @@ export default function Home({ posts, projects }) {
               <li key={title}>
                 <Link href={"/blog/" + slug}>
                   <a>
-                    <h4 className="text-xl font-subheading font-semibold mb-1">{title}</h4>
-                    <p className="whitespace-pre-line">{description}</p>
+                    <h4 className="text-xl font-subheading font-semibold  break-all mb-1">
+                      {title}
+                    </h4>
+                    <p>{description}</p>
                   </a>
                 </Link>
               </li>
