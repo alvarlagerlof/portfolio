@@ -21,23 +21,9 @@
 
 /* TODO: Figure out how to do this in tailwind */
 
-img.bordered {
-  border: 2px solid black !important;
-}
-
-blockquote p:last-child {
-  margin: 0;
-}
-
-blockquote strong {
-  display: block;
-  margin-top: 16px;
-}
-
 code {
   padding: 3px 6px;
   background-color: rgb(238, 238, 238);
-  border-radius: 4px;
 }
 
 @tailwind utilities;

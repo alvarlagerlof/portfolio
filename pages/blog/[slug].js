@@ -5,7 +5,7 @@ import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
 import isDev from "../../libs/is-dev";
 
 import CustomReactMarkdown from "../../components/CustomReactMarkdown";
-import Separator from "../../components/Separator";
+import WithDividers from "../../components/WithDividers";
 
 export default function BlogPost({
   post: {
@@ -19,25 +19,42 @@ export default function BlogPost({
         <title>{title} - Alvar Lagerlöf</title>
         <meta name="description" content={description}></meta>
         <meta property="og:title" content={title}></meta>
-        <meta property="og:type" content="acticle"></meta>
+        <meta property="og:type" content="article"></meta>
         <meta property="og:description" content={description}></meta>
       </Head>
 
-      <header>
-        {draft && (
-          <p className=" bg-primary px-2 rounded-full inline-block text-white h-6 mb-8">Draft</p>
-        )}{" "}
-        <p className="font-medium md:text-xl mb-2">{formatDate(published)}</p>
-        <h1 className="font-heading text-4xl md:text-7xl mb-4">{title}</h1>
-        <h2 className="font-subheading text-xl md:text-2xl">{description}</h2>
-      </header>
-
-      <Separator />
-
-      <article>
-        <CustomReactMarkdown>{content}</CustomReactMarkdown>
-      </article>
+      <WithDividers direction="vertical">
+        <Header title={title} description={description} published={published} draft={draft} />
+        <Article content={content} />
+      </WithDividers>
     </>
+  );
+}
+
+function Header({ title, description, published, draft }) {
+  return (
+    <header>
+      {draft && (
+        <p className=" bg-primary px-2 rounded-full inline-block text-white h-6 mb-8">Draft</p>
+      )}
+      <p className="font-medium md:text-xl mb-2">{formatDate(published)}</p>
+      <h1 className="font-heading text-4xl md:text-7xl mb-4 ">{title}</h1>
+      <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch]">{description}</h2>
+    </header>
+  );
+}
+
+function Aside() {
+  return;
+}
+
+function Article({ content }) {
+  return (
+    <article>
+      <div className="prose">
+        <CustomReactMarkdown>{content}</CustomReactMarkdown>
+      </div>
+    </article>
   );
 }
 
