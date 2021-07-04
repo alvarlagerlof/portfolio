@@ -1,11 +1,11 @@
 import Head from "next/head";
 
-import { formatDate } from "../../libs/utils/date";
-import { getPosts, getPostsPublished, getPost } from "../../libs/blog";
-import isDev from "../../libs/is-dev";
+import { formatDate } from "libs/utils/date";
+import { getPosts, getPostsPublished, getPost } from "libs/blog";
+import isDev from "libs/is-dev";
 
-import CustomReactMarkdown from "../../components/CustomReactMarkdown";
-import WithDividers from "../../components/WithDividers";
+import CustomReactMarkdown from "components/CustomReactMarkdown";
+import WithDividers from "components/WithDividers";
 
 export default function BlogPost({
   post: {

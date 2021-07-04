@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Script from "next/script";
 
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import WithDividers from "../components/WithDividers";
+import Footer from "components/Footer";
+import NavBar from "components/NavBar";
+import WithDividers from "components/WithDividers";
 
 import "../styles/globals.css";
 

@@ -1,5 +1,3 @@
-import Separator from "./Separator";
-
 export default function Footer() {
   return (
     <footer className="mb-8 md:mb-14">

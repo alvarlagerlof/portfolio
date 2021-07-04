@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Head from "next/head";
 
-import ArrowLink from "../../components/ArrowLink";
-import WithDividers from "../../components/WithDividers";
+import ArrowLink from "components/ArrowLink";
+import WithDividers from "components/WithDividers";
 
-import { formatDate } from "../../libs/utils/date";
-import { getPostsDrafts, getPostsSectioned } from "../../libs/blog";
-import isDev from "../../libs/is-dev";
+import { formatDate } from "libs/utils/date";
+import { getPostsDrafts, getPostsSectioned } from "libs/blog";
+import isDev from "libs/is-dev";
 
 export default function Blog({ postsSectioned, drafts, isDev }) {
   return (

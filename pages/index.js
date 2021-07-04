@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 
-import ArrowLink from "../components/ArrowLink";
-import WithDividers from "../components/WithDividers";
+import ArrowLink from "components/ArrowLink";
+import WithDividers from "components/WithDividers";
 
-import { getPostsLatest } from "../libs/blog";
-import { getProjectsFeatured } from "../libs/projects";
+import { getPostsLatest } from "libs/blog";
+import { getProjectsFeatured } from "libs/projects";
 
 export default function Home({ posts, projects }) {
   return (

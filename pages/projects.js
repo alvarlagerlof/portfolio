@@ -2,10 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import { getProjects } from "../libs/projects";
+import { getProjects } from "libs/projects";
 
-import ArrowLink from "../components/ArrowLink";
-import WithDividers from "../components/WithDividers";
+import ArrowLink from "components/ArrowLink";
+import WithDividers from "components/WithDividers";
 
 export default function Projects({ projects }) {
   return (

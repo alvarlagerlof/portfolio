@@ -2,10 +2,10 @@ import { DateTime } from "luxon";
 import Head from "next/head";
 import Image from "next/image";
 
-import ArrowLink from "../components/ArrowLink";
-import WithDividers from "../components/WithDividers";
+import ArrowLink from "components/ArrowLink";
+import WithDividers from "components/WithDividers";
 
-import getExperience from "../libs/experience";
+import getExperience from "libs/experience";
 
 export default function About({ experience }) {
   return (
