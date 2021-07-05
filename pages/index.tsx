@@ -8,8 +8,14 @@ import WithDividers from "components/WithDividers";
 
 import { getPostsLatest } from "libs/blog";
 import { getProjectsFeatured } from "libs/projects";
+import { Post, Project } from "types";
 
-export default function Home({ posts, projects }) {
+type HomeProps = {
+  posts: Post[];
+  projects: Project[];
+};
+
+export default function Home({ posts, projects }: HomeProps) {
   return (
     <>
       <Head>
@@ -59,26 +65,32 @@ function Header() {
   );
 }
 
-function SectionFeaturedProjects({ projects }) {
+type SectionFeaturedProjectsProps = {
+  projects: Project[];
+};
+
+function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
   return (
     <section className="md:min-w-[400px]">
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
       <ul className="space-y-4 md:space-y-8">
-        {projects.map(({ title, description, link, image }) => (
-          <li key={title}>
-            <Link href={link ?? "#"}>
+        {projects.map(project => (
+          <li key={project.title}>
+            <Link href={project.link ?? "#"}>
               <a className="flex flex-row items-center space-x-4 cursor-pointer">
                 <Image
                   unoptimized={true}
                   className="bordered rounded-xl object-cover"
-                  src={"/content/projects/" + image}
+                  src={"/content/projects/" + project.image}
                   width="130"
                   height="80"
                   alt="Project banner"
                 />
                 <div>
-                  <h4 className="text-xl font-subheading font-semibold break-all mb-1">{title}</h4>
-                  <p>{description}</p>
+                  <h4 className="text-xl font-subheading font-semibold break-all mb-1">
+                    {project.title}
+                  </h4>
+                  <p>{project.description}</p>
                 </div>
               </a>
             </Link>
@@ -92,17 +104,23 @@ function SectionFeaturedProjects({ projects }) {
   );
 }
 
-function SectionRecentBlogPosts({ posts }) {
+type SectionRecentBlogPosts = {
+  posts: Post[];
+};
+
+function SectionRecentBlogPosts({ posts }: SectionRecentBlogPosts) {
   return (
     <section>
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
       <ul className="space-y-4 md:space-y-8">
-        {posts.map(({ slug, title, description, published, draft }) => (
-          <li key={title}>
-            <Link href={"/blog/" + slug}>
+        {posts.map(post => (
+          <li key={post.title}>
+            <Link href={`/blog/${post.slug}`}>
               <a>
-                <h4 className="text-xl font-subheading font-semibold  break-all mb-1">{title}</h4>
-                <p>{description}</p>
+                <h4 className="text-xl font-subheading font-semibold  break-all mb-1">
+                  {post.title}
+                </h4>
+                <p>{post.description}</p>
               </a>
             </Link>
           </li>

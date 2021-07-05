@@ -1,8 +1,15 @@
 import Link from "next/link";
+import { ReactChildren } from "react";
 
-export default function ArrowLink({ href, children, newTab }) {
+type ArrowLinkProps = {
+  href: string;
+  newTab?: boolean;
+  children: ReactChildren | string;
+};
+
+export default function ArrowLink({ href, newTab = false, children }: ArrowLinkProps) {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <a
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noreferrer" : ""}

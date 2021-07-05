@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "@types/luxon": "^1.27.0",
     "highlight.js": "^11.0.1",
     "luxon": "^1.25.0",
     "next": "^11.0.0",

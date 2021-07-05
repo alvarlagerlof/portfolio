@@ -26,4 +26,8 @@ code {
   background-color: rgb(238, 238, 238);
 }
 
+img.bordered {
+  border: 2px solid black;
+}
+
 @tailwind utilities;

@@ -42,7 +42,7 @@ function Header() {
         <Image
           unoptimized={true}
           src="/profile.png"
-          className="rounded-3xl bordered w-full"
+          className="rounded-3xl w-full bordered"
           width="1000"
           height="800"
           objectFit="cover"

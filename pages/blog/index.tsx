@@ -7,8 +7,15 @@ import WithDividers from "components/WithDividers";
 import { formatDate } from "libs/utils/date";
 import { getPostsDrafts, getPostsSectioned } from "libs/blog";
 import isDev from "libs/is-dev";
+import { Post, Sections } from "../../types";
 
-export default function Blog({ postsSectioned, drafts, isDev }) {
+type BlogProps = {
+  postsSectioned: Sections;
+  drafts: Post[];
+  isDev: boolean;
+};
+
+export default function Blog({ postsSectioned, drafts, isDev }: BlogProps) {
   return (
     <>
       <Head>
@@ -33,7 +40,7 @@ export default function Blog({ postsSectioned, drafts, isDev }) {
             )}
 
             {Object.entries(postsSectioned)
-              .sort((a, b) => b[0] - a[0])
+              .sort((a: any, b: any) => b[0] - a[0])
               .map(([year, posts]) => {
                 return (
                   <li key={year} className="flex flex-col md:flex-row items-start">
@@ -64,21 +71,27 @@ function Header() {
   );
 }
 
-function PostList({ posts }) {
+type PostListProps = {
+  posts: Post[];
+};
+
+function PostList({ posts }: PostListProps) {
   const truncate = (input, len) => {
     return input.length > len ? `${input.substring(0, len)}...` : input;
   };
 
   return (
     <ul className="space-y-8">
-      {posts.map(({ slug, title, description, published }) => {
+      {posts.map((post: Post) => {
         return (
-          <li key={title}>
-            <Link href={"blog/" + slug}>
+          <li key={post.slug}>
+            <Link href={`blog/${post.slug}`}>
               <a>
-                <em className="block">{formatDate(published)}</em>
-                <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">{title}</h4>
-                <p>{truncate(description, 100)}</p>
+                <em className="block">{formatDate(post.published)}</em>
+                <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
+                  {post.title}
+                </h4>
+                <p>{truncate(post.description, 100)}</p>
               </a>
             </Link>
           </li>
