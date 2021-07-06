@@ -1,11 +1,21 @@
 import ReactMarkdown from "react-markdown";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { default as NextImage } from "next/image";
 import gfm from "remark-gfm";
+
 import ArrowLink from "./ArrowLink";
 
-function Heading({ level, children }) {
+type Children = {
+  children: React.ReactNode;
+};
+type WithChildren<Type> = Type & Children;
+
+type HeadingProps = {
+  level: 1 | 2;
+};
+
+function Heading({ level, children }: WithChildren<HeadingProps>) {
   switch (level) {
     case 1:
       return <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{children}</h3>;
@@ -16,7 +26,12 @@ function Heading({ level, children }) {
   }
 }
 
-function Image({ src, alt }) {
+type ImageProps = {
+  src: string;
+  alt: string;
+};
+
+function Image({ src, alt }: ImageProps) {
   return (
     <div>
       <NextImage
@@ -33,7 +48,11 @@ function Image({ src, alt }) {
   );
 }
 
-function Link({ href, children }) {
+type LinkProps = {
+  href: string;
+};
+
+function Link({ href, children }: WithChildren<LinkProps>) {
   return (
     <ArrowLink newTab href={href}>
       {children}
@@ -41,11 +60,16 @@ function Link({ href, children }) {
   );
 }
 
-function Blockquote({ children }) {
+function Blockquote({ children }: Children) {
   return <blockquote className="py-2 px-4  !border-separator flex flex-col">{children}</blockquote>;
 }
 
-function Code({ language, value }) {
+type CodeProps = {
+  language: string;
+  value: string;
+};
+
+function Code({ language, value }: CodeProps) {
   return (
     <SyntaxHighlighter
       customStyle={{

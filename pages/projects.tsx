@@ -7,7 +7,13 @@ import { getProjects } from "libs/projects";
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 
-export default function Projects({ projects }) {
+import { Project } from "types";
+
+type ProjectsProps = {
+  projects: Project[];
+};
+
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
@@ -40,19 +46,19 @@ function Header() {
   );
 }
 
-function SecitonProjects({ projects }) {
+function SecitonProjects({ projects }: ProjectsProps) {
   return (
     <section>
       <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
-        {projects.map(({ title, description, link, image, blurhash }) => (
-          <li key={title}>
-            <Link href={link ?? "#"}>
+        {projects.map(project => (
+          <li key={project.title}>
+            <Link href={project.link ?? "#"}>
               <a target="_blank" rel="noreferrer">
                 <Image
                   unoptimized={true}
                   className="rounded-3xl bordered"
                   alt="Project logo banner"
-                  src={"/content/projects/" + image}
+                  src={"/content/projects/" + project.image}
                   loading="lazy"
                   width="400"
                   height="250"
@@ -61,9 +67,9 @@ function SecitonProjects({ projects }) {
                   // blurDataURL={blurhash}
                 />
                 <h3 className="font-heading break-all	text-2xl xl:text-3xl mt-2 xl:mt-4 mb-1 xl:mb-2">
-                  {title}
+                  {project.title}
                 </h3>
-                <p>{description}</p>
+                <p>{project.description}</p>
               </a>
             </Link>
           </li>

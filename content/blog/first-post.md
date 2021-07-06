@@ -1,7 +1,8 @@
 ---
 title: Under construction
 description: Fleshing things out
-published: "2020-10-23"
+date:
+  published: "2020-10-23"
 draft: false
 ---
 

@@ -1,13 +1,20 @@
 import { DateTime } from "luxon";
 import Head from "next/head";
 import Image from "next/image";
+import { GetStaticProps } from "next";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 
 import getExperience from "libs/experience";
+import { Experience } from "types";
+import { formatDate } from "libs/utils/date";
 
-export default function About({ experience }) {
+type ExperienceProps = {
+  experience: Experience[];
+};
+
+export default function About({ experience }: ExperienceProps) {
   return (
     <>
       <Head>
@@ -85,13 +92,13 @@ function SectionMyStory() {
   );
 }
 
-function SectionExperience({ experience }) {
+function SectionExperience({ experience }: ExperienceProps) {
   return (
     <section>
       <h3 className="font-heading text-4xl mb-8">Experience</h3>
       <ul className="space-y-8">
-        {experience.map(data => (
-          <ExperienceItem key={data.title + data.company} data={data} />
+        {experience.map(item => (
+          <ExperienceItem key={item.title + item.company} experience={item} />
         ))}
       </ul>
     </section>
@@ -135,20 +142,25 @@ function SectionSocialLinks() {
   );
 }
 
-function ExperienceItem({ data: { title, company, type, link, startDate, endDate, content } }) {
-  const formatDate = dateString => {
-    return DateTime.fromMillis(dateString).toFormat("MMM yyyy");
-  };
+type ExperienceItemProps = {
+  experience: Experience;
+};
 
-  const getDate = () => {
-    if (startDate == endDate) {
-      return `${formatDate(startDate)}`;
+function ExperienceItem({ experience }: ExperienceItemProps) {
+  const getDate = (): string => {
+    const format = "MMM yyyy";
+
+    if (experience.date.end === experience.date.start) {
+      return `${formatDate(experience.date.end, format)}`;
     }
-    return `${formatDate(startDate)} - ${formatDate(endDate)}`;
+    return `${formatDate(experience.date.start, format)} - ${formatDate(
+      experience.date.end,
+      format
+    )}`;
   };
 
   return (
-    <li key={content} className="flex flex-row items-start">
+    <li key={experience.content} className="flex flex-row items-start">
       <div className="mr-4">
         <Image
           aria-hidden
@@ -162,15 +174,15 @@ function ExperienceItem({ data: { title, company, type, link, startDate, endDate
 
       <div>
         <h4 className="text-xl font-subheading font-semibold mb-1">
-          {title} at {company}
+          {experience.title} at {experience.company}
         </h4>
         <em className="block mb-2">
-          {type} • {getDate()}
+          {experience.type} • {getDate()}
         </em>
-        <p className="prose">{content}</p>
-        {link && (
+        <p className="prose">{experience.content}</p>
+        {experience.link && (
           <div className="mt-4">
-            <ArrowLink href={link}>Learn more</ArrowLink>
+            <ArrowLink href={experience.link}>Learn more</ArrowLink>
           </div>
         )}
       </div>
@@ -178,7 +190,13 @@ function ExperienceItem({ data: { title, company, type, link, startDate, endDate
   );
 }
 
-function SocialLink({ name, href, icon }) {
+type SocialLinkProps = {
+  name: string;
+  href: string;
+  icon: string;
+};
+
+function SocialLink({ name, href, icon }: SocialLinkProps) {
   return (
     <li>
       <ArrowLink newTab href={href}>

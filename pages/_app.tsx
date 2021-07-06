@@ -2,12 +2,13 @@ import Head from "next/head";
 import Script from "next/script";
 
 import Footer from "components/Footer";
-import NavBar from "components/NavBar";
+import Navbar from "components/Navbar";
 import WithDividers from "components/WithDividers";
 
 import "../styles/globals.css";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -24,7 +25,7 @@ function MyApp({ Component, pageProps }) {
       <div className="flex flex-col items-center mx-4 sm:mx-8 md:mx-12">
         <div className="w-full xl:w-3/4 max-w-6xl">
           <WithDividers direction="vertical">
-            <NavBar />
+            <Navbar />
             <main>
               <Component {...pageProps} />
             </main>

@@ -1,7 +1,8 @@
 ---
 title: Example syntax test
 description: Esse ad amet non exercitation magna velit in nulla deserunt veniam culpa cupidatat pariatur. Minim dolor quis pariatur ex cillum officia esse aliquip quis.
-published: "2020-10-29"
+date:
+  published: "2020-10-29"
 draft: true
 ---
 

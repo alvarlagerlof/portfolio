@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { ReactChild } from "react";
+import WithDividers from "./WithDividers";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
     <nav className="flex flex-col md:flex-row md:justify-between !pt-4 !pb-4 space-y-8 md:space-y-0 items-center">
       <Link href="/">
@@ -30,7 +32,11 @@ export default function NavBar() {
   );
 }
 
-function IconHome({ active }) {
+type IconProps = {
+  active: boolean;
+};
+
+function IconHome({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -46,7 +52,7 @@ function IconHome({ active }) {
   );
 }
 
-function IconAbout({ active }) {
+function IconAbout({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -62,7 +68,7 @@ function IconAbout({ active }) {
   );
 }
 
-function IconProjects({ active }) {
+function IconProjects({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -92,7 +98,7 @@ function IconProjects({ active }) {
   );
 }
 
-function IconBlog({ active }) {
+function IconBlog({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -114,7 +120,13 @@ function IconBlog({ active }) {
   );
 }
 
-function NavLink({ href, name, icon: Icon }) {
+type NavLinkProps = {
+  href: string;
+  name: string;
+  icon: React.Component;
+};
+
+function NavLink({ href, name, icon: Icon }: NavLinkProps) {
   const router = useRouter();
   const active = router.pathname == href;
 

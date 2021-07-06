@@ -1,4 +1,11 @@
-export default function WithDividers({ direction, children }) {
+import { ReactChild, ReactChildren } from "react";
+
+type WithDividersProps = {
+  direction: "horizontal" | "vertical";
+  children: ReactChildren | ReactChild[];
+};
+
+export default function WithDividers({ direction, children }: WithDividersProps) {
   const map = {
     vertical: "inflate-y-8 md:inflate-y-14 divide-y-2 divide-separator",
     horizontal:

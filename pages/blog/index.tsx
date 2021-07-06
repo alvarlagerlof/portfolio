@@ -39,18 +39,20 @@ export default function Blog({ postsSectioned, drafts, isDev }: BlogProps) {
               </li>
             )}
 
-            {Object.entries(postsSectioned)
-              .sort((a: any, b: any) => b[0] - a[0])
-              .map(([year, posts]) => {
-                return (
-                  <li key={year} className="flex flex-col md:flex-row items-start">
-                    <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
-                      {year}
-                    </h3>
-                    <PostList posts={posts} />
-                  </li>
-                );
-              })}
+            <>
+              {Object.entries(postsSectioned)
+                .sort((a: any, b: any) => b[0] - a[0])
+                .map(([year, posts]) => {
+                  return (
+                    <li key={year} className="flex flex-col md:flex-row items-start">
+                      <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
+                        {year}
+                      </h3>
+                      <PostList posts={posts} />
+                    </li>
+                  );
+                })}
+            </>
           </WithDividers>
         </ul>
       </WithDividers>
@@ -87,7 +89,7 @@ function PostList({ posts }: PostListProps) {
           <li key={post.slug}>
             <Link href={`blog/${post.slug}`}>
               <a>
-                <em className="block">{formatDate(post.published)}</em>
+                <em className="block">{formatDate(post.date.published)}</em>
                 <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
                   {post.title}
                 </h4>

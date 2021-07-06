@@ -11,8 +11,10 @@ type Post = {
   slug?: string;
   title: string;
   description: string;
-  published: string;
-  updated?: string;
+  date: {
+    published: string;
+    updated?: string;
+  };
   draft: boolean;
   content: string;
 };
@@ -25,8 +27,10 @@ type Experience = {
   title: string;
   company: string;
   type: "Part-time" | "Full-time" | "Internship";
-  startDate: string;
-  endDate: string;
+  date: {
+    start: string;
+    end: string;
+  };
   link?: string;
   content: string;
 };

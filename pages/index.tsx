@@ -40,7 +40,6 @@ function Header() {
   const audioRef = useRef(null);
 
   const play = () => {
-    console.log(audioRef.current);
     audioRef.current.play();
   };
 

@@ -26,21 +26,18 @@ async function getPosts(): Promise<Post[]> {
   const filesNames = await promises.readdir("./content/blog");
 
   return await Promise.all(
-    filesNames
-      .map<Promise<Post>>(async (filename: string) => {
-        const fileContent = await promises.readFile(`./content/blog/${filename}`);
-        const base = matter(fileContent.toString()).data as Post;
+    filesNames.map<Promise<Post>>(async (filename: string) => {
+      const fileContent = await promises.readFile(`./content/blog/${filename}`);
+      const base = matter(fileContent.toString()).data as Post;
 
-        const post: Post = {
-          ...base,
-          slug: filename.replace(".md", ""),
-        };
-
-        console.log(post);
-
-        return post;
-      })
-      .sort((a: any, b: any) => b.published - a.published)
+      const post: Post = {
+        ...base,
+        slug: filename.replace(".md", ""),
+      };
+      return post;
+    })
+  ).then(posts =>
+    posts.sort((a: Post, b: Post) => b.date.published.localeCompare(a.date.published))
   );
 }
 
