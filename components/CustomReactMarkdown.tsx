@@ -5,11 +5,7 @@ import { default as NextImage } from "next/image";
 import gfm from "remark-gfm";
 
 import ArrowLink from "./ArrowLink";
-
-type Children = {
-  children: React.ReactNode;
-};
-type WithChildren<Type> = Type & Children;
+import { Children, WithChildren } from "types";
 
 type HeadingProps = {
   level: 1 | 2;
@@ -60,7 +56,7 @@ function Link({ href, children }: WithChildren<LinkProps>) {
   );
 }
 
-function Blockquote({ children }: Children) {
+function Blockquote({ children }: Children) {
   return <blockquote className="py-2 px-4  !border-separator flex flex-col">{children}</blockquote>;
 }
 
@@ -86,7 +82,7 @@ function Code({ language, value }: CodeProps) {
   );
 }
 
-export default function CustomReactMarkdown({ children }) {
+export default function CustomReactMarkdown({ children }: Children) {
   const renderers = {
     heading: Heading,
     image: Image,
