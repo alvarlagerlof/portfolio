@@ -1,7 +1,6 @@
 import { DateTime } from "luxon";
 
 function parseDate(date: string): DateTime {
-  console.log(DateTime.fromISO(date));
   return DateTime.fromISO(date);
 }
 
