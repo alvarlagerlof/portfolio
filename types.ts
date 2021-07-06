@@ -35,4 +35,10 @@ type Experience = {
   content: string;
 };
 
-export type { Project, Post, Experience, Sections };
+type Children = {
+  children: React.ReactNode | string;
+};
+
+type WithChildren<Type> = Type & Children;
+
+export type { Project, Post, Experience, Sections, Children, WithChildren };

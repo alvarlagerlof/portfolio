@@ -1,11 +1,10 @@
-import { ReactChild, ReactChildren } from "react";
+import { WithChildren } from "types";
 
 type WithDividersProps = {
   direction: "horizontal" | "vertical";
-  children: ReactChildren | ReactChild[];
 };
 
-export default function WithDividers({ direction, children }: WithDividersProps) {
+export default function WithDividers({ direction, children }: WithChildren<WithDividersProps>) {
   const map = {
     vertical: "inflate-y-8 md:inflate-y-14 divide-y-2 divide-separator",
     horizontal:

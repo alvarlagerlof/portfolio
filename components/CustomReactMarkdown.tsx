@@ -56,7 +56,7 @@ function Link({ href, children }: WithChildren<LinkProps>) {
   );
 }
 
-function Blockquote({ children }: Children) {
+function Blockquote({ children }: Children) {
   return <blockquote className="py-2 px-4  !border-separator flex flex-col">{children}</blockquote>;
 }
 
