@@ -16,12 +16,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
 
-      <Script
-        src="/js/script.js"
-        data-domain="neurodiversity.wiki"
-        strategy="afterInteractive"
-      ></Script>
-
       <div className="flex flex-col items-center mx-4 sm:mx-8 md:mx-12">
         <div className="w-full xl:w-3/4 max-w-6xl">
           <WithDividers direction="vertical">
