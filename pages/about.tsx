@@ -121,8 +121,13 @@ function SectionSocialLinks() {
         />
         <SocialLink
           name="LinkedIn"
-          href="ttps://linkedin.com/in/alvarlagerlof"
+          href="https://linkedin.com/in/alvarlagerlof"
           icon="/icons/socials/linkedin.svg"
+        />
+        <SocialLink
+          name="Polywork"
+          href="https://polywork.com/alvar"
+          icon="/icons/socials/polywork.svg"
         />
         <SocialLink name="Email" href="mailto:hello@alvar.dev" icon="/icons/socials/email.svg" />
         <SocialLink
