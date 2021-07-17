@@ -6,7 +6,6 @@ import gfm from "remark-gfm";
 
 import ArrowLink from "./ArrowLink";
 import { Children, WithChildren } from "types";
-import { NormalComponent } from "react-markdown/src/ast-to-react";
 
 function H1({ children }: Children) {
   return <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{children}</h3>;
