@@ -21,11 +21,6 @@
 
 /* TODO: Figure out how to do this in tailwind */
 
-code {
-  padding: 3px 6px;
-  background-color: rgb(238, 238, 238);
-}
-
 img.bordered {
   border: 2px solid black !important;
 }

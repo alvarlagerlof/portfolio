@@ -6,20 +6,14 @@ import gfm from "remark-gfm";
 
 import ArrowLink from "./ArrowLink";
 import { Children, WithChildren } from "types";
+import { NormalComponent } from "react-markdown/src/ast-to-react";
 
-type HeadingProps = {
-  level: 1 | 2;
-};
+function H1({ children }: Children) {
+  return <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{children}</h3>;
+}
 
-function Heading({ level, children }: WithChildren<HeadingProps>) {
-  switch (level) {
-    case 1:
-      return <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{children}</h3>;
-    case 2:
-      return <h4 className="font-subheading font-semibold !text-xl !md:text-3xl">{children}</h4>;
-    default:
-      return <p>Heading {level} not implemented</p>;
-  }
+function H2({ children }: Children) {
+  return <h4 className="font-subheading font-semibold !text-xl !md:text-3xl">{children}</h4>;
 }
 
 type ImageProps = {
@@ -62,10 +56,15 @@ function Blockquote({ children }: Children) {
 
 type CodeProps = {
   language: string;
+  inline: boolean;
   value: string;
 };
 
-function Code({ language, value }: CodeProps) {
+function Code({ language, inline, children }: WithChildren<CodeProps>) {
+  if (inline) {
+    return <pre className="inline-block  px-2 bg-[rgb(227,233,242)]">{children}</pre>;
+  }
+
   return (
     <SyntaxHighlighter
       customStyle={{
@@ -77,22 +76,24 @@ function Code({ language, value }: CodeProps) {
       style={style}
       language={language}
     >
-      {value}
+      {children}
     </SyntaxHighlighter>
   );
 }
 
 export default function CustomReactMarkdown({ children }) {
-  const renderers = {
-    heading: Heading,
-    image: Image,
-    link: Link,
+  const components = {
+    h1: H1,
+    h2: H2,
+    img: Image,
+    a: Link,
     blockquote: Blockquote,
     code: Code,
   };
 
   return (
-    <ReactMarkdown plugins={[gfm]} renderers={renderers}>
+    // @ts-ignore
+    <ReactMarkdown plugins={[gfm]} components={components}>
       {children}
     </ReactMarkdown>
   );
