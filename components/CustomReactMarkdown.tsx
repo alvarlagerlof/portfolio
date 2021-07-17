@@ -82,7 +82,7 @@ function Code({ language, value }: CodeProps) {
   );
 }
 
-export default function CustomReactMarkdown({ children }: Children) {
+export default function CustomReactMarkdown({ children }) {
   const renderers = {
     heading: Heading,
     image: Image,

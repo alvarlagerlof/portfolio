@@ -1,7 +1,7 @@
 import process from "process";
 import branchName from "current-git-branch";
 
-export default function isDev() {
+export default function isDev(): boolean {
   // branchName() returns "master" every time in Vercel
 
   return (

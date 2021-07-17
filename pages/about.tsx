@@ -1,7 +1,5 @@
-import { DateTime } from "luxon";
 import Head from "next/head";
 import Image from "next/image";
-import { GetStaticProps } from "next";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
