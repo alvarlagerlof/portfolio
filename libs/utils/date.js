@@ -1,11 +1,15 @@
-import { DateTime } from "luxon";
-
-function parseDate(dateString) {
-  return DateTime.fromMillis(dateString);
+"use strict";
+exports.__esModule = true;
+exports.parseDate = exports.formatDate = void 0;
+var luxon_1 = require("luxon");
+function parseDate(date) {
+    return luxon_1.DateTime.fromISO(date);
 }
-
-function formatDate(dateString) {
-  return DateTime.fromMillis(dateString).toFormat("MMM d, yyyy");
+exports.parseDate = parseDate;
+function formatDate(date, format) {
+    if (format === void 0) { format = "MMM d, yyyy"; }
+    var parsed = parseDate(date);
+    var formatted = parsed.toFormat(format);
+    return formatted;
 }
-
-export { formatDate, parseDate };
+exports.formatDate = formatDate;

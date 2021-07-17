@@ -1,11 +1,40 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import { useRouter } from "next/router";
 
-import Separator from "./Separator";
+export default function Navbar() {
+  return (
+    <nav className="flex flex-col md:flex-row md:justify-between !pt-4 !pb-4 space-y-8 md:space-y-0 items-center">
+      <Link href="/">
+        <a>
+          <div className="flex flex-row items-center space-x-2">
+            <Image
+              unoptimized={true}
+              src="/icons/star.svg"
+              width="24"
+              height="24"
+              alt="Star logo"
+            />
+            <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
+          </div>
+        </a>
+      </Link>
 
-function IconHome({ active }) {
+      <ul className="flex flex-wrap flex-row justify-center -m-2 md:-m-4">
+        <NavLink href="/" name="Home" icon={IconHome} />
+        <NavLink href="/about" name="About" icon={IconAbout} />
+        <NavLink href="/projects" name="Projects" icon={IconProjects} />
+        <NavLink href="/blog" name="Blog" icon={IconBlog} />
+      </ul>
+    </nav>
+  );
+}
+
+type IconProps = {
+  active: boolean;
+};
+
+function IconHome({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -21,7 +50,7 @@ function IconHome({ active }) {
   );
 }
 
-function IconAbout({ active }) {
+function IconAbout({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -37,7 +66,7 @@ function IconAbout({ active }) {
   );
 }
 
-function IconProjects({ active }) {
+function IconProjects({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -67,7 +96,7 @@ function IconProjects({ active }) {
   );
 }
 
-function IconBlog({ active }) {
+function IconBlog({ active }: IconProps) {
   return (
     <svg
       aria-hidden
@@ -89,7 +118,13 @@ function IconBlog({ active }) {
   );
 }
 
-function NavLink({ href, name, icon: Icon }) {
+type NavLinkProps = {
+  href: string;
+  name: string;
+  icon: React.FunctionComponent<any>;
+};
+
+function NavLink({ href, name, icon: Icon }: NavLinkProps) {
   const router = useRouter();
   const active = router.pathname == href;
 
@@ -102,33 +137,5 @@ function NavLink({ href, name, icon: Icon }) {
         </a>
       </Link>
     </li>
-  );
-}
-
-export default function NavBar() {
-  return (
-    <>
-      <div className="flex flex-col md:flex-row md:justify-between py-8 space-y-8 md:space-y-0 items-center">
-        <Link href="/">
-          <a>
-            <div className="flex flex-row items-center space-x-2">
-              <Image src="/icons/star.svg" width="24" height="24" alt="Star logo" />
-              <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
-            </div>
-          </a>
-        </Link>
-
-        <nav>
-          <ul className="flex flex-wrap flex-row justify-center -m-2 md:-m-4">
-            <NavLink href="/" name="Home" icon={IconHome} />
-            <NavLink href="/about" name="About" icon={IconAbout} />
-            <NavLink href="/projects" name="Projects" icon={IconProjects} />
-            <NavLink href="/blog" name="Blog" icon={IconBlog} />
-          </ul>
-        </nav>
-      </div>
-
-      <Separator />
-    </>
   );
 }

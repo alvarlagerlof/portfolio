@@ -1,8 +1,18 @@
 import Link from "next/link";
+import { WithChildren } from "types";
 
-export default function ArrowLink({ href, children, newTab }) {
+type ArrowLinkProps = {
+  href: string;
+  newTab?: boolean;
+};
+
+export default function ArrowLink({
+  href,
+  newTab = false,
+  children,
+}: WithChildren<ArrowLinkProps>) {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <a
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noreferrer" : ""}
