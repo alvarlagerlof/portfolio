@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { ReactChild } from "react";
-import WithDividers from "./WithDividers";
 
 export default function Navbar() {
   return (
@@ -123,7 +121,7 @@ function IconBlog({ active }: IconProps) {
 type NavLinkProps = {
   href: string;
   name: string;
-  icon: React.Component;
+  icon: React.FunctionComponent<any>;
 };
 
 function NavLink({ href, name, icon: Icon }: NavLinkProps) {

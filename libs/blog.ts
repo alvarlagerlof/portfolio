@@ -28,10 +28,11 @@ async function getPosts(): Promise<Post[]> {
   return await Promise.all(
     filesNames.map<Promise<Post>>(async (filename: string) => {
       const fileContent = await promises.readFile(`./content/blog/${filename}`);
-      const base = matter(fileContent.toString()).data as Post;
+      const m = matter(fileContent.toString());
 
       const post: Post = {
-        ...base,
+        ...(m.data as Post),
+        content: m.content,
         slug: filename.replace(".md", ""),
       };
       return post;
@@ -64,7 +65,7 @@ async function getPostsSectioned(): Promise<Sections> {
   const published = await getPostsPublished();
 
   return published.reduce((acc: Sections, curr: Post) => {
-    const year: number = parseDate(curr.published).year;
+    const year: number = parseDate(curr.date.published).year;
 
     if (acc[year]) {
       const sections: Sections = {

@@ -1,13 +1,16 @@
 import Link from "next/link";
-import { ReactChild, ReactChildren } from "react";
+import { WithChildren } from "types";
 
 type ArrowLinkProps = {
   href: string;
   newTab?: boolean;
-  children: React.ReactNode | string;
 };
 
-export default function ArrowLink({ href, newTab = false, children }: ArrowLinkProps) {
+export default function ArrowLink({
+  href,
+  newTab = false,
+  children,
+}: WithChildren<ArrowLinkProps>) {
   return (
     <Link href={href} passHref>
       <a
