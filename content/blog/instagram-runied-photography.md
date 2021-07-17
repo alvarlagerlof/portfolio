@@ -1,6 +1,6 @@
 ---
 title: Instagram runied photography for me
-description: The story of how I stopped taking photos
+description: The story of why I stopped taking photos
 date:
   published: "2021-07-17"
 draft: false
