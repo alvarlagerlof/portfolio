@@ -1,5 +1,5 @@
 ---
-title: Instagram runied photography for me
+title: Instagram ruined photography for me
 description: The story of why I stopped taking photos
 date:
   published: "2021-07-17"
