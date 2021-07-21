@@ -72,20 +72,22 @@ function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
   return (
     <section className="md:min-w-[400px]">
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
-      <ul className="space-y-4 md:space-y-8">
+      <ul className="space-y-6 md:space-y-8">
         {projects.map(project => (
           <li key={project.title}>
             <Link href={project.link ?? "#"}>
-              <a className="flex flex-row items-center space-x-4 cursor-pointer">
-                <Image
-                  unoptimized={true}
-                  className="bordered rounded-xl object-cover"
-                  src={"/content/projects/" + project.image}
-                  width="130"
-                  height="80"
-                  alt="Project banner"
-                />
-                <div>
+              <a className="flex md:flex-row items-start sm:items-center space-x-4 cursor-pointer">
+                <div className="min-w-[120px]">
+                  <Image
+                    unoptimized={true}
+                    className="bordered rounded-xl object-cover"
+                    src={"/content/projects/" + project.image}
+                    width="120"
+                    height="75"
+                    alt="Project banner"
+                  />
+                </div>
+                <div className="-m-1">
                   <h4 className="text-xl font-subheading font-semibold break-all mb-1">
                     {project.title}
                   </h4>
