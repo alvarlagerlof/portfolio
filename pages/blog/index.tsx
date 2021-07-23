@@ -87,7 +87,7 @@ function PostList({ posts }: PostListProps) {
       {posts.map((post: Post) => {
         return (
           <li key={post.slug}>
-            <Link href={`blog/${post.slug}`}>
+            <Link href={`blog/${post.slug}`} passHref>
               <a>
                 <em className="block">{formatDate(post.date.published)}</em>
                 <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">

@@ -52,8 +52,8 @@ function SecitonProjects({ projects }: ProjectsProps) {
       <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
         {projects.map(project => (
           <li key={project.title}>
-            <Link href={project.link ?? "#"}>
-              <a target="_blank" rel="noreferrer">
+            <Link href={project.link ?? "#"} passHref>
+              <a target={project.link ? "_blank" : "_self"} rel="noreferrer">
                 <Image
                   unoptimized={true}
                   className="rounded-3xl bordered"

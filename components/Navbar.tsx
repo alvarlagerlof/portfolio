@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function Navbar() {
   return (
     <nav className="flex flex-col md:flex-row md:justify-between !pt-4 !pb-4 space-y-8 md:space-y-0 items-center">
-      <Link href="/">
+      <Link href="/" passHref>
         <a>
           <div className="flex flex-row items-center space-x-2">
             <Image
@@ -130,7 +130,7 @@ function NavLink({ href, name, icon: Icon }: NavLinkProps) {
 
   return (
     <li className="m-2 md:m-4">
-      <Link href={href}>
+      <Link href={href} passHref>
         <a className="flex flex-row space-x-1 md:space-x-2 items-center">
           <Icon active={active} />
           <span className={"font-medium" + (active ? " text-primary" : "")}>{name}</span>

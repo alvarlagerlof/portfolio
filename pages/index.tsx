@@ -75,8 +75,12 @@ function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
       <ul className="space-y-6 md:space-y-8">
         {projects.map(project => (
           <li key={project.title}>
-            <Link href={project.link ?? "#"}>
-              <a className="flex md:flex-row items-start sm:items-center space-x-4 cursor-pointer">
+            <Link href={project.link ?? "#"} passHref>
+              <a
+                target={project.link ? "_blank" : "_self"}
+                rel="noreferrer"
+                className="flex md:flex-row items-start sm:items-center space-x-4 cursor-pointer"
+              >
                 <div className="min-w-[120px]">
                   <Image
                     unoptimized={true}
@@ -116,7 +120,7 @@ function SectionRecentBlogPosts({ posts }: SectionRecentBlogPosts) {
       <ul className="space-y-4 md:space-y-8">
         {posts.map(post => (
           <li key={post.title}>
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/blog/${post.slug}`} passHref>
               <a>
                 <h4 className="text-xl font-subheading font-semibold  break-all mb-1">
                   {post.title}
