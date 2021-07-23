@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && yarn rss",
+    "postbuild": "yarn sitemap && yarn rss",
     "start": "next start",
+    "sitemap": "next-sitemap",
     "rss": "jiti libs/rss.ts"
   },
   "dependencies": {
