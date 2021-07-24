@@ -14,7 +14,7 @@ Meanwhile, my peers were playing different kinds of video games, Pokémon, or fo
 
 Then one day at school, we had an electronics workshop. We were supposed to turn on a light bulb using three components: a cable, battery, and a bulb. The key here was to create a closed circuit that lets electrons flow through each component.
 
-Since I had already done this at home, I completed the task in seconds. Meanwhile, my peers struggled with the task for several minutes. To be very clear, I don't think they were stupid for taking a longer time to complete the task than I did. You see, **I had spent a similar amount of time solving the same problem myself at home, long before.** I was already familiar with the problem space and comfortable with electronics.
+Since I had already done this at home, I completed the task in seconds. Meanwhile, my peers struggled with the task for several minutes. To be very clear, I don’t blame them. You see, **I had spent a similar amount of time solving the same problem myself at home, long before.** I was already familiar with the problem space and comfortable with electronics.
 
 But, this event changed how a lot of my classmates saw me. Suddenly, I was the "smart" kid. This attention was nice at first because who doesn't want to be called smart, right? Since I was “smart”, I should also know what 9×13 is, right? Spoiler: I didn't, I was terrible at math. And how was it possible that I also didn't know all the winners in Eurovision? The list goes on and on—so many things the “smart” kid didn’t actually know. The label proved to be inaccurate and everyone moved on.
 
