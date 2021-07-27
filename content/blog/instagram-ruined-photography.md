@@ -38,7 +38,7 @@ Set on getting more: likes, followers, comments, I soon found ways to improve my
 
 Looking back at these tactics, they seem desperate. In a way, they were. I found myself in a highly competitive environment—too young to reflect on what I was doing: chasing metrics.
 
-Using the tactics above, I reached 700 followers. All at the expense of mental health, which had gotten worse the further I got. So in March 2017, I stopped. By then, even picking up my camera gave me anxiety.
+Using the tactics above, I reached 700 followers. All at the expense of mental health, which had gotten worse the further I got. By then, even picking up my camera gave me anxiety. So in March 2017, I stopped. My mental health quickly improved.
 
 I've been thinking a lot about whom to blame here. There appears to be no simple answers. At the core, Instagram is simply a photo-sharing platform. The situation could have been prevented from my side. Still, I know that many others use it in similar ways, whether they want to or not.
 
