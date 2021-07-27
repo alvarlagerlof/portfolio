@@ -36,7 +36,7 @@ Set on getting more: likes, followers, comments, I soon found ways to improve my
 
 # Result
 
-Looking back at these tactics, they seem desperate. In a way, they were. I found myself in a highly competitive environment—too young to reflect on what I was doing. Chasing metrics.
+Looking back at these tactics, they seem desperate. In a way, they were. I found myself in a highly competitive environment—too young to reflect on what I was doing: chasing metrics.
 
 Using the tactics above, I reached 700 followers. All at the expense of mental health, which had gotten worse the further I got. So in March 2017, I stopped. By then, even picking up my camera gave me anxiety.
 
