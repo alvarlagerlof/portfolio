@@ -3,41 +3,47 @@ title: Instagram Ruined Photography for Me
 description: The story of why I stopped taking photos
 date:
   published: "2021-07-17"
+  updated: "2021-07-27"
 draft: false
 ---
 
-The following is a story I've been thinking about writing for years. Both as a cautionary tale to anyone getting into photography and an explanation to why I stopped. I've been scared to share this, but here we go.
+The following is a story I've been thinking about writing for years. Both as a cautionary tale to anyone getting into photography, and as an explanation for why I stopped. I've been reluctant to share this, but here's what happened.
 
 # Beginnings
 
-Starting from when I was very young, I've had a fascination with photography. I wasn't any good at all at the start. Despite knowing that, I took photos of everything that caught my eye. I distinctly remember it as something fun. After getting my own camera on a birthday I took even more photos.
+Starting from when I was a kid, I've had a fascination with photography. I used to loan my mom's camera and capture everything that caught my eye. I wasn't any good at all at the start, but after getting my own camera as a birthday present, I improved.
 
-Sometime after that. I made an Instagram account. At first, it was private and only a few friends saw what I posted. Reach was limited. I didn't know it then but that was the start of the end.
+Sometime after that, I started an Instagram account. At first, it was private, and only a few friends viewed what I posted. Limited reach. Getting encouragement and feedback kept me going. It wasn't obvious then, but that was the start of significant pain.
 
-# Metrics
+# Going public
 
-When I got older, I made my account public. Going public meant that my posts and profile were visible to anyone. I'd liked the feeling of getting positive feedback when my account was private, but now anyone could.
+Getting older, I made my account public. Now exposed to anyone I started using hashtags. My pictures would show up on things like #nature or #macro.
 
-This is also when I started using hashtags. Now my pictures would show up on things like #naturephotography. Suddenly I started gaining likes and followers from strangers. At first, it felt really good. When you start getting used to this, your brain gives you a dopamine kick.
+This is when I started gaining likes and followers from strangers. At first, it was delightful. _This_ many people like what I do? Wow.
 
-The thing is that it fades as you aim higher. Did the latest post get fewer likes than the last few? The photo must be worse. I started thinking more about how to make sure that I was growing my metrics than actually enjoying taking photos.
+What I didn’t know was that for each new like and follow, a little dopamine was sent out into my brain. Every little bit of attention was a hit of a drug I didn't know about. After a while, you get used to it—wanting more and setting ever higher standards for yourself. Did the latest post get fewer likes than the last few? The photo must be worse.
+
+Soon, I started thinking about how my photos would be perceived even before taking them. I'd reject compositions that I liked before even clicking the shutter. All based on a vague grasp of what appeared to perform well.
 
 # Gaming the algorithm
 
-Now set on getting more: more likes, more followers, more comments, I found ways to artificially improve my metrics. Here are a few I found.
+Set on getting more: likes, followers, comments, I soon found ways to improve my metrics:
 
-1. Optimizing hashtags. I looked at popular posts on general hashtags such as #nature to find what other hashtags they used and crafted a set for each post. I even looked at hashtag generator sites.
-2. Posting at certain times. Depending on the dominant geographical areas of my followers, I would post on times where I thought they would look at Instagram (lunch for example) and post accordingly.
-3. Faking interest. I would look at recent posts on a hashtag, like some posts, and also go into each of their profiles and like some more posts. That increased the possibility that they'd look at my profile and follow me.
-
-Looking back on these tactics now, they seem desperate and very unhealthy. I even have memories of getting a sore thumb from repetitively using my phone in the same way.
+1. Optimizing hashtags. Post with tags like #nature also used other tags. I'd locate these and fill my own posts with them. There are even websites made for this.
+2. Posting at specific times. I would look at the dominant geographic regions of my followers, and map out optimal times to post. For example, lunchtime on the US west coast.
+3. Faking interest. I'd view posts on a hashtag, open the profiles of the posters, and like a bunch of their posts. This led people to my profile.
+4. Deleting posts. If any of my posts performed badly, I'd delete them.
 
 # Result
 
-After doing the previous for a long time and getting up to around 700 followers, I slowly realized that the situation was hurting my mental health.
+Looking back at these tactics, they seem desperate. In a way, they were. I found myself in a highly competitive environment—too young to reflect on what I was doing: chasing metrics.
 
-In March 2017, I stopped. By then, the thought of taking a photo involved how I thought it would perform before even clicking the shutter. By then, I couldn't take a photo even if I said to myself that I wouldn't post it.
+Using the tactics above, I reached 700 followers. All at the expense of mental health, which had gotten worse the further I got. By then, even picking up my camera gave me anxiety. So in March 2017, I stopped. My mental health quickly improved.
+
+I've been thinking a lot about whom to blame here. There appears to be no simple answers. At the core, Instagram is simply a photo-sharing platform. The situation could have been prevented from my side. Still, I know that many others use it in similar ways, whether they want to or not.
 
 # Solution (in progress)
 
-I haven't posted anything on Instagram since then. I'd still like to get back to taking and showing some people photos, but I'm still working on the best way to do this. For now, I capture interesting things with my phone when I see them, which reduces friction a lot. Some of these go on my Unsplash, but I'm still looking for the right place.
+I haven't posted anything on Instagram since then. I'd still like to get back to taking and showing some people photos, but I'm still working on the best way to do this.
+
+For now, using my phone reduces friction a lot. Some of these go on my Unsplash, but I'm still looking for the right place.
