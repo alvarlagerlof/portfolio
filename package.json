@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "yarn sitemap && yarn rss && yarn ogimage",
+    "postbuild": "yarn sitemap && yarn rss",
     "start": "next start",
     "sitemap": "next-sitemap",
     "rss": "jiti libs/rss.ts",
-    "ogimage": "next-opengraph-image"
+    "ogimage": "next build && next-opengraph-image"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
