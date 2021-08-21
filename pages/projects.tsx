@@ -55,7 +55,6 @@ function SecitonProjects({ projects }: ProjectsProps) {
             <Link href={project.link ?? "#"} passHref>
               <a target={project.link ? "_blank" : "_self"} rel="noreferrer">
                 <Image
-                  unoptimized={true}
                   className="rounded-3xl bordered"
                   alt="Project logo banner"
                   src={"/content/projects/" + project.image}

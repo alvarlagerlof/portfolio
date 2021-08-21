@@ -48,7 +48,7 @@ function Header() {
       <h1 className="font-heading text-4xl md:text-7xl mb-4">I'm Alvar Lagerlöf</h1>
       <button className="flex flex-row space-x-2 items-center mb-8" onClick={play}>
         <span className="md:text-xl font-bold text-primary mr-2">Hear the pronunciation</span>
-        <Image unoptimized={true} alt="Speaker" src="/icons/speaker.svg" width="24" height="24" />
+        <Image alt="Speaker" src="/icons/speaker.svg" width="24" height="24" />
       </button>
 
       <audio ref={audioRef} aria-hidden>
@@ -83,7 +83,6 @@ function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
               >
                 <div className="min-w-[120px]">
                   <Image
-                    unoptimized={true}
                     className="bordered rounded-xl object-cover"
                     src={"/content/projects/" + project.image}
                     width="120"
