@@ -1,10 +1,10 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import { getPostsLatest } from "libs/blog";
 import { getProjectsFeatured } from "libs/projects";
@@ -18,12 +18,7 @@ type HomeProps = {
 export default function Home({ posts, projects }: HomeProps) {
   return (
     <>
-      <Head>
-        <title>Alvar Lagerlöf: Developer and Designer</title>
-        <meta name="description" content="Developer and designer living in Stockholm "></meta>
-        <meta property="og:title" content="Alvar Lagerlöf"></meta>
-        <meta property="og:description" content="Developer and designer living in Stockholm"></meta>
-      </Head>
+      <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
 
       <WithDividers direction="vertical">
         <Header />

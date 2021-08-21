@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +5,7 @@ import { getProjects } from "libs/projects";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import { Project } from "types";
 
@@ -16,12 +16,7 @@ type ProjectsProps = {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
-      <Head>
-        <title>Projects - Alvar Lagerlöf</title>
-        <meta name="description" content="Projects I've worked on"></meta>
-        <meta property="og:title" content="Projects"></meta>
-        <meta property="og:description" content="Projects I've worked on"></meta>
-      </Head>
+      <Meta title="Projects" description="These are some of the projects I've worked on" />
 
       <WithDividers direction="vertical">
         <Header />

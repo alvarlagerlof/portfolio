@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import getExperience from "libs/experience";
 import { Experience } from "types";
@@ -15,12 +15,7 @@ type ExperienceProps = {
 export default function About({ experience }: ExperienceProps) {
   return (
     <>
-      <Head>
-        <title>About me - Alvar Lagerlöf</title>
-        <meta name="description" content="I’m a he/him living in Stockholm, Sweden"></meta>
-        <meta property="og:title" content="About me"></meta>
-        <meta property="og:description" content="I’m a he/him living in Stockholm, Sweden"></meta>
-      </Head>
+      <Meta title="About me" description="My story starts with a $2 computer from a flea market" />
 
       <WithDividers direction="vertical">
         <Header />
