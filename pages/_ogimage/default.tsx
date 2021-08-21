@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useData } from "next-opengraph-image";
 
 export default function Default() {
@@ -16,7 +17,7 @@ export default function Default() {
       </div>
 
       <div className="flex flex-row space-x-6">
-        <img src="/icons/star.svg" alt="" width="50px" height="50px" />
+        <Image src="/icons/star.svg" alt="" width="50px" height="50px" />
         <h3 className="font-subheading font-medium text-primary text-[2.7em]">Alvar Lagerlöf</h3>
       </div>
     </div>
