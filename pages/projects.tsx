@@ -61,7 +61,7 @@ function SecitonProjects({ projects }: ProjectsProps) {
                   src={"/content/projects/" + project.image}
                   loading="lazy"
                   width="400"
-                  height="250"
+                  height="230"
                   objectFit="cover"
                   // placeholder="blur"
                   // blurDataURL={blurhash}
