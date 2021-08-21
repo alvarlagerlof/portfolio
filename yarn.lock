@@ -2800,9 +2800,9 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 next-opengraph-image@^1.0.6:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/next-opengraph-image/-/next-opengraph-image-1.0.7.tgz#94e153d678dd39897d2e3c088269675a7b20fb59"
-  integrity sha512-knAoCQXApZU71JR0/529iMOOaT1/6+8RqJNausb4G+uGSTZsq+V7hMb/zlNTYnYBzwoTQUuEWAvNedSF4mk46g==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/next-opengraph-image/-/next-opengraph-image-1.0.8.tgz#069d230542c2becb0355888cd5e17b52f6e2a97c"
+  integrity sha512-tv2Pp9E5aGvHtZtO2scTQf0LmeC0ql9qRle9uDS0NdVuYlDhKvJ9GFTxxtJF4h282yZph0heiCOw7jAfrgDWSg==
   dependencies:
     "@corex/deepmerge" "^2.6.20"
     get-port "^5.1.1"
