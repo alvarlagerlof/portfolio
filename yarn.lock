@@ -2799,10 +2799,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-opengraph-image@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/next-opengraph-image/-/next-opengraph-image-1.0.4.tgz#188351a3dca138fc51ecf7a4bf8b061f2136b578"
-  integrity sha512-EJji5Y9onfAWozCP0tKTo/TIWDl04/sO2AlXbutIUHs+sJvP72NoKEDqbNo1IvhNrx89G06YmnoJo3Syub7lEg==
+next-opengraph-image@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/next-opengraph-image/-/next-opengraph-image-1.0.6.tgz#3f2e1f97ae440c21bf0f6e564961743c02626365"
+  integrity sha512-Trvb1rxY1EaWDTLwslNELoClj+Z9XmiWbyRq7bUUdCdb/EmQ9l33Mfk1yrUkm/yJDuhz8jFKIa7H0Hw0LUKrrg==
   dependencies:
     "@corex/deepmerge" "^2.6.20"
     get-port "^5.1.1"
