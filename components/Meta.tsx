@@ -2,8 +2,8 @@ import Head from "next/head";
 
 import { useOgImage } from "next-opengraph-image";
 
-export default function Meta({ title, description }) {
-  const ogImage = useOgImage();
+export default function Meta({ title, description, ogImageLayout = "default" }) {
+  const ogImage = useOgImage({ layout: ogImageLayout });
 
   return (
     <Head>
