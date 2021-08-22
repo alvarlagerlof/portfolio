@@ -8,13 +8,7 @@ export default function Navbar() {
       <Link href="/" passHref>
         <a>
           <div className="flex flex-row items-center space-x-2">
-            <Image
-              unoptimized={true}
-              src="/icons/star.svg"
-              width="24"
-              height="24"
-              alt="Star logo"
-            />
+            <Image src="/icons/star.svg" width="24" height="24" alt="Star logo" />
             <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
           </div>
         </a>

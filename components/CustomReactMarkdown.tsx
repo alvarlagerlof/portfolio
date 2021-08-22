@@ -24,7 +24,6 @@ function Image({ src, alt }: ImageProps) {
   return (
     <div>
       <NextImage
-        unoptimized={true}
         src={src}
         alt={alt}
         loading="lazy"

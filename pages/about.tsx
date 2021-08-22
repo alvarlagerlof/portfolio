@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import getExperience from "libs/experience";
 import { Experience } from "types";
@@ -15,12 +15,7 @@ type ExperienceProps = {
 export default function About({ experience }: ExperienceProps) {
   return (
     <>
-      <Head>
-        <title>About me - Alvar Lagerlöf</title>
-        <meta name="description" content="I’m a he/him living in Stockholm, Sweden"></meta>
-        <meta property="og:title" content="About me"></meta>
-        <meta property="og:description" content="I’m a he/him living in Stockholm, Sweden"></meta>
-      </Head>
+      <Meta title="About me" description="My story starts with a $2 computer from a flea market" />
 
       <WithDividers direction="vertical">
         <Header />
@@ -45,7 +40,6 @@ function Header() {
       </div>
       <div className="max-w-[500px]">
         <Image
-          unoptimized={true}
           src="/profile.png"
           className="rounded-3xl w-full bordered"
           width="1000"
@@ -165,14 +159,7 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
   return (
     <li key={experience.content} className="flex flex-row items-start">
       <div className="mr-4">
-        <Image
-          aria-hidden
-          unoptimized={true}
-          src="/icons/star.svg"
-          alt="Star"
-          height="26"
-          width="26"
-        />
+        <Image aria-hidden src="/icons/star.svg" alt="Star" height="26" width="26" />
       </div>
 
       <div>
@@ -204,7 +191,7 @@ function SocialLink({ name, href, icon }: SocialLinkProps) {
     <li>
       <ArrowLink newTab href={href}>
         <div className="inline-block mr-3 translate-y-1 ">
-          <Image unoptimized={true} src={icon} alt={name + " logo"} height="22" width="22" />
+          <Image src={icon} alt={name + " logo"} height="22" width="22" />
         </div>
 
         <span className="font-subheading font-semibold text-xl -mt-4">{name}</span>

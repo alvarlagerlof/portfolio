@@ -1,10 +1,10 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import { getPostsLatest } from "libs/blog";
 import { getProjectsFeatured } from "libs/projects";
@@ -18,12 +18,7 @@ type HomeProps = {
 export default function Home({ posts, projects }: HomeProps) {
   return (
     <>
-      <Head>
-        <title>Alvar Lagerlöf: Developer and Designer</title>
-        <meta name="description" content="Developer and designer living in Stockholm "></meta>
-        <meta property="og:title" content="Alvar Lagerlöf"></meta>
-        <meta property="og:description" content="Developer and designer living in Stockholm"></meta>
-      </Head>
+      <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
 
       <WithDividers direction="vertical">
         <Header />
@@ -48,7 +43,7 @@ function Header() {
       <h1 className="font-heading text-4xl md:text-7xl mb-4">I'm Alvar Lagerlöf</h1>
       <button className="flex flex-row space-x-2 items-center mb-8" onClick={play}>
         <span className="md:text-xl font-bold text-primary mr-2">Hear the pronunciation</span>
-        <Image unoptimized={true} alt="Speaker" src="/icons/speaker.svg" width="24" height="24" />
+        <Image alt="Speaker" src="/icons/speaker.svg" width="24" height="24" />
       </button>
 
       <audio ref={audioRef} aria-hidden>
@@ -83,7 +78,6 @@ function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
               >
                 <div className="min-w-[120px]">
                   <Image
-                    unoptimized={true}
                     className="bordered rounded-xl object-cover"
                     src={"/content/projects/" + project.image}
                     width="120"

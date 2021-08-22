@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Head from "next/head";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import { formatDate } from "libs/utils/date";
 import { getPostsDrafts, getPostsSectioned } from "libs/blog";
@@ -18,12 +18,7 @@ type BlogProps = {
 export default function Blog({ postsSectioned, drafts, isDev }: BlogProps) {
   return (
     <>
-      <Head>
-        <title>Blog - Alvar Lagerlöf</title>
-        <meta name="description" content="Personal blog"></meta>
-        <meta property="og:title" content="Alvar Lagerlöf's blog"></meta>
-        <meta property="og:description" content="Personal blog"></meta>
-      </Head>
+      <Meta title="Blog" description="I try to put my thoughts into words sometimes" />
 
       <WithDividers direction="vertical">
         <Header />

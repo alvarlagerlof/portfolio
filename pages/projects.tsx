@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,6 +5,7 @@ import { getProjects } from "libs/projects";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 import { Project } from "types";
 
@@ -16,12 +16,7 @@ type ProjectsProps = {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
-      <Head>
-        <title>Projects - Alvar Lagerlöf</title>
-        <meta name="description" content="Projects I've worked on"></meta>
-        <meta property="og:title" content="Projects"></meta>
-        <meta property="og:description" content="Projects I've worked on"></meta>
-      </Head>
+      <Meta title="Projects" description="These are some of the projects I've worked on" />
 
       <WithDividers direction="vertical">
         <Header />
@@ -55,13 +50,12 @@ function SecitonProjects({ projects }: ProjectsProps) {
             <Link href={project.link ?? "#"} passHref>
               <a target={project.link ? "_blank" : "_self"} rel="noreferrer">
                 <Image
-                  unoptimized={true}
                   className="rounded-3xl bordered"
                   alt="Project logo banner"
                   src={"/content/projects/" + project.image}
                   loading="lazy"
                   width="400"
-                  height="250"
+                  height="230"
                   objectFit="cover"
                   // placeholder="blur"
                   // blurDataURL={blurhash}

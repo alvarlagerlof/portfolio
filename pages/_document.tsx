@@ -22,12 +22,7 @@ export default class MyDocument extends Document {
             sizes="192x192"
           ></link>
 
-          <meta name="twitter:site" content="@alvarlagerlof"></meta>
-          <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-          <meta name="twitter:card" content="summary_large_image"></meta>
-          <meta property="og:image" content="https://alvar.dev/opengraph.jpg"></meta>
           <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
-
           <script defer data-domain="alvar.dev" src="/js/script.js"></script>
         </Head>
 

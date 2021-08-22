@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import { Post } from "../../types";
 
 import { formatDate } from "libs/utils/date";
@@ -8,6 +6,7 @@ import isDev from "libs/is-dev";
 
 import CustomReactMarkdown from "components/CustomReactMarkdown";
 import WithDividers from "components/WithDividers";
+import Meta from "components/Meta";
 
 type PostProps = {
   post: Post;
@@ -16,13 +15,7 @@ type PostProps = {
 export default function BlogPost({ post }: PostProps) {
   return (
     <>
-      <Head>
-        <title>{post.title} - Alvar Lagerlöf</title>
-        <meta name="description" content={post.description}></meta>
-        <meta property="og:title" content={post.title}></meta>
-        <meta property="og:type" content="article"></meta>
-        <meta property="og:description" content={post.description}></meta>
-      </Head>
+      <Meta title={post.title} description={post.description} />
 
       <WithDividers direction="vertical">
         <Header post={post} />
