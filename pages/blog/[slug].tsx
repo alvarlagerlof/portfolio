@@ -15,7 +15,7 @@ type PostProps = {
 export default function BlogPost({ post }: PostProps) {
   return (
     <>
-      <Meta title={post.title} description={post.description} />
+      <Meta title={post.title} description={post.description} ogImageLayout="blogpost" />
 
       <WithDividers direction="vertical">
         <Header post={post} />
