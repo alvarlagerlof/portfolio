@@ -1,5 +1,5 @@
 ---
-title: Don't Call me Smart
+title: Don't Call Me Smart
 description: Underneath the label of being smart
 date:
   published: "2021-07-24"
