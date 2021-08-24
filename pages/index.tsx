@@ -116,9 +116,7 @@ function SectionRecentBlogPosts({ posts }: SectionRecentBlogPosts) {
           <li key={post.title}>
             <Link href={`/blog/${post.slug}`} passHref>
               <a>
-                <h4 className="text-xl font-subheading font-semibold  break-all mb-1">
-                  {post.title}
-                </h4>
+                <h4 className="text-xl font-subheading font-semibold mb-1">{post.title}</h4>
                 <p>{post.description}</p>
               </a>
             </Link>
