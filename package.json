@@ -34,7 +34,7 @@
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "jiti": "^1.11.0",
-    "marked": "^3.0.1",
+    "marked": "^3.0.2",
     "next-sitemap": "^1.6.157",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
