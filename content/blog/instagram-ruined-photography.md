@@ -3,11 +3,11 @@ title: Instagram Ruined Photography for Me
 description: The story of why I stopped taking photos
 date:
   published: "2021-07-17"
-  updated: "2021-07-27"
+  updated: "2021-09-16"
 draft: false
 ---
 
-The following is a story I've been thinking about writing for years. Both as a cautionary tale to anyone getting into photography, and as an explanation for why I stopped. I've been reluctant to share this, but here's what happened.
+The following is a text I've been thinking about writing for years. Both as a cautionary tale to anyone getting into photography, and as an explanation for why I stopped. I've been reluctant to share this, but here's what happened.
 
 # Beginnings
 
@@ -21,6 +21,7 @@ Getting older, I made my account public. Now exposed to anyone I started using h
 
 This is when I started gaining likes and followers from strangers. At first, it was delightful. _This_ many people like what I do? Wow.
 
+\
 What I didn’t know was that for each new like and follow, a little dopamine was sent out into my brain. Every little bit of attention was a hit of a drug I didn't know about. After a while, you get used to it—wanting more and setting ever higher standards for yourself. Did the latest post get fewer likes than the last few? The photo must be worse.
 
 Soon, I started thinking about how my photos would be perceived even before taking them. I'd reject compositions that I liked before even clicking the shutter. All based on a vague grasp of what appeared to perform well.
@@ -40,7 +41,7 @@ Looking back at these tactics, they seem desperate. In a way, they were. I found
 
 Using the tactics above, I reached 700 followers. All at the expense of mental health, which had gotten worse the further I got. By then, even picking up my camera gave me anxiety. So in March 2017, I stopped. My mental health quickly improved.
 
-I've been thinking a lot about whom to blame here. There appears to be no simple answers. At the core, Instagram is simply a photo-sharing platform. The situation could have been prevented from my side. Still, I know that many others use it in similar ways, whether they want to or not.
+I've been thinking a lot about whom to blame here. There appear to be no simple answers. At its core, Instagram is simply a photo-sharing platform. Maybe the situation could have been prevented from my side. Still, I know that many others use it in similar ways, whether they want to or not. With what’s [coming out](https://www.bbc.com/news/technology-58570353) now about Facebook’s internal research, I suspect this experience is not uncommon.
 
 # Solution (in progress)
 
