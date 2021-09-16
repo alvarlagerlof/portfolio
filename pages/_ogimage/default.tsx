@@ -20,7 +20,7 @@ export default function Default() {
 
       <div className="space-y-2">
         <h1 className="font-heading text-[7em] leading-[1.2]">{title}</h1>
-        <h2 className="font-subheading text-[3.4em]">{description}</h2>
+        <h2 className="font-subheading text-[3.4em] leading-[1.3]">{description}</h2>
       </div>
     </div>
   );
