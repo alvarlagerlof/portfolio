@@ -47,6 +47,6 @@ I've been thinking a lot about whom to blame here. There seem to be no simple an
 
 # Solution (in progress)
 
-I haven't posted anything on Instagram since then. I'd still like to get back to taking and showing some people photos, but I'm still working on the best way to do this.
+I haven't posted anything on Instagram [since then](https://instagram.com/alvarlagerlof). I'd still like to get back to taking and showing some people photos, but I'm still working on the best way to do this.
 
-For now, using my phone reduces friction a lot. Some of these go on my Unsplash, but I'm still looking for the right place. Twitter appear to have a more natural and personal discovery mechanism due to interactions from people you follow being exposed on the feed. But I don’t know. If you know of a better platform, please contact me!
+For now, using my phone reduces friction a lot. Some of these go on my Unsplash, but I'm still looking for the right place. Twitter appears to have a more natural and personal discovery mechanism due to interactions from people you follow being exposed on the feed. But I don’t know. If you know of a better platform, please contact me!
