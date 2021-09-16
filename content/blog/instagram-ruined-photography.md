@@ -13,13 +13,15 @@ The following is a text I've been thinking about writing for years. Both as a ca
 
 Starting from when I was a kid, I've had a fascination with photography. I used to loan my mom's camera and capture everything that caught my eye. I wasn't any good at all at the start, but after getting my own camera as a birthday present, I improved.
 
-Sometime after that, I started an Instagram account. At first, it was private, and only a few friends viewed what I posted. Limited reach. Getting encouragement and feedback kept me going. It wasn't obvious then, but that was the start of significant pain.
+Sometime after that, I started an Instagram account. At first, it was private, and only a few friends viewed what I posted. Limited reach. Getting encouragement and feedback kept me going.
 
 # Going public
 
-Getting older, I made my account public. Now exposed to anyone I started using hashtags. My pictures would show up on things like #nature or #macro.
+Getting older, I made my account public. The motivation for this was to get more feedback. I’d always lacked any significant mentorship in my photography, and I wanted that from people who were better than me. \
+ \
+The discovery mechanism on Instagram was mostly based on hashtags. To get your posts noticed on a hashtag page, you need to get it popular. It wasn't obvious then, but that was the start of significant pain.
 
-This is when I started gaining likes and followers from strangers. At first, it was delightful. _This_ many people like what I do? Wow.
+So I started using the hashtags that all the other posts used. Now I started getting likes and followers from strangers. At first, it was delightful. _This_ many people like what I do? Wow.
 
 \
 What I didn’t know was that for each new like and follow, a little dopamine was sent out into my brain. Every little bit of attention was a hit of a drug I didn't know about. After a while, you get used to it—wanting more and setting ever higher standards for yourself. Did the latest post get fewer likes than the last few? The photo must be worse.
@@ -37,14 +39,14 @@ Set on getting more: likes, followers, comments, I soon found ways to improve my
 
 # Result
 
-Looking back at these tactics, they seem desperate. In a way, they were. I found myself in a highly competitive environment—too young to reflect on what I was doing: chasing metrics.
+Looking back at these tactics, they seem desperate. In a way, they were. I found myself in a highly competitive environment—too young to reflect on what I was doing: chasing metrics. I had completely lost my original goal in the process.
 
 Using the tactics above, I reached 700 followers. All at the expense of mental health, which had gotten worse the further I got. By then, even picking up my camera gave me anxiety. So in March 2017, I stopped. My mental health quickly improved.
 
-I've been thinking a lot about whom to blame here. There appear to be no simple answers. At its core, Instagram is simply a photo-sharing platform. Maybe the situation could have been prevented from my side. Still, I know that many others use it in similar ways, whether they want to or not. With what’s [coming out](https://www.bbc.com/news/technology-58570353) now about Facebook’s internal research, I suspect this experience is not uncommon.
+I've been thinking a lot about whom to blame here. There seem to be no simple answers. At its core, Instagram is simply a photo-sharing platform. Maybe the situation could have been prevented from my side. Still, I know that many others use it in similar ways, whether they want to or not. With what’s [coming out](https://www.bbc.com/news/technology-58570353) now about Facebook’s internal research, I suspect this experience is not uncommon.
 
 # Solution (in progress)
 
 I haven't posted anything on Instagram since then. I'd still like to get back to taking and showing some people photos, but I'm still working on the best way to do this.
 
-For now, using my phone reduces friction a lot. Some of these go on my Unsplash, but I'm still looking for the right place.
+For now, using my phone reduces friction a lot. Some of these go on my Unsplash, but I'm still looking for the right place. Twitter appear to have a more natural and personal discovery mechanism due to interactions from people you follow being exposed on the feed. But I don’t know. If you know of a better platform, please contact me!
