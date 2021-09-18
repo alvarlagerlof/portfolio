@@ -3,7 +3,10 @@ import Head from "next/head";
 import { useOgImage } from "next-opengraph-image";
 
 export default function Meta({ title, description, ogImageLayout = "default" }) {
-  const ogImage = useOgImage({ baseUrl: "https://alvar.dev", layout: ogImageLayout });
+  const ogImage = useOgImage({
+    baseUrl: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`,
+    layout: ogImageLayout,
+  });
 
   return (
     <Head>
