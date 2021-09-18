@@ -26,7 +26,7 @@
     "remark-gfm": "^1.0.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.18",
+    "@types/react": "^17.0.21",
     "autoprefixer": "^10.3.1",
     "current-git-branch": "^1.1.0",
     "eslint": "^7.32.0",
@@ -34,7 +34,7 @@
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "jiti": "^1.11.0",
-    "marked": "^3.0.1",
+    "marked": "^3.0.4",
     "next-sitemap": "^1.6.168",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
