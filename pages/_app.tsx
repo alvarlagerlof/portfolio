@@ -1,16 +1,16 @@
 import Head from "next/head";
-import Script from "next/script";
+import type { AppProps } from "next/app";
+import PlausibleProvider from "next-plausible";
 
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
 import WithDividers from "components/WithDividers";
 
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <PlausibleProvider domain="alvar.dev" customDomain="alvar.dev" trackOutboundLinks>
       <Head>
         {/* Next.js complains if this isn't here */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </WithDividers>
         </div>
       </div>
-    </>
+    </PlausibleProvider>
   );
 }
 

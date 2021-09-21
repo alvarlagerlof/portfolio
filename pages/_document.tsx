@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
           ></link>
 
           <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
-          <script defer data-domain="alvar.dev" src="/js/script.js"></script>
+          {/* <script defer data-domain="alvar.dev" src="/js/script.js"></script> */}
         </Head>
 
         <body>
