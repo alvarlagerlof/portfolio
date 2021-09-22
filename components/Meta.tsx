@@ -13,7 +13,7 @@ export default function Meta({ title, description, ogImageLayout = "default" }) 
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title}></meta>
-      <meta property="og:site_name" content="neurodiversity.wiki"></meta>
+      <meta property="og:site_name" content="alvar.dev"></meta>
       <meta property="og:description" content={description}></meta>
       <meta {...ogImage}></meta>
       <meta name="twitter:card" content="summary_large_image"></meta>
