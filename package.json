@@ -34,7 +34,7 @@
     "eslint-config-next": "^11.1.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
-    "jiti": "^1.11.0",
+    "jiti": "^1.12.3",
     "marked": "^3.0.4",
     "next-sitemap": "^1.6.168",
     "postcss": "^8.3.6",
