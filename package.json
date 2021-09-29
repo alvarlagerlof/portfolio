@@ -14,7 +14,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "@types/luxon": "^2.0.4",
-    "@types/node": "^16.7.1",
+    "@types/node": "^16.10.1",
     "highlight.js": "^11.2.0",
     "luxon": "^2.0.2",
     "next": "^11.0.1",
