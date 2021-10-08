@@ -25,9 +25,7 @@
     "next-sanity-image": "^3.1.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-markdown": "^6.0.3",
-    "react-syntax-highlighter": "^15.4.4",
-    "remark-gfm": "^1.0.0"
+    "react-syntax-highlighter": "^15.4.4"
   },
   "devDependencies": {
     "@sanity/block-content-to-html": "^2.0.0",
@@ -37,9 +35,8 @@
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "fs": "^0.0.1-security",
-    "gray-matter": "^4.0.2",
     "jiti": "^1.12.3",
-    "marked": "^3.0.4",
+    "marked": "^3.0.7",
     "next-sitemap": "^1.6.168",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
