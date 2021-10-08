@@ -33,8 +33,6 @@ export default function BlogPost({ data, preview }: PostProps) {
     enabled: preview && data?.slug.current !== undefined,
   });
 
-  console.log("is preview", preview);
-
   return (
     <>
       <Meta title={post.title} description={post.description} ogImageLayout="blogpost" />
