@@ -162,37 +162,6 @@ function SectionSocialLinks({ socials }: { socials: Social[] }) {
             </li>
           );
         })}
-        {/* <SocialLink
-          name="Twitter"
-          link="https://twitter.com/alvarlagerlof"
-          icon="/icons/socials/twitter.svg"
-        />
-        <SocialLink
-          name="GitHub"
-          link="https://github.com/alvarlagerlof"
-          icon="/icons/socials/github.svg"
-        />
-        <SocialLink
-          name="LinkedIn"
-          link="https://linkedin.com/in/alvarlagerlof"
-          icon="/icons/socials/linkedin.svg"
-        />
-        <SocialLink
-          name="Polywork"
-          link="https://polywork.com/alvar"
-          icon="/icons/socials/polywork.svg"
-        />
-        <SocialLink name="Email" link="mailto:hello@alvar.dev" icon="/icons/socials/email.svg" />
-        <SocialLink
-          name="ArtStation"
-          link="https://www.artstation.com/alvarlagerlof"
-          icon="/icons/socials/artstation.svg"
-        />
-        <SocialLink
-          name="Unsplash"
-          link="https://unsplash.com/@alvarlagerlof"
-          icon="/icons/socials/unsplash.svg"
-        /> */}
       </ul>
     </section>
   );
@@ -238,9 +207,9 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const experience: Experience[] = await getClient(preview).fetch(experienceQuery);
-  const socials: Social[] = await getClient(preview).fetch(spocialsQuery);
+export async function getStaticProps({ preview = true }) {
+  const experience: Experience[] = await getClient(false).fetch(experienceQuery);
+  const socials: Social[] = await getClient(false).fetch(spocialsQuery);
 
   return {
     props: {
