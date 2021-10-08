@@ -93,7 +93,7 @@ function ProjectItem(project: Project) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const projects: Project = await getClient(false).fetch(projectsQuery);
+  const projects: Project = await getClient(preview).fetch(projectsQuery);
 
   return {
     props: {

@@ -207,9 +207,9 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
   );
 }
 
-export async function getStaticProps({ preview = true }) {
-  const experience: Experience[] = await getClient(false).fetch(experienceQuery);
-  const socials: Social[] = await getClient(false).fetch(spocialsQuery);
+export async function getStaticProps({ preview = false }) {
+  const experience: Experience[] = await getClient(preview).fetch(experienceQuery);
+  const socials: Social[] = await getClient(preview).fetch(spocialsQuery);
 
   return {
     props: {
