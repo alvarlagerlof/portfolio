@@ -15,6 +15,12 @@ const serializers = {
       );
     },
 
+    internalLink({ mark, children }) {
+      const { slug = {} } = mark;
+      const href = `/blog/${slug.current}`;
+      return <ArrowLink href={href}>{children}</ArrowLink>;
+    },
+
     code({ children }) {
       return (
         <pre className="inline-block px-1 -py-2 bg-[rgb(227,233,242)] whitespace-normal">

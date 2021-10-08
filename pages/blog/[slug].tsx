@@ -22,7 +22,15 @@ const postQuery = groq`
   description,
   datePublished,
   dateUpdated,
-  body
+  body[] {
+    ...,
+    markDefs[] {
+      ...,
+      _type == "internalLink" => {
+        "slug": @.reference->slug
+      }
+    }
+  }
 }
 `;
 
