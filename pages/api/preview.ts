@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
-  if (req.query.secret !== process.env.NEXT_PREVIEW_SECRET || !req.query.path) {
+  if (req.query.secret !== process.env.SANITY_PREVIEW_SECRET || !req.query.path) {
     return res.status(401).json({ message: "Invalid token" });
   }
 
