@@ -50,6 +50,8 @@ export default function Home({ projectsData, postsData, preview }: HomeProps) {
     enabled: preview,
   });
 
+  console.log("is preview", preview);
+
   return (
     <>
       <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
