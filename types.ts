@@ -28,8 +28,10 @@ export type Post = SanityDefaults & {
   slug: SanitySlug;
   title: string;
   description: string;
-  datePublished: string;
-  dateUpdated?: string;
+  date: {
+    published: string;
+    updated: string;
+  };
   body: string;
 };
 
@@ -41,10 +43,12 @@ export type Experience = SanityDefaults & {
   company: string;
   jobTitle: string;
   employmentType: string;
-  start: string;
-  end: string;
+  date: {
+    start: string;
+    end: string;
+  };
   link?: string;
-  text: string;
+  body: string;
 };
 
 export type Social = SanityDefaults & {

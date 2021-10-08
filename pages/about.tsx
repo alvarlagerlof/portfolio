@@ -24,9 +24,9 @@ const experienceQuery = groq`
   _id,
   company,
   jobTitle,
-  start,
-  end,
-  text,
+  employmentType,
+  date,
+  body,
   link
 }
 `;
@@ -167,18 +167,17 @@ function SectionSocialLinks({ socials }: { socials: Social[] }) {
   );
 }
 
-type ExperienceItemProps = {
-  experience: Experience;
-};
-
-function ExperienceItem({ experience }: ExperienceItemProps) {
+function ExperienceItem({ experience }: { experience: Experience }) {
   const getDate = (): string => {
     const format = "MMM yyyy";
 
-    if (experience?.end === experience?.start) {
-      return `${formatDate(experience?.end, format)}`;
+    if (experience.date?.end === experience.date?.start) {
+      return `${formatDate(experience.date?.end, format)}`;
     }
-    return `${formatDate(experience?.start, format)} - ${formatDate(experience?.end, format)}`;
+    return `${formatDate(experience.date?.start, format)} - ${formatDate(
+      experience.date?.end,
+      format
+    )}`;
   };
 
   return (
@@ -195,7 +194,7 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
           {experience?.employmentType} • {getDate()}
         </em>
         <div className="prose">
-          <BlockContent blocks={experience?.text} />
+          <BlockContent blocks={experience?.body} />
         </div>
         {experience.link && (
           <div className="mt-4">

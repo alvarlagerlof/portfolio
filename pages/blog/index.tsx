@@ -21,12 +21,12 @@ type BlogProps = {
 };
 
 const postsQuery = groq`
-*[_type == "post"] | order(datePublished desc) {
+*[_type == "post"] | order(date.published desc) {
   _id,
   slug,
   title,
   description,
-  datePublished
+  date
 }
 `;
 
@@ -95,7 +95,7 @@ function PostList({ posts }: PostListProps) {
           <li key={post._id}>
             <Link href={`blog/${post.slug?.current}`} passHref>
               <a>
-                <em className="block">{formatDate(post.datePublished)}</em>
+                <em className="block">{formatDate(post.date.updated)}</em>
                 <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
                   {post.title}
                 </h4>

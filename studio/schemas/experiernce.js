@@ -20,18 +20,22 @@ const experience = {
       type: "string",
     },
     {
-      name: "start",
-      title: "Start date",
-      type: "date",
-    },
-    {
-      name: "end",
-      title: "End date",
-      type: "date",
+      title: "Dates",
+      name: "date",
+      type: "object",
+      options: {
+        collapsible: false,
+        collapsed: false,
+        columns: 2,
+      },
+      fields: [
+        { name: "start", type: "date", title: "Start" },
+        { name: "end", type: "date", title: "End" },
+      ],
     },
     {
       title: "Body",
-      name: "text",
+      name: "body",
       type: "array",
       of: [{ type: "block" }],
     },

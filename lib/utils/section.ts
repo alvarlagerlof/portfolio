@@ -3,7 +3,7 @@ import { parseDate } from "./date";
 
 export default function section(posts: Partial<Post>[]): Sections {
   return posts.reduce((acc: Sections, curr: Post) => {
-    const year: number = parseDate(curr.datePublished).year;
+    const year: number = parseDate(curr.date.published).year;
 
     return {
       ...acc,

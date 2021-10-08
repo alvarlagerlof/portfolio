@@ -20,8 +20,7 @@ const postQuery = groq`
   title,
   slug,
   description,
-  datePublished,
-  dateUpdated,
+  date,
   body[] {
     ...,
     markDefs[] {
@@ -59,8 +58,8 @@ function Header({ post }: { post: Post }) {
       <h1 className="font-heading text-4xl md:text-7xl mb-8 ">{post.title}</h1>
       <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch] mb-8">{post.description}</h2>
       <p className="font-medium">
-        Published {formatDate(post.datePublished)}
-        {post.dateUpdated && ` - Updated ${formatDate(post.dateUpdated)}`}
+        Published {formatDate(post.date.published)}
+        {post.date.updated && ` - Updated ${formatDate(post.date.updated)}`}
       </p>
     </header>
   );

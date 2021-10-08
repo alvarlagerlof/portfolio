@@ -24,7 +24,7 @@ const client = sanityClient.withConfig({ apiVersion: "2021-03-25" });
 // as complete
 
 const fetchDocuments = async () => {
-  const query = groq`*[_type == 'post'] {_id, _rev, dateDublished}`;
+  const query = groq`*[_type == 'post']`;
   return await client.fetch(query);
 };
 
@@ -32,8 +32,8 @@ const buildPatches = docs =>
   docs.map(doc => ({
     id: doc._id,
     patch: {
-      set: { datePublished: doc.dateDublished },
-      unset: ["dateDublished"],
+      set: { "date.updated": doc.dateUpdated },
+      unset: ["dateUpdated"],
       // this will cause the transaction to fail if the documents has been
       // modified since it was fetched.
       ifRevisionID: doc._rev,

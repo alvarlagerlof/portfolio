@@ -24,14 +24,18 @@ const post = {
       rows: 2,
     },
     {
-      name: "datePublished",
-      title: "Date published",
-      type: "date",
-    },
-    {
-      name: "dateUpdated",
-      title: "Date updated",
-      type: "date",
+      title: "Dates",
+      name: "date",
+      type: "object",
+      options: {
+        collapsible: false,
+        collapsed: false,
+        columns: 2,
+      },
+      fields: [
+        { name: "published", type: "date", title: "Published" },
+        { name: "updated", type: "date", title: "Updated" },
+      ],
     },
     {
       title: "Body",
