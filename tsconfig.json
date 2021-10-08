@@ -23,9 +23,7 @@
     "next.config.js",
     "postcss.config.js",
     "tailwind.config.js",
-    "next-sitemap.js",
-    "libs/rss.js",
-    "libs/rss.mjs"
+    "next-sitemap.js"
   ],
   "exclude": ["node_modules"]
 }

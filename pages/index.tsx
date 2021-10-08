@@ -1,21 +1,55 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
+import groq from "groq";
+
+import { Post, Project } from "types";
+
+import { getClient } from "lib/sanity/sanity.server";
+import { usePreviewSubscription } from "lib/sanity/sanity";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 import Meta from "components/Meta";
-
-import { getPostsLatest } from "libs/blog";
-import { getProjectsFeatured } from "libs/projects";
-import { Post, Project } from "types";
+import NextSanityImage from "components/SanityImage";
 
 type HomeProps = {
-  posts: Post[];
-  projects: Project[];
+  projectsData: Project[];
+  postsData: Post[];
+  preview: boolean;
 };
 
-export default function Home({ posts, projects }: HomeProps) {
+const postsQuery = groq`
+*[_type == "post"] | order(datePublished desc) [0..3] {
+  _id,
+  slug,
+  title,
+  datePublished,
+  description
+}
+`;
+
+const projectsQuery = groq`
+*[_type == "project" && featured == true] [0..3] {
+  _id,
+  name,
+  description,
+  link,
+  banner
+}
+`;
+
+export default function Home({ projectsData, postsData, preview }: HomeProps) {
+  const { data: projects } = usePreviewSubscription(projectsQuery, {
+    initialData: projectsData,
+    enabled: preview,
+  });
+
+  const { data: posts } = usePreviewSubscription(postsQuery, {
+    initialData: postsData,
+    enabled: preview,
+  });
+
   return (
     <>
       <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
@@ -59,17 +93,13 @@ function Header() {
   );
 }
 
-type SectionFeaturedProjectsProps = {
-  projects: Project[];
-};
-
-function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
+function SectionFeaturedProjects({ projects }: { projects: Project[] }) {
   return (
     <section className="md:min-w-[400px]">
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
       <ul className="space-y-6 md:space-y-8">
         {projects.map(project => (
-          <li key={project.title}>
+          <li key={project._id}>
             <Link href={project.link ?? "#"} passHref>
               <a
                 target={project.link ? "_blank" : "_self"}
@@ -77,17 +107,16 @@ function SectionFeaturedProjects({ projects }: SectionFeaturedProjectsProps) {
                 className="flex md:flex-row items-start sm:items-center space-x-4 cursor-pointer"
               >
                 <div className="min-w-[120px]">
-                  <Image
+                  <NextSanityImage
+                    image={project.banner}
                     className="bordered rounded-xl object-cover"
-                    src={"/content/projects/" + project.image}
                     width="120"
                     height="75"
-                    alt="Project banner"
                   />
                 </div>
                 <div className="-m-1">
                   <h4 className="text-xl font-subheading font-semibold break-all mb-1">
-                    {project.title}
+                    {project.name}
                   </h4>
                   <p>{project.description}</p>
                 </div>
@@ -113,8 +142,8 @@ function SectionRecentBlogPosts({ posts }: SectionRecentBlogPosts) {
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
       <ul className="space-y-4 md:space-y-8">
         {posts.map(post => (
-          <li key={post.title}>
-            <Link href={`/blog/${post.slug}`} passHref>
+          <li key={post._id}>
+            <Link href={`/blog/${post.slug?.current}`} passHref>
               <a>
                 <h4 className="text-xl font-subheading font-semibold mb-1">{post.title}</h4>
                 <p>{post.description}</p>
@@ -130,11 +159,15 @@ function SectionRecentBlogPosts({ posts }: SectionRecentBlogPosts) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
+  const featuredProjects: Project[] = await getClient(preview).fetch(projectsQuery);
+  const latestPosts: Partial<Post>[] = await getClient(preview).fetch(postsQuery);
+
   return {
     props: {
-      projects: await getProjectsFeatured(),
-      posts: await getPostsLatest(),
+      preview,
+      projectsData: featuredProjects,
+      postsData: latestPosts,
     },
   };
 }

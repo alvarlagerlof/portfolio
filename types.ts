@@ -1,44 +1,61 @@
-type Project = {
-  title: string;
+interface SanityDefaults {
+  _id: string;
+}
+
+export interface SanitySlug {
+  _type: "slug";
+  current: string;
+}
+
+export interface SanityImage {
+  _type: "image";
+  asset: {
+    _ref: string;
+    _type: "reference";
+  };
+  caption: string;
+}
+
+export type Project = SanityDefaults & {
+  name: string;
   description: string;
   link: string;
-  image: string;
-  blurhash: string;
+  banner: SanityImage;
   featured: boolean;
 };
 
-type Post = {
-  slug?: string;
+export type Post = SanityDefaults & {
+  slug: SanitySlug;
   title: string;
   description: string;
-  date: {
-    published: string;
-    updated?: string;
-  };
-  draft: boolean;
-  content: string;
+  datePublished: string;
+  dateUpdated?: string;
+  body: string;
 };
 
-type Sections = {
+export interface Sections {
   [year: number]: Post[];
-};
+}
 
-type Experience = {
-  title: string;
+export type Experience = SanityDefaults & {
   company: string;
-  type: "Part-time" | "Full-time" | "Internship";
-  date: {
-    start: string;
-    end: string;
-  };
+  jobTitle: string;
+  employmentType: string;
+  start: string;
+  end: string;
   link?: string;
-  content: string;
+  text: string;
 };
 
-type Children = {
+export type Social = SanityDefaults & {
+  networkName: string;
+  userName: string;
+  link: string;
+  icon: SanityImage;
+};
+
+export interface Children {
   children: React.ReactNode | string;
-};
+}
 
-type WithChildren<Type> = Type & Children;
-
-export type { Project, Post, Experience, Sections, Children, WithChildren };
+export type WithChildren<Type> = Type & Children;

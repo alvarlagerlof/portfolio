@@ -1,18 +1,57 @@
 import Image from "next/image";
+import BlockContent from "@sanity/block-content-to-react";
+import groq from "groq";
+
+import { Experience, Social } from "types";
+
+import { formatDate } from "lib/utils/date";
+import { getClient } from "lib/sanity/sanity.server";
+import { usePreviewSubscription } from "lib/sanity/sanity";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 import Meta from "components/Meta";
-
-import getExperience from "libs/experience";
-import { Experience } from "types";
-import { formatDate } from "libs/utils/date";
+import NextSanityImage from "components/SanityImage";
 
 type ExperienceProps = {
-  experience: Experience[];
+  experienceData: Experience[];
+  socialsData: Social[];
+  preview: boolean;
 };
 
-export default function About({ experience }: ExperienceProps) {
+const experienceQuery = groq`
+*[_type == "experience"] {
+  _id,
+  company,
+  jobTitle,
+  start,
+  end,
+  text,
+  link
+}
+`;
+
+const spocialsQuery = groq`
+*[_type == "social"] {
+  _id,
+  networkName,
+  userName,
+  link,
+  icon,
+}
+`;
+
+export default function About({ experienceData, socialsData, preview }: ExperienceProps) {
+  const { data: experience } = usePreviewSubscription(experienceQuery, {
+    initialData: experienceData,
+    enabled: preview,
+  });
+
+  const { data: socials } = usePreviewSubscription(spocialsQuery, {
+    initialData: socialsData,
+    enabled: preview,
+  });
+
   return (
     <>
       <Meta title="About me" description="My story starts with a $2 computer from a flea market" />
@@ -21,7 +60,7 @@ export default function About({ experience }: ExperienceProps) {
         <Header />
         <WithDividers direction="horizontal">
           <SectionMyStory />
-          <SectionSocialLinks />
+          <SectionSocialLinks socials={socials} />
         </WithDividers>
         <SectionExperience experience={experience} />
       </WithDividers>
@@ -84,56 +123,76 @@ function SectionMyStory() {
   );
 }
 
-function SectionExperience({ experience }: ExperienceProps) {
+function SectionExperience({ experience }: { experience: Experience[] }) {
   return (
     <section>
       <h3 className="font-heading text-4xl mb-8">Experience</h3>
       <ul className="space-y-8">
         {experience.map(item => (
-          <ExperienceItem key={item.title + item.company} experience={item} />
+          <ExperienceItem key={item._id} experience={item} />
         ))}
       </ul>
     </section>
   );
 }
 
-function SectionSocialLinks() {
+function SectionSocialLinks({ socials }: { socials: Social[] }) {
   return (
     <section className="md:min-w-[300px]">
       <h3 className="font-heading text-4xl mb-8">Social links</h3>
 
       <ul className="flex flex-col space-y-2">
-        <SocialLink
+        {socials.map(social => {
+          return (
+            <li key={social._id}>
+              <ArrowLink newTab href={social?.link ?? ""}>
+                <div className="inline-block mr-3 translate-y-1 ">
+                  <NextSanityImage
+                    image={social?.icon}
+                    placeholder="empty"
+                    height="22"
+                    width="22"
+                  />
+                </div>
+
+                <span className="font-subheading font-semibold text-xl -mt-4">
+                  {social?.networkName}
+                </span>
+              </ArrowLink>
+            </li>
+          );
+        })}
+        {/* <SocialLink
           name="Twitter"
-          href="https://twitter.com/alvarlagerlof"
+          link="https://twitter.com/alvarlagerlof"
           icon="/icons/socials/twitter.svg"
         />
         <SocialLink
           name="GitHub"
-          href="https://github.com/alvarlagerlof"
+          link="https://github.com/alvarlagerlof"
           icon="/icons/socials/github.svg"
         />
         <SocialLink
           name="LinkedIn"
-          href="https://linkedin.com/in/alvarlagerlof"
+          link="https://linkedin.com/in/alvarlagerlof"
           icon="/icons/socials/linkedin.svg"
         />
         <SocialLink
           name="Polywork"
-          href="https://polywork.com/alvar"
+          link="https://polywork.com/alvar"
           icon="/icons/socials/polywork.svg"
         />
-        <SocialLink name="Email" href="mailto:hello@alvar.dev" icon="/icons/socials/email.svg" />
+        <SocialLink name="Email" link="mailto:hello@alvar.dev" icon="/icons/socials/email.svg" />
         <SocialLink
           name="ArtStation"
-          href="https://www.artstation.com/alvarlagerlof"
+          link="https://www.artstation.com/alvarlagerlof"
           icon="/icons/socials/artstation.svg"
         />
         <SocialLink
           name="Unsplash"
-          href="https://unsplash.com/@alvarlagerlof"
+          link="https://unsplash.com/@alvarlagerlof"
           icon="/icons/socials/unsplash.svg"
-        />
+        /> */}
       </ul>
     </section>
   );
@@ -147,32 +206,31 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
   const getDate = (): string => {
     const format = "MMM yyyy";
 
-    if (experience.date.end === experience.date.start) {
-      return `${formatDate(experience.date.end, format)}`;
+    if (experience?.end === experience?.start) {
+      return `${formatDate(experience?.end, format)}`;
     }
-    return `${formatDate(experience.date.start, format)} - ${formatDate(
-      experience.date.end,
-      format
-    )}`;
+    return `${formatDate(experience?.start, format)} - ${formatDate(experience?.end, format)}`;
   };
 
   return (
-    <li key={experience.content} className="flex flex-row items-start">
+    <li key={experience._id} className="flex flex-row items-start">
       <div className="mr-4">
         <Image aria-hidden src="/icons/star.svg" alt="Star" height="26" width="26" />
       </div>
 
       <div>
         <h4 className="text-xl font-subheading font-semibold mb-1">
-          {experience.title} at {experience.company}
+          {experience?.jobTitle} at {experience?.company}
         </h4>
         <em className="block mb-2">
-          {experience.type} • {getDate()}
+          {experience?.employmentType} • {getDate()}
         </em>
-        <p className="prose">{experience.content}</p>
+        <div className="prose">
+          <BlockContent blocks={experience?.text} />
+        </div>
         {experience.link && (
           <div className="mt-4">
-            <ArrowLink href={experience.link}>Learn more</ArrowLink>
+            <ArrowLink href={experience?.link}>Learn more</ArrowLink>
           </div>
         )}
       </div>
@@ -180,30 +238,15 @@ function ExperienceItem({ experience }: ExperienceItemProps) {
   );
 }
 
-type SocialLinkProps = {
-  name: string;
-  href: string;
-  icon: string;
-};
+export async function getStaticProps({ preview = false }) {
+  const experience: Experience[] = await getClient(preview).fetch(experienceQuery);
+  const socials: Social[] = await getClient(preview).fetch(spocialsQuery);
 
-function SocialLink({ name, href, icon }: SocialLinkProps) {
-  return (
-    <li>
-      <ArrowLink newTab href={href}>
-        <div className="inline-block mr-3 translate-y-1 ">
-          <Image src={icon} alt={name + " logo"} height="22" width="22" />
-        </div>
-
-        <span className="font-subheading font-semibold text-xl -mt-4">{name}</span>
-      </ArrowLink>
-    </li>
-  );
-}
-
-export async function getStaticProps() {
   return {
     props: {
-      experience: await getExperience(),
+      experienceData: experience,
+      socialsData: socials,
+      preview,
     },
   };
 }

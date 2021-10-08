@@ -1,18 +1,38 @@
+import groq from "groq";
+import { usePreviewSubscription } from "lib/sanity/sanity";
+import { getClient } from "lib/sanity/sanity.server";
+import { formatDate } from "lib/utils/date";
+
 import { Post } from "../../types";
 
-import { formatDate } from "libs/utils/date";
-import { getPosts, getPostsPublished, getPost } from "libs/blog";
-import isDev from "libs/is-dev";
-
-import CustomReactMarkdown from "components/CustomReactMarkdown";
+import CustomBlockContent from "components/CustomBlockContent";
 import WithDividers from "components/WithDividers";
 import Meta from "components/Meta";
 
 type PostProps = {
-  post: Post;
+  data: Post;
+  preview: boolean;
 };
 
-export default function BlogPost({ post }: PostProps) {
+const postQuery = groq`
+*[_type == "post" && slug.current == $slug][0] {
+  _id,
+  title,
+  slug,
+  description,
+  datePublished,
+  dateUpdated,
+  body
+}
+`;
+
+export default function BlogPost({ data, preview }: PostProps) {
+  const { data: post } = usePreviewSubscription(postQuery, {
+    params: { slug: data?.slug.current },
+    initialData: data,
+    enabled: preview && data?.slug.current !== undefined,
+  });
+
   return (
     <>
       <Meta title={post.title} description={post.description} ogImageLayout="blogpost" />
@@ -25,50 +45,53 @@ export default function BlogPost({ post }: PostProps) {
   );
 }
 
-function Header({ post }: PostProps) {
+function Header({ post }: { post: Post }) {
   return (
     <header>
-      {post.draft && (
-        <p className=" bg-primary px-2 rounded-full inline-block text-white h-6 mb-8">Draft</p>
-      )}
-
       <h1 className="font-heading text-4xl md:text-7xl mb-8 ">{post.title}</h1>
       <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch] mb-8">{post.description}</h2>
       <p className="font-medium">
-        Published {formatDate(post.date.published)}
-        {post.date.updated && ` - Updated ${formatDate(post.date.updated)}`}
+        Published {formatDate(post.datePublished)}
+        {post.dateUpdated && ` - Updated ${formatDate(post.dateUpdated)}`}
       </p>
     </header>
   );
 }
 
-function Article({ post }: PostProps) {
+function Article({ post }: { post: Post }) {
   return (
     <article>
       <div className="prose">
-        <CustomReactMarkdown>{post.content}</CustomReactMarkdown>
+        <CustomBlockContent blocks={post.body} />
       </div>
     </article>
   );
 }
 
-export async function getStaticPaths() {
-  const posts: Post[] = isDev() ? await getPosts() : await getPostsPublished();
+export async function getStaticPaths({ preview = false }) {
+  const posts: Partial<Post[]> = await getClient(preview).fetch(
+    groq`
+      *[_type == "post" && defined(slug)] {
+        slug
+      }
+    `
+  );
 
   return {
-    paths: posts.map(post => {
-      return { params: { slug: post.slug } };
-    }),
+    paths: posts.map(post => ({ params: { slug: post.slug?.current } })),
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const post: Post = await getPost(slug);
+export async function getStaticProps({ params: { slug }, preview = false }) {
+  const post: Post = await getClient(preview).fetch(postQuery, {
+    slug,
+  });
 
   return {
     props: {
-      post,
+      data: post,
+      preview,
     },
   };
 }

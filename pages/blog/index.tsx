@@ -1,21 +1,43 @@
 import Link from "next/link";
 
+import { usePreviewSubscription } from "lib/sanity/sanity";
+import { getClient } from "lib/sanity/sanity.server";
+import { formatDate } from "lib/utils/date";
+
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 import Meta from "components/Meta";
 
-import { formatDate } from "libs/utils/date";
-import { getPostsDrafts, getPostsSectioned } from "libs/blog";
-import isDev from "libs/is-dev";
-import { Post, Sections } from "../../types";
+import { Post, Sections } from "types";
+
+import groq from "groq";
+import section from "lib/utils/section";
 
 type BlogProps = {
   postsSectioned: Sections;
   drafts: Post[];
-  isDev: boolean;
+  data: Partial<Post>[];
+  preview: boolean;
 };
 
-export default function Blog({ postsSectioned, drafts, isDev }: BlogProps) {
+const postsQuery = groq`
+*[_type == "post"] | order(datePublished desc) {
+  _id,
+  slug,
+  title,
+  description,
+  datePublished
+}
+`;
+
+export default function Blog({ data, preview }: BlogProps) {
+  const { data: posts } = usePreviewSubscription(postsQuery, {
+    initialData: data,
+    enabled: preview,
+  });
+
+  const sections = section(posts);
+
   return (
     <>
       <Meta title="Blog" description="I try to put my thoughts into words sometimes" />
@@ -25,29 +47,18 @@ export default function Blog({ postsSectioned, drafts, isDev }: BlogProps) {
 
         <ul>
           <WithDividers direction="vertical">
-            {isDev && (
-              <li key="Drafts" className="flex flex-col md:flex-row items-start">
-                <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
-                  Drafts
-                </h3>
-                <PostList posts={drafts} />
-              </li>
-            )}
-
-            <>
-              {Object.entries(postsSectioned)
-                .sort((a: any, b: any) => b[0] - a[0])
-                .map(([year, posts]) => {
-                  return (
-                    <li key={year} className="flex flex-col md:flex-row items-start">
-                      <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
-                        {year}
-                      </h3>
-                      <PostList posts={posts} />
-                    </li>
-                  );
-                })}
-            </>
+            {Object.entries(sections)
+              .sort((a: any, b: any) => b[0] - a[0])
+              .map(([year, posts]) => {
+                return (
+                  <li key={year} className="flex flex-col md:flex-row items-start">
+                    <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
+                      {year}
+                    </h3>
+                    <PostList posts={posts} />
+                  </li>
+                );
+              })}
           </WithDividers>
         </ul>
       </WithDividers>
@@ -69,7 +80,7 @@ function Header() {
 }
 
 type PostListProps = {
-  posts: Post[];
+  posts: Partial<Post>[];
 };
 
 function PostList({ posts }: PostListProps) {
@@ -81,10 +92,10 @@ function PostList({ posts }: PostListProps) {
     <ul className="space-y-8">
       {posts.map((post: Post) => {
         return (
-          <li key={post.slug}>
-            <Link href={`blog/${post.slug}`} passHref>
+          <li key={post._id}>
+            <Link href={`blog/${post.slug?.current}`} passHref>
               <a>
-                <em className="block">{formatDate(post.date.published)}</em>
+                <em className="block">{formatDate(post.datePublished)}</em>
                 <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
                   {post.title}
                 </h4>
@@ -98,12 +109,12 @@ function PostList({ posts }: PostListProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
+  const posts: Partial<Post>[] = await getClient(preview).fetch(postsQuery);
   return {
     props: {
-      drafts: await getPostsDrafts(),
-      postsSectioned: await getPostsSectioned(),
-      isDev: isDev(),
+      data: posts,
+      preview,
     },
   };
 }
