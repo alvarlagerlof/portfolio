@@ -8,7 +8,7 @@
     "postbuild": "yarn sitemap && yarn rss && yarn ogimage",
     "start": "next start",
     "sitemap": "next-sitemap",
-    "rss": "jiti libs/rss.ts",
+    "rss": "jiti lib/rss.ts",
     "ogimage": "next-opengraph-image"
   },
   "dependencies": {
