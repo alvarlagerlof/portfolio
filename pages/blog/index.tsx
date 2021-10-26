@@ -12,6 +12,7 @@ import { Post, Sections } from "types";
 
 import groq from "groq";
 import section from "lib/utils/section";
+import generateRSS from "lib/rss";
 
 type BlogProps = {
   postsSectioned: Sections;
@@ -26,7 +27,8 @@ const postsQuery = groq`
   slug,
   title,
   description,
-  date
+  date,
+  body
 }
 `;
 
@@ -111,6 +113,9 @@ function PostList({ posts }: PostListProps) {
 
 export async function getStaticProps({ preview = false }) {
   const posts: Partial<Post>[] = await getClient(preview).fetch(postsQuery);
+
+  generateRSS(posts);
+
   return {
     props: {
       data: posts,

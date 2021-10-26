@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "yarn sitemap && yarn rss && yarn ogimage",
+    "postbuild": "yarn sitemap && yarn ogimage",
     "start": "next start",
     "sitemap": "next-sitemap",
-    "rss": "jiti lib/rss.ts",
     "ogimage": "next-opengraph-image"
   },
   "dependencies": {
@@ -32,12 +31,12 @@
     "autoprefixer": "^10.3.6",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
-    "jiti": "^1.12.9",
     "next-sitemap": "^1.6.168",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "rss": "^1.2.2",
     "tailwindcss": "^2.2.17",
+    "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   }
 }

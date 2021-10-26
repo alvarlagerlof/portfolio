@@ -1,24 +1,11 @@
 import RSS from "rss";
 import { promises } from "fs";
-import groq from "groq";
 import blocksToHtml from "@sanity/block-content-to-html";
 
 import { Post } from "types";
-import { getClient } from "./sanity/sanity.server";
 
-async function generate() {
+export default async function generateRSS(posts: Partial<Post>[]) {
   try {
-    const posts: Post[] = await getClient(false).fetch(
-      groq`
-        *[_type == "post" && defined(slug)] {
-          slug,
-          title,
-          description,
-          body
-        }
-      `
-    );
-
     const feed = new RSS({
       title: "Alvar Lagerlöf's Blog",
       site_url: "https://alvar.dev",
@@ -33,8 +20,6 @@ async function generate() {
         blocksToHtml({
           blocks: post.body,
         }) + link;
-
-      console.log(post.title);
 
       feed.item({
         title: post.title,
@@ -53,5 +38,3 @@ async function generate() {
     console.log("❌ Failed to generate rss: " + e.message);
   }
 }
-
-generate();
