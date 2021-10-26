@@ -32,7 +32,7 @@
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "next-sitemap": "^1.6.168",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.11",
     "prettier": "^2.3.2",
     "rss": "^1.2.2",
     "tailwindcss": "^2.2.17",
