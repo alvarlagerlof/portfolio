@@ -45,7 +45,7 @@ module.exports = {
       },
       colors: {
         primary: colors.green[600],
-        separator: colors.black,
+        separator: colors.gray[400],
       },
       fontFamily: {
         heading: ["MADE Dillan", "sans-serif"],
