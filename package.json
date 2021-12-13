@@ -13,7 +13,7 @@
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
     "@tailwindcss/typography": "^0.4.1",
-    "@types/luxon": "^2.0.4",
+    "@types/luxon": "^2.0.8",
     "@types/node": "^16.11.1",
     "luxon": "^2.0.2",
     "next": "^12.0.0",
