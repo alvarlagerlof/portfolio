@@ -29,7 +29,7 @@
     "@sanity/block-content-to-html": "^2.0.0",
     "@types/react": "^17.0.39",
     "autoprefixer": "^10.4.2",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "eslint-config-next": "^12.1.0",
     "next-sitemap": "^2.5.7",
     "postcss": "^8.4.8",
