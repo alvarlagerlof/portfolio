@@ -35,5 +35,6 @@ yarn-error.log*
 
 /public/opengraph
 /public/sitemap.xml
+/public/sitemap-0.xml
 /public/feed.xml
 /public/next-opengraph-image
