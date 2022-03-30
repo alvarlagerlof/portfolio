@@ -13,6 +13,7 @@ import { Post, Sections } from "types";
 import groq from "groq";
 import section from "lib/utils/section";
 import generateRSS from "lib/rss";
+import { useRef } from "react";
 
 type BlogProps = {
   postsSectioned: Sections;
@@ -86,28 +87,39 @@ type PostListProps = {
 };
 
 function PostList({ posts }: PostListProps) {
+  return (
+    <ul className="space-y-8">
+      {posts.map((post: Post) => {
+        return <PostItem key={post._id} post={post} />;
+      })}
+    </ul>
+  );
+}
+
+function PostItem({ post }: { post: Post }) {
+  const link = useRef(null);
+
   const truncate = (input, len) => {
     return input.length > len ? `${input.substring(0, len)}...` : input;
   };
 
   return (
-    <ul className="space-y-8">
-      {posts.map((post: Post) => {
-        return (
-          <li key={post._id}>
-            <Link href={`blog/${post.slug?.current}`} passHref>
-              <a>
-                <em className="block">{formatDate(post.date.updated)}</em>
-                <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
-                  {post.title}
-                </h4>
-                <p>{truncate(post.description, 100)}</p>
-              </a>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <li
+      onClick={e => {
+        if (link.current !== e.target) {
+          link.current.click();
+        }
+      }}
+      className="cursor-pointer"
+    >
+      <em className="block">{formatDate(post.date.updated)}</em>
+      <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
+        <Link href={`blog/${post.slug?.current}`} passHref>
+          <a ref={link}>{post.title}</a>
+        </Link>
+      </h4>
+      <p>{truncate(post.description, 100)}</p>
+    </li>
   );
 }
 
