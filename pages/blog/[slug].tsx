@@ -8,6 +8,7 @@ import { Post } from "../../types";
 import CustomBlockContent from "components/CustomBlockContent";
 import WithDividers from "components/WithDividers";
 import Meta from "components/Meta";
+import { setBannerData } from "next-banner";
 
 type PostProps = {
   data: Post;
@@ -39,6 +40,8 @@ export default function BlogPost({ data, preview }: PostProps) {
     initialData: data,
     enabled: preview && data?.slug.current !== undefined,
   });
+
+  setBannerData({ layout: "blogpost" });
 
   return (
     <>

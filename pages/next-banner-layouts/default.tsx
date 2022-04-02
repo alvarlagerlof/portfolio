@@ -1,13 +1,10 @@
 import Image from "next/image";
-import { useData } from "next-opengraph-image";
+import { useBannerData } from "next-banner";
 
 export default function Default() {
-  const { title, description } = useData({
-    placeholder: {
-      title: "Alvar Lagerlöf",
-      description: "Developer and designer from Stockholm",
-    },
-  });
+  const {
+    meta: { title = "Alvar Lagerlöf", description = "Developer and designer from Stockholm" },
+  } = useBannerData();
 
   return (
     <div className="w-[1200px] h-[630px] fixed top-0 left-0 bg-green-100 py-20 px-24 flex flex-col justify-between">
