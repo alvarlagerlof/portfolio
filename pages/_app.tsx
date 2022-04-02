@@ -7,11 +7,11 @@ import Navbar from "components/Navbar";
 import WithDividers from "components/WithDividers";
 
 import "../styles/globals.css";
-import { BannerMeta } from "next-banner";
+import { NextBannerMeta } from "next-banner";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <BannerMeta>
+    <NextBannerMeta>
       <PlausibleProvider domain="alvar.dev" customDomain="alvar.dev" trackOutboundLinks>
         <Head>
           {/* Next.js complains if this isn't here */}
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </div>
         </div>
       </PlausibleProvider>
-    </BannerMeta>
+    </NextBannerMeta>
   );
 }
 
