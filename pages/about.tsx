@@ -97,26 +97,25 @@ function SectionMyStory() {
       <h3 className="font-heading text-4xl mb-8">My story</h3>
       <article className="prose">
         <p>
-          It all begain with a $2 computer. How, you ask? Well, when I was younger I played a lot of
-          Minecraft. Naturally, I wanted to play with friends, so I figured that I'd create a server
-          for us. I went to a flea market and looked for the cheapest computer I could find. For $2,
-          I got an absolute wreck. Not knowing what I had bought, I took it home and installed a
-          Linux distribution on it.
+          It all began with a $2 computer. How do you ask? Well, when I was younger, I played
+          Minecraft a lot. Naturally, I wanted to play with my friends, so I figured I'd create a
+          server for us.
         </p>
         <p>
-          Surprisingly, it worked fine. However, something was missing. All of the "cool" servers
-          had a website. I wanted mine to have one too. An Apache install and some typing later,
-          there was a website. Now, I found that more fun than actually playing the game. It
-          snowballed from there.
+          So I went to a flea market and searched for the cheapest computer I could find. For $2, I
+          got an absolute wreck. Not knowing what I had bought, I took it home and installed a Linux
+          distribution on it.{" "}
         </p>
         <p>
-          Since then, I've tried a lot of different things. Everything from Android and iOS apps, to
-          decentralized tic-tac-toe, to neural networks based on ImageNet.
+          It worked better than expected. But something was missing. All "cool" servers had a
+          website. I wanted mine to have one too. An Apache install and some typing later, there was
+          a website. It snowballed from there. Being a developer was more fun than playing the game.
         </p>
         <p>
-          Along the way, I've realized that I like working with declarative UI and have grown
-          increasingly interested in design as well. When I'm not coding, I like to ski and take
-          photos.
+          Since then, I've experimented with many things. Everything from Android and iOS apps, to
+          decentralized tic-tac-toe, to neural networks based. Along the way, I realized that I am
+          becoming more and more interested in design as well. When I'm not either of those, I like
+          to ski and take photos.
         </p>
       </article>
     </section>
