@@ -9,7 +9,7 @@ export default function Navbar() {
         <a className="py-2">
           <div className="flex flex-row items-center space-x-2">
             <Image src="/icons/star.svg" width="24" height="24" alt="Star logo" />
-            <h1 className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</h1>
+            <p className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</p>
           </div>
         </a>
       </Link>

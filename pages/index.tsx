@@ -99,36 +99,47 @@ function SectionFeaturedProjects({ projects }: { projects: Project[] }) {
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
       <ul className="space-y-6 md:space-y-8">
         {projects.map(project => (
-          <li key={project._id}>
-            <Link href={project.link ?? "#"} passHref>
-              <a
-                target={project.link ? "_blank" : "_self"}
-                rel="noreferrer"
-                className="flex md:flex-row items-start sm:items-center space-x-4 cursor-pointer"
-              >
-                <div className="min-w-[120px]">
-                  <NextSanityImage
-                    image={project.banner}
-                    className="bordered rounded-xl object-cover"
-                    width="120"
-                    height="75"
-                  />
-                </div>
-                <div className="-m-1">
-                  <h4 className="text-xl font-subheading font-semibold break-all mb-1">
-                    {project.name}
-                  </h4>
-                  <p>{project.description}</p>
-                </div>
-              </a>
-            </Link>
-          </li>
+          <ProjectItem project={project} key={project._id} />
         ))}
       </ul>
       <h4 className="text-xl font-subheading mt-12">
         <ArrowLink href="/projects">All projects</ArrowLink>
       </h4>
     </section>
+  );
+}
+
+function ProjectItem({ project }: { project: Project }) {
+  const link = useRef(null);
+
+  return (
+    <li
+      onClick={e => {
+        if (link.current !== e.target) {
+          link.current.click();
+        }
+      }}
+      className="flex md:flex-row items-start sm:items-center space-x-4 cursor-pointer"
+    >
+      <div className="min-w-[120px]">
+        <NextSanityImage
+          image={project.banner}
+          className="bordered rounded-xl object-cover"
+          width="120"
+          height="75"
+        />
+      </div>
+      <div className="-m-1">
+        <h4 className="text-xl font-subheading font-semibold break-all mb-1">
+          <Link href={project.link ?? "#"} passHref>
+            <a target={project.link ? "_blank" : "_self"} ref={link} rel="noreferrer">
+              {project.name}{" "}
+            </a>
+          </Link>
+        </h4>
+        <p>{project.description}</p>
+      </div>
+    </li>
   );
 }
 
@@ -142,20 +153,35 @@ function SectionRecentBlogPosts({ posts }: SectionRecentBlogPosts) {
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
       <ul className="space-y-4 md:space-y-8">
         {posts.map(post => (
-          <li key={post._id}>
-            <Link href={`/blog/${post.slug?.current}`} passHref>
-              <a>
-                <h4 className="text-xl font-subheading font-semibold mb-1">{post.title}</h4>
-                <p>{post.description}</p>
-              </a>
-            </Link>
-          </li>
+          <BlogPostItem post={post} key={post._id} />
         ))}
       </ul>
       <h4 className="text-xl font-subheading mt-12">
         <ArrowLink href="/blog">All posts</ArrowLink>
       </h4>
     </section>
+  );
+}
+
+function BlogPostItem({ post }: { post: Post }) {
+  const link = useRef(null);
+
+  return (
+    <li
+      onClick={e => {
+        if (link.current !== e.target) {
+          link.current.click();
+        }
+      }}
+      className="cursor-pointer"
+    >
+      <h4 className="text-xl font-subheading font-semibold mb-1">
+        <Link href={`/blog/${post.slug?.current}`} passHref>
+          <a ref={link}>{post.title}</a>
+        </Link>
+      </h4>
+      <p>{post.description}</p>
+    </li>
   );
 }
 

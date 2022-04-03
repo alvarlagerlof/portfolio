@@ -10,6 +10,7 @@ import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 import Meta from "components/Meta";
 import NextSanityImage from "components/SanityImage";
+import { useRef } from "react";
 
 type ProjectsProps = {
   data: Project[];
@@ -69,25 +70,34 @@ function SecitonProjects({ projects }: { projects: Project[] }) {
 }
 
 function ProjectItem(project: Project) {
+  const link = useRef(null);
+
   return (
-    <li>
-      <Link href={project.link ?? "#"} passHref>
-        <a target={project.link ? "_blank" : "_self"} rel="noreferrer">
-          <NextSanityImage
-            image={project.banner}
-            className="rounded-3xl bordered"
-            alt="Project logo banner"
-            loading="lazy"
-            width="400"
-            height="230"
-            objectFit="cover"
-          />
-          <h3 className="font-heading break-all	text-2xl xl:text-3xl mt-2 xl:mt-4 mb-1 xl:mb-2">
+    <li
+      onClick={e => {
+        if (link.current !== e.target) {
+          link.current.click();
+        }
+      }}
+      className="cursor-pointer"
+    >
+      <NextSanityImage
+        image={project.banner}
+        className="rounded-3xl bordered"
+        alt="Project logo banner"
+        loading="lazy"
+        width="400"
+        height="230"
+        objectFit="cover"
+      />
+      <h3 className="font-heading break-all	text-2xl xl:text-3xl mt-2 xl:mt-4 mb-1 xl:mb-2">
+        <Link href={project.link ?? "#"} passHref>
+          <a target={project.link ? "_blank" : "_self"} rel="noreferrer" ref={link}>
             {project.name}
-          </h3>
-          <p>{project.description}</p>
-        </a>
-      </Link>
+          </a>
+        </Link>
+      </h3>
+      <p>{project.description}</p>
     </li>
   );
 }

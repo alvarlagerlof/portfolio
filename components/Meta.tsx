@@ -1,12 +1,6 @@
 import Head from "next/head";
-import { useOgImage } from "next-opengraph-image";
 
 export default function Meta({ title, description, ogImageLayout = "default" }) {
-  const ogImage = useOgImage({
-    baseUrl: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`,
-    layout: ogImageLayout,
-  });
-
   return (
     <Head>
       <title>{title}</title>
@@ -14,7 +8,6 @@ export default function Meta({ title, description, ogImageLayout = "default" }) 
       <meta property="og:title" content={title}></meta>
       <meta property="og:site_name" content="alvar.dev"></meta>
       <meta property="og:description" content={description}></meta>
-      <meta {...ogImage}></meta>
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@alvarlagerlof"></meta>
       <meta name="twitter:creator" content="@alvarlagerlof"></meta>
