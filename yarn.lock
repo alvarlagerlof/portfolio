@@ -747,6 +747,11 @@
   resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-0.140.22.tgz#7a65f56bb751f7b1c5dfacfadd34ee10fc4f0fde"
   integrity sha512-CAmQZnj+KM7FSEYiWlIGDit072syicYuAw0w7R2ctMzHiZ4p9mE/g6dBnYqrqFUrw2J+GpJgPt+RVspKP8vdqA==
 
+"@sanity/image-url@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-1.0.1.tgz#960d649b2f4396da0adb31cf94503c929495cea0"
+  integrity sha512-AdKQ3zMk7WdoNwoJPrAvQhW+kUtBldBX0nHtnGy+rwmgsCQ0rAXasrgH43Fhmsp/yB6piiq+F2d5qEuBFsdQVg==
+
 "@sanity/observable@2.0.9":
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/@sanity/observable/-/observable-2.0.9.tgz#587d6847b8814a32be1d6c1f2d135df521d09329"
@@ -2789,10 +2794,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-banner@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/next-banner/-/next-banner-1.1.0.tgz#73e211476089c56e36b3c31c122da33c8dc21b8d"
-  integrity sha512-iFw2fAbBftpEaGdg5LH7tdLZfkJPT6lanIhPpJ34OQWHC6gFt9GW0zWhGSRI+IKgcitraaUxZ4KeE9RY5KY6zA==
+next-banner@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/next-banner/-/next-banner-1.1.1.tgz#d30a1e4bb7336d53b781c15d978fe2fcc8c72563"
+  integrity sha512-RaxCoaULfZ2ZVK02pvf0ruaULGT67MaqzWdz0iUYkRisebOCuEVYHTgosv3c0MWz+gVkwBjcu7jx3azviCGomw==
   dependencies:
     get-port "^6.1.2"
     merge-anything "^5.0.2"
