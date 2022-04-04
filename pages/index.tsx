@@ -20,12 +20,15 @@ type HomeProps = {
 };
 
 const postsQuery = groq`
-*[_type == "post"] | order(datePublished desc) [0..3] {
+*[_type == "post"] | order(date.published desc) [0..3] {
   _id,
   slug,
   title,
-  datePublished,
-  description
+  description,
+  "date": {
+    published,
+    updated
+  }
 }
 `;
 
