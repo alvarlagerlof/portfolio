@@ -47,6 +47,17 @@ const post = {
           marks: {
             annotations: [
               {
+                name: "link",
+                type: "object",
+                title: "link",
+                fields: [
+                  {
+                    name: "url",
+                    type: "url",
+                  },
+                ],
+              },
+              {
                 name: "internalLink",
                 type: "object",
                 title: "Internal link",
