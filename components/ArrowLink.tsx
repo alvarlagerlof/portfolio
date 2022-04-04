@@ -16,7 +16,7 @@ export default function ArrowLink({
       <a
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noreferrer" : ""}
-        className="text-primary font-semibold hover:underline"
+        className="text-primary font-semibold no-underline hover:underline"
       >
         {children} →
       </a>

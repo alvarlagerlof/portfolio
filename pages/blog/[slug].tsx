@@ -58,7 +58,7 @@ export default function BlogPost({ data, preview }: PostProps) {
 function Header({ post }: { post: Post }) {
   return (
     <header>
-      <h1 className="font-heading text-4xl md:text-7xl mb-8 ">{post.title}</h1>
+      <h1 className="font-heading text-4xl md:text-7xl mb-8">{post.title}</h1>
       <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch] mb-8">{post.description}</h2>
       <p className="font-medium">
         Published {formatDate(post.date.published)}

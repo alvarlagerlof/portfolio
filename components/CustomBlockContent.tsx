@@ -8,6 +8,7 @@ const serializers = {
   marks: {
     link({ mark, children }) {
       const { href } = mark;
+
       return (
         <ArrowLink newTab href={href}>
           {children}
@@ -16,8 +17,11 @@ const serializers = {
     },
 
     internalLink({ mark, children }) {
-      const { slug = {} } = mark;
-      const href = `/blog/${slug.current}`;
+      const {
+        slug: { current },
+      } = mark;
+      const href = `/blog/${current}`;
+
       return <ArrowLink href={href}>{children}</ArrowLink>;
     },
 

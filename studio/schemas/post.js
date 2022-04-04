@@ -52,7 +52,7 @@ const post = {
                 title: "link",
                 fields: [
                   {
-                    name: "url",
+                    name: "href",
                     type: "url",
                   },
                 ],
