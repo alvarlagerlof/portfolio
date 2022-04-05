@@ -22,7 +22,8 @@
 /* TODO: Figure out how to do this in tailwind */
 
 img.bordered {
-  border: 2px solid black !important;
+  border: 2px solid rgb(156, 163, 175) !important;
 }
+
 
 @tailwind utilities;
