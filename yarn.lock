@@ -2804,10 +2804,10 @@ next-banner@^1.1.2:
     puppeteer "^13.5.1"
     tasuku "^1.0.2"
 
-next-plausible@^3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.1.8.tgz#56f01bf5064445fc5d657c19b7c2fc2a195b571f"
-  integrity sha512-7lqtSflFvSVzzxwaTwnHnoxK5J1BJcvORBWpLKb7GsRblf3dDC85BIfLiWLNonkxfS+P8/pjem0bunAg6Wh1IQ==
+next-plausible@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.1.9.tgz#4795df2e83a6ca14495d2fa0d31a92649c42425f"
+  integrity sha512-6Ro6lVnuXAtqbbBQfuKuu0cpZHWWvJWbOE1G+Rx6i42T6lLYtbQzbu09Cutv3vc/wD/4ySHzJkuTnxsqnlArGA==
 
 next-sanity-image@^3.2.1:
   version "3.2.1"
