@@ -1,8 +1,12 @@
 import RSS from "rss";
 import { promises } from "fs";
-import blocksToHtml from "@sanity/block-content-to-html";
+import { toHTML } from "@portabletext/to-html";
+import htm from "htm";
+import vhtml from "vhtml";
 
 import { Post } from "types";
+
+const html = htm.bind(vhtml);
 
 export default async function generateRSS(posts: Partial<Post>[]) {
   try {
@@ -17,8 +21,12 @@ export default async function generateRSS(posts: Partial<Post>[]) {
     posts.forEach(post => {
       const link = `<br/>(This is an article posted to my blog at alvar.dev. You can read it online by <a href="https://alvar.dev/blog/${post.slug.current}">clicking here</a>.)`;
       const content =
-        blocksToHtml({
-          blocks: post.body,
+        toHTML(post.body, {
+          components: {
+            types: {
+              image: ({ value }) => String(html`<img src="${value.imageUrl}" />`),
+            },
+          },
         }) + link;
 
       feed.item({

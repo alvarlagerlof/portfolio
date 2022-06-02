@@ -1,3 +1,5 @@
+import { PortableTextBlock } from "@portabletext/types";
+
 interface SanityDefaults {
   _id: string;
 }
@@ -32,7 +34,7 @@ export type Post = SanityDefaults & {
     published: string;
     updated: string;
   };
-  body: string;
+  body: PortableTextBlock[];
 };
 
 export interface Sections {
