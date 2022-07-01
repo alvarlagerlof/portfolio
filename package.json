@@ -33,7 +33,7 @@
     "@types/react": "^18.0.10",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.15.0",
-    "eslint-config-next": "^12.1.6",
+    "eslint-config-next": "^12.2.0",
     "htm": "^3.1.1",
     "next-sitemap": "^2.5.28",
     "postcss": "^8.4.14",
