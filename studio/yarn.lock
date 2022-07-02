@@ -1211,10 +1211,10 @@
   resolved "https://registry.npmjs.org/@sanity/color/-/color-2.1.10.tgz#b92e59818600c3d8295b057cf0e8236e7f3b0143"
   integrity sha512-t1rV2/WAECqyKziAhAxgpHh9oLQuIUGvHlV/jSboAG4K8/HeRPF8WWiGak/B32uiPl6lOpw3oM4BonYmPLb2+Q==
 
-"@sanity/core@2.30.1":
-  version "2.30.1"
-  resolved "https://registry.yarnpkg.com/@sanity/core/-/core-2.30.1.tgz#ff0f08d5bba66847777fa5ca470973b3f1ab02a5"
-  integrity sha512-HH0svw3kCkUzv1/XMaESNFfGNit7MnDYVjSz9kgh0MKh0u5KDM0UHpGaGk34tX9VKQNeVJBDFpooeqWl9n1IpQ==
+"@sanity/core@2.30.2":
+  version "2.30.2"
+  resolved "https://registry.yarnpkg.com/@sanity/core/-/core-2.30.2.tgz#97fa016a12df652f546b0994ec3b73f272c179d9"
+  integrity sha512-DqWD+s8pczkrGxOVxLpa0k1l8IKIb7VGZIfMrHk8ERfLWma8fyFY8qNO/g+8Td0h650lKH56nzWcWH9Y2VbSyQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.10.4"
     "@babel/preset-env" "^7.11.5"
@@ -1222,7 +1222,7 @@
     "@babel/preset-typescript" "^7.10.4"
     "@babel/register" "^7.7.4"
     "@sanity/eventsource" "^3.0.1"
-    "@sanity/export" "2.29.3"
+    "@sanity/export" "2.30.2"
     "@sanity/generate-help-url" "^3.0.0"
     "@sanity/import" "2.29.3"
     "@sanity/plugin-loader" "2.29.5"
@@ -1235,6 +1235,8 @@
     chalk "^2.4.2"
     chokidar "^3.0.0"
     configstore "^5.0.1"
+    console-table-printer "^2.11.0"
+    date-fns "^2.16.1"
     debug "^3.2.7"
     deep-sort-object "^1.0.1"
     es6-promisify "^6.0.0"
@@ -1370,10 +1372,10 @@
     event-source-polyfill "1.0.25"
     eventsource "^1.0.6"
 
-"@sanity/export@2.29.3":
-  version "2.29.3"
-  resolved "https://registry.npmjs.org/@sanity/export/-/export-2.29.3.tgz#ab42a8acb5f47d2ffa0e2da7fa07db5ff58884a3"
-  integrity sha512-3SxlDH2Y3rrSDAd/gtS3V+HGqOB0yEUXnQ0Nr4DYgwW9nXsV9nRSgLU5pYG+KKSfQMy4bzM3jXMulj5j7FDuJg==
+"@sanity/export@2.30.2":
+  version "2.30.2"
+  resolved "https://registry.yarnpkg.com/@sanity/export/-/export-2.30.2.tgz#d20d01ab9b622419b4b65591c482caea4f111d03"
+  integrity sha512-kB0qA28btLBhaTrKgJDrAxvfWT72/29gTFx3CPYwSljz/wDaI3jnrKLB2lRuwEzfa0FumQWdMqAYT7LZV2eowg==
   dependencies:
     archiver "^5.0.0"
     debug "^3.2.7"
@@ -3045,6 +3047,13 @@ console-browserify@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/console-browserify/-/console-browserify-1.2.0.tgz#67063cef57ceb6cf4993a2ab3a55840ae8c49336"
   integrity sha512-ZMkYO/LkF17QvCPqM0gxw8yUzigAOZOSWSHg91FH6orS7vcEj5dVZTidN2fQ14yBSdg97RqhSNwLUXInd52OTA==
+
+console-table-printer@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/console-table-printer/-/console-table-printer-2.11.0.tgz#704a74cb56d66267a2527f500fedcaa78ca76259"
+  integrity sha512-F5H5/lFciTV2OBI/xDh/x7nZAM6YPqkbkoIxr8px4B/nSvUV4ymsi4BL0bwRwrRcOgtp/LqGJGgGmkicAMd8LQ==
+  dependencies:
+    simple-wcswidth "^1.0.1"
 
 constants-browserify@^1.0.0:
   version "1.0.0"
@@ -8692,6 +8701,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+simple-wcswidth@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/simple-wcswidth/-/simple-wcswidth-1.0.1.tgz#8ab18ac0ae342f9d9b629604e54d2aa1ecb018b2"
+  integrity sha512-xMO/8eNREtaROt7tJvWJqHBDTMFN4eiQ5I4JRMuilwfnFcV5W9u7RUkueNkdw0jPqGMX36iCywelS5yilTuOxg==
 
 sisteransi@^1.0.4:
   version "1.0.5"
