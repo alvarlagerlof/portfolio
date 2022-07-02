@@ -1,4 +1,5 @@
 {
+  "timezone": "Europe/Stockholm",
   "rangeStrategy": "pin",
   "lockFileMaintenance": {
     "enabled": true,
@@ -8,11 +9,12 @@
   },
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "schedule": ["before 1am"]
     }
   ]
 }
