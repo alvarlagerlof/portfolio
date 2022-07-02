@@ -21,7 +21,7 @@
     "@sanity/default-login": "2.30.1",
     "@sanity/desk-tool": "2.30.1",
     "@sanity/vision": "2.30.1",
-    "prop-types": "15.7.2",
+    "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
