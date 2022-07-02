@@ -1,17 +1,3 @@
 {
-  "rangeStrategy": "pin",
-  "timezone": "Europe/Stockholm",
-  "schedule": "before 5am every weekday",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": "after 10pm on sunday"
-  },
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
-    }
-  ]
+  "rangeStrategy": "pin"
 }
