@@ -14,7 +14,9 @@
     },
     {
       "matchUpdateTypes": ["major"],
-      "schedule": ["before 1am"]
+      "schedule": ["before 2am"],
+      "groupName": "all major dependencies",
+      "groupSlug": "all-major"
     }
   ]
 }
