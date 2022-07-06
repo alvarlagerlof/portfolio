@@ -30,7 +30,7 @@
     "@playwright/test": "1.23.1",
     "@portabletext/to-html": "1.0.3",
     "@portabletext/types": "1.0.3",
-    "@types/react": "18.0.14",
+    "@types/react": "18.0.15",
     "autoprefixer": "10.4.7",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.0",
