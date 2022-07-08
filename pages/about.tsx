@@ -20,7 +20,7 @@ type ExperienceProps = {
 };
 
 const experienceQuery = groq`
-*[_type == "experience"] {
+*[_type == "experience"] | order(date.start desc) {
   _id,
   company,
   jobTitle,
@@ -173,6 +173,11 @@ function ExperienceItem({ experience }: { experience: Experience }) {
     if (experience.date?.end === experience.date?.start) {
       return `${formatDate(experience.date?.end, format)}`;
     }
+
+    if (experience.date?.start && !experience.date?.end) {
+      return `${formatDate(experience.date?.start, format)} - Present`;
+    }
+
     return `${formatDate(experience.date?.start, format)} - ${formatDate(
       experience.date?.end,
       format
