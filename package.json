@@ -35,7 +35,7 @@
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
     "htm": "3.1.1",
-    "next-sitemap": "3.1.10",
+    "next-sitemap": "3.1.11",
     "postcss": "8.4.14",
     "prettier": "2.7.1",
     "rss": "1.2.2",
