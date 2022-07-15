@@ -15,7 +15,7 @@
     "@sanity/image-url": "1.0.1",
     "@tailwindcss/typography": "0.5.4",
     "@types/luxon": "2.3.2",
-    "@types/node": "18.0.4",
+    "@types/node": "18.0.5",
     "luxon": "3.0.1",
     "next": "12.2.2",
     "next-banner": "1.2.32",
