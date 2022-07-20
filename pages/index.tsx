@@ -6,7 +6,6 @@ import groq from "groq";
 import { Post, Project } from "types";
 
 import { getClient } from "lib/sanity/sanity.server";
-import { usePreviewSubscription } from "lib/sanity/sanity";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
@@ -14,9 +13,8 @@ import Meta from "components/Meta";
 import NextSanityImage from "components/SanityImage";
 
 type HomeProps = {
-  projectsData: Project[];
-  postsData: Post[];
-  preview: boolean;
+  projects: Project[];
+  posts: Post[];
 };
 
 const postsQuery = groq`
@@ -42,17 +40,7 @@ const projectsQuery = groq`
 }
 `;
 
-export default function Home({ projectsData, postsData, preview }: HomeProps) {
-  const { data: projects } = usePreviewSubscription(projectsQuery, {
-    initialData: projectsData,
-    enabled: preview,
-  });
-
-  const { data: posts } = usePreviewSubscription(postsQuery, {
-    initialData: postsData,
-    enabled: preview,
-  });
-
+export default function Home({ projects, posts }: HomeProps) {
   return (
     <>
       <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
@@ -188,15 +176,14 @@ function BlogPostItem({ post }: { post: Post }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const featuredProjects: Project[] = await getClient(preview).fetch(projectsQuery);
-  const latestPosts: Partial<Post>[] = await getClient(preview).fetch(postsQuery);
+export async function getStaticProps() {
+  const featuredProjects: Project[] = await getClient().fetch(projectsQuery);
+  const latestPosts: Partial<Post>[] = await getClient().fetch(postsQuery);
 
   return {
     props: {
-      preview,
-      projectsData: featuredProjects,
-      postsData: latestPosts,
+      projects: featuredProjects,
+      posts: latestPosts,
     },
   };
 }

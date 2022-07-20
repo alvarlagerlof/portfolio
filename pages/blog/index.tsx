@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { usePreviewSubscription } from "lib/sanity/sanity";
 import { getClient } from "lib/sanity/sanity.server";
 import { formatDate } from "lib/utils/date";
 
@@ -16,10 +15,7 @@ import generateRSS from "lib/rss";
 import { useRef } from "react";
 
 type BlogProps = {
-  postsSectioned: Sections;
-  drafts: Post[];
-  data: Partial<Post>[];
-  preview: boolean;
+  posts: Partial<Post>[];
 };
 
 const postsQuery = groq`
@@ -33,12 +29,7 @@ const postsQuery = groq`
 }
 `;
 
-export default function Blog({ data, preview }: BlogProps) {
-  const { data: posts } = usePreviewSubscription(postsQuery, {
-    initialData: data,
-    enabled: preview,
-  });
-
+export default function Blog({ posts }: BlogProps) {
   const sections = section(posts);
 
   return (
@@ -123,15 +114,14 @@ function PostItem({ post }: { post: Post }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const posts: Partial<Post>[] = await getClient(preview).fetch(postsQuery);
+export async function getStaticProps() {
+  const posts: Partial<Post>[] = await getClient().fetch(postsQuery);
 
   generateRSS(posts);
 
   return {
     props: {
-      data: posts,
-      preview,
+      posts,
     },
   };
 }

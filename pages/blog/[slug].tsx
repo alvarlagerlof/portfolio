@@ -1,5 +1,4 @@
 import groq from "groq";
-import { usePreviewSubscription } from "lib/sanity/sanity";
 import { getClient } from "lib/sanity/sanity.server";
 import { formatDate } from "lib/utils/date";
 
@@ -11,8 +10,7 @@ import Meta from "components/Meta";
 import { setBannerData } from "next-banner";
 
 type PostProps = {
-  data: Post;
-  preview: boolean;
+  post: Post;
 };
 
 const postQuery = groq`
@@ -34,13 +32,7 @@ const postQuery = groq`
 }
 `;
 
-export default function BlogPost({ data, preview }: PostProps) {
-  const { data: post } = usePreviewSubscription(postQuery, {
-    params: { slug: data?.slug.current },
-    initialData: data,
-    enabled: preview && data?.slug.current !== undefined,
-  });
-
+export default function BlogPost({ post }: PostProps) {
   setBannerData({ layout: "blogpost" });
 
   return (
@@ -78,8 +70,8 @@ function Article({ post }: { post: Post }) {
   );
 }
 
-export async function getStaticPaths({ preview = false }) {
-  const posts: Partial<Post[]> = await getClient(preview).fetch(
+export async function getStaticPaths() {
+  const posts: Partial<Post[]> = await getClient().fetch(
     groq`
       *[_type == "post" && defined(slug)] {
         slug
@@ -93,15 +85,14 @@ export async function getStaticPaths({ preview = false }) {
   };
 }
 
-export async function getStaticProps({ params: { slug }, preview = false }) {
-  const post: Post = await getClient(preview).fetch(postQuery, {
+export async function getStaticProps({ params: { slug } }) {
+  const post: Post = await getClient().fetch(postQuery, {
     slug,
   });
 
   return {
     props: {
-      data: post,
-      preview,
+      post,
     },
   };
 }

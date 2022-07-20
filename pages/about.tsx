@@ -6,7 +6,6 @@ import { Experience, Social } from "types";
 
 import { formatDate } from "lib/utils/date";
 import { getClient } from "lib/sanity/sanity.server";
-import { usePreviewSubscription } from "lib/sanity/sanity";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
@@ -14,9 +13,8 @@ import Meta from "components/Meta";
 import NextSanityImage from "components/SanityImage";
 
 type ExperienceProps = {
-  experienceData: Experience[];
-  socialsData: Social[];
-  preview: boolean;
+  experience: Experience[];
+  socials: Social[];
 };
 
 const experienceQuery = groq`
@@ -41,17 +39,7 @@ const spocialsQuery = groq`
 }
 `;
 
-export default function About({ experienceData, socialsData, preview }: ExperienceProps) {
-  const { data: experience } = usePreviewSubscription(experienceQuery, {
-    initialData: experienceData,
-    enabled: preview,
-  });
-
-  const { data: socials } = usePreviewSubscription(spocialsQuery, {
-    initialData: socialsData,
-    enabled: preview,
-  });
-
+export default function About({ experience, socials }: ExperienceProps) {
   return (
     <>
       <Meta title="About me" description="My story starts with a $2 computer from a flea market" />
@@ -210,15 +198,14 @@ function ExperienceItem({ experience }: { experience: Experience }) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const experience: Experience[] = await getClient(preview).fetch(experienceQuery);
-  const socials: Social[] = await getClient(preview).fetch(spocialsQuery);
+export async function getStaticProps() {
+  const experience: Experience[] = await getClient().fetch(experienceQuery);
+  const socials: Social[] = await getClient().fetch(spocialsQuery);
 
   return {
     props: {
-      experienceData: experience,
-      socialsData: socials,
-      preview,
+      experience: experience,
+      socials: socials,
     },
   };
 }

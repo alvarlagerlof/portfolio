@@ -4,7 +4,6 @@ import groq from "groq";
 import { Project } from "types";
 
 import { getClient } from "lib/sanity/sanity.server";
-import { usePreviewSubscription } from "lib/sanity/sanity";
 
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
@@ -13,8 +12,7 @@ import NextSanityImage from "components/SanityImage";
 import { useRef } from "react";
 
 type ProjectsProps = {
-  data: Project[];
-  preview: boolean;
+  projects: Project[];
 };
 
 const projectsQuery = groq`
@@ -27,12 +25,7 @@ const projectsQuery = groq`
 }
 `;
 
-export default function Projects({ data, preview }: ProjectsProps) {
-  const { data: projects } = usePreviewSubscription(projectsQuery, {
-    initialData: data,
-    enabled: preview,
-  });
-
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
       <Meta title="Projects" description="These are some of the projects I've worked on" />
@@ -102,13 +95,12 @@ function ProjectItem(project: Project) {
   );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const projects: Project = await getClient(preview).fetch(projectsQuery);
+export async function getStaticProps() {
+  const projects: Project = await getClient().fetch(projectsQuery);
 
   return {
     props: {
-      data: projects,
-      preview,
+      projects,
     },
   };
 }
