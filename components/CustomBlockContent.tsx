@@ -3,11 +3,11 @@ import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/p
 import ArrowLink from "./ArrowLink";
 import NextSanityImage from "./SanityImage";
 
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
-const components = {
+const components: Partial<PortableTextReactComponents> = {
   marks: {
-    link({ value, children }) {
+    link: ({ value, children }) => {
       const { href } = value;
 
       return (
@@ -17,7 +17,7 @@ const components = {
       );
     },
 
-    internalLink({ value, children }) {
+    internalLink: ({ value, children }) => {
       const {
         slug: { current },
       } = value;
@@ -26,7 +26,7 @@ const components = {
       return <ArrowLink href={href}>{children}</ArrowLink>;
     },
 
-    code({ children }) {
+    code: ({ children }) => {
       return (
         <pre className="inline-block px-1 -py-2 bg-[rgb(227,233,242)] whitespace-normal">
           {children}
@@ -36,7 +36,7 @@ const components = {
   },
 
   types: {
-    code({ node: { language, code } }) {
+    code({ value: { language, code } }) {
       return (
         <SyntaxHighlighter
           customStyle={{
