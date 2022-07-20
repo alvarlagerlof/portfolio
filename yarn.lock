@@ -157,6 +157,14 @@
     "@types/node" "*"
     playwright-core "1.23.4"
 
+"@portabletext/react@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-1.0.6.tgz#508ede0b165a3705db6907a94ff67c791d9ab432"
+  integrity sha512-j6BprLiwFz3zr1Lo6BxM2sQ1b3g1JIjGwePeuxqSfbBiEYbGXn2izEckMJ02hSa1f7+RCEUJ+Bojvtzz6BBUaw==
+  dependencies:
+    "@portabletext/toolkit" "^1.0.5"
+    "@portabletext/types" "^1.0.3"
+
 "@portabletext/to-html@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@portabletext/to-html/-/to-html-1.0.3.tgz#06ec95a0cf59c0ec1f6251bd62bfc71db08a9fe7"
@@ -249,11 +257,6 @@
     simple-get "^4.0.1"
     split2 "^4.1.0"
     throttle-debounce "^5.0.0"
-
-"@sanity/image-url@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-1.0.1.tgz#960d649b2f4396da0adb31cf94503c929495cea0"
-  integrity sha512-AdKQ3zMk7WdoNwoJPrAvQhW+kUtBldBX0nHtnGy+rwmgsCQ0rAXasrgH43Fhmsp/yB6piiq+F2d5qEuBFsdQVg==
 
 "@sanity/image-url@^0.140.15", "@sanity/image-url@^0.140.22":
   version "0.140.22"

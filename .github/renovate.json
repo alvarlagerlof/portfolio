@@ -16,6 +16,24 @@
     {
       "matchUpdateTypes": ["major"],
       "schedule": ["every weekend"]
+    },
+    {
+      "packagePatterns": ["^@sanity/", "sanity-plugin-*"],
+      "groupName": "Sanity packages",
+      "enabled": true,
+      "rangeStrategy": "update-lockfile",
+      "minor": {
+        "automerge": true
+      },
+      "patch": {
+        "automerge": true
+      },
+      "pin": {
+        "automerge": true
+      },
+      "lockFileMaintenance": {
+        "automerge": true
+      }
     }
   ]
 }

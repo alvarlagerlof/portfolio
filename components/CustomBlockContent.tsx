@@ -1,13 +1,14 @@
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import BlockContent from "@sanity/block-content-to-react";
 import ArrowLink from "./ArrowLink";
 import NextSanityImage from "./SanityImage";
 
-const serializers = {
+import { PortableText } from "@portabletext/react";
+
+const components = {
   marks: {
-    link({ mark, children }) {
-      const { href } = mark;
+    link({ value, children }) {
+      const { href } = value;
 
       return (
         <ArrowLink newTab href={href}>
@@ -16,10 +17,10 @@ const serializers = {
       );
     },
 
-    internalLink({ mark, children }) {
+    internalLink({ value, children }) {
       const {
         slug: { current },
-      } = mark;
+      } = value;
       const href = `/blog/${current}`;
 
       return <ArrowLink href={href}>{children}</ArrowLink>;
@@ -53,38 +54,28 @@ const serializers = {
       );
     },
 
-    image({ node }) {
-      return <NextSanityImage image={node} className="rounded-3xl bordered" />;
+    image({ value }) {
+      return <NextSanityImage image={value} className="rounded-3xl bordered" />;
+    },
+  },
+
+  block: {
+    h1: ({ children }) => {
+      return <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{children}</h3>;
     },
 
-    block(props) {
-      const { style = "normal" } = props.node;
+    h2: ({ children }) => {
+      return <h4 className="font-subheading font-semibold !text-xl !md:text-3xl">{children}</h4>;
+    },
 
-      if (style === "h1") {
-        return (
-          <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{props.children}</h3>
-        );
-      }
-
-      if (style === "h2") {
-        return (
-          <h4 className="font-subheading font-semibold !text-xl !md:text-3xl">{props.children}</h4>
-        );
-      }
-
-      if (style === "blockquote") {
-        return (
-          <blockquote className="py-2 px-4  !border-separator flex flex-col">
-            {props.children}
-          </blockquote>
-        );
-      }
-
-      return BlockContent.defaultSerializers.types.block(props);
+    blockquote: ({ children }) => {
+      return (
+        <blockquote className="py-2 px-4  !border-separator flex flex-col">{children}</blockquote>
+      );
     },
   },
 };
 
 export default function CustomBlockContent({ blocks }) {
-  return <BlockContent blocks={blocks} serializers={serializers} />;
+  return <PortableText value={blocks} components={components} />;
 }
