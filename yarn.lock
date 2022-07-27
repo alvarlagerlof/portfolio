@@ -1998,10 +1998,10 @@ next-sanity@0.6.0:
     "@sanity/groq-store" "^0.4.0"
     groq "^2.29.3"
 
-next-sitemap@3.1.13:
-  version "3.1.13"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.13.tgz#dd72712ff710caa31580999fca631fece109e324"
-  integrity sha512-wMA8WFbFUPwT4uXKlHSjm7a3Gu6NI74E08enN/CYHRh+5HQrGoL4TWOz7JkGBR6k/Pg5trGusIIGMrPkhOhkTQ==
+next-sitemap@3.1.14:
+  version "3.1.14"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.14.tgz#fd6d1587e06ce1c6d2a88c5f641fcccdfb56524f"
+  integrity sha512-NzlFFapr/GNCHj77ocg8MidtkpY/jY4J2FUjHtV/Z/lW3nbaD2VZjwlpgbwOrgYzByjNETVdvU2K18kTJdU3WA==
   dependencies:
     "@corex/deepmerge" "^4.0.29"
     minimist "^1.2.6"
