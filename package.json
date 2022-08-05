@@ -39,7 +39,7 @@
     "postcss": "8.4.14",
     "prettier": "2.7.1",
     "rss": "1.2.2",
-    "tailwindcss": "3.1.7",
+    "tailwindcss": "3.1.8",
     "typescript": "4.7.4",
     "vhtml": "2.2.0"
   }
