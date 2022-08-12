@@ -2018,10 +2018,10 @@ next-sanity-image@3.2.1:
   dependencies:
     "@sanity/image-url" "^0.140.22"
 
-next-sanity@0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.6.4.tgz#a4a1b634dc29ccf5af076a7d0433f70c56de7d37"
-  integrity sha512-Wj/dXfKqkYUaGzolrt94ABKzpbCHEgIiX/CtM9h6Gs+zI6XrulGwZ5dnbsR7C8TXVwmG5/6Oz8ihCrof7gZT0Q==
+next-sanity@0.6.10:
+  version "0.6.10"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.6.10.tgz#eebf92ac813232942c6d262def306ffa3445fb84"
+  integrity sha512-6lTsJ9HNrz6devo8d3nshMbAEAk8P2b3t7EcLq5vjaTZaUzYUhdBiuXvdGqHa2l0YAP/40/cY5Pos8FUTcm2CA==
   dependencies:
     "@sanity/client" "^3.3.3"
     "@sanity/groq-store" "^0.4.0"
