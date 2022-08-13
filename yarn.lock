@@ -263,10 +263,15 @@
     split2 "^4.1.0"
     throttle-debounce "^5.0.0"
 
-"@sanity/image-url@^0.140.15", "@sanity/image-url@^0.140.22":
+"@sanity/image-url@^0.140.15":
   version "0.140.22"
   resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-0.140.22.tgz#7a65f56bb751f7b1c5dfacfadd34ee10fc4f0fde"
   integrity sha512-CAmQZnj+KM7FSEYiWlIGDit072syicYuAw0w7R2ctMzHiZ4p9mE/g6dBnYqrqFUrw2J+GpJgPt+RVspKP8vdqA==
+
+"@sanity/image-url@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@sanity/image-url/-/image-url-1.0.1.tgz#960d649b2f4396da0adb31cf94503c929495cea0"
+  integrity sha512-AdKQ3zMk7WdoNwoJPrAvQhW+kUtBldBX0nHtnGy+rwmgsCQ0rAXasrgH43Fhmsp/yB6piiq+F2d5qEuBFsdQVg==
 
 "@sanity/timed-out@^4.0.2":
   version "4.0.2"
@@ -2011,12 +2016,12 @@ next-plausible@3.2.0:
   resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.2.0.tgz#d801346253e0c1cf64a02b9fc3a42050455cbc47"
   integrity sha512-OlYcLXBG3kKd/fKMpm8SZ5IkUKSFm1/8t7cv6e5bewIqlpdZpdWuSrjbdJpbmutb2KPLXHzilKp09zmDGjy9KQ==
 
-next-sanity-image@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-3.2.1.tgz#81b44969c7b5c281b7f29fe25b3649828fc5a5ea"
-  integrity sha512-lnynR/h7kD5ueVxQoam8ElKXb+bGWuU1cP+PCwx1NzIiBUHM2wBMnvmpt+emubGocMaIURT/iwPU46VnmB9rsQ==
+next-sanity-image@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-4.1.0.tgz#4558db1d8b45f5891be0cdbb66476b1ae1dfa74b"
+  integrity sha512-DOKqiVJjGQb/FGPA5e5ezVK326w1GFx28J0XFt8XMtaaWzRfYdPQlkUhJdTDIAPIMMwQQwAmSxxA0r2rQpKigg==
   dependencies:
-    "@sanity/image-url" "^0.140.22"
+    "@sanity/image-url" "^1.0.0"
 
 next-sanity@0.7.0:
   version "0.7.0"
