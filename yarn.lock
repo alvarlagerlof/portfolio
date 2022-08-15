@@ -162,7 +162,7 @@
     "@types/node" "*"
     playwright-core "1.25.0"
 
-"@portabletext/react@^1.0.6":
+"@portabletext/react@1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-1.0.6.tgz#508ede0b165a3705db6907a94ff67c791d9ab432"
   integrity sha512-j6BprLiwFz3zr1Lo6BxM2sQ1b3g1JIjGwePeuxqSfbBiEYbGXn2izEckMJ02hSa1f7+RCEUJ+Bojvtzz6BBUaw==

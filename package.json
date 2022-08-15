@@ -11,7 +11,7 @@
     "test:hd": "playwright test --headed"
   },
   "dependencies": {
-    "@portabletext/react": "^1.0.6",
+    "@portabletext/react": "1.0.6",
     "@sanity/block-content-to-react": "3.0.0",
     "@tailwindcss/typography": "0.5.4",
     "@types/luxon": "3.0.0",
