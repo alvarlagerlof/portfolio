@@ -15,7 +15,7 @@
     "@sanity/block-content-to-react": "3.0.0",
     "@tailwindcss/typography": "0.5.4",
     "@types/luxon": "3.0.0",
-    "@types/node": "18.7.10",
+    "@types/node": "18.7.11",
     "luxon": "3.0.1",
     "next": "12.2.5",
     "next-banner": "1.2.115",
