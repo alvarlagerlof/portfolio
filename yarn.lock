@@ -230,6 +230,17 @@
     object-assign "^4.1.1"
     rxjs "^6.0.0"
 
+"@sanity/client@^3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-3.3.5.tgz#25d7dc69c416d3fa235e02ca3ca520d6f48296f4"
+  integrity sha512-6KjIjPKW/+iJR/0zPTmDvPr8ax8c8wC3QoOM9b0cjzn5G4a2EHvGq/2NgvBwSQ8h4GXwa2GZ75BNE/fO/kNaxg==
+  dependencies:
+    "@sanity/eventsource" "^4.0.0"
+    get-it "^6.1.1"
+    make-error "^1.3.0"
+    object-assign "^4.1.1"
+    rxjs "^6.0.0"
+
 "@sanity/color@^2.1.8":
   version "2.1.14"
   resolved "https://registry.yarnpkg.com/@sanity/color/-/color-2.1.14.tgz#96b486c24eecf9b657c358953a12cd5988810429"
@@ -1997,12 +2008,12 @@ next-sanity-image@4.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.8.2.tgz#e7c189fbb95a6ad67e79d8485f97e37bc44d6bd5"
-  integrity sha512-IFiJ/7/IiFDICADdyuR9X5lnNdyILyMiAfgDtQ+XdyD8ct1B2z/eMEgGx8rpBw7hYTvRyXLaxcw4yiEpeUKr7w==
+next-sanity@0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.8.4.tgz#d6105bec1334679c693825f68ef0c5756a0330d3"
+  integrity sha512-3ZgW+1+X0Y2PPCqdt7RIKID4EyX9jqnn3lrHahqLW6N6C/8Up71TA0M+Ltq2vlLUSt9YkvqsTmHP5hgaOg2SWQ==
   dependencies:
-    "@sanity/client" "^3.3.3"
+    "@sanity/client" "^3.3.5"
     "@sanity/groq-store" "^0.4.1"
     groq "^2.29.3"
 
