@@ -262,7 +262,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.18.10", "@babel/parser@^7.19.0", "@babel/parser@^7.19.1":
+"@babel/parser@^7.18.10", "@babel/parser@^7.19.1":
   version "7.19.1"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.19.1.tgz#6f6d6c2e621aad19a92544cc217ed13f1aac5b4c"
   integrity sha512-h7RCSorm1DdTVGJf3P2Mhj3kdnkmF/EiysUkzS2TdgAYqyjFdMQJbVuXOBej2SBJaXan/lIVtT6KkGbyyq753A==
@@ -966,7 +966,7 @@
     "@babel/parser" "^7.18.10"
     "@babel/types" "^7.18.10"
 
-"@babel/traverse@^7.19.0", "@babel/traverse@^7.19.1":
+"@babel/traverse@^7.19.0", "@babel/traverse@^7.19.1", "@babel/traverse@^7.4.5":
   version "7.19.1"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.19.1.tgz#0fafe100a8c2a603b4718b1d9bf2568d1d193347"
   integrity sha512-0j/ZfZMxKukDaag2PtOPDbwuELqIar6lLskVPPJDjXMXjfLb1Obo/1yjxIGqqAJrmfaTIY3z2wFLAQ7qSkLsuA==
@@ -978,22 +978,6 @@
     "@babel/helper-hoist-variables" "^7.18.6"
     "@babel/helper-split-export-declaration" "^7.18.6"
     "@babel/parser" "^7.19.1"
-    "@babel/types" "^7.19.0"
-    debug "^4.1.0"
-    globals "^11.1.0"
-
-"@babel/traverse@^7.4.5":
-  version "7.19.0"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.19.0.tgz#eb9c561c7360005c592cc645abafe0c3c4548eed"
-  integrity sha512-4pKpFRDh+utd2mbRC8JLnlsMUii3PMHjpL6a0SZ4NMZy7YFP9aXORxEhdMVOc9CpWtDF09IkciQLEhK7Ml7gRA==
-  dependencies:
-    "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.19.0"
-    "@babel/helper-environment-visitor" "^7.18.9"
-    "@babel/helper-function-name" "^7.19.0"
-    "@babel/helper-hoist-variables" "^7.18.6"
-    "@babel/helper-split-export-declaration" "^7.18.6"
-    "@babel/parser" "^7.19.0"
     "@babel/types" "^7.19.0"
     debug "^4.1.0"
     globals "^11.1.0"
@@ -2710,7 +2694,7 @@ browserslist@^2.0.0, browserslist@^2.11.3:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
 
-browserslist@^4.0.0, browserslist@^4.21.3:
+browserslist@^4.0.0, browserslist@^4.21.3, browserslist@^4.21.4:
   version "4.21.4"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.4.tgz#e7496bbc67b9e39dd0f98565feccdcb0d4ff6987"
   integrity sha512-CBHJJdDmgjl3daYjN5Cp5kbTf1mUhZoS+beLklHIvkOWscs83YAhLlF3Wsh/lciQYAcbBJgTOD44VtG31ZM4Hw==
@@ -3267,11 +3251,11 @@ copy-to-clipboard@^3.3.1:
     toggle-selection "^1.0.6"
 
 core-js-compat@^3.25.1:
-  version "3.25.1"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.25.1.tgz#6f13a90de52f89bbe6267e5620a412c7f7ff7e42"
-  integrity sha512-pOHS7O0i8Qt4zlPW/eIFjwp+NrTPx+wTL0ctgI2fHn31sZOq89rDsmtc/A2vAX7r6shl+bmVI+678He46jgBlw==
+  version "3.25.2"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.25.2.tgz#7875573586809909c69e03ef310810c1969ee138"
+  integrity sha512-TxfyECD4smdn3/CjWxczVtJqVLEEC2up7/82t7vC0AzNogr+4nQ8vyF7abxAuTXWvjTClSbvGhU0RgqA4ToQaQ==
   dependencies:
-    browserslist "^4.21.3"
+    browserslist "^4.21.4"
 
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.6.12"
