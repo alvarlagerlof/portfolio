@@ -175,10 +175,10 @@
     "@portabletext/toolkit" "^1.0.5"
     "@portabletext/types" "^1.0.3"
 
-"@portabletext/to-html@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@portabletext/to-html/-/to-html-1.0.3.tgz#06ec95a0cf59c0ec1f6251bd62bfc71db08a9fe7"
-  integrity sha512-pcMjM06LPuZZ2HNnLJBIVUMo9BXstKhELtzgkPwwEQzUBL7n9L+ttsOZPwPIhV+t9uSlbvMezbM+McJFS0OO8w==
+"@portabletext/to-html@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@portabletext/to-html/-/to-html-1.0.4.tgz#a99d0469b3cf49e0484f096101c70f94134da65e"
+  integrity sha512-SOb/20OYEI5Tqy0St8mAGPqQuQ8uzJPpG4YQxusrQKby05NdD7vnPqDo6lkniD5kutevVoMbYrix0Kt0s6t6Nw==
   dependencies:
     "@portabletext/toolkit" "^1.0.5"
     "@portabletext/types" "^1.0.2"
