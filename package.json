@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.26.0",
-    "@portabletext/to-html": "1.0.3",
+    "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "1.0.3",
     "@types/react": "18.0.15",
     "autoprefixer": "10.4.12",
