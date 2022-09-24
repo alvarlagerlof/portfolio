@@ -32,7 +32,7 @@
     "@portabletext/types": "1.0.3",
     "@types/react": "18.0.15",
     "autoprefixer": "10.4.12",
-    "eslint": "8.23.1",
+    "eslint": "8.24.0",
     "eslint-config-next": "12.3.0",
     "htm": "3.1.1",
     "next-sitemap": "3.1.22",
