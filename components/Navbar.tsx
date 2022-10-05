@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/future/image";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
@@ -8,7 +8,7 @@ export default function Navbar() {
       <Link href="/" passHref>
         <a className="py-2">
           <div className="flex flex-row items-center space-x-2">
-            <Image src="/icons/star.svg" width="24" height="24" alt="Star logo" />
+            <Image src="/icons/star.svg" width={24} height={24} alt="Star logo" />
             <p className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</p>
           </div>
         </a>

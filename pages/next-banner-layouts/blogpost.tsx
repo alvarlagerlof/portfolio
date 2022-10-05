@@ -19,13 +19,13 @@ export default function Default() {
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center space-x-6">
           <div className="rounded-full overflow-hidden w-16 h-16">
-            <Image src="/profile.png" alt="" width="100px" height="100px" />
+            <Image src="/profile.png" alt="" width={100} height={100} />
           </div>
           <h3 className="font-subheading font-medium text-primary text-[2.7em]">
             By Alvar Lagerlöf
           </h3>
         </div>
-        <Image src="/icons/star.svg" alt="" width="50px" height="50px" />
+        <Image src="/icons/star.svg" alt="" width={50} height={50} />
       </div>
     </div>
   );

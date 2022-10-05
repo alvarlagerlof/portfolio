@@ -4,11 +4,13 @@
 @font-face {
   font-family: "MADE Dillan";
   src: url(/fonts/made-dillan.woff) format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Space Text";
   src: url(/fonts/space-text-medium.woff) format("woff");
+  font-display: swap;
 }
 
 @import url("https://rsms.me/inter/inter.css");

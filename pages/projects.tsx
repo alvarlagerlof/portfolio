@@ -32,7 +32,7 @@ export default function Projects({ projects }: ProjectsProps) {
 
       <WithDividers direction="vertical">
         <Header />
-        <SecitonProjects projects={projects} />
+        <SectionProjects projects={projects} />
       </WithDividers>
     </>
   );
@@ -50,19 +50,23 @@ function Header() {
   );
 }
 
-function SecitonProjects({ projects }: { projects: Project[] }) {
+function SectionProjects({ projects }: { projects: Project[] }) {
   return (
     <section>
       <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
-        {projects.map(project => (
-          <ProjectItem key={project._id} {...project} />
-        ))}
+        {projects.map((project, i) => {
+          return <ProjectItem key={project._id} {...project} isFirst={i == 0} />;
+        })}
       </ul>
     </section>
   );
 }
 
-function ProjectItem(project: Project) {
+type ProjectAndIsFirst = Project & {
+  isFirst: boolean;
+};
+
+function ProjectItem({ isFirst, ...project }: ProjectAndIsFirst) {
   const link = useRef(null);
 
   return (
@@ -76,12 +80,11 @@ function ProjectItem(project: Project) {
     >
       <NextSanityImage
         image={project.banner}
-        className="rounded-3xl bordered"
+        className="rounded-3xl bordered bg-cover"
         alt="Project logo banner"
-        loading="lazy"
-        width="400"
-        height="230"
-        objectFit="cover"
+        width={400}
+        height={230}
+        priority={isFirst}
       />
       <h3 className="font-heading break-all	text-2xl xl:text-3xl mt-2 xl:mt-4 mb-1 xl:mb-2">
         <Link href={project.link ?? "#"} passHref>

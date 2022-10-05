@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image";
+import Image, { ImageProps } from "next/future/image";
 import { sanityClient } from "lib/sanity/sanity.server";
 import { useNextSanityImage } from "next-sanity-image";
 

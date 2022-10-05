@@ -39,22 +39,20 @@ export default function Blog({ posts }: BlogProps) {
       <WithDividers direction="vertical">
         <Header />
 
-        <ul>
-          <WithDividers direction="vertical">
-            {Object.entries(sections)
-              .sort((a: any, b: any) => b[0] - a[0])
-              .map(([year, posts]) => {
-                return (
-                  <li key={year} className="flex flex-col md:flex-row items-start">
-                    <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
-                      {year}
-                    </h3>
-                    <PostList posts={posts} />
-                  </li>
-                );
-              })}
-          </WithDividers>
-        </ul>
+        <WithDividers direction="vertical">
+          {Object.entries(sections)
+            .sort((a: any, b: any) => b[0] - a[0])
+            .map(([year, posts]) => {
+              return (
+                <section key={year} className="flex flex-col md:flex-row items-start">
+                  <h3 className="font-heading text-3xl md:text-5xl md:min-w-[180px] mb-8 md:mb-0">
+                    {year}
+                  </h3>
+                  <PostList posts={posts} />
+                </section>
+              );
+            })}
+        </WithDividers>
       </WithDividers>
     </>
   );

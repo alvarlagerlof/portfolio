@@ -9,7 +9,7 @@ export default function Default() {
   return (
     <div className="w-[1200px] h-[630px] fixed top-0 left-0 bg-green-100 py-20 px-24 flex flex-col justify-between">
       <div className="flex flex-row space-x-6">
-        <Image src="/icons/star.svg" alt="" width="50px" height="50px" />
+        <Image src="/icons/star.svg" alt="" width={50} height={50} />
         {title != "Alvar Lagerlöf" && (
           <h3 className="font-subheading font-medium text-primary text-[2.7em]">Alvar Lagerlöf</h3>
         )}

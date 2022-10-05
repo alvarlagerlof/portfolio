@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import BlockContent from "@sanity/block-content-to-react";
 import groq from "groq";
 
@@ -65,14 +65,14 @@ function Header() {
           I’m a he/him living in Stockholm, Sweden.
         </h2>
       </div>
-      <div className="max-w-[500px]">
+      <div className="max-w-[500px] sm:min-w-[300px]">
         <Image
           src="/profile.png"
-          className="rounded-3xl w-full bordered"
-          width="1000"
-          height="800"
-          objectFit="cover"
+          className="rounded-3xl w-full bordered bg-cover"
+          width={1000}
+          height={800}
           alt="Portrait of Alvar Lagerlöf"
+          priority
         />
       </div>
     </header>
@@ -137,8 +137,9 @@ function SectionSocialLinks({ socials }: { socials: Social[] }) {
                   <NextSanityImage
                     image={social?.icon}
                     placeholder="empty"
-                    height="22"
-                    width="22"
+                    height={22}
+                    width={22}
+                    alt={social.networkName + " icon"}
                   />
                 </div>
 
@@ -175,7 +176,7 @@ function ExperienceItem({ experience }: { experience: Experience }) {
   return (
     <li key={experience._id} className="flex flex-row items-start">
       <div className="mr-4">
-        <Image aria-hidden src="/icons/star.svg" alt="Star" height="26" width="26" />
+        <Image aria-hidden src="/icons/star.svg" alt="Star" height={26} width={26} />
       </div>
 
       <div>

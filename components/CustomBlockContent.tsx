@@ -55,7 +55,7 @@ const components: Partial<PortableTextReactComponents> = {
     },
 
     image({ value }) {
-      return <NextSanityImage image={value} className="rounded-3xl bordered" />;
+      return <NextSanityImage image={value} className="rounded-3xl bordered" alt={value.caption} />;
     },
   },
 

@@ -44,7 +44,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: colors.green[600],
+        primary: colors.green[700],
         separator: colors.gray[400],
       },
       fontFamily: {
