@@ -213,7 +213,7 @@
     "@sanity/block-content-to-hyperscript" "^3.0.0"
     prop-types "^15.6.2"
 
-"@sanity/client@^3.3.3", "@sanity/client@^3.3.5":
+"@sanity/client@^3.3.3", "@sanity/client@^3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-3.4.1.tgz#d1bd02bafc50eb0aac8d5b6fab942da52549652f"
   integrity sha512-WSvnroCHqboUeyY0nl71vDPKmfurXI0mtqdNDb5u8MW00CAHRyCt1+Sgy39D/g+6R35FYniV31vTSTo3ofim0A==
@@ -1433,7 +1433,7 @@ groq-js@^1.0.1:
   resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.1.0.tgz#15188fbbd543b282656682d9736459bf6a561b41"
   integrity sha512-y87W921Jg9IAksKT9LFvDMrYG9KIcgUDyE4ccENV7K26CKvg1V0lOTJbE1UNI8DcSk/bvx/MWFI7j3iUkCe/gA==
 
-groq@^2.0.9, groq@^2.29.3:
+groq@^2.0.9, groq@^2.33.2:
   version "2.33.2"
   resolved "https://registry.yarnpkg.com/groq/-/groq-2.33.2.tgz#3a85c85a1e43e79bba77f171f23997f541d61010"
   integrity sha512-5pf4c91JESCS28IJCgolJq/WBw4Xvf2m8FgZVUlrCig17I+qERosALAHLyyutXu403EYnyCD3DdCLaPb3aGneA==
@@ -1982,14 +1982,14 @@ next-sanity-image@4.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.8.4.tgz#d6105bec1334679c693825f68ef0c5756a0330d3"
-  integrity sha512-3ZgW+1+X0Y2PPCqdt7RIKID4EyX9jqnn3lrHahqLW6N6C/8Up71TA0M+Ltq2vlLUSt9YkvqsTmHP5hgaOg2SWQ==
+next-sanity@0.8.5:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.8.5.tgz#b6bdd08d4132d037442b000ea0ce1fc86afe95ab"
+  integrity sha512-WJat3KIecCrwSnReVrGE1LlAQF4VnxhueesJaEy4yvLIwg0xdLNVEBYpxgiX17axehZbRQ/c7Dfah/aZfoRSxw==
   dependencies:
-    "@sanity/client" "^3.3.5"
+    "@sanity/client" "^3.4.1"
     "@sanity/groq-store" "^0.4.1"
-    groq "^2.29.3"
+    groq "^2.33.2"
 
 next-sitemap@3.1.24:
   version "3.1.24"
