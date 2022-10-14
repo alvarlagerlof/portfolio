@@ -27,7 +27,7 @@
     "react-syntax-highlighter": "15.5.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.27.0",
+    "@playwright/test": "1.27.1",
     "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "1.0.3",
     "@types/react": "18.0.15",
