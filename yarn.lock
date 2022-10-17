@@ -1982,10 +1982,10 @@ next-sanity-image@4.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@0.8.5:
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-0.8.5.tgz#b6bdd08d4132d037442b000ea0ce1fc86afe95ab"
-  integrity sha512-WJat3KIecCrwSnReVrGE1LlAQF4VnxhueesJaEy4yvLIwg0xdLNVEBYpxgiX17axehZbRQ/c7Dfah/aZfoRSxw==
+next-sanity@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.0.tgz#1f45105ad43438be7fdb8842c1837d05938c9195"
+  integrity sha512-J1rqCtrR6ZhFN1yKVl+Is+nLEKZBXHO6vm/TvChU1oiwWuCj5ELigbrLh+mJIYc7F77g7kvmAnS/UAMATjHvbw==
   dependencies:
     "@sanity/client" "^3.4.1"
     "@sanity/groq-store" "^0.4.1"
