@@ -37,6 +37,8 @@ export type Post = SanityDefaults & {
   body: PortableTextBlock[];
 };
 
+export type PostPreview = Exclude<Post, "body">;
+
 export interface Sections {
   [year: number]: Post[];
 }
