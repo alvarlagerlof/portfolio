@@ -21,6 +21,7 @@ export default async function SocialLinkList() {
 
       <ul className="flex flex-col space-y-2">
         <Suspense fallback={<SocialLinkListSkeleton />}>
+          {/* @ts-ignore */}
           <SocialLinkListData />
         </Suspense>
       </ul>

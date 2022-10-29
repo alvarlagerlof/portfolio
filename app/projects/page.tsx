@@ -1,9 +1,9 @@
 import ArrowLink from "components/ArrowLink";
 import Meta from "components/Meta";
 import WithDividers from "components/WithDividers";
-import ProjectGrid from "./components/ProjectGrid";
+import { Projects } from "./components/Projects";
 
-export default async function ProjectsPage() {
+export default function ProjectsPage() {
   return (
     <>
       <Meta title="Projects" description="These are some of the projects I've worked on" />
@@ -17,7 +17,8 @@ export default async function ProjectsPage() {
         </header>
 
         <section>
-          <ProjectGrid />
+          {/* @ts-ignore */}
+          <Projects />
         </section>
       </WithDividers>
     </>

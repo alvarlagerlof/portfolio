@@ -2,7 +2,7 @@ import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Project } from "types";
-import ProjectItem, { ProjectItemSkeleton } from "./ProjectItem";
+import { Item, ItemLoading } from "./Item";
 
 const query = groq`
 *[_type == "project"] {
@@ -14,36 +14,37 @@ const query = groq`
 }
 `;
 
-export default async function ProjectGrid() {
+export async function Projects() {
   return (
     <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
-      <Suspense fallback={<ProjectGridSkeleton />}>
-        <ProjectGridData />
+      <Suspense fallback={<Loading />}>
+        {/* @ts-ignore */}
+        <ProjectsList />
       </Suspense>
     </ul>
   );
 }
 
-async function ProjectGridData() {
+async function ProjectsList() {
   const projects: Project[] = await getClient().fetch(query);
   await new Promise(r => setTimeout(r, 1000));
 
   return (
     <>
       {projects.map((project, i) => {
-        return <ProjectItem key={project._id} {...project} isFirst={i == 0} />;
+        return <Item key={project._id} {...project} isFirst={i == 0} />;
       })}
     </>
   );
 }
 
-export function ProjectGridSkeleton() {
+export function Loading() {
   return (
     <>
-      <ProjectItemSkeleton />
-      <ProjectItemSkeleton />
-      <ProjectItemSkeleton />
-      <ProjectItemSkeleton />
+      <ItemLoading />
+      <ItemLoading />
+      <ItemLoading />
+      <ItemLoading />
     </>
   );
 }

@@ -11,7 +11,7 @@ type ProjectAndIsFirst = Project & {
   isFirst: boolean;
 };
 
-export default function ProjectItem({ isFirst, ...project }: ProjectAndIsFirst) {
+export function Item({ isFirst, ...project }: ProjectAndIsFirst) {
   const link = useRef(null);
 
   return (
@@ -46,7 +46,7 @@ export default function ProjectItem({ isFirst, ...project }: ProjectAndIsFirst) 
   );
 }
 
-export function ProjectItemSkeleton() {
+export function ItemLoading() {
   return (
     <div>
       <Skeleton className="w-full h-[180px] rounded-3xl" />

@@ -1,10 +1,10 @@
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
 import Pronunciation from "./components/Pronunciation";
-import SectionFeaturedProjects from "./components/SectionFeaturedProjects";
-import SectionRecentBlogPosts from "./components/SectionRecentBlogPosts";
+import { FeaturedProjects } from "./components/FeaturedProjects";
+import { RecentBlogPosts } from "./components/RecentBlogPosts";
 
-export default async function IndexPage() {
+export default function IndexPage() {
   return (
     <WithDividers direction="vertical">
       <header>
@@ -18,8 +18,8 @@ export default async function IndexPage() {
       </header>
 
       <WithDividers direction="horizontal">
-        <SectionFeaturedProjects />
-        <SectionRecentBlogPosts />
+        <FeaturedProjects />
+        <RecentBlogPosts />
       </WithDividers>
     </WithDividers>
   );

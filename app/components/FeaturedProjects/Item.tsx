@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { Project } from "types";
 
-export default function ProjectItem({ project }: { project: Project }) {
+export function Item(project: Project) {
   const link = useRef(null);
 
   return (
@@ -41,5 +41,18 @@ export default function ProjectItem({ project }: { project: Project }) {
         <p>{project.description}</p>
       </div>
     </li>
+  );
+}
+
+export function ItemLoading() {
+  return (
+    <div className="flex flex-row space-x-4 items-center">
+      <div className="block h-[75px] w-[120px] bg-skeleton rounded-xl" />
+
+      <div className="-m-1">
+        <div className="block w-24 h-[1.25rem] bg-skeleton rounded mb-3" />
+        <div className="block w-[300px] h-[1rem] bg-skeleton rounded" />
+      </div>
+    </div>
   );
 }

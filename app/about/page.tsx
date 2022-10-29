@@ -13,8 +13,10 @@ export default function AboutPage() {
         <Header />
         <WithDividers direction="horizontal">
           <Story />
+          {/* @ts-ignore */}
           <SocialLinkList />
         </WithDividers>
+        {/* @ts-ignore */}
         <ExperienceList />
       </WithDividers>
     </>
