@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   return (
@@ -28,8 +28,8 @@ type NavLinkProps = {
 };
 
 function NavLink({ href, name }: NavLinkProps) {
-  const router = useRouter();
-  const active = router.pathname == href;
+  const pathname = usePathname();
+  const active = pathname == href;
 
   return (
     <li>

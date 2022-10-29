@@ -1,8 +1,6 @@
-import Head from "next/head";
-
 export default function Meta({ title, description, ogImageLayout = "default" }) {
   return (
-    <Head>
+    <>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title}></meta>
@@ -11,6 +9,6 @@ export default function Meta({ title, description, ogImageLayout = "default" }) 
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@alvarlagerlof"></meta>
       <meta name="twitter:creator" content="@alvarlagerlof"></meta>
-    </Head>
+    </>
   );
 }
