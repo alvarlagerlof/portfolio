@@ -1,5 +1,4 @@
 import ArrowLink from "components/ArrowLink";
-import Meta from "components/Meta";
 import WithDividers from "components/WithDividers";
 import { Projects } from "./components/Projects";
 

@@ -1,6 +1,5 @@
 import ArrowLink from "components/ArrowLink";
 import WithDividers from "components/WithDividers";
-import Meta from "components/Meta";
 
 import section from "lib/utils/section";
 
