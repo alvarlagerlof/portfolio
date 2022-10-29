@@ -28,7 +28,7 @@ const query = groq`
 }
 `;
 
-export default async function PostPage({ params: { slug } }) {
+export default async function PostPage({ params: { slug } }: { params: { slug: string } }) {
   return (
     <Suspense fallback={<Loading />}>
       {/* @ts-ignore */}
