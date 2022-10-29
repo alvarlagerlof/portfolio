@@ -4,5 +4,5 @@ module.exports = withPlausibleProxy()({
   images: {
     domains: ["cdn.sanity.io"],
   },
-  experimental: { images: { allowFutureImage: true }, appDir: true },
+  experimental: { appDir: true },
 });
