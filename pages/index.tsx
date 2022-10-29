@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/future/image";
+import Image from "next/image";
 import { useRef } from "react";
 import groq from "groq";
 
@@ -124,10 +124,13 @@ function ProjectItem({ project }: { project: Project }) {
       </div>
       <div className="-m-1">
         <h4 className="text-xl font-subheading font-semibold break-all mb-1">
-          <Link href={project.link ?? "#"} passHref>
-            <a target={project.link ? "_blank" : "_self"} ref={link} rel="noreferrer">
-              {project.name}{" "}
-            </a>
+          <Link
+            href={project.link ?? "#"}
+            target={project.link ? "_blank" : "_self"}
+            ref={link}
+            rel="noreferrer"
+          >
+            {project.name}
           </Link>
         </h4>
         <p>{project.description}</p>
@@ -169,8 +172,8 @@ function BlogPostItem({ post }: { post: Post }) {
       className="cursor-pointer"
     >
       <h4 className="text-xl font-subheading font-semibold mb-1">
-        <Link href={`/blog/${post.slug?.current}`} passHref>
-          <a ref={link}>{post.title}</a>
+        <Link href={`/blog/${post.slug?.current}`} ref={link}>
+          {post.title}
         </Link>
       </h4>
       <p>{post.description}</p>

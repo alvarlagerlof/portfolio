@@ -103,8 +103,8 @@ function PostItem({ post }: { post: Post }) {
     >
       <em className="block">{formatDate(post.date.published)}</em>
       <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
-        <Link href={`blog/${post.slug?.current}`} passHref>
-          <a ref={link}>{post.title}</a>
+        <Link href={`blog/${post.slug?.current}`} ref={link}>
+          {post.title}
         </Link>
       </h4>
       <p>{truncate(post.description, 100)}</p>

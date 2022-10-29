@@ -87,10 +87,13 @@ function ProjectItem({ isFirst, ...project }: ProjectAndIsFirst) {
         priority={isFirst}
       />
       <h3 className="font-heading break-all	text-2xl xl:text-3xl mt-2 xl:mt-4 mb-1 xl:mb-2">
-        <Link href={project.link ?? "#"} passHref>
-          <a target={project.link ? "_blank" : "_self"} rel="noreferrer" ref={link}>
-            {project.name}
-          </a>
+        <Link
+          href={project.link ?? "#"}
+          target={project.link ? "_blank" : "_self"}
+          rel="noreferrer"
+          ref={link}
+        >
+          {project.name}
         </Link>
       </h3>
       <p>{project.description}</p>

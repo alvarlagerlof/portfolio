@@ -12,14 +12,13 @@ export default function ArrowLink({
   children,
 }: WithChildren<ArrowLinkProps>) {
   return (
-    <Link href={href} passHref>
-      <a
-        target={newTab ? "_blank" : "_self"}
-        rel={newTab ? "noreferrer" : ""}
-        className="text-primary font-semibold no-underline hover:underline"
-      >
-        {children} →
-      </a>
+    <Link
+      href={href}
+      target={newTab ? "_blank" : "_self"}
+      rel={newTab ? "noreferrer" : ""}
+      className="text-primary font-semibold no-underline hover:underline"
+    >
+      {children} →
     </Link>
   );
 }
