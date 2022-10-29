@@ -4,7 +4,7 @@ import Skeleton from "components/Skeleton";
 import SkeletonText from "components/SkeletonText";
 import { Social } from "types";
 
-export default function SocialLinkItem(social: Social) {
+export function Item(social: Social) {
   return (
     <li>
       <ArrowLink newTab href={social?.link ?? ""}>
@@ -24,7 +24,7 @@ export default function SocialLinkItem(social: Social) {
   );
 }
 
-export function SocialLinkItemSkeleton() {
+export function ItemLoading() {
   return (
     <div className="flex flex-row space-x-2 pb-1 items-center">
       <Skeleton className="w-6 h-6 rounded-lg" />

@@ -6,7 +6,7 @@ import ArrowLink from "components/ArrowLink";
 import SkeletonText from "components/SkeletonText";
 import Skeleton from "components/Skeleton";
 
-export default function ExperienceListItem(experience: Experience) {
+export function Item(experience: Experience) {
   const getDate = (): string => {
     const format = "MMM yyyy";
 
@@ -25,10 +25,15 @@ export default function ExperienceListItem(experience: Experience) {
   };
 
   return (
-    <li key={experience._id} className="flex flex-row items-start">
-      <div className="mr-4">
-        <Image aria-hidden src="/icons/star.svg" alt="Star" height={26} width={26} />
-      </div>
+    <li key={experience._id} className="flex flex-row space-x-4 items-start">
+      <Image
+        aria-hidden
+        src="/icons/star.svg"
+        alt="Star"
+        height={26}
+        width={26}
+        className="mt-0.5"
+      />
 
       <div>
         <h4 className="text-xl font-subheading font-semibold mb-1">
@@ -50,11 +55,11 @@ export default function ExperienceListItem(experience: Experience) {
   );
 }
 
-export function ExperienceListItemSkeleton() {
+export function ItemLoading() {
   return (
     <div className="flex flex-row space-x-4 pb-8">
       <Skeleton className="w-6 h-6 !rounded-full" />
-      <div className="space-y-4 mt-1">
+      <div className="space-y-4 mt-0.5">
         <SkeletonText className="w-80 h-[1.25rem]" />
         <SkeletonText className="w-36 h-[1rem]" />
         <SkeletonText className="w-[600px] max-w-full h-36" />

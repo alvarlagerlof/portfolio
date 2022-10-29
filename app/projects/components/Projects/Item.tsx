@@ -49,7 +49,7 @@ export function Item({ isFirst, ...project }: ProjectAndIsFirst) {
 export function ItemLoading() {
   return (
     <div>
-      <Skeleton className="w-full h-[180px] rounded-3xl" />
+      <Skeleton className="w-full h-[180px] !rounded-3xl" />
       <SkeletonText className="w-48 h-[1.5rem] mb-2 mt-6" />
       <SkeletonText className="w-36 h-[1rem]" />
     </div>

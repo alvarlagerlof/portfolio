@@ -26,25 +26,21 @@ export const revalidate = 30;
 
 export default function BlogPage() {
   return (
-    <>
-      <Meta title="Blog" description="I try to put my thoughts into words sometimes" />
+    <WithDividers direction="vertical">
+      <header>
+        <h1 className="font-heading text-4xl md:text-7xl mb-4">Blog</h1>
 
-      <WithDividers direction="vertical">
-        <header>
-          <h1 className="font-heading text-4xl md:text-7xl mb-4">Blog</h1>
+        <h2 className="font-subheading text-xl md:text-2xl max-w-[45ch]">
+          I try to put my thoughts into words sometimes. RSS is available{" "}
+          <ArrowLink href="https://alvar.dev/feed.xml">here</ArrowLink>
+        </h2>
+      </header>
 
-          <h2 className="font-subheading text-xl md:text-2xl max-w-[45ch]">
-            I try to put my thoughts into words sometimes. RSS is available{" "}
-            <ArrowLink href="https://alvar.dev/feed.xml">here</ArrowLink>
-          </h2>
-        </header>
-
-        <Suspense fallback={<Loading />}>
-          {/* @ts-ignore */}
-          <Data />
-        </Suspense>
-      </WithDividers>
-    </>
+      <Suspense fallback={<Loading />}>
+        {/* @ts-ignore */}
+        <Data />
+      </Suspense>
+    </WithDividers>
   );
 }
 
@@ -52,7 +48,7 @@ const getSections = cache(async id => {
   const posts = await getClient().fetch(query);
   const sections = section(posts);
 
-  await new Promise(r => setTimeout(r, 3000));
+  await new Promise(r => setTimeout(r, 300));
 
   return sections;
 });

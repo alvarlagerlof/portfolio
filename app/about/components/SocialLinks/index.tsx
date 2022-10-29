@@ -2,7 +2,7 @@ import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Social } from "types";
-import SocialLinkItem, { SocialLinkItemSkeleton } from "./SocialLinkItem";
+import { Item, ItemLoading } from "./Item";
 
 const query = groq`
 *[_type == "social"] {
@@ -14,42 +14,42 @@ const query = groq`
 }
 `;
 
-export default async function SocialLinkList() {
+export async function SocialLinks() {
   return (
     <section className="md:min-w-[300px]">
       <h3 className="font-heading text-4xl mb-8">Social links</h3>
 
       <ul className="flex flex-col space-y-2">
-        <Suspense fallback={<SocialLinkListSkeleton />}>
+        <Suspense fallback={<Loading />}>
           {/* @ts-ignore */}
-          <SocialLinkListData />
+          <SocialLinksList />
         </Suspense>
       </ul>
     </section>
   );
 }
 
-async function SocialLinkListData() {
+async function SocialLinksList() {
   const socialLinks: Social[] = await getClient().fetch(query);
   await new Promise(r => setTimeout(r, 1000));
 
   return (
     <>
       {socialLinks.map(social => {
-        return <SocialLinkItem {...social} key={social._id} />;
+        return <Item {...social} key={social._id} />;
       })}
     </>
   );
 }
 
-function SocialLinkListSkeleton() {
+function Loading() {
   return (
     <>
-      <SocialLinkItemSkeleton />
-      <SocialLinkItemSkeleton />
-      <SocialLinkItemSkeleton />
-      <SocialLinkItemSkeleton />
-      <SocialLinkItemSkeleton />
+      <ItemLoading />
+      <ItemLoading />
+      <ItemLoading />
+      <ItemLoading />
+      <ItemLoading />
     </>
   );
 }

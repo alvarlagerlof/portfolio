@@ -1,3 +1,5 @@
+"use client";
+
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import ArrowLink from "./ArrowLink";

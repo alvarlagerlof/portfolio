@@ -1,25 +1,21 @@
 import Meta from "components/Meta";
 import WithDividers from "components/WithDividers";
 import Image from "next/image";
-import ExperienceList from "./components/ExperienceList";
-import SocialLinkList from "./components/SocialLinkList";
+import { Exerience } from "./components/Exerience";
+import { SocialLinks } from "./components/SocialLinks";
 
 export default function AboutPage() {
   return (
-    <>
-      <Meta title="About me" description="My story starts with a $2 computer from a flea market" />
-
-      <WithDividers direction="vertical">
-        <Header />
-        <WithDividers direction="horizontal">
-          <Story />
-          {/* @ts-ignore */}
-          <SocialLinkList />
-        </WithDividers>
+    <WithDividers direction="vertical">
+      <Header />
+      <WithDividers direction="horizontal">
+        <Story />
         {/* @ts-ignore */}
-        <ExperienceList />
+        <SocialLinks />
       </WithDividers>
-    </>
+      {/* @ts-ignore */}
+      <Exerience />
+    </WithDividers>
   );
 }
 
