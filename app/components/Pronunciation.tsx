@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Speaker } from "components/Icons/Speaker";
 import { useRef } from "react";
 
 export default function Pronunciation() {
@@ -13,9 +13,9 @@ export default function Pronunciation() {
 
   return (
     <>
-      <button className="flex flex-row space-x-2 items-center mb-8" onClick={play}>
+      <button onClick={play} className="flex flex-row space-x-1 items-center mb-8">
         <span className="md:text-xl font-bold text-primary mr-2">Hear the pronunciation</span>
-        <Image alt="Speaker" src="/icons/speaker.svg" width={24} height={24} />
+        <Speaker />
       </button>
 
       <audio ref={audioRef} aria-hidden>

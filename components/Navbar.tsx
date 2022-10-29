@@ -1,13 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { Star } from "./Icons/Star";
 
 export default function Navbar() {
   return (
     <nav className="flex flex-col md:flex-row md:justify-between !pt-4 !pb-4 space-y-4 md:space-y-0 items-center">
       <Link href="/" className="py-2">
         <div className="flex flex-row items-center space-x-2">
-          <Image src="/icons/star.svg" width={24} height={24} alt="Star logo" />
+          <Star />
           <p className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</p>
         </div>
       </Link>

@@ -16,6 +16,7 @@
     "@tailwindcss/typography": "0.5.7",
     "@types/luxon": "3.0.2",
     "@types/node": "18.11.7",
+    "@vercel/og": "^0.0.20",
     "luxon": "3.0.4",
     "next": "^13.0.0",
     "next-banner": "1.2.172",

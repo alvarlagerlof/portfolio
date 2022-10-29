@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useBannerData } from "next-banner";
+import { Star } from "components/Icons/Star";
 
 export default function Default() {
   const {
@@ -25,7 +26,7 @@ export default function Default() {
             By Alvar Lagerlöf
           </h3>
         </div>
-        <Image src="/icons/star.svg" alt="" width={50} height={50} />
+        <Star />
       </div>
     </div>
   );

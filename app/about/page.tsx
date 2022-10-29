@@ -1,8 +1,9 @@
-import Meta from "components/Meta";
 import WithDividers from "components/WithDividers";
 import Image from "next/image";
 import { Exerience } from "./components/Exerience";
 import { SocialLinks } from "./components/SocialLinks";
+
+import profile from "./profile.png";
 
 export default function AboutPage() {
   return (
@@ -30,7 +31,7 @@ function Header() {
       </div>
       <div className="max-w-[500px] sm:min-w-[300px]">
         <Image
-          src="/profile.png"
+          src={profile}
           className="rounded-3xl w-full bordered bg-cover"
           width={1000}
           height={800}

@@ -5,6 +5,7 @@ import { Experience } from "types";
 import ArrowLink from "components/ArrowLink";
 import SkeletonText from "components/SkeletonText";
 import Skeleton from "components/Skeleton";
+import { Star } from "components/Icons/Star";
 
 export function Item(experience: Experience) {
   const getDate = (): string => {
@@ -26,14 +27,7 @@ export function Item(experience: Experience) {
 
   return (
     <li key={experience._id} className="flex flex-row space-x-4 items-start">
-      <Image
-        aria-hidden
-        src="/icons/star.svg"
-        alt="Star"
-        height={26}
-        width={26}
-        className="mt-0.5"
-      />
+      <Star aria-hidden className="mt-0.5" />
 
       <div>
         <h4 className="text-xl font-subheading font-semibold mb-1">
