@@ -27,7 +27,7 @@ export async function Projects() {
 
 async function ProjectsList() {
   const projects: Project[] = await getClient().fetch(query);
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   return (
     <>

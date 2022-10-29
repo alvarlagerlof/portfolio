@@ -42,7 +42,7 @@ async function Content({ slug }: { slug: string }) {
     slug,
   });
 
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   if (!post) notFound();
 

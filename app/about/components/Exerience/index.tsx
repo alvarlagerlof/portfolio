@@ -33,7 +33,7 @@ export async function Exerience() {
 async function ExperienceList() {
   const experience: Experience[] = await getClient().fetch(query);
 
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   return (
     <>

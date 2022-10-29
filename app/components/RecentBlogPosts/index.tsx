@@ -38,7 +38,7 @@ export function RecentBlogPosts() {
 async function Posts() {
   const posts: PostPreview[] = await getClient().fetch(query);
 
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   return (
     <>

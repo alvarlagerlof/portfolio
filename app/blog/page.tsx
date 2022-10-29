@@ -47,7 +47,7 @@ const getSections = cache(async id => {
   const posts = await getClient().fetch(query);
   const sections = section(posts);
 
-  await new Promise(r => setTimeout(r, 300));
+  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   return sections;
 });
