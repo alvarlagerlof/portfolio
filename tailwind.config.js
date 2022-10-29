@@ -28,7 +28,11 @@ const inflatePlugin = function ({ addComponents, theme, variants, e }) {
 
 module.exports = {
   mode: "jit",
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: "media",
   theme: {
     extend: {
@@ -46,6 +50,7 @@ module.exports = {
       colors: {
         primary: colors.green[700],
         separator: colors.gray[400],
+        skeleton: colors.slate[200],
       },
       fontFamily: {
         heading: ["MADE Dillan", "sans-serif"],

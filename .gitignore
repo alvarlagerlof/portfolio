@@ -39,3 +39,5 @@ yarn-error.log*
 /public/next-banner-generated
 
 /playwright-report
+
+.vscode
