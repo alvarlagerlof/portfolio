@@ -25,7 +25,7 @@ export function Item({ isFirst, ...project }: ProjectAndIsFirst) {
     >
       <NextSanityImage
         image={project.banner}
-        className="rounded-3xl bordered bg-cover"
+        className="rounded-3xl border-2 border-imgborder bg-cover"
         alt="Project logo banner"
         width={400}
         height={230}

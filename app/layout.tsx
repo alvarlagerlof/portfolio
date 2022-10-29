@@ -4,11 +4,27 @@ import Navbar from "components/Navbar";
 import WithDividers from "components/WithDividers";
 import PlausibleProvider from "next-plausible";
 
+import { Inter } from "@next/font/google";
+import localFont from "@next/font/local";
+
+const inter = Inter({
+  variable: "--font-inter",
+});
+
+const madeDillan = localFont({
+  src: "../public/fonts/made-dillan.woff",
+  variable: "--font-made-dillan",
+});
+const spaceText = localFont({
+  src: "../public/fonts/space-text-medium.woff",
+  variable: "--font-space-text",
+});
+
 import "../styles/globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <head>
         <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
 

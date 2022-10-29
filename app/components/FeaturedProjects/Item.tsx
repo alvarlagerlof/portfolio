@@ -20,7 +20,7 @@ export function Item(project: Project) {
       <div className="min-w-[120px]">
         <NextSanityImage
           image={project.banner}
-          className="bordered rounded-xl object-cover"
+          className="border-2 border-imgborder rounded-xl object-cover"
           width={120}
           height={75}
           priority
