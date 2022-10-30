@@ -18,7 +18,7 @@
     "@types/node": "18.11.7",
     "luxon": "3.0.4",
     "next": "12.3.2",
-    "next-banner": "1.2.133",
+    "next-banner": "1.2.134",
     "next-plausible": "3.6.4",
     "next-sanity": "1.0.3",
     "next-sanity-image": "4.1.0",
