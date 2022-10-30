@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
-
-
-.font-heading {
-  font-family: var(--font-made-dillan)
-}
-
-
-.font-subheading {
-  font-family: var(--font-space-text)
-}
-
-
 @tailwind utilities;

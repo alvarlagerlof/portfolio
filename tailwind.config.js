@@ -48,6 +48,10 @@ module.exports = {
         skeleton: colors.slate[200],
         imgborder: colors.gray[400],
       },
+      fontFamily: {
+        heading: ["var(--font-made-dillan)"],
+        subheading: ["var(--font-space-text)"],
+      },
     },
   },
   plugins: [inflatePlugin, typographyPlugin],
