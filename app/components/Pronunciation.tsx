@@ -19,7 +19,7 @@ export default function Pronunciation() {
       </button>
 
       <audio ref={audioRef} aria-hidden>
-        <source src="/name.flac" type="audio/flac" />
+        <source src="/name.mp3" type="audio/flac" />
         Your browser does not support the audio element.
       </audio>
     </>
