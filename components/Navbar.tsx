@@ -36,7 +36,7 @@ function NavLink({ href, name }: NavLinkProps) {
   return (
     <li>
       <Link href={href} passHref>
-        <a className="flex flex-row items-center py-2 px-4">
+        <a className="flex flex-row items-center py-2 px-3">
           <span className={"font-medium" + (active ? " text-primary" : "")}>{name}</span>
         </a>
       </Link>
