@@ -23,6 +23,7 @@ const spaceText = localFont({
 });
 
 import "../styles/globals.css";
+import { AnalyticsWrapper } from "components/Analytics";
 
 export const revalidate = 60;
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
+                <AnalyticsWrapper />
               </WithDividers>
             </div>
           </div>
