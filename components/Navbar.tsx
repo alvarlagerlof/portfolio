@@ -6,8 +6,8 @@ import { Star } from "./Icons/Star";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-col md:flex-row md:justify-between !pt-4 !pb-4 space-y-4 md:space-y-0 items-center">
-      <Link href="/" className="py-2">
+    <nav className="flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 items-center mt-4">
+      <Link href="/">
         <div className="flex flex-row items-center space-x-2">
           <Star />
           <p className="font-subheading font-medium text-primary text-xl">Alvar Lagerlöf</p>
@@ -35,8 +35,14 @@ function NavLink({ href, name }: NavLinkProps) {
 
   return (
     <li>
-      <Link href={href} className="flex flex-row items-center py-2 px-4">
-        <span className={"font-medium" + (active ? " text-primary" : "")}>{name}</span>
+      <Link
+        href={href}
+        className={
+          "flex flex-row items-center font-medium py-1 px-3" +
+          (active ? " bg-primary text-white rounded-full" : "")
+        }
+      >
+        {name}
       </Link>
     </li>
   );

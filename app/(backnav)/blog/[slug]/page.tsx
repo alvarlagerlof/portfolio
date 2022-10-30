@@ -55,7 +55,7 @@ async function Content({ slug }: { slug: string }) {
         </h2>
         <p className="font-medium">
           Published {formatDate(post.date.published)}
-          {post.date.updated && ` - Updated ${formatDate(post.date.updated)}`}
+          {post.date.updated && ` - Updated ${formatDate(post.date.updated)}`} - by Alvar Lagerlöf
         </p>
       </header>
 

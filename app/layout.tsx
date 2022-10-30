@@ -1,8 +1,6 @@
-import Footer from "components/Footer";
 import Meta from "components/Meta";
-import Navbar from "components/Navbar";
-import WithDividers from "components/WithDividers";
 import PlausibleProvider from "next-plausible";
+import { AnalyticsWrapper } from "components/Analytics";
 
 import { Inter } from "@next/font/google";
 import localFont from "@next/font/local";
@@ -23,11 +21,10 @@ const spaceText = localFont({
 });
 
 import "../styles/globals.css";
-import { AnalyticsWrapper } from "components/Analytics";
 
 export const revalidate = 60;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <head>
@@ -51,16 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body>
         <PlausibleProvider domain="alvar.dev" customDomain="alvar.dev" trackOutboundLinks>
-          <div className="flex flex-col items-center mx-4 sm:mx-8 md:mx-12">
-            <div className="w-full xl:w-3/4 max-w-6xl">
-              <WithDividers direction="vertical">
-                <Navbar />
-                <main>{children}</main>
-                <Footer />
-                <AnalyticsWrapper />
-              </WithDividers>
-            </div>
-          </div>
+          {children}
+          <AnalyticsWrapper />
         </PlausibleProvider>
       </body>
     </html>
