@@ -9,6 +9,7 @@ import localFont from "@next/font/local";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
 });
 
 const madeDillan = localFont({
