@@ -21,8 +21,6 @@ const query = groq`
 }
 `;
 
-export const revalidate = 30;
-
 export default function BlogPage() {
   return (
     <WithDividers direction="vertical">
