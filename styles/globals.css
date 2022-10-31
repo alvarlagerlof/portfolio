@@ -1,31 +1,3 @@
 @tailwind base;
 @tailwind components;
-
-@font-face {
-  font-family: "MADE Dillan";
-  src: url(/fonts/made-dillan.woff) format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Space Text";
-  src: url(/fonts/space-text-medium.woff) format("woff");
-  font-display: swap;
-}
-
-@import url("https://rsms.me/inter/inter.css");
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-    -webkit-tap-highlight-color: transparent;
-  }
-}
-
-/* TODO: Figure out how to do this in tailwind */
-
-img.bordered {
-  border: 2px solid rgb(156, 163, 175) !important;
-}
-
-
 @tailwind utilities;

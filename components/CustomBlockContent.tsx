@@ -1,3 +1,5 @@
+"use client";
+
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import ArrowLink from "./ArrowLink";
@@ -55,7 +57,13 @@ const components: Partial<PortableTextReactComponents> = {
     },
 
     image({ value }) {
-      return <NextSanityImage image={value} className="rounded-3xl bordered" alt={value.caption} />;
+      return (
+        <NextSanityImage
+          image={value}
+          className="rounded-3xl border-2 border-imgborder"
+          alt={value.caption}
+        />
+      );
     },
   },
 

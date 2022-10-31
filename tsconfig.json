@@ -19,7 +19,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -28,7 +33,8 @@
     "next.config.js",
     "postcss.config.js",
     "tailwind.config.js",
-    "next-sitemap.js"
+    "next-sitemap.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
