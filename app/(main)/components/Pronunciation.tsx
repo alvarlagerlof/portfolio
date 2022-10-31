@@ -27,9 +27,7 @@ export default function Pronunciation() {
 
   async function wait() {
     firstRender.current = false;
-    await new Promise(r => setTimeout(r, 3000));
-
-    return Promise.resolve(undefined);
+    return undefined;
   }
 
   return (
