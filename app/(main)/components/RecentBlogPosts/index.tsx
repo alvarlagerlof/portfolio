@@ -4,7 +4,6 @@ import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { PostPreview } from "types";
 import { Item, ItemLoading } from "./Item";
-import Test from "./test";
 
 const query = groq`
 *[_type == "post"] | order(date.published desc) [0..3] {
