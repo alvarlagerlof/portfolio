@@ -8,7 +8,10 @@ export default function ProjectsPage() {
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-4">Projects</h1>
         <h2 className="font-subheading text-xl md:text-2xl">
-          You can also check out my socials on the <ArrowLink href="/about">about page</ArrowLink>
+          You can also find all my repos on{" "}
+          <ArrowLink newTab href="https://github.com/alvarlagerlof/">
+            GitHub
+          </ArrowLink>
         </h2>
       </header>
 
