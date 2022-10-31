@@ -49,9 +49,10 @@ export function ItemLoading() {
     <div className="flex flex-row space-x-4 items-center">
       <div className="block h-[75px] w-[120px] bg-skeleton rounded-xl" />
 
-      <div className="-m-1">
-        <div className="block w-24 h-[1.25rem] bg-skeleton rounded mb-3" />
-        <div className="block w-[300px] h-[1rem] bg-skeleton rounded" />
+      {/* hacky, fix this */}
+      <div className="-m-1 max-w-[calc(100%-130px)]">
+        <div className="block w-24 max-w-full h-[1.25rem] bg-skeleton rounded mb-3" />
+        <div className="block w-[300px] max-w-full h-[1rem] bg-skeleton rounded" />
       </div>
     </div>
   );

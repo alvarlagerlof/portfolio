@@ -29,8 +29,8 @@ export function Item({ post }: { post: PostPreview }) {
 export function ItemLoading() {
   return (
     <div className="space-y-3">
-      <div className="block w-4/5 h-6 bg-skeleton rounded" />
-      <div className="block w-4/5 h-4 bg-skeleton rounded" />
+      <div className="block w-3/5 h-6 bg-skeleton rounded" />
+      <div className="block w-full sm:w-4/5 h-4 bg-skeleton rounded" />
     </div>
   );
 }

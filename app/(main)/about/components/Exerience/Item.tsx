@@ -52,10 +52,11 @@ export function Item(experience: Experience) {
 export function ItemLoading() {
   return (
     <div className="flex flex-row space-x-4 pb-8">
-      <Skeleton className="w-6 h-6 !rounded-full" />
-      <div className="space-y-4 mt-0.5">
-        <SkeletonText className="w-80 h-[1.25rem]" />
-        <SkeletonText className="w-36 h-[1rem]" />
+      <Skeleton className="!w-6 h-6 !rounded-full" />
+      {/* hack, fix this later */}
+      <div className="space-y-4 mt-0.5 max-w-[calc(100%-30px)]">
+        <SkeletonText className="w-80 max-w-full h-[1.25rem]" />
+        <SkeletonText className="w-36 max-w-full h-[1rem]" />
         <SkeletonText className="w-[600px] max-w-full h-36" />
         <SkeletonText className="w-[500px] max-w-full h-16" />
       </div>

@@ -20,7 +20,7 @@ const query = groq`
 
 export function RecentBlogPosts() {
   return (
-    <section className="w-1/2">
+    <section className="md:w-1/2">
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
       <ul className="space-y-4 md:space-y-8">
         <Suspense fallback={<Loading />}>
