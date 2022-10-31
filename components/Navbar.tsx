@@ -6,7 +6,7 @@ import { Star } from "./Icons/Star";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 items-center mt-4">
+    <nav className="flex flex-col md:flex-row md:justify-between space-y-5 md:space-y-0 items-center mt-4 md:mt-8 md:mb-24">
       <Link href="/">
         <div className="flex flex-row items-center space-x-2">
           <Star />
@@ -14,7 +14,7 @@ export default function Navbar() {
         </div>
       </Link>
 
-      <ul className="flex flex-wrap flex-row justify-center -m-2 md:-m-4">
+      <ul className="flex flex-wrap flex-row justify-center space-x-2">
         <NavLink href="/" name="Home" />
         <NavLink href="/about" name="About" />
         <NavLink href="/projects" name="Projects" />
