@@ -1,3 +1,4 @@
+import { SetTitle } from "components/SetTitle";
 import WithDividers from "components/WithDividers";
 import Image from "next/image";
 import { Exerience } from "./components/Exerience";
@@ -8,6 +9,7 @@ import profile from "./profile.png";
 export default function AboutPage() {
   return (
     <WithDividers direction="vertical">
+      <SetTitle to="About me" />
       <Header />
       <WithDividers direction="horizontal">
         <Story />
