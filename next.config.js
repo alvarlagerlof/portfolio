@@ -6,6 +6,5 @@ module.exports = withPlausibleProxy()({
   },
   experimental: {
     appDir: true,
-    runtime: "experimental-edge", // 'node.js' (default) | experimental-edge},
   },
 });
