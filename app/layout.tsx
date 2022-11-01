@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 const madeDillan = localFont({
-  src: "../public/fonts/made-dillan.woff",
+  src: "./fonts/made-dillan.woff",
   variable: "--font-made-dillan",
 });
 
 const spaceText = localFont({
-  src: "../public/fonts/space-text-medium.woff",
+  src: "./fonts/space-text-medium.woff",
   variable: "--font-space-text",
 });
 
