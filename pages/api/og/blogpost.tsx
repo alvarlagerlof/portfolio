@@ -6,11 +6,11 @@ export const config = {
 };
 
 const spaceTextFont = fetch(
-  new URL("../../../public/fonts/space-text-medium.woff", import.meta.url)
+  new URL("../../../assets/fonts/space-text-medium.woff", import.meta.url)
 ).then(res => res.arrayBuffer());
 
 const madeDillanFont = fetch(
-  new URL("../../../public/fonts/made-dillan.woff", import.meta.url)
+  new URL("../../../assets/fonts/made-dillan.woff", import.meta.url)
 ).then(res => res.arrayBuffer());
 
 export default async function handler(req: NextRequest, res) {
