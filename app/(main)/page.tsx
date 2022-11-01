@@ -3,10 +3,12 @@ import WithDividers from "components/WithDividers";
 import Pronunciation from "./components/Pronunciation";
 import { FeaturedProjects } from "./components/FeaturedProjects";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
+import { SetTitle } from "components/SetTitle";
 
 export default function IndexPage() {
   return (
     <WithDividers direction="vertical">
+      <SetTitle to="Alvar Lagerlöf" />
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-4">I'm Alvar Lagerlöf</h1>
         <Pronunciation />

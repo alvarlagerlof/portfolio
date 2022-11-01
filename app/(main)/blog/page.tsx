@@ -9,6 +9,7 @@ import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
 
 import { ItemLoading } from "./components/Posts/Item";
+import { SetTitle } from "components/SetTitle";
 
 const query = groq`
 *[_type == "post"] | order(date.published desc) {
@@ -24,6 +25,7 @@ const query = groq`
 export default function BlogPage() {
   return (
     <WithDividers direction="vertical">
+      <SetTitle to="Blog" />
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-4">Blog</h1>
 

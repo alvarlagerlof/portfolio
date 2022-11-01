@@ -8,6 +8,7 @@ import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import SkeletonText from "components/SkeletonText";
+import { SetTitle } from "components/SetTitle";
 
 const query = groq`
 *[_type == "post" && slug.current == $slug][0] {
@@ -48,6 +49,7 @@ async function Content({ slug }: { slug: string }) {
 
   return (
     <WithDividers direction="vertical">
+      <SetTitle to={post.title} />
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-8">{post.title}</h1>
         <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch] mb-8">
