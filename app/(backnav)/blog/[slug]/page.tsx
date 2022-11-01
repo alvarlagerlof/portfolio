@@ -1,14 +1,13 @@
+import { CustomBlockContent } from "components/CustomBlockContent";
+import { SetTitle } from "components/SetTitle";
+import { SkeletonText } from "components/SkeletonText";
+import { WithDividers } from "components/WithDividers";
 import { getClient } from "lib/sanity/sanity.server";
 import { formatDate } from "lib/utils/date";
-
-import { CustomBlockContent } from "components/CustomBlockContent";
-import { WithDividers } from "components/WithDividers";
-import { Post } from "types";
 import { groq } from "next-sanity";
-import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { SkeletonText } from "components/SkeletonText";
-import { SetTitle } from "components/SetTitle";
+import { Suspense } from "react";
+import { Post } from "types";
 
 const query = groq`
 *[_type == "post" && slug.current == $slug][0] {

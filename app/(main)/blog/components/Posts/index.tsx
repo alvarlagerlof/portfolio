@@ -1,4 +1,5 @@
 import { Post } from "types";
+
 import { Item } from "./Item";
 
 type PostListProps = {

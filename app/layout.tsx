@@ -1,9 +1,10 @@
-import { Meta } from "components/Meta";
-import PlausibleProvider from "next-plausible";
-import { AnalyticsWrapper } from "components/Analytics";
-
 import { Inter } from "@next/font/google";
 import localFont from "@next/font/local";
+import { AnalyticsWrapper } from "components/Analytics";
+import { Meta } from "components/Meta";
+import PlausibleProvider from "next-plausible";
+
+import "../styles/globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,8 +20,6 @@ const spaceText = localFont({
   src: "../public/fonts/space-text-medium.woff",
   variable: "--font-space-text",
 });
-
-import "../styles/globals.css";
 
 export const revalidate = 60;
 

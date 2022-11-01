@@ -2,6 +2,7 @@ import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Project } from "types";
+
 import { Item, ItemLoading } from "./Item";
 
 const query = groq`

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { Star } from "./Icons/Star";
 
 export function Navbar() {
