@@ -4,7 +4,7 @@ import { AnalyticsWrapper } from "components/Analytics";
 import { Meta } from "components/Meta";
 import PlausibleProvider from "next-plausible";
 
-import "../styles/globals.css";
+import "./global.css";
 
 const inter = Inter({
   variable: "--font-inter",
