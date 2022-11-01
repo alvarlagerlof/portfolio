@@ -1,5 +1,4 @@
-import Footer from "components/Footer";
-import WithDividers from "components/WithDividers";
+import { Footer } from "components/Footer";
 import Link from "next/link";
 
 export default function BackNavLayout({ children }) {
@@ -19,7 +18,6 @@ export default function BackNavLayout({ children }) {
         <main className="my-16">{children}</main>
 
         <Footer />
-        {/* </WithDividers> */}
       </div>
     </div>
   );

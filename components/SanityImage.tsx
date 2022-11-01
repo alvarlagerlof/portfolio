@@ -12,11 +12,7 @@ type SanityImageProps = {
   image: SanityImage;
 } & ImagePropsWithoutSrc;
 
-export default function NextSanityImage({
-  image,
-  placeholder = "blur",
-  ...props
-}: SanityImageProps) {
+export function NextSanityImage({ image, placeholder = "blur", ...props }: SanityImageProps) {
   const imageProps = useNextSanityImage(sanityClient, image);
 
   /* eslint-disable */

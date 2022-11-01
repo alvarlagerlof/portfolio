@@ -1,4 +1,4 @@
-import Meta from "components/Meta";
+import { Meta } from "components/Meta";
 import PlausibleProvider from "next-plausible";
 import { AnalyticsWrapper } from "components/Analytics";
 

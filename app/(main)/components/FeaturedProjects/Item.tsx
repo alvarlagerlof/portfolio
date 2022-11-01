@@ -1,6 +1,6 @@
 "use client";
 
-import NextSanityImage from "components/SanityImage";
+import { NextSanityImage } from "components/SanityImage";
 import Link from "next/link";
 import { useRef } from "react";
 import { Project } from "types";

@@ -1,4 +1,4 @@
-import ArrowLink from "components/ArrowLink";
+import { ArrowLink } from "components/ArrowLink";
 
 export default function NotFoundPage() {
   return (

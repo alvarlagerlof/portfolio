@@ -1,6 +1,6 @@
-import ArrowLink from "components/ArrowLink";
-import WithDividers from "components/WithDividers";
-import Pronunciation from "./components/Pronunciation";
+import { ArrowLink } from "components/ArrowLink";
+import { WithDividers } from "components/WithDividers";
+import { Pronunciation } from "./components/Pronunciation";
 import { FeaturedProjects } from "./components/FeaturedProjects";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
 import { SetTitle } from "components/SetTitle";

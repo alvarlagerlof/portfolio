@@ -6,11 +6,7 @@ type ArrowLinkProps = {
   newTab?: boolean;
 };
 
-export default function ArrowLink({
-  href,
-  newTab = false,
-  children,
-}: WithChildren<ArrowLinkProps>) {
+export function ArrowLink({ href, newTab = false, children }: WithChildren<ArrowLinkProps>) {
   return (
     <Link
       href={href}

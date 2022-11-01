@@ -1,4 +1,4 @@
-import Meta from "components/Meta";
+import { Meta } from "components/Meta";
 import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
 import { Post } from "types";
