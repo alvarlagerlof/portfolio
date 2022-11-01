@@ -20,22 +20,6 @@ const spaceText = localFont({
   variable: "--font-space-text",
 });
 
-import { Inter } from "@next/font/google";
-import localFont from "@next/font/local";
-
-const inter = Inter({
-  variable: "--font-inter",
-});
-
-const madeDillan = localFont({
-  src: "../public/fonts/made-dillan.woff",
-  variable: "--font-made-dillan",
-});
-const spaceText = localFont({
-  src: "../public/fonts/space-text-medium.woff",
-  variable: "--font-space-text",
-});
-
 import "../styles/globals.css";
 
 export const revalidate = 60;
