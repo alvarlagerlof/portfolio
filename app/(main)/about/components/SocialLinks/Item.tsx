@@ -1,7 +1,7 @@
-import ArrowLink from "components/ArrowLink";
-import NextSanityImage from "components/SanityImage";
-import Skeleton from "components/Skeleton";
-import SkeletonText from "components/SkeletonText";
+import { ArrowLink } from "components/ArrowLink";
+import { NextSanityImage } from "components/SanityImage";
+import { Skeleton } from "components/Skeleton";
+import { SkeletonText } from "components/SkeletonText";
 import { Social } from "types";
 
 export function Item(social: Social) {

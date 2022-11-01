@@ -2,8 +2,8 @@
 
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import ArrowLink from "./ArrowLink";
-import NextSanityImage from "./SanityImage";
+import { ArrowLink } from "./ArrowLink";
+import { NextSanityImage } from "./SanityImage";
 
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 
@@ -84,6 +84,6 @@ const components: Partial<PortableTextReactComponents> = {
   },
 };
 
-export default function CustomBlockContent({ blocks }) {
+export function CustomBlockContent({ blocks }) {
   return <PortableText value={blocks} components={components} />;
 }

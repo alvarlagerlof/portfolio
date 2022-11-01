@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Star } from "./Icons/Star";
 
-export default function Navbar() {
+export function Navbar() {
   return (
     <nav className="flex flex-col md:flex-row md:justify-between space-y-5 md:space-y-0 items-center mt-4 md:mt-8 md:mb-24">
       <Link href="/">

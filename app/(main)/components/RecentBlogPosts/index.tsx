@@ -1,4 +1,4 @@
-import ArrowLink from "components/ArrowLink";
+import { ArrowLink } from "components/ArrowLink";
 import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
 import { Suspense } from "react";

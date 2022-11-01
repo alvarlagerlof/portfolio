@@ -1,5 +1,5 @@
-import ArrowLink from "components/ArrowLink";
-import WithDividers from "components/WithDividers";
+import { ArrowLink } from "components/ArrowLink";
+import { WithDividers } from "components/WithDividers";
 
 import section from "lib/utils/section";
 

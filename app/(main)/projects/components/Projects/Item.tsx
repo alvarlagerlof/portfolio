@@ -1,8 +1,8 @@
 "use client";
 
-import NextSanityImage from "components/SanityImage";
-import Skeleton from "components/Skeleton";
-import SkeletonText from "components/SkeletonText";
+import { NextSanityImage } from "components/SanityImage";
+import { Skeleton } from "components/Skeleton";
+import { SkeletonText } from "components/SkeletonText";
 import Link from "next/link";
 import { useRef } from "react";
 import { Project } from "types";

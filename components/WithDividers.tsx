@@ -4,7 +4,7 @@ type WithDividersProps = {
   direction: "horizontal" | "vertical";
 };
 
-export default function WithDividers({ direction, children }: WithChildren<WithDividersProps>) {
+export function WithDividers({ direction, children }: WithChildren<WithDividersProps>) {
   const map = {
     vertical: "inflate-y-8 md:inflate-y-14 divide-y-2 divide-separator divide-solid",
     horizontal:

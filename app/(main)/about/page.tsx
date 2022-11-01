@@ -1,5 +1,5 @@
 import { SetTitle } from "components/SetTitle";
-import WithDividers from "components/WithDividers";
+import { WithDividers } from "components/WithDividers";
 import Image from "next/image";
 import { Exerience } from "./components/Exerience";
 import { SocialLinks } from "./components/SocialLinks";
