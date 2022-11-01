@@ -1,6 +1,7 @@
 import { ArrowLink } from "components/ArrowLink";
 import { SetTitle } from "components/SetTitle";
 import { WithDividers } from "components/WithDividers";
+
 import { Projects } from "./components/Projects";
 
 export default function ProjectsPage() {

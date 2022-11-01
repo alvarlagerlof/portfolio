@@ -1,11 +1,10 @@
-import { formatDate } from "lib/utils/date";
 import BlockContent from "@sanity/block-content-to-react";
-import Image from "next/image";
-import { Experience } from "types";
 import { ArrowLink } from "components/ArrowLink";
-import { SkeletonText } from "components/SkeletonText";
-import { Skeleton } from "components/Skeleton";
 import { Star } from "components/Icons/Star";
+import { Skeleton } from "components/Skeleton";
+import { SkeletonText } from "components/SkeletonText";
+import { formatDate } from "lib/utils/date";
+import { Experience } from "types";
 
 export function Item(experience: Experience) {
   const getDate = (): string => {

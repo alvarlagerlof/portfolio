@@ -1,15 +1,13 @@
 import { ArrowLink } from "components/ArrowLink";
+import { SetTitle } from "components/SetTitle";
 import { WithDividers } from "components/WithDividers";
-
-import section from "lib/utils/section";
-
-import { Posts } from "./components/Posts";
 import { getClient } from "lib/sanity/sanity.server";
+import section from "lib/utils/section";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
 
+import { Posts } from "./components/Posts";
 import { ItemLoading } from "./components/Posts/Item";
-import { SetTitle } from "components/SetTitle";
 
 const query = groq`
 *[_type == "post"] | order(date.published desc) {

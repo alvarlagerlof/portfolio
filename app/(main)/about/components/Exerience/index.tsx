@@ -1,8 +1,9 @@
-import { Experience } from "types";
 import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
-import { Item, ItemLoading } from "./Item";
 import { Suspense } from "react";
+import { Experience } from "types";
+
+import { Item, ItemLoading } from "./Item";
 
 const query = groq`
 *[_type == "experience"] | order(date.start desc) {

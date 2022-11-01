@@ -1,9 +1,8 @@
 "use client";
 
-import Image, { ImageProps } from "next/image";
 import { sanityClient } from "lib/sanity/sanity.server";
 import { useNextSanityImage } from "next-sanity-image";
-
+import Image, { ImageProps } from "next/image";
 import { SanityImage } from "types";
 
 type ImagePropsWithoutSrc = Omit<ImageProps, "src">;

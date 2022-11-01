@@ -1,6 +1,5 @@
 import { Footer } from "components/Footer";
 import { Navbar } from "components/Navbar";
-import { WithDividers } from "components/WithDividers";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (

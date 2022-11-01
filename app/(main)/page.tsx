@@ -1,9 +1,10 @@
 import { ArrowLink } from "components/ArrowLink";
-import { WithDividers } from "components/WithDividers";
-import { Pronunciation } from "./components/Pronunciation";
-import { FeaturedProjects } from "./components/FeaturedProjects";
-import { RecentBlogPosts } from "./components/RecentBlogPosts";
 import { SetTitle } from "components/SetTitle";
+import { WithDividers } from "components/WithDividers";
+
+import { FeaturedProjects } from "./components/FeaturedProjects";
+import { Pronunciation } from "./components/Pronunciation";
+import { RecentBlogPosts } from "./components/RecentBlogPosts";
 
 export default function IndexPage() {
   return (
