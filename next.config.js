@@ -7,4 +7,12 @@ module.exports = withPlausibleProxy()({
   experimental: {
     appDir: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/feed.xml",
+        destination: "/api/rss",
+      },
+    ];
+  },
 });

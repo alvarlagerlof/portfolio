@@ -29,7 +29,7 @@ export default function BlogPage() {
 
         <h2 className="font-subheading text-xl md:text-2xl max-w-[45ch]">
           I try to put my thoughts into words sometimes. RSS is available{" "}
-          <ArrowLink href="https://alvar.dev/feed.xml">here</ArrowLink>
+          <ArrowLink href="/feed.xml">here</ArrowLink>
         </h2>
       </header>
 
