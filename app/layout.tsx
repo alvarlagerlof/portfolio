@@ -27,8 +27,6 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <head>
-        <Meta title="Alvar Lagerlöf" description="Developer and designer from Stockholm" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="theme-color" content="#16a34a"></meta>
 

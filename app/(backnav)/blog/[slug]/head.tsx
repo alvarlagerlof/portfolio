@@ -17,5 +17,5 @@ export default async function Head({ params: { slug } }) {
 
   if (!post) return null;
 
-  return <Meta title={post.title} description={post.description} />;
+  return <Meta title={post.title} description={post.description} ogImageLayout="blogpost" />;
 }

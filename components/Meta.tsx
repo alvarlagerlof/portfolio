@@ -1,6 +1,8 @@
 export function Meta({ title, description, ogImageLayout = "default" }) {
   const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
+  console.log(ogImageLayout);
+
   return (
     <>
       <title>{title}</title>
@@ -14,12 +16,12 @@ export function Meta({ title, description, ogImageLayout = "default" }) {
       {ogImageLayout === "blogpost" ? (
         <meta
           property="og:image"
-          content={`${domain}/api/og/default?title=${title}&description=${description}`}
+          content={`${domain}/api/og/blogpost?title=${title}&description=${description}`}
         />
       ) : (
         <meta
           property="og:image"
-          content={`${domain}/api/og/blogpost?title=${title}&description=${description}`}
+          content={`${domain}/api/og/default?title=${title}&description=${description}`}
         />
       )}
     </>
