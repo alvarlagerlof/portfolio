@@ -1,8 +1,4 @@
-const { withPlausibleProxy } = require("next-plausible");
-
-module.exports = withPlausibleProxy({
-  customDomain: "http://alvar.dev",
-})({
+module.exports = {
   images: {
     domains: ["cdn.sanity.io"],
   },
@@ -15,6 +11,14 @@ module.exports = withPlausibleProxy({
         source: "/feed.xml",
         destination: "/api/rss",
       },
+      {
+        source: "/js/script.outbound-links.js",
+        destination: "https://plausible.io/js/script.outbound-links.js",
+      },
+      {
+        source: "/api/event",
+        destination: "https://plausible.io/api/event",
+      },
     ];
   },
-});
+};

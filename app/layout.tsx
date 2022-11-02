@@ -2,7 +2,7 @@ import { Inter } from "@next/font/google";
 import localFont from "@next/font/local";
 import { AnalyticsWrapper } from "components/Analytics";
 import { Meta } from "components/Meta";
-import PlausibleProvider from "next-plausible";
+import Script from "next/script";
 
 import "./global.css";
 
@@ -42,19 +42,14 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           sizes="192x192"
         ></link>
 
+        <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
+
         <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
       </head>
 
       <body>
-        <PlausibleProvider
-          domain="alvar.dev"
-          customDomain="https://alvar.dev"
-          trackOutboundLinks
-          selfHosted
-        >
-          {children}
-          <AnalyticsWrapper />
-        </PlausibleProvider>
+        {children}
+        <AnalyticsWrapper />
       </body>
     </html>
   );

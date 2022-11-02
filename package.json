@@ -21,7 +21,6 @@
     "luxon": "3.0.4",
     "next": "13.0.1",
     "next-banner": "1.2.132",
-    "next-plausible": "3.6.4",
     "next-sanity": "1.0.3",
     "next-sanity-image": "4.1.0",
     "react": "^18.2.0",

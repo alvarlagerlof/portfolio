@@ -2052,11 +2052,6 @@ next-banner@1.2.132:
     puppeteer "18.0.5"
     tasuku "2.0.0"
 
-next-plausible@3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.6.4.tgz#15684340736e47d3ffa49f9c8fae598e3cfefca6"
-  integrity sha512-aHL4IL+gkkjs5ScB18LZ3LMEWXKR5VTvnMDs/fHNFHadOh23i37fD+VP5oAQLALR8Mde63l9JJljrw9DkvjWjQ==
-
 next-sanity-image@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-4.1.0.tgz#4558db1d8b45f5891be0cdbb66476b1ae1dfa74b"
