@@ -46,7 +46,12 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
       </head>
 
       <body>
-        <PlausibleProvider domain="alvar.dev" customDomain="alvar.dev" trackOutboundLinks>
+        <PlausibleProvider
+          domain="alvar.dev"
+          customDomain="https://alvar.dev"
+          trackOutboundLinks
+          selfHosted
+        >
           {children}
           <AnalyticsWrapper />
         </PlausibleProvider>
