@@ -16,12 +16,12 @@ export function Meta({ title, description, ogImageLayout = "default" }) {
       {ogImageLayout === "blogpost" ? (
         <meta
           property="og:image"
-          content={`${domain}/api/og/blogpost?title=${title}&description=${description}`}
+          content={encodeURI(`${domain}/api/og/blogpost?title=${title}&description=${description}`)}
         />
       ) : (
         <meta
           property="og:image"
-          content={`${domain}/api/og/default?title=${title}&description=${description}`}
+          content={encodeURI(`${domain}/api/og/default?title=${title}&description=${description}`)}
         />
       )}
     </>
