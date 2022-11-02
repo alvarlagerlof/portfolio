@@ -1,7 +1,6 @@
 import { Inter } from "@next/font/google";
 import localFont from "@next/font/local";
-import { AnalyticsWrapper } from "components/Analytics";
-import { Meta } from "components/Meta";
+// import { AnalyticsWrapper } from "components/Analytics";
 import Script from "next/script";
 
 import "./global.css";
@@ -47,7 +46,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
 
       <body>
         {children}
-        <AnalyticsWrapper />
+        {/* <AnalyticsWrapper /> */}
       </body>
     </html>
   );
