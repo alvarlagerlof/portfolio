@@ -6,6 +6,8 @@ import { Exerience } from "./components/Exerience";
 import { SocialLinks } from "./components/SocialLinks";
 import profile from "./profile.png";
 
+export const runtime = "experimental-edge";
+
 export default function AboutPage() {
   return (
     <WithDividers direction="vertical">
