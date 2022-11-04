@@ -20,8 +20,6 @@ const spaceText = localFont({
   variable: "--font-space-text",
 });
 
-export const revalidate = 60;
-
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
