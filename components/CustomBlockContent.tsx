@@ -1,11 +1,10 @@
-"use client";
-
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { Suspense } from "react";
 
 import { ArrowLink } from "./ArrowLink";
+import { CodeBlock } from "./CodeBlock";
 import { NextSanityImage } from "./SanityImage";
+import { Skeleton } from "./Skeleton";
 
 const components: Partial<PortableTextReactComponents> = {
   marks: {
@@ -38,21 +37,13 @@ const components: Partial<PortableTextReactComponents> = {
   },
 
   types: {
-    code({ value: { language, code } }) {
+    code(props) {
+      const { language, code } = props.value;
+
       return (
-        <SyntaxHighlighter
-          customStyle={{
-            borderRadius: "0px",
-            padding: "16px",
-            fontFamily: "unset",
-            fontSize: "0.9em",
-            width: "100%",
-          }}
-          style={style}
-          language={language}
-        >
-          {code}
-        </SyntaxHighlighter>
+        <Suspense fallback={<Skeleton className="w-full h-96" />}>
+          <CodeBlock language={language} code={code} />
+        </Suspense>
       );
     },
 

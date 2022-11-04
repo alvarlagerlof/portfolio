@@ -162,13 +162,13 @@
     "@types/node" "*"
     playwright-core "1.27.1"
 
-"@portabletext/react@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-1.0.6.tgz#508ede0b165a3705db6907a94ff67c791d9ab432"
-  integrity sha512-j6BprLiwFz3zr1Lo6BxM2sQ1b3g1JIjGwePeuxqSfbBiEYbGXn2izEckMJ02hSa1f7+RCEUJ+Bojvtzz6BBUaw==
+"@portabletext/react@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-2.0.0.tgz#188dc7bbd3d02693ceefbeb9115e44ccdf4c3554"
+  integrity sha512-8AaTfRdRAzWxs2ADbMXV32/LTOJaRDp/m89hax/NTbC8F+OBOgHLBl+M7zSJDVIS1k+fuorFCLcOoq+PuAGJvQ==
   dependencies:
-    "@portabletext/toolkit" "^1.0.5"
-    "@portabletext/types" "^1.0.3"
+    "@portabletext/toolkit" "^2.0.0"
+    "@portabletext/types" "^2.0.0"
 
 "@portabletext/to-html@1.0.4":
   version "1.0.4"
@@ -185,7 +185,14 @@
   dependencies:
     "@portabletext/types" "^1.0.3"
 
-"@portabletext/types@2.0.0":
+"@portabletext/toolkit@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.0.tgz#b6675bc4a90c4b0ec92cb66687d149034b38e4b6"
+  integrity sha512-2Ljk7dnofxqam9u4B0h1UmpU18h+6SerSU/UanEHQW/IfjmOi48qZDre6MsOrQJ9/LsmlA8MDrmlCND5r/tg3A==
+  dependencies:
+    "@portabletext/types" "^2.0.0"
+
+"@portabletext/types@2.0.0", "@portabletext/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.0.tgz#920d9ffb19ea68c6b0857fe1e97e27c7464d5055"
   integrity sha512-AjbCPt9x9U0XFwLuVnIxweBrDAlKKcPJRVkpckjMk77VKEQoYvX2dITf5QtQf1TlLIx8zHJFtMcLmiqDJiGuLg==
