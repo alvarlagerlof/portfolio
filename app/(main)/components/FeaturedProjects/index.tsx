@@ -12,7 +12,12 @@ const query = groq`
   name,
   description,
   link,
-  banner
+  banner {
+    asset->{
+      ...,
+      metadata
+    }
+  }
 }
 `;
 

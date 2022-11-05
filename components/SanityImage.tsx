@@ -15,5 +15,13 @@ export function NextSanityImage({ image, placeholder = "blur", ...props }: Sanit
   const imageProps = useNextSanityImage(sanityClient, image);
 
   /* eslint-disable */
-  return <Image {...imageProps} {...props} alt={image?.caption ?? ""} placeholder={placeholder} />;
+  return (
+    <Image
+      {...imageProps}
+      {...props}
+      alt={image?.caption ?? ""}
+      placeholder={placeholder}
+      blurDataURL={image.asset.metadata.lqip}
+    />
+  );
 }

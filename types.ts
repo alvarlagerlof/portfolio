@@ -14,7 +14,11 @@ export interface SanityImage {
   asset: {
     _ref: string;
     _type: "reference";
+    metadata: {
+      lqip: string;
+    };
   };
+
   caption: string;
 }
 
