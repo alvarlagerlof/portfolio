@@ -2066,10 +2066,10 @@ next-sanity-image@4.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.3.tgz#5d32b47015164b976477cd2c7e96bd5637164e8d"
-  integrity sha512-9THbeAUGA3REPeLxEK4x9a4/k5WVK6gXU11kX2+zaP9Z2Q4cc5vcI0SglUrZ4FWeVXquLuULtC/iiO5p67LDhw==
+next-sanity@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.8.tgz#248927d6a4730e1aa82b21d8b90ced03f39de365"
+  integrity sha512-8DvKiWqTi5kcxAzSEHVoH34ij0A7+fehB7SvqC1z7w+ZGpThzRf3xXeC2ZvHovDx+sOj0rDdDsdRc0OYefwumw==
   dependencies:
     "@sanity/client" "^3.4.1"
     "@sanity/groq-store" "^1.0.3"
