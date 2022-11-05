@@ -1,10 +1,10 @@
 // lib/config.js
 
-import { createConfig } from "sanity";
+import { defineConfig } from "sanity";
 
 const basePath = "/studio";
 
-export default createConfig({
+export default defineConfig({
   basePath: basePath,
   /**
    * Find your project ID and dataset in `sanity.json` in your studio project.
