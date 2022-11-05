@@ -1,10 +1,10 @@
-import BlockContent from "@sanity/block-content-to-react";
 import { ArrowLink } from "components/ArrowLink";
 import { Star } from "components/Icons/Star";
 import { Skeleton } from "components/Skeleton";
 import { SkeletonText } from "components/SkeletonText";
 import { formatDate } from "lib/utils/date";
 import { Experience } from "types";
+import { PortableText } from "@portabletext/react";
 
 export function Item(experience: Experience) {
   const getDate = (): string => {
@@ -36,7 +36,7 @@ export function Item(experience: Experience) {
           {experience?.employmentType} • {getDate()}
         </em>
         <div className="prose">
-          <BlockContent blocks={experience?.body} />
+          <PortableText value={experience?.body} />
         </div>
         {experience.link && (
           <div className="mt-4">
