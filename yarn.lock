@@ -2075,7 +2075,7 @@ next-sanity@1.0.8:
     "@sanity/groq-store" "^1.0.3"
     groq "^2.33.2"
 
-next@^13.0.3-canary.0:
+next@13.0.3-canary.0:
   version "13.0.3-canary.0"
   resolved "https://registry.yarnpkg.com/next/-/next-13.0.3-canary.0.tgz#5229d96892f8a2c2e981cbd0e1f8d10bf594bef5"
   integrity sha512-h9rTohejomMj7d0/BHT0v9HaX/CQy2dLYUdUAxI6I8ObYCESEUMeymtQzAHjQ/Fp1MP5+GPOVOVO2uqHNlCd2g==
