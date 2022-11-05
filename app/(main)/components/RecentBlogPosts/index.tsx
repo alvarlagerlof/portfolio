@@ -12,7 +12,7 @@ const query = groq`
   slug,
   title,
   description,
-  "date": {
+  date {
     published,
     updated
   }

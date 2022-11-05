@@ -23,6 +23,12 @@ const query = groq`
       _type == "internalLink" => {
         "slug": @.reference->slug
       }
+    },
+    _type == "image" => {
+      asset->{
+        ...,
+        metadata
+      }
     }
   }
 }

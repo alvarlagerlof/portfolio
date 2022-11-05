@@ -11,7 +11,12 @@ const query = groq`
   networkName,
   userName,
   link,
-  icon,
+  icon {
+    asset->{
+      ...,
+      metadata
+    }
+  }
 }
 `;
 
