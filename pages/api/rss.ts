@@ -48,6 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           components: {
             types: {
               image: ({ value }) => String(html`<img src="${value.imageUrl}" />`),
+              code: ({ value }) => String(html`<pre>${value.code}</pre>`),
             },
           },
         }) + link;
