@@ -52,7 +52,7 @@ export type Experience = SanityDefaults & {
     end: string;
   };
   link?: string;
-  body: string;
+  body: PortableTextBlock[];
 };
 
 export type Social = SanityDefaults & {
