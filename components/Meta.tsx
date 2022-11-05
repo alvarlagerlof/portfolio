@@ -1,8 +1,6 @@
 export function Meta({ title, description, ogImageLayout = "default" }) {
   const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
-  console.log(ogImageLayout);
-
   return (
     <>
       <title>{title}</title>
