@@ -4,7 +4,7 @@ import { WithDividers } from "components/WithDividers";
 import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
-import { Post, Sections } from "types";
+import { Post, PostPreview, Sections } from "types";
 
 import { Posts } from "./components/Posts";
 import { ItemLoading } from "./components/Posts/Item";
@@ -42,7 +42,7 @@ export default function BlogPage() {
 }
 
 const getSections = cache(async () => {
-  const posts = await getClient().fetch(query);
+  const posts: PostPreview[] = await getClient().fetch(query);
 
   const sections = posts.reduce((acc: Sections, curr: Post) => {
     const year: number = new Date(curr.date.published).getFullYear();

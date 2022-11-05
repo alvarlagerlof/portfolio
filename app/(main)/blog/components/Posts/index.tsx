@@ -1,9 +1,9 @@
-import { Post } from "types";
+import { Post, PostPreview } from "types";
 
 import { Item } from "./Item";
 
 type PostListProps = {
-  posts: Partial<Post>[];
+  posts: PostPreview[];
 };
 
 export function Posts({ posts }: PostListProps) {
