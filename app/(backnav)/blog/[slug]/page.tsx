@@ -3,7 +3,7 @@ import { SetTitle } from "components/SetTitle";
 import { SkeletonText } from "components/SkeletonText";
 import { WithDividers } from "components/WithDividers";
 import { getClient } from "lib/sanity/sanity.server";
-import { formatDate } from "lib/utils/formatDate";
+import { formatDate } from "lib/formatDate";
 import { groq } from "next-sanity";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
