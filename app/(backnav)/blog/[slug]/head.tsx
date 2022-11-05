@@ -1,19 +1,8 @@
 import { Meta } from "components/Meta";
-import { getClient } from "lib/sanity/sanity.server";
-import { groq } from "next-sanity";
-import { Post } from "types";
-
-export const query = groq`
-*[_type == "post" && slug.current == $slug][0] {
-  title,
-  description,
-}
-`;
+import { getPost } from "./getPost";
 
 export default async function Head({ params: { slug } }) {
-  const post: Post = await getClient().fetch(query, {
-    slug,
-  });
+  const post = await getPost(slug);
 
   if (!post) return null;
 

@@ -2,39 +2,12 @@ import { CustomBlockContent } from "components/CustomBlockContent";
 import { SetTitle } from "components/SetTitle";
 import { SkeletonText } from "components/SkeletonText";
 import { WithDividers } from "components/WithDividers";
-import { getClient } from "lib/sanity/sanity.server";
 import { formatDate } from "lib/formatDate";
-import { groq } from "next-sanity";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { Post } from "types";
+import { getPost } from "./getPost";
 
-const query = groq`
-*[_type == "post" && slug.current == $slug][0] {
-  _id,
-  title,
-  slug,
-  description,
-  date,
-  body[] {
-    ...,
-    markDefs[] {
-      ...,
-      _type == "internalLink" => {
-        "slug": @.reference->slug
-      }
-    },
-    _type == "image" => {
-      asset->{
-        ...,
-        metadata
-      }
-    }
-  }
-}
-`;
-
-export default async function PostPage({ params: { slug } }: { params: { slug: string } }) {
+export default function PostPage({ params: { slug } }: { params: { slug: string } }) {
   return (
     <Suspense fallback={<Loading />}>
       {/* @ts-ignore */}
@@ -44,11 +17,7 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
 }
 
 async function Content({ slug }: { slug: string }) {
-  const post: Post = await getClient().fetch(query, {
-    slug,
-  });
-
-  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
+  const post = await getPost(slug);
 
   if (!post) notFound();
 
@@ -68,7 +37,9 @@ async function Content({ slug }: { slug: string }) {
 
       <article>
         <div className="prose">
-          <CustomBlockContent blocks={post.body} />
+          <Suspense>
+            <CustomBlockContent blocks={post.body} />
+          </Suspense>
         </div>
       </article>
     </WithDividers>
