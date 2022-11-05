@@ -2,7 +2,7 @@ import { ArrowLink } from "components/ArrowLink";
 import { Star } from "components/Icons/Star";
 import { Skeleton } from "components/Skeleton";
 import { SkeletonText } from "components/SkeletonText";
-import { formatDate } from "lib/utils/formatDate";
+import { formatDate } from "lib/formatDate";
 import { Experience } from "types";
 import { PortableText } from "@portabletext/react";
 

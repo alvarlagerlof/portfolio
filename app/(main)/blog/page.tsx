@@ -2,9 +2,9 @@ import { ArrowLink } from "components/ArrowLink";
 import { SetTitle } from "components/SetTitle";
 import { WithDividers } from "components/WithDividers";
 import { getClient } from "lib/sanity/sanity.server";
-import section from "lib/utils/section";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
+import { Post, Sections } from "types";
 
 import { Posts } from "./components/Posts";
 import { ItemLoading } from "./components/Posts/Item";
@@ -41,9 +41,17 @@ export default function BlogPage() {
   );
 }
 
-const getSections = cache(async id => {
+const getSections = cache(async () => {
   const posts = await getClient().fetch(query);
-  const sections = section(posts);
+
+  const sections = posts.reduce((acc: Sections, curr: Post) => {
+    const year: number = new Date(curr.date.published).getFullYear();
+
+    return {
+      ...acc,
+      [year]: acc[year] ? [...acc[year], curr] : [curr],
+    };
+  }, {});
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
@@ -51,7 +59,7 @@ const getSections = cache(async id => {
 });
 
 async function Data() {
-  const sections = await getSections("heksan");
+  const sections = await getSections();
 
   return (
     <WithDividers direction="vertical">

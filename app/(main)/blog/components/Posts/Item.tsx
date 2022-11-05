@@ -1,7 +1,7 @@
 "use client";
 
 import { SkeletonText } from "components/SkeletonText";
-import { formatDate } from "lib/utils/formatDate";
+import { formatDate } from "lib/formatDate";
 import Link from "next/link";
 import { useRef } from "react";
 import { Post } from "types";
