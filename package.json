@@ -19,7 +19,7 @@
     "@vercel/og": "0.0.20",
     "feed": "4.2.2",
     "luxon": "3.1.0",
-    "next": "^13.0.3-canary.0",
+    "next": "13.0.3-canary.0",
     "next-banner": "1.2.132",
     "next-sanity": "1.0.8",
     "next-sanity-image": "4.1.0",
