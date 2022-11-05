@@ -3,12 +3,15 @@ import { ArrowLink } from "components/ArrowLink";
 import { Star } from "components/Icons/Star";
 import { Skeleton } from "components/Skeleton";
 import { SkeletonText } from "components/SkeletonText";
-import { formatDate } from "lib/utils/date";
+import { formatDate } from "lib/utils/formatDate";
 import { Experience } from "types";
 
 export function Item(experience: Experience) {
   const getDate = (): string => {
-    const format = "MMM yyyy";
+    let format: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "short",
+    };
 
     if (experience.date?.end === experience.date?.start) {
       return `${formatDate(experience.date?.end, format)}`;
