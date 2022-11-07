@@ -1,9 +1,11 @@
+/** @type {import("next").NextConfig} */
 module.exports = {
   images: {
     domains: ["cdn.sanity.io"],
   },
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ["sanity", "next-sanity"],
   },
   async rewrites() {
     return [

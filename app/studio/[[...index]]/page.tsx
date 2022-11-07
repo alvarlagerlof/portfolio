@@ -13,6 +13,12 @@ import { NextStudio } from "next-sanity/studio";
 
 import config from "../../../lib/sanity/config";
 
+import "../../global.css";
+
 export default function StudioPage() {
-  return <NextStudio config={config} />;
+  return (
+    <div className="sanity">
+      <NextStudio config={config} />
+    </div>
+  );
 }
