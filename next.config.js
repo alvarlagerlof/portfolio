@@ -5,6 +5,19 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Accept-Encoding",
+            value: "br",
+          },
+        ],
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
