@@ -1843,10 +1843,10 @@ next-sanity-image@5.0.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.8.tgz#248927d6a4730e1aa82b21d8b90ced03f39de365"
-  integrity sha512-8DvKiWqTi5kcxAzSEHVoH34ij0A7+fehB7SvqC1z7w+ZGpThzRf3xXeC2ZvHovDx+sOj0rDdDsdRc0OYefwumw==
+next-sanity@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-1.0.9.tgz#8ae6a63c77035fc7afa7567eb7794c1ff801106f"
+  integrity sha512-Iga8oF8+/sIpk3MJ5DFSDWq5ItOmsOUz0ytNksfp9g1k6aEOtLvT2eQ/vZ1WIxsnZj1tRv8LhAwPewxfM41Krw==
   dependencies:
     "@sanity/client" "^3.4.1"
     "@sanity/groq-store" "^1.0.3"
