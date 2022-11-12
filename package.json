@@ -15,7 +15,7 @@
     "@tailwindcss/typography": "0.5.7",
     "@vercel/og": "0.0.20",
     "feed": "4.2.2",
-    "next": "13.0.3-canary.0",
+    "next": "13.0.3",
     "next-sanity": "1.0.8",
     "next-sanity-image": "5.0.0",
     "react": "18.2.0",
