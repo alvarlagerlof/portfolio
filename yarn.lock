@@ -422,10 +422,10 @@
     "@typescript-eslint/types" "5.42.1"
     eslint-visitor-keys "^3.3.0"
 
-"@vercel/analytics@0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.3.tgz#7d0b7a35a692f16b823f2d22fdd95a955893420b"
-  integrity sha512-zJuEwzvi0bBmWrMrj9jvyMS+X6iUdW3m/y5P7aOLwJQKHsJyfpdINo/4Rv+wxubz3gl4nRqIQdtOFCe1P1ErXQ==
+"@vercel/analytics@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.5.tgz#285275b64a5b47cae0e5d11002fb8856b1ec6b0c"
+  integrity sha512-/k9N8Ea3Yc5A52GlkjzUEbi2vE/izClrOf++ryBkxEfrZM/OZwtHkdNw/QExZ1h/B67RCZLK7bCOnKKrhG7gTg==
 
 "@vercel/og@0.0.20":
   version "0.0.20"
