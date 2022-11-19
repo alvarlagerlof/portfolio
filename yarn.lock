@@ -56,10 +56,10 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.0.4-canary.3.tgz#3d8ca346eae37222748d0821727db6f251c893e7"
   integrity sha512-awrMiFJmLzHMyotCzUH0fkNxBDJn5/dsUjmnT4D0Dwr4iSPrJ7ok6r9OwOVqLYVHD+P8pa2TMPLp3avfzn0H2Q==
 
-"@next/eslint-plugin-next@13.0.4-canary.3":
-  version "13.0.4-canary.3"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.4-canary.3.tgz#4ee8435208c7ac769beaf1aa6b8e0f3e8a090571"
-  integrity sha512-nm19FOEuplhR9muN9Re6brOgAOEmeAiE/aP0IBn7Fh18yguLynxMRbk+kGsByzBJhGPlDKzzwevu2ZRGvnEVyg==
+"@next/eslint-plugin-next@13.0.4":
+  version "13.0.4"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.4.tgz#46800f48d9f81e8bb460319a15a00bf2f4016e91"
+  integrity sha512-jZ4urKT+aO9QHm3ttihrIQscQISDSKK8isAom750+EySn9o3LCSkTdPGBtvBqY7Yku+NqhfQempR5J58DqTaVg==
   dependencies:
     glob "7.1.7"
 
@@ -944,12 +944,12 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-next@13.0.4-canary.3:
-  version "13.0.4-canary.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-13.0.4-canary.3.tgz#c4f6780c7b432620ae0a3f8178f144f92c858c0c"
-  integrity sha512-ixJZ1spCl4X9wQH+uWIY1n98NXHPFFIE+glpy3a9GBZwny/Ese1L+M1y4ytF5MTJtaIMVA9Oq3RTkg/SI+DNZg==
+eslint-config-next@13.0.4:
+  version "13.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-13.0.4.tgz#78954caf26b3aa718bed077bce90c1f505db0005"
+  integrity sha512-moEC7BW2TK7JKq3QfnaauqRjWzVcEf71gp5DbClpFPHM6QXE0u0uVvSTiHlmOgtCe1vyWAO+AhF87ZITd8mIDw==
   dependencies:
-    "@next/eslint-plugin-next" "13.0.4-canary.3"
+    "@next/eslint-plugin-next" "13.0.4"
     "@rushstack/eslint-patch" "^1.1.3"
     "@typescript-eslint/parser" "^5.42.0"
     eslint-import-resolver-node "^0.3.6"
