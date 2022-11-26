@@ -13,7 +13,7 @@
     "@next/font": "13.0.4",
     "@portabletext/react": "2.0.0",
     "@tailwindcss/typography": "0.5.8",
-    "@vercel/og": "0.0.20",
+    "@vercel/og": "0.0.21",
     "feed": "4.2.2",
     "next": "13.0.4",
     "next-sanity": "2.0.2",
