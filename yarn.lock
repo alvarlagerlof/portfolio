@@ -1958,10 +1958,10 @@ next-sanity-image@5.0.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-3.1.1.tgz#965c20115c8f6c772d42037519efab90997ba1b5"
-  integrity sha512-Hc/kwtOnLsC2tS5LWyZCufMyell2ATiMnx4Xmgg1ycdItCHJJ/y3UwP/+oIhRKy6ue36V6wiVc17NdXlG36ccw==
+next-sanity@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-3.1.2.tgz#0fd61fe7f5e89f397c489ce847eb90e7c5811a42"
+  integrity sha512-zTuq8gLorBFNosOWjPj/huAaKWHJuN/sxikQrilzLg0VYo7eJvB/GeBDqXUDG0LhszIVxRJJjydEttr9/kUiGA==
   dependencies:
     "@sanity/client" "^3.4.1"
     "@sanity/preview-kit" "^1.2.9"
