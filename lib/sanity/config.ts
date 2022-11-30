@@ -4,25 +4,14 @@ import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { codeInput } from "@sanity/code-input";
 
+import { projectId, dataset, apiVersion } from "./api";
+
 export default defineConfig({
   basePath: "/studio",
-  /**
-   * Find your project ID and dataset in `sanity.json` in your studio project.
-   * These are considered “public”, but you can use environment variables
-   * if you want differ between local dev and production.
-   *
-   * https://nextjs.org/docs/basic-features/environment-variables
-   **/
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  apiVersion: "2021-03-25",
+  projectId,
+  dataset,
+  apiVersion,
   title: process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || "alvar.dev",
-  /**
-   * Set useCdn to `false` if your application require the freshest possible
-   * data always (potentially slightly slower and a bit more expensive).
-   * Authenticated request (like preview) will always bypass the CDN
-   **/
-  useCdn: process.env.NODE_ENV === "production",
   plugins: [
     deskTool(),
     codeInput(),

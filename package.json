@@ -12,7 +12,7 @@
   "dependencies": {
     "@next/font": "13.0.5",
     "@portabletext/react": "2.0.0",
-    "@sanity/code-input": "^3.0.0-v3-studio.15",
+    "@sanity/code-input": "3.0.0",
     "@tailwindcss/typography": "0.5.7",
     "@vercel/og": "0.0.20",
     "feed": "4.2.2",
@@ -22,7 +22,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-syntax-highlighter": "15.5.0",
-    "sanity": "3.0.0-rc.0"
+    "sanity": "3.0.0-rc.3",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@playwright/test": "1.28.1",
