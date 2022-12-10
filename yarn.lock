@@ -748,10 +748,10 @@
     object-assign "^4.1.1"
     rxjs "^6.0.0"
 
-"@sanity/code-input@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@sanity/code-input/-/code-input-3.0.0.tgz#ca4d01a9cdb956b8321d3d745dc39462d4de6df1"
-  integrity sha512-Ov6csC/t2i6qZbbylGodhMmaygsX/t/TxjCG1L+oGPJNXu3mXQDG8/3PQmZl1Zac1Do90+72eK4/x/xj/+QHBA==
+"@sanity/code-input@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@sanity/code-input/-/code-input-3.0.1.tgz#201d943360258c487e5fc49e08816de4b9cdd3ec"
+  integrity sha512-45EsvoBHP1jTSS87T4pxNj3qzAeSmA9TlPavgb9XagiNjy970nAYYQvggpg/46zu0BJMz2YnzXPAAc0kkHYhtA==
   dependencies:
     "@sanity/icons" "^2.0.0"
     "@sanity/incompatible-plugin" "^1.0.4"
