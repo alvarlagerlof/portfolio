@@ -10,7 +10,7 @@
     "test:hd": "playwright test --headed"
   },
   "dependencies": {
-    "@next/font": "13.0.7",
+    "@next/font": "13.1.0",
     "@portabletext/react": "2.0.0",
     "@sanity/code-input": "3.0.1",
     "@tailwindcss/typography": "0.5.8",
