@@ -1,4 +1,4 @@
-import { PortableText, PortableTextReactComponents } from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
 import { Suspense } from "react";
 
 import { ArrowLink } from "./ArrowLink";
