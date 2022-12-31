@@ -1,11 +1,9 @@
-"use client";
-
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkCold as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import Syntax from "react-syntax-highlighter/dist/esm/default-highlight";
+import coldarkCold from "react-syntax-highlighter/dist/esm/styles/hljs/atelier-plateau-light";
 
 export function CodeBlock({ language, code }) {
   return (
-    <SyntaxHighlighter
+    <Syntax
       customStyle={{
         borderRadius: "0px",
         padding: "16px",
@@ -13,10 +11,10 @@ export function CodeBlock({ language, code }) {
         fontSize: "0.9em",
         width: "100%",
       }}
-      style={style}
+      style={coldarkCold}
       language={language}
     >
       {code}
-    </SyntaxHighlighter>
+    </Syntax>
   );
 }
