@@ -891,10 +891,10 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@^1.2.13":
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-1.2.14.tgz#cc5491b2597730867583b001103ab22b7a049fa3"
-  integrity sha512-cnUlaWjlK+DjIK24KhCfTd6NgJD7AGka/4TYc9PonTR0DkRDaQiSes1Bl5MuAps80XeTel3+ZT6yq9+z5zeDZw==
+"@sanity/preview-kit@^1.2.15":
+  version "1.2.15"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-1.2.15.tgz#f6664427920f383dca431d4daf3d4e71ad139788"
+  integrity sha512-zd9bkpx1Xh7chQu39tG9SOGjTxepd4LKcH2YEznmsaPSr9PJgK3/U2vlVflbX6gHdPSGH3U1yQnq8RW0MkEzdw==
   dependencies:
     "@sanity/groq-store" "^1.1.4"
     "@types/event-source-polyfill" "^1.0.0"
@@ -4115,13 +4115,13 @@ next-sanity-image@5.0.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-3.1.8.tgz#697eaafea902afd04c418e4472cffb02c8fe9ab7"
-  integrity sha512-ZsxLc1eSPDIYP9bsOQ4EXLA9b/tRentaWmUVS6woWqk+0DNordHf12PGm0LAdv6KLatL2ISCqurvYKQWCl9zYw==
+next-sanity@3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-3.1.9.tgz#235c196803aa7b25296a8ad7690fe7f9beaaa14a"
+  integrity sha512-HL9e0UjOzriRYggNH2Jf4xcLEOwlKUJfVM3g0Qlg9Lo4h0TXGfYf/CjMVxDebE01kQ7BWLSAgWbpjzI1rzpR1Q==
   dependencies:
     "@sanity/client" "^3.4.1"
-    "@sanity/preview-kit" "^1.2.13"
+    "@sanity/preview-kit" "^1.2.15"
     "@sanity/webhook" "^2.0.0"
     groq "^2.33.2"
 
