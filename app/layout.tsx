@@ -40,8 +40,6 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         ></link>
 
         <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
-
-        <meta name="monetization" content="$ilp.uphold.com/yGGixMZQUePn"></meta>
       </head>
 
       <body>
