@@ -1,7 +1,5 @@
-// "use client";
-
 import Syntax from "react-syntax-highlighter/dist/esm/default-highlight";
-// import coldarkCold from "react-syntax-highlighter/dist/cjs/styles/prism/coldark-dark";
+import coldarkCold from "react-syntax-highlighter/dist/esm/styles/hljs/atelier-plateau-light";
 
 export function CodeBlock({ language, code }) {
   return (
@@ -13,7 +11,7 @@ export function CodeBlock({ language, code }) {
         fontSize: "0.9em",
         width: "100%",
       }}
-      // style={coldarkCold}
+      style={coldarkCold}
       language={language}
     >
       {code}
