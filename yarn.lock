@@ -4054,10 +4054,10 @@ next-sanity-image@5.0.0:
   dependencies:
     "@sanity/image-url" "^1.0.0"
 
-next-sanity@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.1.1.tgz#19f49003d17123185ba34a8e9d88e03930717c34"
-  integrity sha512-v3xAL5MAD09Co70uGOTIHg1/WsGdZTyZ989MnZnrvZNLcjKJtfZZZYEYmk8HX7B6VgYd1Tsc4e84+QOGzlbtig==
+next-sanity@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.1.2.tgz#e40c1186207d1a215587896df9ac8735cd73c04e"
+  integrity sha512-Em7AB7Ghjf1kiGBUXN0MuNHPZkaG/jM+u/LGURU71lamML5CjckGlHnuIztV65P52PoJRcgTEYWBwh3YlTNQPw==
   dependencies:
     "@sanity/client" "^4"
     "@sanity/preview-kit" "^1.3"
