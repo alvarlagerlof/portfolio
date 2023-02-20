@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.30.0",
-    "@portabletext/to-html": "1.0.4",
+    "@portabletext/to-html": "2.0.0",
     "@portabletext/types": "2.0.2",
     "@types/react": "18.0.28",
     "@vercel/analytics": "0.1.10",
