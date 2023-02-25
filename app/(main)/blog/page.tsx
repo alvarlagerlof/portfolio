@@ -1,7 +1,7 @@
 import { ArrowLink } from "components/ArrowLink";
-import { SetTitle } from "components/SetTitle";
 import { WithDividers } from "components/WithDividers";
 import { getClient } from "lib/sanity/sanity.server";
+import { Metadata } from "next";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
 import { Post, PostPreview, Sections } from "types";
@@ -20,10 +20,24 @@ const query = groq`
 }
 `;
 
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Blog";
+  const description = "I try to put my thoughts into words sometimes";
+
+  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      images: encodeURI(`${domain}/api/og/default?title=${title}&description=${description}`),
+    },
+  };
+}
+
 export default function BlogPage() {
   return (
     <WithDividers direction="vertical">
-      <SetTitle to="Blog" />
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-4">Blog</h1>
 

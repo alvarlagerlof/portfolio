@@ -12,12 +12,12 @@ type ProjectAndIsFirst = Project & {
 };
 
 export function Item({ isFirst, ...project }: ProjectAndIsFirst) {
-  const link = useRef(null);
+  const link = useRef<HTMLAnchorElement | null>(null);
 
   return (
     <li
       onClick={e => {
-        if (link.current !== e.target) {
+        if (link.current && link.current !== e.target) {
           link.current.click();
         }
       }}
