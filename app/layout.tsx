@@ -1,5 +1,6 @@
 import { Inter } from "@next/font/google";
 import localFont from "@next/font/local";
+import { Metadata } from "next";
 // import { AnalyticsWrapper } from "components/Analytics";
 import Script from "next/script";
 
@@ -21,6 +22,17 @@ const spaceText = localFont({
 });
 
 export const revalidate = 120;
+
+export const metadata: Metadata = {
+  openGraph: {
+    siteName: "alvar.dev",
+  },
+  twitter: {
+    site: "@alvarlagerlof",
+    creator: "@alvarlagerlof",
+    card: "summary_large_image",
+  },
+};
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (

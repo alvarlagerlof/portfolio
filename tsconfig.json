@@ -20,7 +20,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -30,7 +31,8 @@
     "postcss.config.js",
     "tailwind.config.js",
     "next-sitemap.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "environment.d.ts"
   ],
   "exclude": ["node_modules"]
 }

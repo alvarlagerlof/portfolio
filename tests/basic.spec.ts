@@ -41,7 +41,8 @@ test.describe("basic flow", () => {
 
     const h1 = await page.locator("h1");
 
-    await expect(page).toHaveURL(href);
+    await expect(href).toBeDefined();
+    await expect(page).toHaveURL(href!);
     await expect(h1).toHaveText(title);
   });
 });

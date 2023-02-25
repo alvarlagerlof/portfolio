@@ -1,15 +1,29 @@
 import { ArrowLink } from "components/ArrowLink";
-import { SetTitle } from "components/SetTitle";
 import { WithDividers } from "components/WithDividers";
+import { Metadata } from "next";
 
 import { FeaturedProjects } from "./components/FeaturedProjects";
 import { Pronunciation } from "./components/Pronunciation";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
 
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Alvar Lagerlöf";
+  const description = "Developer and designer from Stockholm";
+
+  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      images: encodeURI(`${domain}/api/og/default?title=${title}&description=${description}`),
+    },
+  };
+}
+
 export default function IndexPage() {
   return (
     <WithDividers direction="vertical">
-      <SetTitle to="Alvar Lagerlöf" />
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-4">I'm Alvar Lagerlöf</h1>
         <Pronunciation />

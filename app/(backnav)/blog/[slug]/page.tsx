@@ -1,11 +1,29 @@
 import { CustomBlockContent } from "components/CustomBlockContent";
-import { SetTitle } from "components/SetTitle";
 import { SkeletonText } from "components/SkeletonText";
 import { WithDividers } from "components/WithDividers";
 import { formatDate } from "lib/formatDate";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { getPost } from "./getPost";
+
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { title, description } = await getPost(slug);
+
+  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      images: encodeURI(`${domain}/api/og/blogpost?title=${title}&description=${description}`),
+    },
+  };
+}
 
 export default function PostPage({ params: { slug } }: { params: { slug: string } }) {
   return (
@@ -23,7 +41,6 @@ async function Content({ slug }: { slug: string }) {
 
   return (
     <WithDividers direction="vertical">
-      <SetTitle to={post.title} />
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-8">{post.title}</h1>
         <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch] mb-8">

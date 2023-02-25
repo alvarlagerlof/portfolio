@@ -1,6 +1,6 @@
 "use client";
 
-import { sanityClient } from "lib/sanity/sanity.server";
+import { sanityClientLike } from "lib/sanity/sanity.server";
 import { useNextSanityImage } from "next-sanity-image";
 import Image, { ImageProps } from "next/image";
 import { SanityImage } from "types";
@@ -12,7 +12,7 @@ type SanityImageProps = {
 } & ImagePropsWithoutSrc;
 
 export function NextSanityImage({ image, placeholder = "blur", ...props }: SanityImageProps) {
-  const imageProps = useNextSanityImage(sanityClient, image);
+  const imageProps = useNextSanityImage(sanityClientLike, image);
 
   /* eslint-disable */
   return (

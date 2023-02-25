@@ -7,7 +7,7 @@ import { useRef } from "react";
 import { Post } from "types";
 
 export function Item(post: Post) {
-  const link = useRef(null);
+  const link = useRef<HTMLAnchorElement | null>(null);
 
   const truncate = (input, len) => {
     return input.length > len ? `${input.substring(0, len)}...` : input;
@@ -16,7 +16,7 @@ export function Item(post: Post) {
   return (
     <li
       onClick={e => {
-        if (link.current !== e.target) {
+        if (link.current && link.current !== e.target) {
           link.current.click();
         }
       }}

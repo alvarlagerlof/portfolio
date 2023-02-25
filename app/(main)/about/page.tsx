@@ -1,15 +1,29 @@
-import { SetTitle } from "components/SetTitle";
 import { WithDividers } from "components/WithDividers";
+import { Metadata } from "next";
 import Image from "next/image";
 
 import { Exerience } from "./components/Exerience";
 import { SocialLinks } from "./components/SocialLinks";
 import profile from "./profile.png";
 
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "About me";
+  const description = "My story starts with a $2 computer from a flea market";
+
+  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      images: encodeURI(`${domain}/api/og/default?title=${title}&description=${description}`),
+    },
+  };
+}
+
 export default function AboutPage() {
   return (
     <WithDividers direction="vertical">
-      <SetTitle to="About me" />
       <Header />
       <WithDividers direction="horizontal">
         <Story />
