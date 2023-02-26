@@ -1873,7 +1873,7 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bright@^0.7.0:
+bright@0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/bright/-/bright-0.7.0.tgz#7699150f04608c2269dfc25af9b6019565872e0f"
   integrity sha512-eLItPVH/tgyeOC9T24FsBQ57pSglOPoc1V7eG4XpIQzFNQ1aGYGvlQRAw6NUJk7mnd1EOiyXAVpbCgB400ERrA==
