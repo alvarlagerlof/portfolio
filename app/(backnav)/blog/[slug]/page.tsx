@@ -41,10 +41,8 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
         </p>
       </header>
 
-      <article>
-        <div className="prose">
-          <CustomBlockContent blocks={post.body} />
-        </div>
+      <article className="prose">
+        <CustomBlockContent blocks={post.body} />
       </article>
     </WithDividers>
   );
