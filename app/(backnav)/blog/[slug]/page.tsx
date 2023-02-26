@@ -10,15 +10,17 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const { title, description } = await getPost(slug);
+  const post = await getPost(slug);
+
+  if (!post) notFound()
 
   const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
   return {
-    title,
-    description,
+    title: post.title,
+    description: post.description,
     openGraph: {
-      images: encodeURI(`${domain}/api/og/blogpost?title=${title}&description=${description}`),
+      images: encodeURI(`${domain}/api/og/blogpost?title=${post.title}&description=${post.description}`),
     },
   };
 }
@@ -30,9 +32,9 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
 
   return (
     <WithDividers direction="vertical">
-      <header>
-        <h1 className="font-heading text-4xl md:text-7xl mb-8">{post.title}</h1>
-        <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch] mb-8">
+      <header className="space-y-8">
+        <h1 className="font-heading text-4xl md:text-7xl">{post.title}</h1>
+        <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch]">
           {post.description}
         </h2>
         <p className="font-medium">
@@ -47,3 +49,4 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
     </WithDividers>
   );
 }
+
