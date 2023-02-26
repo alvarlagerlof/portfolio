@@ -1,10 +1,8 @@
 import { CustomBlockContent } from "components/CustomBlockContent";
-import { SkeletonText } from "components/SkeletonText";
 import { WithDividers } from "components/WithDividers";
 import { formatDate } from "lib/formatDate";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 import { getPost } from "./getPost";
 
 export async function generateMetadata({
@@ -25,16 +23,7 @@ export async function generateMetadata({
   };
 }
 
-export default function PostPage({ params: { slug } }: { params: { slug: string } }) {
-  return (
-    <Suspense fallback={<Loading />}>
-      {/* @ts-ignore */}
-      <Content slug={slug} />
-    </Suspense>
-  );
-}
-
-async function Content({ slug }: { slug: string }) {
+export default async function PostPage({ params: { slug } }: { params: { slug: string } }) {
   const post = await getPost(slug);
 
   if (!post) notFound();
@@ -52,28 +41,9 @@ async function Content({ slug }: { slug: string }) {
         </p>
       </header>
 
-      <article>
-        <div className="prose">
-          <Suspense>
-            <CustomBlockContent blocks={post.body} />
-          </Suspense>
-        </div>
+      <article className="prose">
+        <CustomBlockContent blocks={post.body} />
       </article>
-    </WithDividers>
-  );
-}
-
-function Loading() {
-  return (
-    <WithDividers direction="vertical">
-      <div>
-        <SkeletonText className="w-[40ch] max-w-full h-[3.5rem] mb-4" />
-        <SkeletonText className="w-[60ch] max-w-full h-[2rem] mb-8" />
-        <SkeletonText className="w-[30ch] max-w-full h-[2rem]" />
-      </div>
-      <div>
-        <SkeletonText className="w-[64ch] max-w-full h-[50rem]" />
-      </div>
     </WithDividers>
   );
 }

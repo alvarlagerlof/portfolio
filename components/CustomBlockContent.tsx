@@ -1,10 +1,8 @@
 import { PortableText } from "@portabletext/react";
-import { Suspense } from "react";
 
 import { ArrowLink } from "./ArrowLink";
 import { CodeBlock } from "./CodeBlock";
 import { NextSanityImage } from "./SanityImage";
-import { Skeleton } from "./Skeleton";
 
 export function CustomBlockContent({ blocks }) {
   return (
@@ -43,11 +41,7 @@ export function CustomBlockContent({ blocks }) {
         types: {
           code(props) {
             const { language, code } = props.value;
-            return (
-              <Suspense fallback={<Skeleton className="w-full h-96" />}>
-                <CodeBlock language={language} code={code} />
-              </Suspense>
-            );
+            return <CodeBlock language={language} code={code} />;
           },
           image({ value }) {
             return (
