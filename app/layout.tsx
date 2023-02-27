@@ -32,31 +32,33 @@ export const metadata: Metadata = {
     creator: "@alvarlagerlof",
     card: "summary_large_image",
   },
+  icons: [
+    {
+      url: "/favicons/favicon.ico"
+    },
+    {
+      url: "/favicons/favicon-16x16.png",
+      sizes: "16x16",
+    },
+    {
+      url: "/favicons/favicon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      url: "/favicons/favicon-192x192.png",
+      sizes: "192x192",
+    }
+  ],
+  themeColor: "#16a34a"
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <meta name="theme-color" content="#16a34a"></meta>
-
-        <link rel="icon" href="/favicons/favicon.ico"></link>
-        <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16"></link>
-        <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32"></link>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicons/favicon-192x192.png"
-          sizes="192x192"
-        ></link>
-
-        <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
-      </head>
-
       <body>
         {children}
         {/* <AnalyticsWrapper /> */}
+        <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
       </body>
     </html>
   );
