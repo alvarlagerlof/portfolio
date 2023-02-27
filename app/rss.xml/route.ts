@@ -7,7 +7,6 @@ import { Feed } from "feed";
 import { Post } from "types";
 import { getClient } from "lib/sanity/sanity.server";
 import { groq } from "next-sanity";
-import { NextApiRequest, NextApiResponse } from "next";
 
 const html = htm.bind(vhtml);
 
@@ -22,7 +21,7 @@ const query = groq`
 }
 `;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
   try {
     const posts: Post[] = await getClient().fetch(query);
 
@@ -72,9 +71,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const rss = feed.rss2();
 
-    res.status(200).send(rss);
+    return new Response(rss);
   } catch (e: any) {
     console.log(`${e.message}`);
-    res.status(500).send({ error: "failed generate feed" });
+    return new Response(JSON.stringify({ error: "failed generate feed" }), { status: 500 });
   }
 }
