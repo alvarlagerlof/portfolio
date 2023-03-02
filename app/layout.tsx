@@ -21,7 +21,7 @@ const spaceText = localFont({
   variable: "--font-space-text",
 });
 
-export const revalidate = 120;
+export const revalidate = 600;
 
 export const metadata: Metadata = {
   openGraph: {
