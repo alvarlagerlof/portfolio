@@ -1,8 +1,10 @@
 import { PortableText } from "@portabletext/react";
+import { Suspense } from "react";
 
 import { ArrowLink } from "./ArrowLink";
 import { CodeBlock } from "./CodeBlock";
 import { NextSanityImage } from "./SanityImage";
+import { Skeleton } from "./Skeleton";
 
 export function CustomBlockContent({ blocks }) {
   return (
@@ -41,13 +43,17 @@ export function CustomBlockContent({ blocks }) {
         types: {
           code(props) {
             const { language, code } = props.value;
-            return <CodeBlock language={language} code={code} />;
+            return (
+              <Suspense fallback={<Skeleton className="w-full h-48 rounded-2xl"/>}>
+                <CodeBlock language={language} code={code} />
+              </Suspense>
+            );
           },
           image({ value }) {
             return (
               <NextSanityImage
                 image={value}
-                className="rounded-3xl border-2 border-imgborder"
+                className="rounded-2xl border-2 border-imgborder"
                 alt={value.caption}
               />
             );
