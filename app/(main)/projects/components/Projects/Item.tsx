@@ -25,7 +25,7 @@ export function Item({ isFirst, ...project }: ProjectAndIsFirst) {
     >
       <NextSanityImage
         image={project.banner}
-        className="rounded-3xl border-2 border-imgborder bg-cover"
+        className="rounded-2xl border-2 border-imgborder bg-cover"
         alt="Project logo banner"
         width={400}
         height={230}
@@ -49,7 +49,7 @@ export function Item({ isFirst, ...project }: ProjectAndIsFirst) {
 export function ItemLoading() {
   return (
     <div>
-      <Skeleton className="w-full h-[180px] !rounded-3xl" />
+      <Skeleton className="w-full h-[180px] !rounded-2xl" />
       <SkeletonText className="w-48 max-w-full h-[1.5rem] mb-2 mt-6" />
       <SkeletonText className="w-36 max-w-full h-[1rem]" />
     </div>

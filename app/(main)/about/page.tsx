@@ -48,7 +48,7 @@ function Header() {
       <div className="max-w-[500px] sm:min-w-[300px]">
         <Image
           src={profile}
-          className="rounded-3xl w-full border-2 border-imgborder bg-cover"
+          className="rounded-2xl w-full border-2 border-imgborder bg-cover"
           width={1000}
           height={800}
           alt="Portrait of Alvar Lagerlöf"
