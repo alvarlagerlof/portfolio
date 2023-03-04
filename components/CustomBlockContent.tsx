@@ -44,7 +44,7 @@ export function CustomBlockContent({ blocks }) {
           code(props) {
             const { language, code } = props.value;
             return (
-              <Suspense fallback={<Skeleton className="w-full h-48"/>}>
+              <Suspense fallback={<Skeleton className="w-full h-48 rounded-2xl"/>}>
                 <CodeBlock language={language} code={code} />
               </Suspense>
             );
