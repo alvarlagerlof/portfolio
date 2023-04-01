@@ -1,4 +1,4 @@
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { cache } from "react";
 import { Post } from "types";
@@ -31,7 +31,7 @@ const query = groq`
 export const getPost = cache(async (slug: string) => {
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
-  return await getClient().fetch<Post>(query, {
+  return await sanityClient.fetch<Post>(query, {
     slug,
   });
 });

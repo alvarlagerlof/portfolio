@@ -1,5 +1,5 @@
 import { ArrowLink } from "components/ArrowLink";
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Project } from "types";
@@ -34,7 +34,7 @@ export function FeaturedProjects() {
 }
 
 async function Projects() {
-  const projects: Project[] = await getClient().fetch(query);
+  const projects: Project[] = await sanityClient.fetch(query);
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 

@@ -1,4 +1,4 @@
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Experience } from "types";
@@ -32,7 +32,7 @@ export async function Exerience() {
 }
 
 async function ExperienceList() {
-  const experience: Experience[] = await getClient().fetch(query);
+  const experience: Experience[] = await sanityClient.fetch(query);
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
