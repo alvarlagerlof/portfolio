@@ -29,6 +29,3 @@ jobs:
         id: run-checks
         run: yarn checkly test -e ENVIRONMENT_URL=${{ env.ENVIRONMENT_URL }}
         continue-on-error: false
-      - name: Deploy checks
-        if: steps.run-checks.outcome == 'success'
-        run: npm run checkly:deploy
