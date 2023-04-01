@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     openGraph: {
-      images: encodeURI(`${domain}/api/og/default?title=${title}&description=${description}`),
+      images: encodeURI(`${domain}/og/default?title=${title}&description=${description}`),
     },
   };
 }

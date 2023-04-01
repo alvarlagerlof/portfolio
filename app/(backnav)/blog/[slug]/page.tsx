@@ -22,7 +22,7 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     openGraph: {
-      images: encodeURI(`${domain}/api/og/blogpost?title=${post.title}&description=${post.description}`),
+      images: encodeURI(`${domain}/og/blogpost?title=${post.title}&description=${post.description}`),
     },
   };
 }
