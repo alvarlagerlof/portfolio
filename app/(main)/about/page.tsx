@@ -27,13 +27,11 @@ export default function AboutPage() {
   return (
     <WithDividers direction="vertical">
       <Header />
-      <WithDividers direction="horizontal">
+      {/* <WithDividers direction="horizontal">
         <Story />
-        {/* @ts-ignore */}
         <SocialLinks />
       </WithDividers>
-      {/* @ts-ignore */}
-      <Exerience />
+      <Exerience /> */}
     </WithDividers>
   );
 }
