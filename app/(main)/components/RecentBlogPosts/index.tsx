@@ -1,5 +1,5 @@
 import { ArrowLink } from "components/ArrowLink";
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { PostPreview } from "types";
@@ -38,7 +38,7 @@ export function RecentBlogPosts() {
 }
 
 async function Posts() {
-  const posts: PostPreview[] = await getClient().fetch(query);
+  const posts: PostPreview[] = await sanityClient.fetch(query);
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 

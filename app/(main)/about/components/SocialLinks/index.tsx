@@ -1,4 +1,4 @@
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Social } from "types";
@@ -36,7 +36,7 @@ export async function SocialLinks() {
 }
 
 async function SocialLinksList() {
-  const socialLinks: Social[] = await getClient().fetch(query);
+  const socialLinks: Social[] = await sanityClient.fetch(query);
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   return (

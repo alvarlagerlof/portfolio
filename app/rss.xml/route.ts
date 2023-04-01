@@ -5,7 +5,7 @@ import vhtml from "vhtml";
 import { Feed } from "feed";
 
 import { Post } from "types";
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { groq } from "next-sanity";
 
 const html = htm.bind(vhtml);
@@ -23,7 +23,7 @@ const query = groq`
 
 export async function GET() {
   try {
-    const posts: Post[] = await getClient().fetch(query);
+    const posts: Post[] = await sanityClient.fetch(query);
 
     const feed = new Feed({
       title: "Alvar Lagerlöf's Blog",

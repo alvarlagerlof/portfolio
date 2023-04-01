@@ -1,6 +1,6 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
-import { getClient } from "lib/sanity/sanity.server";
+import { sanityClient } from "lib/sanity/client";
 import { Metadata } from "next";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
@@ -56,7 +56,7 @@ export default function BlogPage() {
 }
 
 const getSections = cache(async () => {
-  const posts: PostPreview[] = await getClient().fetch(query);
+  const posts: PostPreview[] = await sanityClient.fetch(query);
 
   const sections = posts.reduce((acc: Sections, curr: Post) => {
     const year: number = new Date(curr.date.published).getFullYear();
