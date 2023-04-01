@@ -224,7 +224,7 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@checkly/cli@^0.4.9":
+"@checkly/cli@0.4.9":
   version "0.4.9"
   resolved "https://registry.yarnpkg.com/@checkly/cli/-/cli-0.4.9.tgz#34d1779925d286eeb9638de8c8e4034aa10b97ef"
   integrity sha512-xIowfoQwePuyN9Vhta8rDInV4F7ttGvNtwAXZbWMfqAY3rTTayFszeE1wsqu9xbyynxVRnJ+4oUHL0Hdzdk1Vw==
