@@ -1,6 +1,8 @@
 {
-  "extends": "next",
+  "extends": ["nest", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "rules": {
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "prettier/prettier": "error"
   }
 }
