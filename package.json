@@ -32,7 +32,7 @@
     "@playwright/test": "1.32.1",
     "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "2.0.2",
-    "@types/react": "18.0.31",
+    "@types/react": "18.0.32",
     "@vercel/analytics": "0.1.11",
     "autoprefixer": "10.4.14",
     "eslint": "8.37.0",
