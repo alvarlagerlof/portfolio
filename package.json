@@ -28,7 +28,7 @@
     "styled-components": "5.3.9"
   },
   "devDependencies": {
-    "@checkly/cli": "0.4.9",
+    "@checkly/cli": "0.4.11",
     "@playwright/test": "1.32.1",
     "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "2.0.2",
