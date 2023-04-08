@@ -35,7 +35,7 @@
     "@types/react": "18.0.33",
     "@vercel/analytics": "0.1.11",
     "autoprefixer": "10.4.14",
-    "eslint": "8.37.0",
+    "eslint": "8.38.0",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "8.8.0",
     "htm": "3.1.1",
