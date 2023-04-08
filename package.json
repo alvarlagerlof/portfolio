@@ -12,7 +12,7 @@
     "checkly:test": "npx checkly test"
   },
   "dependencies": {
-    "@next/font": "13.2.4",
+    "@next/font": "13.3.0",
     "@portabletext/react": "2.0.2",
     "@sanity/code-input": "4.1.0",
     "@tailwindcss/typography": "0.5.9",
