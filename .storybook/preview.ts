@@ -1,19 +1,27 @@
 import { Preview } from '@storybook/react'
 
+import style1 from "./style1.css"
+import style2 from "./style2.css"
+import style3 from "./style3.css"
+
+
 async function loadStyle1() {
   await new Promise(resolve => setTimeout(resolve, 30));
-  return `button { background: red !important; }`
+  return style1
+  // return (await import(/* webpackIgnore: true */ "./style1.css")).default
 }
 
 async function loadStyle2() {
   await new Promise(resolve => setTimeout(resolve, 30));
-  return `button { background: green !important; }`
+  return style2
+  // return (await import(/* webpackIgnore: true */ "./style2.css")).default
 }
 
 
 async function loadStyle3() {
   await new Promise(resolve => setTimeout(resolve, 30));
-  return `button { padding: 20px !important; }`
+  return style3
+  // return (await import(/* webpackIgnore: true */ "./style3.css")).default
 }
 
 async function withStyles(context) {
