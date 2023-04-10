@@ -7,13 +7,19 @@ async function withStyles(context) {
   console.log("before")
   await new Promise(resolve => setTimeout(resolve, 30));
 
-  var style = document.createElement('style');
-  style.id = 'myFavicon';
-  style.textContent = `button { background: red !important; }`
 
-  document.head.appendChild(style)
+  const existingStyleTag = document.querySelector('[data-name="customStyle"]')
+
+  if (existingStyleTag) {
+    existingStyleTag.textContent = `button { background: green !important; }`
+  } else {
+    var style = document.createElement('style');
+    style.textContent = `button { background: red !important; }`
+    style.dataset.name = "customStyle"
+    document.head.appendChild(style)
+  }
+
   console.log("after")
-
   console.log(context)
 
 
