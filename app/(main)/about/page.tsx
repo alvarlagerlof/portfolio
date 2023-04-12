@@ -6,6 +6,8 @@ import { Exerience } from "./components/Exerience";
 import { SocialLinks } from "./components/SocialLinks";
 import profile from "./profile.png";
 
+export const runtime = "edge"
+
 export async function generateMetadata(): Promise<Metadata> {
   const title = "About me";
   const description = "My story starts with a $2 computer from a flea market";
