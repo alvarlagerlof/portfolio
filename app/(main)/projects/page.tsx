@@ -3,6 +3,8 @@ import { WithDividers } from "components/WithDividers";
 import { Metadata } from "next";
 import { Projects } from "./components/Projects";
 
+export const runtime = "edge"
+
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Projects";
   const description = "These are some of the projects I've worked on";

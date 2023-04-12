@@ -20,6 +20,9 @@ const query = groq`
 }
 `;
 
+export const runtime = "edge"
+
+
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Blog";
   const description = "I try to put my thoughts into words sometimes";
