@@ -3062,34 +3062,6 @@
     "@storybook/client-logger" "7.0.4"
     "@storybook/manager-api" "7.0.4"
 
-"@storybook/blocks@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.4.tgz#300d5e7b3c0c10995aaaa870553b13988355d241"
-  integrity sha512-ybFuFMW1l/12dDqfOfO37cLS6m3A4/3Z7MbaN743SsBzuVOfThCd7V7ErWpKDDHpoIk+3osWkg0QuqZoO5Irkw==
-  dependencies:
-    "@storybook/channels" "7.0.4"
-    "@storybook/client-logger" "7.0.4"
-    "@storybook/components" "7.0.4"
-    "@storybook/core-events" "7.0.4"
-    "@storybook/csf" "^0.1.0"
-    "@storybook/docs-tools" "7.0.4"
-    "@storybook/global" "^5.0.0"
-    "@storybook/manager-api" "7.0.4"
-    "@storybook/preview-api" "7.0.4"
-    "@storybook/theming" "7.0.4"
-    "@storybook/types" "7.0.4"
-    "@types/lodash" "^4.14.167"
-    color-convert "^2.0.1"
-    dequal "^2.0.2"
-    lodash "^4.17.21"
-    markdown-to-jsx "^7.1.8"
-    memoizerific "^1.11.3"
-    polished "^4.2.2"
-    react-colorful "^5.1.2"
-    telejson "^7.0.3"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
-
 "@storybook/blocks@7.0.5":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.5.tgz#9d0a54145ea6f0f5ef909f26769ccd805a8983a8"
