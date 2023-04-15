@@ -39,7 +39,7 @@
     "@storybook/addon-interactions": "7.0.4",
     "@storybook/addon-links": "7.0.4",
     "@storybook/blocks": "7.0.4",
-    "@storybook/nextjs": "7.0.2",
+    "@storybook/nextjs": "7.0.4",
     "@storybook/react": "7.0.2",
     "@storybook/testing-library": "0.0.14-next.2",
     "@types/react": "18.0.33",
