@@ -35,7 +35,7 @@
     "@playwright/test": "1.32.3",
     "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "2.0.2",
-    "@storybook/addon-essentials": "7.0.2",
+    "@storybook/addon-essentials": "7.0.4",
     "@storybook/addon-interactions": "7.0.2",
     "@storybook/addon-links": "7.0.2",
     "@storybook/blocks": "7.0.2",
