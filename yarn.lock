@@ -2849,7 +2849,7 @@
     remark-slug "^6.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-essentials@^7.0.2":
+"@storybook/addon-essentials@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-7.0.2.tgz#38e46af7639b5d12255dbfb2b66478a22f9ddb09"
   integrity sha512-LAsWsXa/Pp2B4Ve2WVgc990FtsiHpFDRsq7S3V7xRrZP8DYRbtJIVdszPMDS5uKC+yzbswFEXz08lqbGvq8zgQ==
@@ -2878,7 +2878,7 @@
     "@storybook/global" "^5.0.0"
     "@storybook/preview-api" "7.0.2"
 
-"@storybook/addon-interactions@^7.0.2":
+"@storybook/addon-interactions@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-interactions/-/addon-interactions-7.0.2.tgz#0d03b98da000f633a4c9320e190d363913fa7b79"
   integrity sha512-vPWnyGND4s9nVp+U21N/jE00dCRsHcKU68SoL4OiIZioTTRbLvrTG9eAdBkZXsVPpFHq8gndma3nXfplOSSckg==
@@ -2897,7 +2897,7 @@
     polished "^4.2.2"
     ts-dedent "^2.2.0"
 
-"@storybook/addon-links@^7.0.2":
+"@storybook/addon-links@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-7.0.2.tgz#149e3af921ecb7e4db63bdd9aabcf0e2167bdfab"
   integrity sha512-lPtfy2MqrcI9YjupBM2eRKGPdFKVPCz7WgO/JQQakGugORJTEGCyJrNJNtWY9jDenv8ynLZ40OxtPBZi54Sr6Q==
@@ -2983,7 +2983,7 @@
     "@storybook/client-logger" "7.0.2"
     "@storybook/manager-api" "7.0.2"
 
-"@storybook/blocks@7.0.2", "@storybook/blocks@^7.0.2":
+"@storybook/blocks@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.2.tgz#b4bdcb9ca48d89804dd5ad939abc3b0c2df73e35"
   integrity sha512-JzHmU8jZLzeQ6bunzci8j/2Ji18GBTyhrPFLk5RjEbMNGWpGjvER/yR127tZOdbPguVNr4iVbRfGzd1wGHlrzA==
@@ -3393,7 +3393,7 @@
   resolved "https://registry.yarnpkg.com/@storybook/mdx2-csf/-/mdx2-csf-1.0.0.tgz#ce4b2e44c9082bf382db835eef611b0097b7d771"
   integrity sha512-dBAnEL4HfxxJmv7LdEYUoZlQbWj9APZNIbOaq0tgF8XkxiIbzqvgB0jhL/9UOrysSDbQWBiCRTu2wOVxedGfmw==
 
-"@storybook/nextjs@^7.0.2":
+"@storybook/nextjs@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/nextjs/-/nextjs-7.0.2.tgz#682332147af4290568805afd1fd7bddd55b73135"
   integrity sha512-ZFkUQci1yvm/HT3EPnBhsrVjHlL0jJgDkxQRo+jJj51YCyfRmoQ6I0/MmfheUiktG2hC5MlUhmD7nWTYk0ERiA==
@@ -3516,7 +3516,7 @@
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.2.tgz#50ca149ad76c226301d273d7870bb2f94d380ce6"
   integrity sha512-fMl0aV7mJ3wyQKvt6z+rZuiIiSd9YinS77IJ1ETHqVZ4SxWriOS0GFKP6sZflrlpShoZBh+zl1lDPG7ZZdrQGw==
 
-"@storybook/react@7.0.2", "@storybook/react@^7.0.2":
+"@storybook/react@7.0.2":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.2.tgz#64f13f8280275ada53684708c8e08f99512f27a7"
   integrity sha512-2P7Oju1XKWMyn75dO0vjL4gthzBL/lLiCBRyAHKXZJ1H2eNdWjXkOOtH1HxnbRcXjWSU4tW96dqKY8m0iR9zAA==
@@ -3575,7 +3575,7 @@
     nanoid "^3.3.1"
     read-pkg-up "^7.0.1"
 
-"@storybook/testing-library@^0.0.14-next.2":
+"@storybook/testing-library@0.0.14-next.2":
   version "0.0.14-next.2"
   resolved "https://registry.yarnpkg.com/@storybook/testing-library/-/testing-library-0.0.14-next.2.tgz#458e6c7623118e24826ba73b80db0a887f3f57e8"
   integrity sha512-i/SLSGm0o978ELok/SB4Qg1sZ3zr+KuuCkzyFqcCD0r/yf+bG35aQGkFqqxfSAdDxuQom0NO02FE+qys5Eapdg==
@@ -5375,7 +5375,7 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^6.17.3:
+chromatic@6.17.3:
   version "6.17.3"
   resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.17.3.tgz#e0825f30e3efe71b016f7b5e265fbfbfde71c522"
   integrity sha512-x6WAHLBqub/BYiGXEOsgw9T3m459SmwOvIz0Ra7rCriE2A9AqDKRmVdAEhzVud24ut6ehd54FJpDtArnR5/TbA==
@@ -11619,7 +11619,7 @@ store2@^2.14.2:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-storybook@^7.0.2:
+storybook@7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/storybook/-/storybook-7.0.2.tgz#b12f4214cb0b0307d944d5d820b8855f89396159"
   integrity sha512-/XBLhT9Vb14yNBcA9rlW15y+C6IsCA3kx5PKvK9kL10sKCi8invcY94UfCSisXe8HqsO3u6peumo2xpYucKMjw==
