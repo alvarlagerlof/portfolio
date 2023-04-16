@@ -41,7 +41,7 @@
     "@storybook/blocks": "7.0.5",
     "@storybook/nextjs": "7.0.5",
     "@storybook/react": "7.0.5",
-    "@storybook/testing-library": "0.0.14-next.2",
+    "@storybook/testing-library": "0.1.0",
     "@types/react": "18.0.35",
     "@vercel/analytics": "0.1.11",
     "autoprefixer": "10.4.14",
