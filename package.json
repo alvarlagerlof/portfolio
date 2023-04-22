@@ -40,7 +40,7 @@
     "@storybook/addon-links": "7.0.6",
     "@storybook/blocks": "7.0.6",
     "@storybook/nextjs": "7.0.6",
-    "@storybook/react": "7.0.5",
+    "@storybook/react": "7.0.6",
     "@storybook/testing-library": "0.1.0",
     "@types/react": "18.0.35",
     "@vercel/analytics": "0.1.11",
