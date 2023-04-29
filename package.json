@@ -20,7 +20,7 @@
     "@sanity/code-input": "4.1.0",
     "@tailwindcss/typography": "0.5.9",
     "@vercel/og": "0.5.4",
-    "bright": "0.7.2",
+    "bright": "0.8.0",
     "feed": "4.2.2",
     "next": "13.3.1",
     "next-sanity": "4.1.7",
