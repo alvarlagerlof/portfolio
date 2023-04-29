@@ -9465,10 +9465,10 @@ next-sanity-image@6.0.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.1.7.tgz#8bec14e6b74a1e82d6d7df19f1a011b3eba58fde"
-  integrity sha512-bMYVeE6Uwg7WW2/zVCAgQ8S+uFIi03Vhgrf1fTRQjEZY9rIGGbYSZ4wiDwsix+ms/zClzpqkUR91mmBR2tNN/Q==
+next-sanity@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.2.0.tgz#1d6cfcaef024801da359e5da659f6eedc7efd2fa"
+  integrity sha512-4GNEgXXDWPlvXqdJaAfKBR8BNvwQqUCynJ9GCgL6tVGcfZvcAImyZkzLTXj75PTZDPDcc7OfKHXg+XbmbUp7hA==
   dependencies:
     "@sanity/client" "5"
     "@sanity/preview-kit" "1.4.0"
