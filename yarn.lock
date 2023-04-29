@@ -5124,10 +5124,10 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bright@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/bright/-/bright-0.8.0.tgz#4fa44bf3ed69f777686cbb7a450fa6608115f52c"
-  integrity sha512-ChYAnh3UokVnDKTsZJojfqvO0z46QspQogCYpb6Z6l2lil0CtMxocKG1OEOWJRfHc6gtwGAfricWy69bzcpNwA==
+bright@0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/bright/-/bright-0.8.2.tgz#b0a27a4ac4f429fb75852743343bf18f077a63ad"
+  integrity sha512-5V5AZ7Fyykz9DVSiauXKXvN+5UlYi2JkK/QXWynW98rHGvM9GtHsEs9v+ml7xX49+zxsk9QUob72i4091VCDvQ==
   dependencies:
     "@code-hike/lighter" "0.6.6"
     server-only "^0.0.1"
