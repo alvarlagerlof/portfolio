@@ -2214,10 +2214,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@portabletext/react@2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-2.0.3.tgz#df7aa932a8a94974e4202323e83d5a5989ad5e46"
-  integrity sha512-dfsqsmh4loX28lTRWqUKyNEnsn1+tsJxjs7TVh5C4tpm4lbOjkyHJQwqcziSthr8D8xaMjkFyeGY6yV8HTMQDg==
+"@portabletext/react@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.0.tgz#9066e00500ef5f30a92d9eb26bcd2209be1c8aad"
+  integrity sha512-bvh9Ls3ZOa7rPOtJ2fTrTFAC6nXAwHlyt1ukFqFSgTehtsgl91WB2kaBa3XdXCBiobzED3OPcLZ3Y3fsb9ZFiQ==
   dependencies:
     "@portabletext/toolkit" "^2.0.1"
     "@portabletext/types" "^2.0.2"
