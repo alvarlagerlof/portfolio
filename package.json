@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@next/font": "13.3.2",
-    "@portabletext/react": "2.0.3",
+    "@portabletext/react": "3.0.0",
     "@sanity/code-input": "4.1.0",
     "@tailwindcss/typography": "0.5.9",
     "@vercel/og": "0.5.4",
