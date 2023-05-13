@@ -47,7 +47,7 @@
     "autoprefixer": "10.4.14",
     "chromatic": "6.17.4",
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.1",
+    "eslint-config-next": "13.4.2",
     "eslint-config-prettier": "8.8.0",
     "htm": "3.1.1",
     "postcss": "8.4.23",
