@@ -2921,34 +2921,6 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/blocks@7.0.9":
-  version "7.0.9"
-  resolved "https://registry.yarnpkg.com/@storybook/blocks/-/blocks-7.0.9.tgz#00167a8a68a62bcfc0d8780e5c649719e62a3b95"
-  integrity sha512-Mk0sMYvpKy0S+nmxl3QUzf7uqYTrYv9y06D+Ii4Se1Czmwo2+a7ABjmLIzAKQbdBx7ZqUCxW48Ip+X9vQHL/Iw==
-  dependencies:
-    "@storybook/channels" "7.0.9"
-    "@storybook/client-logger" "7.0.9"
-    "@storybook/components" "7.0.9"
-    "@storybook/core-events" "7.0.9"
-    "@storybook/csf" "^0.1.0"
-    "@storybook/docs-tools" "7.0.9"
-    "@storybook/global" "^5.0.0"
-    "@storybook/manager-api" "7.0.9"
-    "@storybook/preview-api" "7.0.9"
-    "@storybook/theming" "7.0.9"
-    "@storybook/types" "7.0.9"
-    "@types/lodash" "^4.14.167"
-    color-convert "^2.0.1"
-    dequal "^2.0.2"
-    lodash "^4.17.21"
-    markdown-to-jsx "^7.1.8"
-    memoizerific "^1.11.3"
-    polished "^4.2.2"
-    react-colorful "^5.1.2"
-    telejson "^7.0.3"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
-
 "@storybook/builder-manager@7.0.9":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/builder-manager/-/builder-manager-7.0.9.tgz#1d1991bc347c7f9c0a1c8521f93980d8d00e6386"
