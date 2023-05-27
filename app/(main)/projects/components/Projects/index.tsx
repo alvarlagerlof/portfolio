@@ -13,8 +13,14 @@ const query = groq`
   link,
   banner {
     asset->{
-      ...,
-      metadata
+      _id,
+      metadata {
+        lqip,
+        dimensions {
+          width,
+          height
+        }
+      }
     }
   }
 }
@@ -38,7 +44,16 @@ async function ProjectsList() {
   return (
     <>
       {projects.map((project, i) => {
-        return <Item key={project._id} {...project} isFirst={i == 0} />;
+        return (
+          <Item
+            key={project._id}
+            banner={project.banner}
+            link={project.link}
+            name={project.name}
+            description={project.description}
+            isFirst={i == 0}
+          />
+        );
       })}
     </>
   );

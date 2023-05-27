@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 import { ArrowLink } from "./ArrowLink";
 import { CodeBlock } from "./CodeBlock";
-import { NextSanityImage } from "./SanityImage";
+import { NextSanityImage } from "./NextSanityImage";
 import { Skeleton } from "./Skeleton";
 
 export function CustomBlockContent({ blocks }) {

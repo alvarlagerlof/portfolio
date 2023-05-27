@@ -20,8 +20,14 @@ const query = groq`
     },
     _type == "image" => {
       asset->{
-        ...,
-        metadata
+        _id,
+        metadata {
+          lqip,
+          dimensions {
+            width,
+            height
+          }
+        }
       }
     }
   }

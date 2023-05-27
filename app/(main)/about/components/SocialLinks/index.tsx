@@ -9,12 +9,17 @@ const query = groq`
 *[_type == "social"] {
   _id,
   networkName,
-  userName,
   link,
   icon {
     asset->{
-      ...,
-      metadata
+      _id,
+      metadata {
+        lqip,
+        dimensions {
+          width,
+          height
+        }
+      }
     }
   }
 }
@@ -42,7 +47,14 @@ async function SocialLinksList() {
   return (
     <>
       {socialLinks.map(social => {
-        return <Item {...social} key={social._id} />;
+        return (
+          <Item
+            key={social._id}
+            icon={social.icon}
+            networkName={social.networkName}
+            link={social.link}
+          />
+        );
       })}
     </>
   );

@@ -1,34 +1,21 @@
-"use client";
-
 import { SkeletonText } from "components/SkeletonText";
 import { formatDate } from "lib/formatDate";
 import Link from "next/link";
-import { useRef } from "react";
 import { Post } from "types";
 
-export function Item(post: Post) {
-  const link = useRef<HTMLAnchorElement | null>(null);
+const truncate = (input, len) => {
+  return input.length > len ? `${input.substring(0, len)}...` : input;
+};
 
-  const truncate = (input, len) => {
-    return input.length > len ? `${input.substring(0, len)}...` : input;
-  };
 
+export function Item({ date, slug, description, title }: Omit<Post, "_id" | "body">) {
   return (
-    <li
-      onClick={e => {
-        if (link.current && link.current !== e.target) {
-          link.current.click();
-        }
-      }}
-      className="cursor-pointer"
-    >
-      <em className="block">{formatDate(post.date.published)}</em>
+    <li>
+      <em className="block">{formatDate(date.published)}</em>
       <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
-        <Link href={`blog/${post.slug?.current}`} ref={link}>
-          {post.title}
-        </Link>
+        <Link href={`blog/${slug?.current}`}>{title}</Link>
       </h4>
-      <p>{truncate(post.description, 100)}</p>
+      <p>{truncate(description, 100)}</p>
     </li>
   );
 }

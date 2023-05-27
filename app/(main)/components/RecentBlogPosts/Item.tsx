@@ -1,27 +1,13 @@
-"use client";
-
 import Link from "next/link";
-import { useRef } from "react";
 import { PostPreview } from "types";
 
-export function Item({ post }: { post: PostPreview }) {
-  const link = useRef<HTMLAnchorElement | null>(null);
-
+export function Item({ title, description, slug }: Omit<PostPreview, "_id" | "date" | "body">) {
   return (
-    <li
-      onClick={e => {
-        if (link.current && link.current !== e.target) {
-          link.current.click();
-        }
-      }}
-      className="cursor-pointer"
-    >
+    <li>
       <h4 className="text-xl font-subheading font-semibold mb-1">
-        <Link href={`/blog/${post.slug?.current}`} ref={link}>
-          {post.title}
-        </Link>
+        <Link href={`/blog/${slug?.current}`}>{title}</Link>
       </h4>
-      <p>{post.description}</p>
+      <p>{description}</p>
     </li>
   );
 }

@@ -6,44 +6,44 @@ import { formatDate } from "lib/formatDate";
 import { Experience } from "types";
 import { PortableText } from "@portabletext/react";
 
-export function Item(experience: Experience) {
+export function Item({ date, company, jobTitle, body, link, employmentType  }: Omit<Experience, "_id">) {
   const getDate = (): string => {
     let format: Intl.DateTimeFormatOptions = {
       year: "numeric",
       month: "short",
     };
 
-    if (experience.date?.end === experience.date?.start) {
-      return `${formatDate(experience.date?.end, format)}`;
+    if (date?.end === date?.start) {
+      return `${formatDate(date?.end, format)}`;
     }
 
-    if (experience.date?.start && !experience.date?.end) {
-      return `${formatDate(experience.date?.start, format)} - Present`;
+    if (date?.start && !date?.end) {
+      return `${formatDate(date?.start, format)} - Present`;
     }
 
-    return `${formatDate(experience.date?.start, format)} - ${formatDate(
-      experience.date?.end,
+    return `${formatDate(date?.start, format)} - ${formatDate(
+      date?.end,
       format
     )}`;
   };
 
   return (
-    <li key={experience._id} className="flex flex-row space-x-4 items-start">
+    <li className="flex flex-row space-x-4 items-start">
       <Star aria-hidden className="mt-0.5" />
 
       <div>
         <h4 className="text-xl font-subheading font-semibold mb-1">
-          {experience?.jobTitle} at {experience?.company}
+          {jobTitle} at {company}
         </h4>
         <em className="block mb-2">
-          {experience?.employmentType} • {getDate()}
+          {employmentType} • {getDate()}
         </em>
         <div className="prose">
-          <PortableText value={experience?.body} />
+          <PortableText value={body} />
         </div>
-        {experience.link && (
+        {link && (
           <div className="mt-4">
-            <ArrowLink href={experience?.link}>Learn more</ArrowLink>
+            <ArrowLink href={link}>Learn more</ArrowLink>
           </div>
         )}
       </div>
