@@ -45,12 +45,7 @@ async function Posts() {
   return (
     <>
       {posts.map(post => (
-        <Item
-          key={post._id}
-          title={post.title}
-          description={post.description}
-          slug={post.slug}
-        />
+        <Item key={post._id} title={post.title} description={post.description} slug={post.slug} />
       ))}
     </>
   );

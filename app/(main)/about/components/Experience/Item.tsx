@@ -6,7 +6,14 @@ import { formatDate } from "lib/formatDate";
 import { Experience } from "types";
 import { PortableText } from "@portabletext/react";
 
-export function Item({ date, company, jobTitle, body, link, employmentType  }: Omit<Experience, "_id">) {
+export function Item({
+  date,
+  company,
+  jobTitle,
+  body,
+  link,
+  employmentType,
+}: Omit<Experience, "_id">) {
   const getDate = (): string => {
     let format: Intl.DateTimeFormatOptions = {
       year: "numeric",
@@ -21,10 +28,7 @@ export function Item({ date, company, jobTitle, body, link, employmentType  }: O
       return `${formatDate(date?.start, format)} - Present`;
     }
 
-    return `${formatDate(date?.start, format)} - ${formatDate(
-      date?.end,
-      format
-    )}`;
+    return `${formatDate(date?.start, format)} - ${formatDate(date?.end, format)}`;
   };
 
   return (

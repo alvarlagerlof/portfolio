@@ -6,7 +6,7 @@ import { FeaturedProjects } from "./components/FeaturedProjects";
 import { Pronunciation } from "./components/Pronunciation";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
 
-export const runtime = "edge"
+export const runtime = "edge";
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Alvar Lagerlöf";

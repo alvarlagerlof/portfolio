@@ -2,7 +2,7 @@ import { ImageResponse } from "@vercel/og";
 import { Star } from "components/Icons/Star";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge"
+export const runtime = "edge";
 
 const spaceTextFont = fetch(
   new URL("../../../assets/fonts/space-text-medium.woff", import.meta.url)

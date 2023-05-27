@@ -8,7 +8,13 @@ type ProjectAndIsFirst = Project & {
   isFirst: boolean;
 };
 
-export function Item({ isFirst, banner, link, name, description }: Omit<ProjectAndIsFirst, "_id" | "featured">) {
+export function Item({
+  isFirst,
+  banner,
+  link,
+  name,
+  description,
+}: Omit<ProjectAndIsFirst, "_id" | "featured">) {
   return (
     <li>
       <NextSanityImage
@@ -20,11 +26,7 @@ export function Item({ isFirst, banner, link, name, description }: Omit<ProjectA
         priority={isFirst}
       />
       <h3 className="font-heading break-all	text-2xl xl:text-3xl mt-2 xl:mt-4 mb-1 xl:mb-2">
-        <Link
-          href={link ?? "#"}
-          target={link ? "_blank" : "_self"}
-          rel="noreferrer"
-        >
+        <Link href={link ?? "#"} target={link ? "_blank" : "_self"} rel="noreferrer">
           {name}
         </Link>
       </h3>
