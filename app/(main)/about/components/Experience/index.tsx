@@ -17,7 +17,7 @@ const query = groq`
 }
 `;
 
-export async function Exerience() {
+export async function Experience() {
   return (
     <section>
       <h3 className="font-heading text-4xl mb-8">Experience</h3>
@@ -39,7 +39,15 @@ async function ExperienceList() {
   return (
     <>
       {experience.map(item => (
-        <Item key={item._id} {...item} />
+        <Item
+          key={item._id}
+          date={item.date}
+          company={item.company}
+          jobTitle={item.jobTitle}
+          body={item.body}
+          link={item.link}
+          employmentType={item.employmentType}
+        />
       ))}
     </>
   );
