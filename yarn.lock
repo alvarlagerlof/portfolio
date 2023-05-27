@@ -1089,10 +1089,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@checkly/cli@0.4.13":
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/@checkly/cli/-/cli-0.4.13.tgz#89ec0c16210147d79fc67bc4c2a4b6b9e5d7f5ba"
-  integrity sha512-4knjiRzZqJQaii4xnywTnPkgxQ9phiU0plN5NrTTvroqHwbEUvdv6WH/A2vwCGFeYImWZ99CG6hMAlOAeyFeXQ==
+"@checkly/cli@0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@checkly/cli/-/cli-0.4.14.tgz#6e3b4da9caef6674c3bde4a189d6a5e10b0af6f7"
+  integrity sha512-nUrTUiWAm6WtlpiblvCgFK4kjehNvPVyCCE594DcJ0wYMz3K9BUGU4an20P1Id9FZFvH4y7R0Ut907uM8oMD4A==
   dependencies:
     "@oclif/core" "2.0.7"
     "@oclif/plugin-autocomplete" "2.1.8"
