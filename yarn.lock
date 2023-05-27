@@ -1481,15 +1481,15 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@^1.5.0":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-1.5.3.tgz#e72f7fed56acb36c694cdfb7f076fb58d6d0e9bb"
-  integrity sha512-1ZUL9wGu9IU+Ql00C6CM3myiXwmw11IzxMgTvFDZJ0/kWs7+jBF3JpeExge3U/nZxAZ+3otqMb1F8LiBGY5bHw==
+"@sanity/preview-kit@^1.5.4":
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-1.5.4.tgz#13da6703278200f6eb734379b332e2b0a2d69b8a"
+  integrity sha512-yeaToBDOuxAYmJptV10tvDN9FPb1+rryRzBW8722aVkJizVZnEAl6//9lDy7Hg6xsJ51C0VwnOF5R7jw5oOHrQ==
   dependencies:
     "@sanity/client" "^6.1.1"
     "@sanity/eventsource" "^5.0.0"
     "@sanity/groq-store" "^2.1.0"
-    "@vercel/stega" "^0.0.4"
+    "@vercel/stega" "^0.0.5"
     lodash.isplainobject "^4.0.6"
     suspend-react "^0.0.10"
     tiny-invariant "^1.3.1"
@@ -2038,10 +2038,10 @@
   optionalDependencies:
     ajv "^6.0.0"
 
-"@vercel/stega@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@vercel/stega/-/stega-0.0.4.tgz#1c44ec91d9eda78b4803b95502413d7120e80d51"
-  integrity sha512-4c9AibBOJ9oGvvev0f5QFbdcDPmOjkxdlrKb5Y70DnAc0ThtFujod8DRGA/RLFQ5lAvgRTdpvoczl8GhHuxFJQ==
+"@vercel/stega@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@vercel/stega/-/stega-0.0.5.tgz#96e0efd2c7ecfed35f30bf76c7ce618f613fa288"
+  integrity sha512-vvuUYW0rBp4Ea9xv0LilqFyDHAW9tvy4GL70G1ayGisQwpOYIPChmiw/56jqZvpxjE9gjQIApLfglOcdZe3PcA==
 
 "@vitejs/plugin-react@^3.0.0":
   version "3.1.0"
@@ -5689,13 +5689,13 @@ next-sanity-image@6.0.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.3.2.tgz#c025649b2fd853f35e1aacf85484dc497863a043"
-  integrity sha512-BLO2vrBfPWRirJacmJ+Nkx9PUlH0MTRGaRPm4LcZtEd4ulCDpw3AbfJHvzfaFy62jeIzcdkWBWLAkzjbXKr8gA==
+next-sanity@4.3.3:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-4.3.3.tgz#96f8e9af06fb07eb4a487d6601e77ca10aa796a3"
+  integrity sha512-537xLC4hpTgV3SGj6w4aXvBvm/nHdyZGtZ5IcZpH33p70J7UjptF4+D4FvWKZGPjF3v3SFk75AHjxWVPORL9RA==
   dependencies:
     "@sanity/client" "^6.0.0"
-    "@sanity/preview-kit" "^1.5.0"
+    "@sanity/preview-kit" "^1.5.4"
     "@sanity/webhook" "^2.0.0"
     groq "^3.0.0"
 
