@@ -15,7 +15,7 @@
     "chromatic": "npx chromatic --build-script-name storybook:build"
   },
   "dependencies": {
-    "@next/font": "13.4.3",
+    "@next/font": "13.4.4",
     "@portabletext/react": "3.0.0",
     "@sanity/code-input": "4.1.1",
     "@tailwindcss/typography": "0.5.9",
