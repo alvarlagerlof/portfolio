@@ -7,8 +7,7 @@ const truncate = (input, len) => {
   return input.length > len ? `${input.substring(0, len)}...` : input;
 };
 
-
-export function Item({ date, slug, description, title }: Omit<Post, "_id" | "body">) {
+export function Item({ date, slug, description, title }: Omit<Post, "_id" | "body">) {
   return (
     <li>
       <em className="block">{formatDate(date.published)}</em>

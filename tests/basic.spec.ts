@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-const baseUrl = process.env.ENVIRONMENT_URL
-if (typeof baseUrl !== "string") throw new Error("ENVIRONMENT_URL is not defined.")
+const baseUrl = process.env.ENVIRONMENT_URL;
+if (typeof baseUrl !== "string") throw new Error("ENVIRONMENT_URL is not defined.");
 
 test.describe("basic flow", () => {
   test("it should have some content on index", async ({ page }) => {
@@ -39,7 +39,7 @@ test.describe("basic flow", () => {
     const a = page.locator("main ul li a").first();
 
     const href = await a.getAttribute("href");
-    console.log("this HREF", href)
+    console.log("this HREF", href);
     const title = await a.innerText();
 
     await a.click();

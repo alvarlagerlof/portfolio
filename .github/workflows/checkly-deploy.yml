@@ -10,8 +10,8 @@
 name: Checkly Deploy
 on:
   push:
-      branches:
-        - main
+    branches:
+      - main
 env:
   CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
   CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}

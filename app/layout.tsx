@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   icons: [
     {
-      url: "/favicons/favicon.ico"
+      url: "/favicons/favicon.ico",
     },
     {
       url: "/favicons/favicon-16x16.png",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     {
       url: "/favicons/favicon-192x192.png",
       sizes: "192x192",
-    }
+    },
   ],
-  themeColor: "#16a34a"
+  themeColor: "#16a34a",
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {

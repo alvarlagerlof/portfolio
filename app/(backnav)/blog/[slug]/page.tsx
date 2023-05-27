@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = await getPost(slug);
 
-  if (!post) notFound()
+  if (!post) notFound();
 
   const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
@@ -22,7 +22,9 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     openGraph: {
-      images: encodeURI(`${domain}/og/blogpost?title=${post.title}&description=${post.description}`),
+      images: encodeURI(
+        `${domain}/og/blogpost?title=${post.title}&description=${post.description}`
+      ),
     },
   };
 }
@@ -36,9 +38,7 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
     <WithDividers direction="vertical">
       <header className="space-y-8">
         <h1 className="font-heading text-4xl md:text-7xl">{post.title}</h1>
-        <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch]">
-          {post.description}
-        </h2>
+        <h2 className="font-subheading text-xl md:text-2xl max-w-[60ch]">{post.description}</h2>
         <p className="font-medium">
           Published {formatDate(post.date.published)}
           {post.date.updated && ` - Updated ${formatDate(post.date.updated)}`} - by Alvar Lagerlöf
@@ -51,4 +51,3 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
     </WithDividers>
   );
 }
-
