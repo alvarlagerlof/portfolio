@@ -18,7 +18,6 @@ export interface SanityImage {
       lqip: string;
     };
   };
-
   caption: string;
 }
 
@@ -61,7 +60,6 @@ export type Experience = SanityDefaults & {
 
 export type Social = SanityDefaults & {
   networkName: string;
-  userName: string;
   link: string;
   icon: SanityImage;
 };

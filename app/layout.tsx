@@ -1,7 +1,6 @@
 import { Inter } from "@next/font/google";
 import localFont from "@next/font/local";
 import { Metadata } from "next";
-// import { AnalyticsWrapper } from "components/Analytics";
 import Script from "next/script";
 
 import "./global.css";

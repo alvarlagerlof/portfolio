@@ -1,24 +1,24 @@
 import { ArrowLink } from "components/ArrowLink";
-import { NextSanityImage } from "components/SanityImage";
+import { NextSanityImage } from "components/NextSanityImage";
 import { Skeleton } from "components/Skeleton";
 import { SkeletonText } from "components/SkeletonText";
 import { Social } from "types";
 
-export function Item(social: Social) {
+export function Item({ icon, networkName, link }: Omit<Social, "_id">) {
   return (
     <li>
-      <ArrowLink newTab href={social?.link ?? ""}>
+      <ArrowLink newTab href={link ?? ""}>
         <div className="inline-block mr-3 translate-y-1 ">
           <NextSanityImage
-            image={social?.icon}
+            image={icon}
             placeholder="empty"
             height={22}
             width={22}
-            alt={`${social.networkName} icon`}
+            alt={`${networkName} icon`}
           />
         </div>
 
-        <span className="font-subheading font-semibold text-xl -mt-4">{social?.networkName}</span>
+        <span className="font-subheading font-semibold text-xl -mt-4">{networkName}</span>
       </ArrowLink>
     </li>
   );

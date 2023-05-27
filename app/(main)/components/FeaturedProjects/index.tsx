@@ -14,8 +14,14 @@ const query = groq`
   link,
   banner {
     asset->{
-      ...,
-      metadata
+      _id,
+      metadata {
+        lqip,
+        dimensions {
+          width,
+          height
+        }
+      }
     }
   }
 }
@@ -42,7 +48,13 @@ async function Projects() {
     <>
       <ul className="space-y-6 md:space-y-8">
         {projects.map(project => (
-          <Item key={project._id} {...project} />
+          <Item
+            key={project._id}
+            name={project.name}
+            link={project.link}
+            description={project.description}
+            banner={project.banner}
+          />
         ))}
       </ul>
       <h4 className="text-xl font-subheading mt-12">

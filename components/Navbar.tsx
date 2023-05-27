@@ -1,9 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { Star } from "./Icons/Star";
+import { NavLink } from "./NavLink";
 
 export function Navbar() {
   return (
@@ -22,29 +20,5 @@ export function Navbar() {
         <NavLink href="/blog" name="Blog" />
       </ul>
     </nav>
-  );
-}
-
-type NavLinkProps = {
-  href: string;
-  name: string;
-};
-
-function NavLink({ href, name }: NavLinkProps) {
-  const pathname = usePathname();
-  const active = pathname == href;
-
-  return (
-    <li>
-      <Link
-        href={href}
-        className={
-          "flex flex-row items-center font-medium py-1 px-3" +
-          (active ? " bg-primary text-white rounded-full" : "")
-        }
-      >
-        {name}
-      </Link>
-    </li>
   );
 }
