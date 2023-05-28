@@ -9,13 +9,13 @@ export const size = {
   height: 630,
 };
 
-const spaceTextFont = fetch(
-  new URL("../../../../assets/fonts/space-text-medium.woff", import.meta.url)
-).then(res => res.arrayBuffer());
+const spaceTextFont = fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url)).then(
+  res => res.arrayBuffer()
+);
 
-const madeDillanFont = fetch(
-  new URL("../../../../assets/fonts/made-dillan.woff", import.meta.url)
-).then(res => res.arrayBuffer());
+const madeDillanFont = fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url)).then(res =>
+  res.arrayBuffer()
+);
 
 export default async function Image({ params: { slug } }: { params: { slug: string } }) {
   const { title, description } = await getPost(slug);
