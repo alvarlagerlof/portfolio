@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       "application/rss+xml": "https://alvar.dev/feed.xml",
     },
   },
-  // metadataBase: new URL("https://alvar.dev"),
+  metadataBase: new URL("https://alvar.dev"),
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
