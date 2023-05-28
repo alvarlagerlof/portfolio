@@ -1,6 +1,6 @@
 import { ImageResponse } from "@vercel/og";
 import { getPost } from "./getPost";
-import { OgStar } from "components/OgStar";
+import { OpenGraphImageStar } from "../../../../components/OpenGraphImageStar";
 
 export const runtime = "edge";
 
@@ -92,7 +92,7 @@ export default async function Image({ params: { slug } }: { params: { slug: stri
               By Alvar Lagerlöf
             </h3>
           </div>
-          <OgStar />
+          <OpenGraphImageStar />
         </div>
       </div>
     ),
