@@ -16,16 +16,9 @@ export async function generateMetadata({
 
   if (!post) notFound();
 
-  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-
   return {
     title: post.title,
     description: post.description,
-    openGraph: {
-      images: encodeURI(
-        `${domain}/og/blogpost?title=${post.title}&description=${post.description}`
-      ),
-    },
   };
 }
 
