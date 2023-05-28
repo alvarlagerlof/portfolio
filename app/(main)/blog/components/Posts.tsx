@@ -1,13 +1,35 @@
+import { Post, PostPreview } from "types";
 import { SkeletonText } from "components/SkeletonText";
 import { formatDate } from "lib/formatDate";
 import Link from "next/link";
-import { Post } from "types";
+
+type PostListProps = {
+  posts: PostPreview[];
+};
+
+export function Posts({ posts }: PostListProps) {
+  return (
+    <ul className="space-y-8">
+      {posts.map((post: Post) => {
+        return (
+          <PostItem
+            key={post._id}
+            title={post.title}
+            date={post.date}
+            slug={post.slug}
+            description={post.description}
+          />
+        );
+      })}
+    </ul>
+  );
+}
 
 const truncate = (input, len) => {
   return input.length > len ? `${input.substring(0, len)}...` : input;
 };
 
-export function Item({ date, slug, description, title }: Omit<Post, "_id" | "body">) {
+export function PostItem({ date, slug, description, title }: Omit<Post, "_id" | "body">) {
   return (
     <li>
       <em className="block">{formatDate(date.published)}</em>
@@ -19,7 +41,7 @@ export function Item({ date, slug, description, title }: Omit<Post, "_id" | "bod
   );
 }
 
-export function ItemLoading({ withYear }: { withYear: boolean }) {
+export function PostItemLoading({ withYear }: { withYear: boolean }) {
   return (
     <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-20">
       {withYear ? <SkeletonText className="w-[12ch] h-[2.5rem]" /> : <div className="w-[12ch]" />}

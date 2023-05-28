@@ -1,7 +1,7 @@
 import { WithDividers } from "components/WithDividers";
 import Image from "next/image";
 
-import { Experience } from "./components/Experience";
+import { ExperienceSection } from "./components/ExperienceSection";
 import { SocialLinks } from "./components/SocialLinks";
 import profile from "./profile.png";
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
         <SocialLinks />
       </WithDividers>
       {/* @ts-ignore */}
-      <Experience />
+      <ExperienceSection />
     </WithDividers>
   );
 }
