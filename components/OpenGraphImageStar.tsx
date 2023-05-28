@@ -1,4 +1,4 @@
-export function OgStar() {
+export function OpenGraphImageStar() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="45" fill="none">
       <g clip-path="url(#a)">

@@ -1,5 +1,5 @@
 import { ImageResponse } from "@vercel/og";
-import { OgStar } from "components/OgStar";
+import { OpenGraphImageStar } from "components/OpenGraphImageStar";
 
 const spaceTextFont = fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url)).then(
   res => res.arrayBuffer()
@@ -36,7 +36,7 @@ export async function defaultOg(title?: string, description?: string) {
             alignItems: "center",
           }}
         >
-          <OgStar />
+          <OpenGraphImageStar />
           {title != "Alvar Lagerlöf" && (
             <h3
               style={{
