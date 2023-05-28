@@ -61,7 +61,6 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <body>
         {children}
-        {/* <AnalyticsWrapper /> */}
         <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
       </body>
     </html>
