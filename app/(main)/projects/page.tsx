@@ -1,24 +1,13 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
-import { Metadata } from "next";
 import { Projects } from "./components/Projects";
 
 export const runtime = "edge";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Projects";
-  const description = "These are some of the projects I've worked on";
-
-  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      images: encodeURI(`${domain}/og/default?title=${title}&description=${description}`),
-    },
-  };
-}
+export const metadata = {
+  title: "Projects",
+  description: "These are some of the projects I've worked on",
+};
 
 export default function ProjectsPage() {
   return (

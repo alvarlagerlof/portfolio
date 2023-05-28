@@ -1,7 +1,6 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
 import { sanityClient } from "lib/sanity/client";
-import { Metadata } from "next";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
 import { Post, PostPreview, Sections } from "types";
@@ -22,20 +21,10 @@ const query = groq`
 
 export const runtime = "edge";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Blog";
-  const description = "I try to put my thoughts into words sometimes";
-
-  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      images: encodeURI(`${domain}/og/default?title=${title}&description=${description}`),
-    },
-  };
-}
+export const metadata = {
+  title: "Blog",
+  description: "I try to put my thoughts into words sometimes",
+};
 
 export default function BlogPage() {
   return (
