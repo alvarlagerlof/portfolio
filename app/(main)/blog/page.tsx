@@ -6,7 +6,7 @@ import { cache, Suspense } from "react";
 import { Post, PostPreview, Sections } from "types";
 
 import { Posts } from "./components/Posts";
-import { ItemLoading } from "./components/Posts/Item";
+import { PostItemLoading } from "./components/Posts";
 
 const query = groq`
 *[_type == "post"] | order(date.published desc) {
@@ -88,13 +88,13 @@ function Loading() {
   return (
     <>
       <div className="space-y-8">
-        <ItemLoading withYear={true} />
-        <ItemLoading withYear={false} />
-        <ItemLoading withYear={false} />
+        <PostItemLoading withYear={true} />
+        <PostItemLoading withYear={false} />
+        <PostItemLoading withYear={false} />
       </div>
       <div className="space-y-8">
-        <ItemLoading withYear={true} />
-        <ItemLoading withYear={false} />
+        <PostItemLoading withYear={true} />
+        <PostItemLoading withYear={false} />
       </div>
     </>
   );

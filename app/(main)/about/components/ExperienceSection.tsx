@@ -1,3 +1,6 @@
+import { sanityClient } from "lib/sanity/client";
+import { groq } from "next-sanity";
+import { Suspense } from "react";
 import { ArrowLink } from "components/ArrowLink";
 import { Star } from "components/Icons/Star";
 import { Skeleton } from "components/Skeleton";
@@ -6,7 +9,65 @@ import { formatDate } from "lib/formatDate";
 import { Experience } from "types";
 import { PortableText } from "@portabletext/react";
 
-export function Item({
+const query = groq`
+*[_type == "experience"] | order(date.start desc) {
+  _id,
+  company,
+  jobTitle,
+  employmentType,
+  date,
+  body,
+  link
+}
+`;
+
+export async function ExperienceSection() {
+  return (
+    <section>
+      <h3 className="font-heading text-4xl mb-8">Experience</h3>
+      <ul className="space-y-8">
+        <Suspense fallback={<ExperienceListLoading />}>
+          {/* @ts-ignore */}
+          <ExperienceList />
+        </Suspense>
+      </ul>
+    </section>
+  );
+}
+
+async function ExperienceList() {
+  const experience: Experience[] = await sanityClient.fetch(query);
+
+  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
+
+  return (
+    <>
+      {experience.map(item => (
+        <ExperienceItem
+          key={item._id}
+          date={item.date}
+          company={item.company}
+          jobTitle={item.jobTitle}
+          body={item.body}
+          link={item.link}
+          employmentType={item.employmentType}
+        />
+      ))}
+    </>
+  );
+}
+
+function ExperienceListLoading() {
+  return (
+    <>
+      <ExperienceItemLoading />
+      <ExperienceItemLoading />
+      <ExperienceItemLoading />
+    </>
+  );
+}
+
+export function ExperienceItem({
   date,
   company,
   jobTitle,
@@ -55,7 +116,7 @@ export function Item({
   );
 }
 
-export function ItemLoading() {
+export function ExperienceItemLoading() {
   return (
     <div className="flex flex-row space-x-4 pb-8">
       <Skeleton className="!w-6 h-6 !rounded-full" />
