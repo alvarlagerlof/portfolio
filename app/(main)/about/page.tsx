@@ -1,5 +1,4 @@
 import { WithDividers } from "components/WithDividers";
-import { Metadata } from "next";
 import Image from "next/image";
 
 import { Experience } from "./components/Experience";
@@ -8,20 +7,10 @@ import profile from "./profile.png";
 
 export const runtime = "edge";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "About me";
-  const description = "My story starts with a $2 computer from a flea market";
-
-  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      images: encodeURI(`${domain}/og/default?title=${title}&description=${description}`),
-    },
-  };
-}
+export const metadata = {
+  title: "About me",
+  description: "My story starts with a $2 computer from a flea market",
+};
 
 export default function AboutPage() {
   return (

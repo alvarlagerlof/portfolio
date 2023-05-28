@@ -1,27 +1,15 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
-import { Metadata } from "next";
-
 import { FeaturedProjects } from "./components/FeaturedProjects";
 import { Pronunciation } from "./components/Pronunciation";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
 
 export const runtime = "edge";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Alvar Lagerlöf";
-  const description = "Developer and designer from Stockholm";
-
-  const domain = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-
-  return {
-    title,
-    description,
-    openGraph: {
-      images: encodeURI(`${domain}/og/default?title=${title}&description=${description}`),
-    },
-  };
-}
+export const metadata = {
+  title: "Alvar Lagerlöf",
+  description: "Developer and designer from Stockholm",
+};
 
 export default function IndexPage() {
   return (
