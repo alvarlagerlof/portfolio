@@ -49,6 +49,11 @@ export const metadata: Metadata = {
     },
   ],
   themeColor: "#16a34a",
+  alternates: {
+    types: {
+      "application/rss+xml": "https://alvar.dev/feed.xml",
+    },
+  },
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
