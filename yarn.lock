@@ -1208,10 +1208,10 @@
   optionalDependencies:
     fsevents "2.3.2"
 
-"@portabletext/react@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.0.tgz#9066e00500ef5f30a92d9eb26bcd2209be1c8aad"
-  integrity sha512-bvh9Ls3ZOa7rPOtJ2fTrTFAC6nXAwHlyt1ukFqFSgTehtsgl91WB2kaBa3XdXCBiobzED3OPcLZ3Y3fsb9ZFiQ==
+"@portabletext/react@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.2.tgz#d51d11a6b3dd3973bbc043b6ea5801176506b9c0"
+  integrity sha512-uZVWXzN69Ql98ja5zmb8vIGHY4Y0jFWoMArgLcBdLJe6ia69vyYmPmUoLbkBqfH+FhWmsfLQMjgOC88q4OPaDw==
   dependencies:
     "@portabletext/toolkit" "^2.0.1"
     "@portabletext/types" "^2.0.2"
