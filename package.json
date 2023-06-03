@@ -37,7 +37,7 @@
     "autoprefixer": "10.4.14",
     "checkly": "4.0.8",
     "chromatic": "6.18.0",
-    "eslint": "8.41.0",
+    "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
