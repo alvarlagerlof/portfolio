@@ -41,18 +41,19 @@ export async function POST(request: Request) {
     const formattedLines: string[] = [];
 
     for (const line of lines) {
+      const cleanedLine = line.replaceAll("\t", "    ");
       try {
-        const json = JSON.parse(line) as unknown;
+        const json = JSON.parse(cleanedLine) as unknown;
 
         if (!isPlainObject(json)) {
-          console.log("LINE ERROR", "Not an object", line);
+          console.log("LINE ERROR", "Not an object", cleanedLine);
           return;
         }
 
         formattedLines.push(JSON.stringify({ event: json }));
         console.log("LINE PUSH", line.substring(0, 100));
       } catch (error) {
-        console.log("LINE ERROR", error.message, line);
+        console.log("LINE ERROR", error.message, cleanedLine);
       }
     }
 
