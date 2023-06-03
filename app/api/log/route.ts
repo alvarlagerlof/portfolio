@@ -38,7 +38,10 @@ export async function POST(request: Request) {
       {
         method: "POST",
         body: `INSERT INTO vercel_log FORMAT JSONEachRow
-${text.split("\n").map(line => `{"event":${line}}`)}`,
+${text
+  .split("\n")
+  .map(line => `{"event":${line}}`)
+  .join("\n")}`,
       }
     );
 
