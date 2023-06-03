@@ -35,9 +35,24 @@ export async function POST(request: Request) {
   try {
     const sql = "INSERT INTO vercel_log FORMAT JSONEachRow";
 
-    console.log("PREVIEW", `${sql}\n${lines.map(line => line.substring(0, 1000)).join("\n\n")}`);
+    const formattedLines: string[] = [];
 
-    const body = `${sql}\n${lines.map(line => `{"event":${line}}`).join("\n")}`;
+    for (const line of lines) {
+      if (!line.startsWith("{") || !line.endsWith("}")) {
+        console.log("LINE ERROR", "Does match { x }", line);
+        return;
+      }
+
+      try {
+        const json = JSON.parse(line);
+        formattedLines.push(JSON.stringify({ event: json }));
+        console.log("LINE PUSH", line.substring(0, 100));
+      } catch (error) {
+        console.log("LINE ERROR", error.message, line);
+      }
+    }
+
+    const body = `${sql}\n${formattedLines.join("\n")}`;
 
     const response = await fetch(
       `https://ai2rwbv3zr.eu-west-1.aws.clickhouse.cloud:8443/?user=${process.env.CLICKHOUSE_USER}&password=${process.env.CLICKHOUSE_PASSWORD}`,
