@@ -50,9 +50,21 @@ export async function POST(request: Request) {
       }
     );
 
+    const responseText = await response.text();
+
     console.log("RESPONSE OK", response.ok);
     console.log("RESPONSE STATUS", response.status);
     console.log("RESPONSE STATUS TEXT", response.statusText);
+    console.log("RESPONSE TEXT", responseText);
+
+    if (!response.ok) {
+      return new Response(responseText, {
+        status: 500,
+        headers: {
+          "x-vercel-verify": process.env.LOG_DRAIN_VERCEL_VERIFY,
+        },
+      });
+    }
 
     return new Response(null, {
       status: 200,
