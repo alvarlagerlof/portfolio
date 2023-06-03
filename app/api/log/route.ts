@@ -30,16 +30,11 @@ export async function POST(request: Request) {
   //   }
 
   const text = await request.text();
-  console.log("TEXT SAMPLE", text.substring(0, 200));
   const lines = text.split("\\n");
-  console.log("ND LINES", lines.length);
 
   try {
     const sql = "INSERT INTO vercel_log FORMAT JSONEachRow";
-    console.log("SQL", sql);
-    for (const line of lines) {
-      console.log("LINE CUT", `{"event":${line.substring(0, 100)}}`);
-    }
+
     console.log(
       "PREVIEW",
       `${sql}\n${lines.map(line => `{"event":${line.substring(0, 30)}}`).join("\n")}`
@@ -62,6 +57,7 @@ export async function POST(request: Request) {
       },
     });
   } catch (error) {
+    console.error(error);
     if (error instanceof Error) {
       return new Response(error.message, {
         status: 500,
