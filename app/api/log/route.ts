@@ -1,4 +1,4 @@
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   if (!process.env.LOG_DRAIN_VERCEL_VERIFY) {
     return new Response(null, {
       status: 500,
