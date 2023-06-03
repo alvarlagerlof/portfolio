@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
     console.log(
       "PREVIEW",
-      `${sql}\n${lines.map(line => `{"event":${line.substring(0, 30)}}`).join("\n")}`
+      `${sql}\n${lines.map(line => `{"event":${line.substring(0, 150)}}`).join("\n")}`
     );
 
     const body = `${sql}\n${lines.map(line => `{"event":${line}}`).join("\n")}`;
