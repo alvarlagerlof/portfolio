@@ -35,10 +35,7 @@ export async function POST(request: Request) {
   try {
     const sql = "INSERT INTO vercel_log FORMAT JSONEachRow";
 
-    console.log(
-      "PREVIEW",
-      `${sql}\n${lines.map(line => `{"event":${line.substring(0, 1000)}}`).join("\n")}`
-    );
+    console.log("PREVIEW", `${sql}\n${lines.map(line => line.substring(0, 1000)).join("\n\n")}`);
 
     const body = `${sql}\n${lines.map(line => `{"event":${line}}`).join("\n")}`;
 
