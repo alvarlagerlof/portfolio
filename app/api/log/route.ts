@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       {
         method: "POST",
         body: `INSERT INTO vercel_log FORMAT JSONEachRow
-    ${text}`,
+${text.split("\n").map(line => `{"event":${line}}`)}`,
       }
     );
 
@@ -50,20 +50,18 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     if (error instanceof Error) {
-        return new Response(error.message, {
-            status: 500,
-            headers: {
-              "x-vercel-verify": process.env.LOG_DRAIN_VERCEL_VERIFY,
-            },
-          });
-        }
-    }
-    return new Response("Server error", {
+      return new Response(error.message, {
         status: 500,
         headers: {
           "x-vercel-verify": process.env.LOG_DRAIN_VERCEL_VERIFY,
         },
       });
     }
-
+  }
+  return new Response("Server error", {
+    status: 500,
+    headers: {
+      "x-vercel-verify": process.env.LOG_DRAIN_VERCEL_VERIFY,
+    },
+  });
 }
