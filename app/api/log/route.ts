@@ -29,16 +29,23 @@ export async function POST(request: Request) {
   //     });
   //   }
 
-  const json = (await request.json()) as unknown[];
-  console.log(json.length);
+  const text = await request.text();
+  console.log("TEXT SAMPLE", text.substring(0, 200));
+  const lines = text.split("\\n");
+  console.log("ND LINES", lines.length);
 
   try {
-    for (const line of json) {
-      console.log(JSON.stringify(line).substring(0, 100));
+    const sql = "INSERT INTO vercel_log FORMAT JSONEachRow";
+    console.log("SQL", sql);
+    for (const line of lines) {
+      console.log("LINE CUT", `{"event":${line.substring(0, 100)}}`);
     }
+    console.log(
+      "PREVIEW",
+      `${sql}\n${lines.map(line => `{"event":${line.substring(0, 30)}}`).join("\n")}`
+    );
 
-    const body = `INSERT INTO vercel_log FORMAT JSONEachRow
-${json.map(line => `{"event":${line}}`).join("\n")}`;
+    const body = `${sql}\n${lines.map(line => `{"event":${line}}`).join("\n")}`;
 
     await fetch(
       `http://localhost:8123/?user=${process.env.CLICKHOUSE_USER}&password=${process.env.CLICKHOUSE_PASSWORD}`,
