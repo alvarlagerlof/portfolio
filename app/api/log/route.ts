@@ -29,19 +29,22 @@ export async function POST(request: Request) {
   //     });
   //   }
 
-  const text = await request.text();
-  console.log(text);
+  const json = (await request.json()) as unknown[];
+  console.log(json.length);
 
   try {
+    for (const line of json) {
+      console.log(JSON.stringify(line).substring(0, 100));
+    }
+
+    const body = `INSERT INTO vercel_log FORMAT JSONEachRow
+${json.map(line => `{"event":${line}}`).join("\n")}`;
+
     await fetch(
       `http://localhost:8123/?user=${process.env.CLICKHOUSE_USER}&password=${process.env.CLICKHOUSE_PASSWORD}`,
       {
         method: "POST",
-        body: `INSERT INTO vercel_log FORMAT JSONEachRow
-${text
-  .split("\n")
-  .map(line => `{"event":${line}}`)
-  .join("\n")}`,
+        body,
       }
     );
 
