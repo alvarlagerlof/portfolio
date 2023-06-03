@@ -25,7 +25,12 @@ export async function POST(request: Request) {
   //     });
   //   }
 
-  console.log(await request.json());
+  console.log(await request.text());
+
+  //   await fetch("http://localhost:8123/?user=user&password=password", {
+  //     method: "POST",
+  //     body: `INSERT INTO t VALUES (1),(2),(3)`,
+  //   });
 
   return new Response(null, {
     status: 200,
