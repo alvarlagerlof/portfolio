@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     const body = `${sql}\n${lines.map(line => `{"event":${line}}`).join("\n")}`;
 
     await fetch(
-      `http://localhost:8123/?user=${process.env.CLICKHOUSE_USER}&password=${process.env.CLICKHOUSE_PASSWORD}`,
+      `https://ai2rwbv3zr.eu-west-1.aws.clickhouse.cloud:8443/?user=${process.env.CLICKHOUSE_USER}&password=${process.env.CLICKHOUSE_PASSWORD}`,
       {
         method: "POST",
         body,
