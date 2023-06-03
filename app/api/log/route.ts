@@ -42,13 +42,17 @@ export async function POST(request: Request) {
 
     const body = `${sql}\n${lines.map(line => `{"event":${line}}`).join("\n")}`;
 
-    await fetch(
+    const response = await fetch(
       `https://ai2rwbv3zr.eu-west-1.aws.clickhouse.cloud:8443/?user=${process.env.CLICKHOUSE_USER}&password=${process.env.CLICKHOUSE_PASSWORD}`,
       {
         method: "POST",
         body,
       }
     );
+
+    console.log("RESPONSE OK", response.ok);
+    console.log("RESPONSE STATUS", response.status);
+    console.log("RESPONSE STATUS TEXT", response.statusText);
 
     return new Response(null, {
       status: 200,
