@@ -38,8 +38,8 @@ export async function POST(request: Request) {
     const formattedLines: string[] = [];
 
     for (const line of lines) {
-      if (!line.startsWith("{") || !line.endsWith("}")) {
-        console.log("LINE ERROR", "Does match { x }", line);
+      if (!line.startsWith('"{') || !line.endsWith('}"')) {
+        console.log("LINE ERROR", "Does not match { x }", line);
         return;
       }
 
