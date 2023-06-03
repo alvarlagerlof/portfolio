@@ -1,6 +1,9 @@
 // const crypto = require("crypto");
 // const { json } = require("micro");
 
+const isPlainObject = obj =>
+  obj.constructor === Object && Object.getPrototypeOf(obj) === Object.prototype;
+
 export async function POST(request: Request) {
   if (
     !process.env.CLICKHOUSE_USER ||
@@ -38,13 +41,14 @@ export async function POST(request: Request) {
     const formattedLines: string[] = [];
 
     for (const line of lines) {
-      if (!line.startsWith('"{') || !line.endsWith('}"')) {
-        console.log("LINE ERROR", "Does not match { x }", line);
-        return;
-      }
-
       try {
-        const json = JSON.parse(line);
+        const json = JSON.parse(line) as unknown;
+
+        if (!isPlainObject(json)) {
+          console.log("LINE ERROR", "Not an object", line);
+          return;
+        }
+
         formattedLines.push(JSON.stringify({ event: json }));
         console.log("LINE PUSH", line.substring(0, 100));
       } catch (error) {
