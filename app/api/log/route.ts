@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         }
 
         formattedLines.push(JSON.stringify({ event: line }));
-        console.log("LINE PUSH", line.substring(0, 100));
+        console.log("LINE PUSH", JSON.stringify(line).substring(0, 100));
       } catch (error) {
         console.log("LINE ERROR");
         console.log("\n");
