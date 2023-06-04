@@ -1,5 +1,6 @@
 // const crypto = require("crypto");
 // const { json } = require("micro");
+import ndjsonParser from "ndjson-parse";
 
 const isPlainObject = obj =>
   obj.constructor === Object && Object.getPrototypeOf(obj) === Object.prototype;
@@ -32,45 +33,41 @@ export async function POST(request: Request) {
   //     });
   //   }
 
-  const text = await request.text();
-  const lines = text.split("\\n");
+  const sql = "INSERT INTO vercel_log FORMAT JSONEachRow";
 
   try {
-    const sql = "INSERT INTO vercel_log FORMAT JSONEachRow";
+    const text = await request.text();
+
+    const parsed = ndjsonParser(text);
 
     const formattedLines: string[] = [];
 
-    for (const line of lines) {
-      const sublines = line.split("\n");
-      for (const subline of sublines) {
-        console.log("\n");
-        const cleanedLine = subline.replaceAll("\t", "    ");
-        try {
-          const json = JSON.parse(cleanedLine) as unknown;
-
-          if (!isPlainObject(json)) {
-            console.log("LINE ERROR");
-            console.log("\n");
-            console.log("MESSAGE", "Not an object");
-            console.log("\n");
-            console.log("CLEANED LINE", cleanedLine);
-            console.log("\n");
-            return;
-          }
-
-          formattedLines.push(JSON.stringify({ event: json }));
-          console.log("LINE PUSH", line.substring(0, 100));
-        } catch (error) {
-          console.log("LINE ERROR", error.message, cleanedLine);
+    for (const line of parsed) {
+      console.log("\n");
+      try {
+        if (!isPlainObject(line)) {
+          console.log("LINE ERROR");
           console.log("\n");
-          console.log("MESSAGE", error.message);
+          console.log("MESSAGE", "Not an object");
           console.log("\n");
-          console.log("CLEANED LINE", cleanedLine);
+          console.log("LINE", JSON.stringify(line));
+          console.log("\n");
+          return;
         }
+
+        formattedLines.push(JSON.stringify({ event: line }));
+        console.log("LINE PUSH", line.substring(0, 100));
+      } catch (error) {
+        console.log("LINE ERROR");
         console.log("\n");
-        console.log("-------------------");
+        console.log("MESSAGE", error.message);
         console.log("\n");
+        console.log("CLEANED LINE", JSON.stringify(line));
       }
+
+      console.log("\n");
+      console.log("-------------------");
+      console.log("\n");
     }
 
     const body = `${sql}\n${formattedLines.join("\n")}`;
