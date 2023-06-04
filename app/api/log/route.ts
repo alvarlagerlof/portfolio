@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         }
 
         formattedLines.push(JSON.stringify({ event: line }));
-        console.log("LINE PUSH", JSON.stringify(line).substring(0, 100));
+        console.log("LINE PUSH", JSON.stringify(line).substring(0, 500));
       } catch (error) {
         console.log("LINE ERROR");
         console.log("\n");
@@ -65,9 +65,7 @@ export async function POST(request: Request) {
         console.log("CLEANED LINE", JSON.stringify(line));
       }
 
-      console.log("\n");
       console.log("-------------------");
-      console.log("\n");
     }
 
     const body = `${sql}\n${formattedLines.join("\n")}`;
