@@ -53,7 +53,7 @@ export async function POST(request: Request) {
             console.log("\n");
             console.log("MESSAGE", "Not an object");
             console.log("\n");
-            console.log("CLEANED", cleanedLine);
+            console.log("CLEANED LINE", cleanedLine);
             console.log("\n");
             return;
           }
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
           console.log("\n");
           console.log("MESSAGE", error.message);
           console.log("\n");
-          console.log("CLEANED", cleanedLine);
+          console.log("CLEANED LINE", cleanedLine);
         }
         console.log("\n");
         console.log("-------------------");
