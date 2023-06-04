@@ -41,12 +41,18 @@ export async function POST(request: Request) {
     const formattedLines: string[] = [];
 
     for (const line of lines) {
+      console.log("\n");
       const cleanedLine = line.replaceAll("\t", "    ");
       try {
         const json = JSON.parse(cleanedLine) as unknown;
 
         if (!isPlainObject(json)) {
-          console.log("LINE ERROR", "Not an object", cleanedLine);
+          console.log("LINE ERROR");
+          console.log("\n");
+          console.log("MESSAGE", "Not an object");
+          console.log("\n");
+          console.log("CLEANED", cleanedLine);
+          console.log("\n");
           return;
         }
 
@@ -54,7 +60,14 @@ export async function POST(request: Request) {
         console.log("LINE PUSH", line.substring(0, 100));
       } catch (error) {
         console.log("LINE ERROR", error.message, cleanedLine);
+        console.log("\n");
+        console.log("MESSAGE", error.message);
+        console.log("\n");
+        console.log("CLEANED", cleanedLine);
       }
+      console.log("\n");
+      console.log("-------------------");
+      console.log("\n");
     }
 
     const body = `${sql}\n${formattedLines.join("\n")}`;
