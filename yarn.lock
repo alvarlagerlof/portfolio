@@ -1196,13 +1196,13 @@
   optionalDependencies:
     fsevents "2.3.2"
 
-"@portabletext/react@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.2.tgz#d51d11a6b3dd3973bbc043b6ea5801176506b9c0"
-  integrity sha512-uZVWXzN69Ql98ja5zmb8vIGHY4Y0jFWoMArgLcBdLJe6ia69vyYmPmUoLbkBqfH+FhWmsfLQMjgOC88q4OPaDw==
+"@portabletext/react@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.3.tgz#e2c79ccacd87641935b2daab76119921b2c938e2"
+  integrity sha512-NVZq1DwQ/a75VJPYQRgWideJns+yfOu9r8eG/0ZbKJ2KGYKkQ1ll5NjFavG+qct5e3Up5Tq5EqSMAvoDbXPxBw==
   dependencies:
-    "@portabletext/toolkit" "^2.0.1"
-    "@portabletext/types" "^2.0.2"
+    "@portabletext/toolkit" "^2.0.2"
+    "@portabletext/types" "^2.0.5"
 
 "@portabletext/react@^1.0.6":
   version "1.0.6"
@@ -1227,14 +1227,14 @@
   dependencies:
     "@portabletext/types" "^2.0.0"
 
-"@portabletext/toolkit@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.1.tgz#ce1f6a27b19e6bb2e36ffcb39c5e05b09d55e9dc"
-  integrity sha512-vr2SeDFUFV+VmRIyYsHBMimZLiiN0S7qIridt/YLJs3Wm1dI4jsfUam82AQwheSMjvWdBiBZ+Wsjq5HZBG4htw==
+"@portabletext/toolkit@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.2.tgz#bcf29c36fa6bf0fca2f8673eb058081b18af1139"
+  integrity sha512-JNJjLlLkK09twDEdh2fvtXXvzULQkbYtSJZPbRD0ro4NyOY3tyhYI9666T/1D37W0cOTdm89NIwmfUG+bldT+Q==
   dependencies:
     "@portabletext/types" "^2.0.0"
 
-"@portabletext/types@2.0.2", "@portabletext/types@^2.0.0", "@portabletext/types@^2.0.2":
+"@portabletext/types@2.0.2", "@portabletext/types@^2.0.0":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.2.tgz#f283a2a0db68abff0c7b8f04f6fafc266d01e0c4"
   integrity sha512-3xTbSa80G1nODyACY0ilrmPo1PmU1xuoPvfcpzpqSEL0kX01fSW+21PKgS9BcG+GqdG9HK/VxciKWa+nFA7mqg==
@@ -1243,6 +1243,11 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-1.0.3.tgz#b23f832ae5331c1d864195a95eba34abf340597e"
   integrity sha512-SDDsdury2SaTI2D5Ea6o+Y39SSZMYHRMWJHxkxYl3yzFP0n/0EknOhoXcoaV+bxGr2dTTqZi2TOEj+uWYuavSw==
+
+"@portabletext/types@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.5.tgz#89872bd5b25df8c1d917e13fe3f035cdf135ae0e"
+  integrity sha512-AceKp/Y6UIzvUe/T675oPKlO2Dnt1BVIiUpwhcplPzLeYqaYaWYvb7ricVyWj7j0rukYRgBRQdrTBvgo9E1D+g==
 
 "@resvg/resvg-wasm@2.4.1":
   version "2.4.1"
