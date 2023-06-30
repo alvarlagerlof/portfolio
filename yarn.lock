@@ -1186,12 +1186,12 @@
   optionalDependencies:
     fsevents "2.3.2"
 
-"@portabletext/react@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.3.tgz#e2c79ccacd87641935b2daab76119921b2c938e2"
-  integrity sha512-NVZq1DwQ/a75VJPYQRgWideJns+yfOu9r8eG/0ZbKJ2KGYKkQ1ll5NjFavG+qct5e3Up5Tq5EqSMAvoDbXPxBw==
+"@portabletext/react@3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.4.tgz#cd1316c782b227fad206fd3147e1c9d60aa933a8"
+  integrity sha512-M15IXRgoOgWiu3WxwdCZPpi/0sdP2KrMcRKCZFHI4D2nkhXO1A8Avs6Djc+uPg5ayfnCxewLl/FnXA0hFgccBw==
   dependencies:
-    "@portabletext/toolkit" "^2.0.2"
+    "@portabletext/toolkit" "^2.0.4"
     "@portabletext/types" "^2.0.5"
 
 "@portabletext/react@^1.0.6":
@@ -1217,12 +1217,12 @@
   dependencies:
     "@portabletext/types" "^2.0.0"
 
-"@portabletext/toolkit@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.2.tgz#bcf29c36fa6bf0fca2f8673eb058081b18af1139"
-  integrity sha512-JNJjLlLkK09twDEdh2fvtXXvzULQkbYtSJZPbRD0ro4NyOY3tyhYI9666T/1D37W0cOTdm89NIwmfUG+bldT+Q==
+"@portabletext/toolkit@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.4.tgz#5e5d4461f3451736c3165962b4a39d0693c9834b"
+  integrity sha512-ZE+WntiZQ40vxMBu3/QXRbGjzL8/R2BOFgdf6danJOahvlL9lZ1/DDShyUsxNaAvoBarwGJtjuZVOcRJWcsVng==
   dependencies:
-    "@portabletext/types" "^2.0.0"
+    "@portabletext/types" "^2.0.5"
 
 "@portabletext/types@2.0.5", "@portabletext/types@^2.0.5":
   version "2.0.5"
