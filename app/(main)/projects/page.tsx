@@ -2,7 +2,7 @@ import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
 import { Projects } from "./components/Projects";
 
-export const runtime = "edge";
+export const revalidate = 600;
 
 export const metadata = {
   title: "Projects",

@@ -1,13 +1,19 @@
 import { ImageResponse } from "@vercel/og";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
 
-const spaceTextFont = fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url)).then(
-  res => res.arrayBuffer(),
-);
+const getSpaceTextFont = async () => {
+  const response = await fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url));
+  const interSemiBold = await response.arrayBuffer();
 
-const madeDillanFont = fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url)).then(res =>
-  res.arrayBuffer(),
-);
+  return interSemiBold;
+};
+
+const getMadeDillanFont = async () => {
+  const response = await fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url));
+  const interSemiBold = await response.arrayBuffer();
+
+  return interSemiBold;
+};
 
 export async function defaultOg(title?: string, description?: string) {
   const adjustedTitle = title ? title.slice(0, 100) : "Alvar Lagerlöf";
@@ -74,12 +80,12 @@ export async function defaultOg(title?: string, description?: string) {
       fonts: [
         {
           name: "Space Text",
-          data: await spaceTextFont,
+          data: await getSpaceTextFont(),
           style: "normal",
         },
         {
           name: "MADE Dillan",
-          data: await madeDillanFont,
+          data: await getMadeDillanFont(),
           style: "normal",
         },
       ],

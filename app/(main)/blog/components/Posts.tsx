@@ -32,11 +32,11 @@ const truncate = (input, len) => {
 export function PostItem({ date, slug, description, title }: Omit<Post, "_id" | "body">) {
   return (
     <li>
-      <em className="block">{formatDate(date.published)}</em>
+      <em className="block">{date && date.published ? formatDate(date.published) : "No date"}</em>
       <h4 className="font-subheading font-semibold text-xl md:text-2xl mb-2">
         <Link href={`blog/${slug?.current}`}>{title}</Link>
       </h4>
-      <p>{truncate(description, 100)}</p>
+      <p>{description ? truncate(description, 100) : "No description"}</p>
     </li>
   );
 }

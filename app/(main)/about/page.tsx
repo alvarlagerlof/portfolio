@@ -5,7 +5,7 @@ import { ExperienceSection } from "./components/ExperienceSection";
 import { SocialLinks } from "./components/SocialLinks";
 import profile from "./profile.png";
 
-export const runtime = "edge";
+export const revalidate = 600;
 
 export const metadata = {
   title: "About me",

@@ -5,6 +5,7 @@ module.exports = {
   },
   experimental: {
     serverComponentsExternalPackages: ["sanity", "next-sanity"],
+    ppr: true,
   },
   async rewrites() {
     return [

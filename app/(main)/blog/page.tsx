@@ -1,6 +1,6 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
-import { sanityClient } from "lib/sanity/client";
+import { createSanityClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
 import { Post, PostPreview, Sections } from "types";
@@ -19,7 +19,7 @@ const query = groq`
 }
 `;
 
-export const runtime = "edge";
+export const revalidate = 600;
 
 export const metadata = {
   title: "Blog",
@@ -47,9 +47,16 @@ export default function BlogPage() {
 }
 
 const getSections = cache(async () => {
-  const posts: PostPreview[] = await sanityClient.fetch(query);
+  const posts: PostPreview[] = await createSanityClientWithDraftMode().fetch(query);
 
   const sections = posts.reduce((acc: Sections, curr: Post) => {
+    if (curr.date === null) {
+      return {
+        ...acc,
+        Drafts: acc["Drafts"] ? [...acc["Drafts"], curr] : [curr],
+      };
+    }
+
     const year: number = new Date(curr.date.published).getFullYear();
 
     return {
@@ -69,7 +76,17 @@ async function Data() {
   return (
     <WithDividers direction="vertical">
       {Object.entries(sections)
-        .sort((a: any, b: any) => b[0] - a[0])
+        .sort((a: any, b: any) => {
+          if (a[0] === "Drafts") {
+            return -1;
+          }
+
+          if (b[0] === "Drafts") {
+            return 1;
+          }
+
+          return b[0] - a[0];
+        })
         .map(([year, posts]) => {
           return (
             <section key={year} className="flex flex-col md:flex-row items-start">
