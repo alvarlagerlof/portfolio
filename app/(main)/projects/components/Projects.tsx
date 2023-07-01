@@ -42,7 +42,6 @@ export async function Projects() {
 async function ProjectsList() {
   const projects: Project[] = await sanityClient.fetch(query);
 
-
   return (
     <>
       {projects.map((project, i) => {
