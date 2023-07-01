@@ -3,6 +3,7 @@ import { WithDividers } from "components/WithDividers";
 import { FeaturedProjects } from "./components/FeaturedProjects";
 import { Pronunciation } from "./components/Pronunciation";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
+import { DraftIndicator } from "app/DraftIndicator";
 
 export const runtime = "edge";
 
@@ -14,6 +15,8 @@ export const metadata = {
 export default function IndexPage() {
   return (
     <WithDividers direction="vertical">
+      <DraftIndicator />
+
       <header>
         <h1 className="font-heading text-4xl md:text-7xl mb-4">I'm Alvar Lagerlöf</h1>
         <Pronunciation />

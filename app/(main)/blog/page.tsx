@@ -1,6 +1,6 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
-import { sanityClient } from "lib/sanity/client";
+import { createClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { cache, Suspense } from "react";
 import { Post, PostPreview, Sections } from "types";
@@ -47,7 +47,7 @@ export default function BlogPage() {
 }
 
 const getSections = cache(async () => {
-  const posts: PostPreview[] = await sanityClient.fetch(query);
+  const posts: PostPreview[] = await createClientWithDraftMode().fetch(query);
 
   const sections = posts.reduce((acc: Sections, curr: Post) => {
     const year: number = new Date(curr.date.published).getFullYear();

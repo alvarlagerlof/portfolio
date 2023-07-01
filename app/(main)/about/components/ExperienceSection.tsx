@@ -1,4 +1,4 @@
-import { sanityClient } from "lib/sanity/client";
+import { createClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { ArrowLink } from "components/ArrowLink";
@@ -36,7 +36,7 @@ export async function ExperienceSection() {
 }
 
 async function ExperienceList() {
-  const experience: Experience[] = await sanityClient.fetch(query);
+  const experience: Experience[] = await createClientWithDraftMode().fetch(query);
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
