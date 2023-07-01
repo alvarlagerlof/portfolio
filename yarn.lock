@@ -1371,10 +1371,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-3.0.0.tgz#60e9cba61b82103ea3761730a53cd9310b98892d"
   integrity sha512-wtMYcV5GIDIhVyF/jjmdwq1GdlK07dRL40XMns73VbrFI7FteRltxv48bhYVZPcLkRXb0SHjpDS/icj9/yzbVA==
 
-"@sanity/groq-store@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-2.1.0.tgz#a7ddd25399bdc8469362384107a68386caa8db98"
-  integrity sha512-GYWtsi0TyTOXiFbGmlPccKE/UsFom9byU8DpPsshNpD0z2MNy19/L0lAaV5/JdUgb8uu84sEKYMPumkRG94lhw==
+"@sanity/groq-store@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-2.3.0.tgz#540bbbf74051397d76a6cc18199b8ca8cc211b45"
+  integrity sha512-vj5uDeNQlhwyviEgq3cq0nobMHToBMYXPL1HSFKKuScxow1JO5RIt4KNnUoFyPQTcgsVcpGsg2RKbXMJ8GsqGw==
   dependencies:
     "@sanity/eventsource" "5"
     "@sanity/types" "3"
@@ -1464,13 +1464,13 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.2.2.tgz#38dfe365c609b54ca3077c7b07cd9dcf1a4857d2"
-  integrity sha512-8H5A2CtrA+Z/esDFT2WqxuLKvzUlg5TMU+yyTA6Dcl8AtDuWDIwzFo82wiU9L1wsQuzLjPXzWX9OcwHBtJbhng==
+"@sanity/preview-kit@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.3.0.tgz#425238161005e8fcc91b48477892ac21e32d7c75"
+  integrity sha512-gl71G3JyRUbSOgu6b4NPLgSVLaqrdkC/reTUM/8T1TD7r+Ro2z7wRHO28XjmJ/tq2D2Nu4lGrl/cw+FbjE8i0g==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
-    "@sanity/groq-store" "2.1.0"
+    "@sanity/groq-store" "2.3.0"
     "@vercel/stega" "0.0.5"
     lodash.get "4.4.2"
     lodash.isplainobject "4.0.6"
@@ -5168,12 +5168,12 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.0.2.tgz#ba0c0b5580848540bbed1c5c8702c21d84e10d30"
-  integrity sha512-dopB2BQF/i04RcWjwlA+66Z52NtM1xbgcYE5mWP/fSmfwgq5Ee/k+JTgIvQ0EbDXon0dZZOVjsvlitWVO+5nZw==
+next-sanity@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.1.0.tgz#435f14668786927e533f600c8d4578ccafb070c6"
+  integrity sha512-MqlkpaVyasfkz196dMm4oJkiBPgaoyb6lDC7X5hRStcIaZVTUgyoDSoeksQZxZLbo6QTf5HeBlrjeX8tNQ+HWQ==
   dependencies:
-    "@sanity/preview-kit" "2.2.2"
+    "@sanity/preview-kit" "2.3.0"
     "@sanity/webhook" "2.0.0"
     groq "^3.0.0"
 
