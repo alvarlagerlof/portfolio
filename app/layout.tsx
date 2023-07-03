@@ -1,5 +1,5 @@
-import { Inter } from "@next/font/google";
-import localFont from "@next/font/local";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Metadata } from "next";
 import Script from "next/script";
 
