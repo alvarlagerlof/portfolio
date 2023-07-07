@@ -6083,7 +6083,7 @@ next-sanity@5.1.0:
     "@sanity/webhook" "2.0.0"
     groq "^3.0.0"
 
-next@^13.4.9:
+next@13.4.9:
   version "13.4.9"
   resolved "https://registry.yarnpkg.com/next/-/next-13.4.9.tgz#473de5997cb4c5d7a4fb195f566952a1cbffbeba"
   integrity sha512-vtefFm/BWIi/eWOqf1GsmKG3cjKw1k3LjuefKRcL3iiLl3zWzFdPG3as6xtxrGO6gwTzzaO1ktL4oiHt/uvTjA==
