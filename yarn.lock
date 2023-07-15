@@ -2303,14 +2303,14 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.3.1.tgz#9501987c587cc0fd97eeaa73389199874afc9b95"
-  integrity sha512-QccmNBuB+5NF6nUbhmsKWhfshVsb/rNHJ5zEqySoqBPu/QYttSVX4xIV93et6eJNPMvumU1VP0Z3EfSFT30N/A==
+"@sanity/preview-kit@2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.3.3.tgz#58f5df4f6125fe182c6af9b18732ad7d4134cf01"
+  integrity sha512-4TREUzu3Yfiys3SWmYMLQN+ifUYaVoDG/+CLDEOlI9p3LpO+V6z/OfXhrTjIPy+dNnbl320hipCdHGwdF2g6xw==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
     "@sanity/groq-store" "2.3.0"
-    "@vercel/stega" "0.0.5"
+    "@vercel/stega" "0.1.0"
     lodash.get "4.4.2"
     lodash.isplainobject "4.0.6"
     lru-cache "10.0.0"
@@ -2761,10 +2761,10 @@
   optionalDependencies:
     ajv "^6.0.0"
 
-"@vercel/stega@0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@vercel/stega/-/stega-0.0.5.tgz#96e0efd2c7ecfed35f30bf76c7ce618f613fa288"
-  integrity sha512-vvuUYW0rBp4Ea9xv0LilqFyDHAW9tvy4GL70G1ayGisQwpOYIPChmiw/56jqZvpxjE9gjQIApLfglOcdZe3PcA==
+"@vercel/stega@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@vercel/stega/-/stega-0.1.0.tgz#2eadbbc9eb0eaab26d28b0c443a922d78c23b6e3"
+  integrity sha512-5b0PkOJsFBX5alChuIO3qpkt5vIZBevzLPhUQ1UP8UzVjL3F1VllnZxp/thfD8R5ol7D7WHkgZHIjdUBX4tDpQ==
 
 "@vitejs/plugin-react@^3.0.0":
   version "3.1.0"
@@ -6095,12 +6095,12 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.1.1.tgz#de8891d63a68ef30d181ec8a037ccb97e3ab8280"
-  integrity sha512-zY80a0F7uDzvmKSvP1rNGKcbxPz2nH6UY0sYs7fW/nmifJzd48MyYqL31AqzO9FHPAG/V4a/aMbC23PFOgxKIA==
+next-sanity@5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.1.2.tgz#4b10d2e10401754600cb44af77a7a9031f019264"
+  integrity sha512-nzfir4ObrZ0vc8i3KpPC5iE9O/rGqSHn6+lZaEcwjY575NM3DtSW5yGumqTJi/fOJr5Ru1IqRyBS3Q3GpG8okg==
   dependencies:
-    "@sanity/preview-kit" "2.3.1"
+    "@sanity/preview-kit" "2.3.3"
     "@sanity/webhook" "2.0.0"
     groq "^3.0.0"
 
