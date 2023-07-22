@@ -1089,10 +1089,10 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@code-hike/lighter@0.6.6":
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/@code-hike/lighter/-/lighter-0.6.6.tgz#72f1b93dceacc40022a0c2c0f154363e2595a4ba"
-  integrity sha512-dLkSpowP4NaWDUgay3Mebb8V+wYqVGRD+Tl8wSfWdtIH0z4OUU3UznSsmvvGpCgkdUIF5DhOPRGRowqkNWQsrg==
+"@code-hike/lighter@0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@code-hike/lighter/-/lighter-0.8.1.tgz#3bde8e1eea3900132359e37c05bae5ac96ddd53c"
+  integrity sha512-St4rPmB7C2EWmAK1sAbvD3lZeM7UDInVDMjQDzEDsu4Q3B3AqF25vXedQK51U0UO0MCOASgBBdTiNwvJAfIqMQ==
 
 "@codemirror/autocomplete@^6.0.0", "@codemirror/autocomplete@^6.1.0", "@codemirror/autocomplete@^6.7.1":
   version "6.8.1"
@@ -3214,12 +3214,12 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bright@0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/bright/-/bright-0.8.2.tgz#b0a27a4ac4f429fb75852743343bf18f077a63ad"
-  integrity sha512-5V5AZ7Fyykz9DVSiauXKXvN+5UlYi2JkK/QXWynW98rHGvM9GtHsEs9v+ml7xX49+zxsk9QUob72i4091VCDvQ==
+bright@0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/bright/-/bright-0.8.3.tgz#e3568b9bd7a5f6daab042b31b4a5a21da56868e8"
+  integrity sha512-8rTu44zFHODJBxg+On/E0z2BtMQpe8BEkrGgoBSAX0cIoS3sTfpRk7NxDKOTTX749SHrfEjokiZk1v3BggbvIQ==
   dependencies:
-    "@code-hike/lighter" "0.6.6"
+    "@code-hike/lighter" "0.8.1"
     server-only "^0.0.1"
 
 browserify-zlib@^0.1.4:
