@@ -35,7 +35,7 @@
     "@vercel/analytics": "1.0.1",
     "autoprefixer": "10.4.14",
     "checkly": "4.0.12",
-    "chromatic": "6.19.9",
+    "chromatic": "6.20.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "eslint-config-prettier": "8.8.0",
