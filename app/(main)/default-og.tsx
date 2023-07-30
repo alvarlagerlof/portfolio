@@ -2,11 +2,11 @@ import { ImageResponse } from "@vercel/og";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
 
 const spaceTextFont = fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url)).then(
-  res => res.arrayBuffer()
+  res => res.arrayBuffer(),
 );
 
 const madeDillanFont = fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url)).then(res =>
-  res.arrayBuffer()
+  res.arrayBuffer(),
 );
 
 export async function defaultOg(title?: string, description?: string) {
@@ -83,6 +83,6 @@ export async function defaultOg(title?: string, description?: string) {
           style: "normal",
         },
       ],
-    }
+    },
   );
 }

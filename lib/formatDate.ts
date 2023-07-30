@@ -6,7 +6,7 @@ let defaultFormat: Intl.DateTimeFormatOptions = {
 
 export function formatDate(
   date: string,
-  format: Intl.DateTimeFormatOptions = defaultFormat
+  format: Intl.DateTimeFormatOptions = defaultFormat,
 ): string {
   return new Intl.DateTimeFormat("en-GB", format).format(new Date(date));
 }
