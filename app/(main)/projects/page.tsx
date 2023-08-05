@@ -1,6 +1,7 @@
 import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
 import { Projects } from "./components/Projects";
+import { BlogPosts } from "./components/BlogPosts";
 
 export const runtime = "edge";
 
@@ -25,6 +26,7 @@ export default function ProjectsPage() {
       <section>
         {/* @ts-ignore */}
         <Projects />
+        <BlogPosts />
       </section>
     </WithDividers>
   );
