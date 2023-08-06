@@ -5999,10 +5999,10 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.1.7:
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.1.7.tgz#f4e67e6235437838c3d8ce4e5d4ed4b08104550a"
-  integrity sha512-fGB60Bdfl04y2E1t5hnG5X7JXpDrhc9cCrLf8jOLERzujauSI4kAR39B70TXkwGRZ4hzSZpWiduyaXzI3akZlw==
+next-sanity@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.2.0.tgz#8fd7a9d64b4be5baf1ce5680fe4ec8e603898433"
+  integrity sha512-Jc47yOLyh6DL628DTnv6rMo2bD0crhzXnvd40rhejk3wml0quD/TfgOI0b54hNUpbRfK7TZAuHC+Xm/Xjs+mBQ==
   dependencies:
     "@sanity/preview-kit" "2.4.7"
     "@sanity/webhook" "2.0.0"
