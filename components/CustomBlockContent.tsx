@@ -33,7 +33,7 @@ export function CustomBlockContent({ blocks }) {
 
           code: ({ children }) => {
             return (
-              <code className="inline-block px-1 -py-2 bg-[rgb(227,233,242)] whitespace-normal">
+              <code className="inline-block px-1 -py-2 m-0 bg-[rgb(227,233,242)] whitespace-normal">
                 {children}
               </code>
             );
