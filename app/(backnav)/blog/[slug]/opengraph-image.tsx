@@ -17,11 +17,11 @@ export default async function Image({ params: { slug } }: { params: { slug: stri
   console.log("test", new URL("/assets/fonts/space-text-medium.woff", import.meta.url).toString());
 
   const spaceTextFont = fetch(new URL("fonts/space-text-medium.woff", import.meta.url)).then(res =>
-    res.arrayBuffer()
+    res.arrayBuffer(),
   );
 
   const madeDillanFont = fetch(new URL("fonts/made-dillan.woff", import.meta.url)).then(res =>
-    res.arrayBuffer()
+    res.arrayBuffer(),
   );
 
   return new ImageResponse(
@@ -115,6 +115,6 @@ export default async function Image({ params: { slug } }: { params: { slug: stri
           style: "normal",
         },
       ],
-    }
+    },
   );
 }
