@@ -1,12 +1,6 @@
 import { ImageResponse } from "@vercel/og";
-import { getPost } from "./getPost";
-import { OpenGraphImageStar } from "components/OpenGraphImageStar";
-
-export const runtime = "edge";
-export const size = {
-  width: 1200,
-  height: 630,
-};
+// import { getPost } from "./blog/[slug]/getPost";
+import { OpenGraphImageStar } from "../../components/OpenGraphImageStar";
 
 const getSpaceTextFont = async () => {
   const response = await fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url));
@@ -22,8 +16,10 @@ const getMadeDillanFont = async () => {
   return interSemiBold;
 };
 
-export default async function Image({ params: { slug } }: { params: { slug: string } }) {
-  const { title, description } = await getPost(slug);
+export default async function blogOg(slug: string) {
+  //   const { title, description } = await getPost(slug);
+  const title = "hej";
+  const description = "hej";
 
   return new ImageResponse(
     (
