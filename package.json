@@ -32,7 +32,7 @@
     "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "2.0.5",
     "@types/react": "18.2.20",
-    "@vercel/analytics": "1.0.1",
+    "@vercel/analytics": "1.0.2",
     "autoprefixer": "10.4.14",
     "checkly": "4.0.14",
     "chromatic": "6.20.0",
