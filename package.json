@@ -37,7 +37,7 @@
     "checkly": "4.0.14",
     "chromatic": "6.20.0",
     "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
+    "eslint-config-next": "13.4.13",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier": "5.0.0",
     "htm": "3.1.1",
