@@ -2131,16 +2131,16 @@
   resolved "https://registry.yarnpkg.com/@sanity/generate-help-url/-/generate-help-url-3.0.0.tgz#60e9cba61b82103ea3761730a53cd9310b98892d"
   integrity sha512-wtMYcV5GIDIhVyF/jjmdwq1GdlK07dRL40XMns73VbrFI7FteRltxv48bhYVZPcLkRXb0SHjpDS/icj9/yzbVA==
 
-"@sanity/groq-store@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-4.0.2.tgz#003c23a8e5f51740a6cad0cbd403456c3b2394d9"
-  integrity sha512-YjWjU1uxYMoTFa1UDbDLu6MMIGUqdEQ8udNITzBki1tXjod/sZF9FnH2UQQHCkUqISfRbzKfmJfJ2M2viY0AJQ==
+"@sanity/groq-store@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@sanity/groq-store/-/groq-store-4.0.4.tgz#2f50f0c6a987a28bcc51bf57ccca9ccf5fa8ca27"
+  integrity sha512-Bk1ZsS6PGeCtmP8a4FJfvHws1WlnQUPdcr9MbO38Fbbtp55ZdLjTbxozxo//mK7jsbmNxf2HjpQ1mm5jDI49RQ==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
     "@sanity/types" "^3.14.5"
     fast-deep-equal "3.1.3"
     groq "^3.14.5"
-    groq-js "1.1.10"
+    groq-js "1.1.12"
     mendoza "3.0.3"
     simple-get "4.0.1"
     split2 "4.2.0"
@@ -2224,17 +2224,17 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@2.4.7":
-  version "2.4.7"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.4.7.tgz#e09bd97a93716ad73f9f62e737830d9b8db569c8"
-  integrity sha512-goh8xDrPuoY1IObtQOc/8S4nKZEI9oPBGS04yAmiSRggZkos0L5ttoa7oPObWOiH92T8RF1LRjsKNTPjCMxUcQ==
+"@sanity/preview-kit@2.4.12":
+  version "2.4.12"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.4.12.tgz#3c26ef6a5ebe268b747c4a4e121ec7d1495d664a"
+  integrity sha512-TyYYoS6+0PfjWds/6y+tt8M8snyEqroi5v4tH39gOG1fUYNYYp7XG3iUlEz9efpIaLnX6KJuHvU0cxo8oOskGA==
   dependencies:
     "@sanity/eventsource" "5.0.0"
-    "@sanity/groq-store" "4.0.2"
+    "@sanity/groq-store" "4.0.4"
     "@vercel/stega" "0.1.0"
     lodash.get "4.4.2"
     lodash.isplainobject "4.0.6"
-    lru-cache "10.0.0"
+    lru-cache "10.0.1"
     mendoza "3.0.3"
     react-fast-compare "3.2.2"
     use-sync-external-store "1.2.0"
@@ -4855,7 +4855,12 @@ graphemer@^1.4.0:
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
-groq-js@1.1.10, groq-js@^1.0.0:
+groq-js@1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.1.12.tgz#247a81e52f12f0fa2eaae1ce4f41812c578148ed"
+  integrity sha512-02KhsoLuTwr/MOf6bBzt+rQOj+QuLoZ5IDDkzXM2NWY73CF1d29KTRBffzCAjsjBvY7kn+oQcwPdQVb3vBkl9w==
+
+groq-js@^1.0.0:
   version "1.1.10"
   resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.1.10.tgz#0c127516905fbaea2eb40d5d5932e6d628051194"
   integrity sha512-cYZMSCuBZ5KPB7hDRzkIwTB6qTDtcfqXxcejJPWumSw5gCOInTSvVtfccp0GM7TE1HkF7bF1PR2iSnliFDSSJg==
@@ -5719,10 +5724,10 @@ loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lru-cache@10.0.0, "lru-cache@^9.1.1 || ^10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.0.tgz#b9e2a6a72a129d81ab317202d93c7691df727e61"
-  integrity sha512-svTf/fzsKHffP42sujkO/Rjs37BCIsQVRCeNYIm9WN8rgT7ffoUnRtZCqU+6BqcSBdv8gwJeTz8knJpgACeQMw==
+lru-cache@10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.1.tgz#0a3be479df549cca0e5d693ac402ff19537a6b7a"
+  integrity sha512-IJ4uwUTi2qCccrioU6g9g/5rvvVl13bsdczUUcqbciD9iLr095yj8DQKdObriEvuNSx325N1rV1O0sJFszx75g==
 
 lru-cache@^5.1.1:
   version "5.1.1"
@@ -5737,6 +5742,11 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
+
+"lru-cache@^9.1.1 || ^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.0.tgz#b9e2a6a72a129d81ab317202d93c7691df727e61"
+  integrity sha512-svTf/fzsKHffP42sujkO/Rjs37BCIsQVRCeNYIm9WN8rgT7ffoUnRtZCqU+6BqcSBdv8gwJeTz8knJpgACeQMw==
 
 luxon@3.3.0:
   version "3.3.0"
@@ -5990,12 +6000,12 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.2.0.tgz#8fd7a9d64b4be5baf1ce5680fe4ec8e603898433"
-  integrity sha512-Jc47yOLyh6DL628DTnv6rMo2bD0crhzXnvd40rhejk3wml0quD/TfgOI0b54hNUpbRfK7TZAuHC+Xm/Xjs+mBQ==
+next-sanity@5.2.6:
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.2.6.tgz#703c4a0fd4f1d6efa12ddc9d442a3a250c31999a"
+  integrity sha512-uK5kUBy3ffLwzgWZKiFOe+wDek0c0kvzAAfv76wSwGXzsevG3+vzStw87+7lmb0bHM6Q50DYpTzSCLc5vEcs4w==
   dependencies:
-    "@sanity/preview-kit" "2.4.7"
+    "@sanity/preview-kit" "2.4.12"
     "@sanity/webhook" "2.0.0"
     groq "^3.0.0"
 
