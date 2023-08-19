@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx --yes @highlight-run/sourcemap-uploader upload --apiKey $HIGHLIGHT_SOURCEMAP_UPLOAD_API_KEY --path ./.next && find build -name '*.js.map' -type f -delete",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test --reporter=list",
