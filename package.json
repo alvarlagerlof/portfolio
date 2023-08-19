@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npx --yes @highlight-run/sourcemap-uploader upload --apiKey $HIGHLIGHT_SOURCEMAP_UPLOAD_API_KEY --path ./.next && find build -name '*.js.map' -type f -delete",
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test --reporter=list",
@@ -20,7 +20,6 @@
     "@vercel/og": "0.5.11",
     "bright": "0.8.4",
     "feed": "4.2.2",
-    "highlight.run": "^7.4.0",
     "next": "13.4.19",
     "next-sanity": "5.4.4",
     "next-sanity-image": "6.1.0",
