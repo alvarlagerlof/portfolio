@@ -12,6 +12,7 @@ module.exports = withHighlightConfig({
     serverComponentsExternalPackages: ["sanity", "next-sanity"],
     instrumentationHook: true,
   },
+  productionBrowserSourceMaps: false,
   async rewrites() {
     return [
       {
