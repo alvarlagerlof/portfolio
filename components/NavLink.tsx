@@ -12,7 +12,7 @@ export function NavLink({ href, name }: NavLinkProps) {
   const pathname = usePathname();
   const active = pathname == href;
 
-  if (pathname === "/blog") {
+  if (pathname === "/about") {
     throw new Error("This component failed to render");
   }
 
