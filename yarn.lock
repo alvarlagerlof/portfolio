@@ -2205,10 +2205,10 @@
     lodash "^4.17.21"
     slate "0.81.1"
 
-"@sanity/preview-kit@2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-2.6.0.tgz#1ae986cce21e40f712df7cd6a1bf180405764cc1"
-  integrity sha512-IOnc7+TBd6Zz74DXW/koQdxdQuIMn7r1NxhA+GVs1eS3zrNMm8sdEchCYtRmwAmYZj2pCbujo3QNiTcie0jsNA==
+"@sanity/preview-kit@3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-3.1.4.tgz#d443d8a7765b56ec7dc93da4545a827b36520fd0"
+  integrity sha512-9iUr1ITPHbJLqLW2Gl3jQaAczKA5eTy2KvHqWVThlN6ryJkMGOGRcspPAiXDl+dfi11bV8RvEANXAap6B9RK/A==
   dependencies:
     "@sanity/eventsource" "5.0.0"
     "@sanity/groq-store" "4.0.4"
@@ -2284,13 +2284,12 @@
     "@types/uuid" "^8.0.0"
     uuid "^8.0.0"
 
-"@sanity/webhook@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@sanity/webhook/-/webhook-2.0.0.tgz#22e5916fd6ea616625b4105a68f2858408de8eee"
-  integrity sha512-KusHeWVy6yW3hcgVHbGx6qVv//bUj3CD9Nr0EOw086+mo/ESrUV21HjOCrNQ+AYqXvJ9H5qhqmMiuc8H5dXUGA==
+"@sanity/webhook@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@sanity/webhook/-/webhook-3.0.1.tgz#ed70a185940ec5775770cfb43503ecaee328e49e"
+  integrity sha512-2eTDg/+TR8lSX2OH6wH7M8UUwZUsD/i8Raw9mFH9myt2mkPY3ns77cU6K1QL2ZhwIIDJT5tttTELURF7RjlzVg==
   dependencies:
     base64url "^3.0.1"
-    tslib "^2.3.1"
 
 "@shuding/opentype.js@1.4.0-beta.0":
   version "1.4.0-beta.0"
@@ -5945,13 +5944,13 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.2.7:
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.2.7.tgz#044fe3fb48ddd9ffb8dc27a6cfa6126c3a1abf6f"
-  integrity sha512-cR4EFz9njJMM118PwDzVe2SWC3VYIBKHoWq620PYoK+0oFQckYFNpKDhibZxwZyktuJ83cEGitzOoI0F0a5acw==
+next-sanity@5.4.4:
+  version "5.4.4"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.4.4.tgz#e01af288fbed5c5a9bea131e41f736cc32d1a5ca"
+  integrity sha512-B0ekCOfrCAZ77J9f6PW8DJcZCcT6p4mnDg9MGqLtJuUaerEhYG31MSdXw8GzuYyzTMJu9a5bLGYMV8nUYnV5iA==
   dependencies:
-    "@sanity/preview-kit" "2.6.0"
-    "@sanity/webhook" "2.0.0"
+    "@sanity/preview-kit" "3.1.4"
+    "@sanity/webhook" "3.0.1"
     groq "^3.0.0"
 
 next@13.4.19:
@@ -7821,7 +7820,7 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.1, tslib@^2.4.0, tslib@^2.4.1, tslib@^2.5.0, tslib@^2.6.0:
+tslib@^2, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0, tslib@^2.4.1, tslib@^2.5.0, tslib@^2.6.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.1.tgz#fd8c9a0ff42590b25703c0acb3de3d3f4ede0410"
   integrity sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==
