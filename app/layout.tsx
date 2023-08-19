@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Metadata } from "next";
 import Script from "next/script";
+import { HighlightInit } from "@highlight-run/next/client";
 
 import "./global.css";
 
@@ -59,11 +60,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
-      <body>
-        {children}
-        <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
-      </body>
-    </html>
+    <>
+      <HighlightInit
+        projectId={process.env.NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID}
+        tracingOrigins
+        networkRecording={{
+          enabled: true,
+          recordHeadersAndBody: true,
+          urlBlocklist: [],
+        }}
+      />
+
+      <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
+        <body>
+          {children}
+          <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
+        </body>
+      </html>
+    </>
   );
 }

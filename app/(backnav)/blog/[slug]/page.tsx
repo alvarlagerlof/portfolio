@@ -14,6 +14,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = await getPost(slug);
 
+  throw new Error("Blog post failed to render (server)");
+
   if (!post) notFound();
 
   return {
