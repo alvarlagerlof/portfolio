@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { H } from "highlight.run";
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   useEffect(() => {
+    H.consumeError(error);
     // Log the error to an error reporting service
     console.error(error);
   }, [error]);
