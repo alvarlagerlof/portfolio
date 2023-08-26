@@ -31,7 +31,7 @@
     "@playwright/test": "1.37.1",
     "@portabletext/to-html": "1.0.4",
     "@portabletext/types": "2.0.6",
-    "@types/react": "18.2.20",
+    "@types/react": "18.2.21",
     "@vercel/analytics": "1.0.2",
     "autoprefixer": "10.4.15",
     "checkly": "4.0.14",
