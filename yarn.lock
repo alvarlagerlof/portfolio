@@ -2691,7 +2691,7 @@
   dependencies:
     "@upstash/redis" "^1.19.3"
 
-"@upstash/ratelimit@^0.4.4":
+"@upstash/ratelimit@0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@upstash/ratelimit/-/ratelimit-0.4.4.tgz#99b4d9e2428c18ef0946ec347b5f22dac0184e60"
   integrity sha512-y3q6cNDdcRQ2MRPRf5UNWBN36IwnZ4kAEkGoH3i6OqdWwz4qlBxNsw4/Rpqn9h93+Nx1cqg5IOq7O2e2zMJY1w==
@@ -2717,12 +2717,12 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.0.2.tgz#7af719a1bf33734840aee6f04eb548d2cedab9ec"
   integrity sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==
 
-"@vercel/edge@^1.0.1":
+"@vercel/edge@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@vercel/edge/-/edge-1.0.1.tgz#94fc7be3c79834b0833dad9cfa23ed47b55309fa"
   integrity sha512-0lE1J1QsKmet3NUlNjS1+4tw7VpOsd3wxG91A5ZAAcxxDl3RQh/ThnYVV5VYT6FoSK5ZZ3jYh5YZCd0pWPK3yQ==
 
-"@vercel/kv@^0.2.2":
+"@vercel/kv@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@vercel/kv/-/kv-0.2.2.tgz#4b01c2bfd0aad674598b4d89a38a9454fa945a15"
   integrity sha512-mqnQOB6bkp4h5eObxfLNIlhlVqOGSH8cWOlC5pDVWTjX3zL8dETO1ZBl6M74HBmeBjbD5+J7wDJklRigY6UNKw==
