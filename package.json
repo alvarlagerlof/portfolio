@@ -15,7 +15,7 @@
   "dependencies": {
     "@portabletext/react": "3.0.7",
     "@sanity/code-input": "4.1.1",
-    "@tailwindcss/typography": "0.5.9",
+    "@tailwindcss/typography": "0.5.10",
     "@vercel/og": "0.5.13",
     "@upstash/ratelimit": "0.4.4",
     "@vercel/edge": "1.0.1",
