@@ -6,11 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "playwright test --reporter=list",
-    "test:hd": "playwright test --headed",
-    "checkly:deploy": "npx checkly deploy --force",
-    "checkly:test": "npx checkly test"
+    "lint": "next lint"
   },
   "dependencies": {
     "@portabletext/react": "3.0.7",
@@ -34,7 +30,6 @@
     "@types/react": "18.2.21",
     "@vercel/analytics": "1.0.2",
     "autoprefixer": "10.4.15",
-    "checkly": "4.1.0",
     "chromatic": "6.24.1",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
