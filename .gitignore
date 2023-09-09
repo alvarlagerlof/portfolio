@@ -37,13 +37,6 @@ yarn-error.log*
 /public/sitemap.xml
 /public/sitemap-0.xml
 /public/feed.xml
-/public/next-banner-generated
-/
-
-/playwright-report
 
 .vscode
-
-build-storybook.log
-
 
