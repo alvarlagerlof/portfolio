@@ -1923,7 +1923,7 @@
     golden-fleece "^1.0.9"
     pkg-dir "^5.0.0"
 
-"@sanity/client@^6.4.11", "@sanity/client@^6.4.9":
+"@sanity/client@^6.4.12", "@sanity/client@^6.4.9":
   version "6.4.12"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.4.12.tgz#34a1a543669157eba533e64b60359984ef9c6d33"
   integrity sha512-TuseXC5z0CORO7wKMmhNTiKy/8vjWsN7/PTMy53MUBshlMYE2xPad2QFw1zr+n/7qvNNc/CQ6Y2wVnaXU9PHVg==
@@ -5355,12 +5355,12 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.5.3:
-  version "5.5.3"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.5.3.tgz#f419a769bc6de02c95021a4fcafedea21d783e93"
-  integrity sha512-7Ec0texAbVphQHJTpHeNJN8EiNsJVhW14T/PvHq/UP7wYiLRkX/l9Fp/gHt6Vss9EKcHPqnMKYDWZTejWeyOHg==
+next-sanity@5.5.4:
+  version "5.5.4"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.5.4.tgz#8b1b957c4937310061de6cd677ac15e5f1ee1fb3"
+  integrity sha512-hXpTbubgazoJO1cSb+OuGCtRbq7Fby/MYpZnU9IRoiPZS50UVz8lPWflFUfTq/j+pCerPpp31qDwCjY+Op6KcA==
   dependencies:
-    "@sanity/client" "^6.4.11"
+    "@sanity/client" "^6.4.12"
     "@sanity/preview-kit" "3.1.6"
     "@sanity/webhook" "3.0.1"
     groq "^3.0.0"
