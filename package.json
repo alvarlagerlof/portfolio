@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@portabletext/react": "3.0.7",
+    "@portabletext/react": "3.0.9",
     "@sanity/code-input": "4.1.1",
     "@tailwindcss/typography": "0.5.10",
     "@vercel/og": "0.5.17",
