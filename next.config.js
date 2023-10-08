@@ -4,7 +4,6 @@ module.exports = {
     domains: ["cdn.sanity.io"],
   },
   experimental: {
-    appDir: true,
     serverComponentsExternalPackages: ["sanity", "next-sanity"],
   },
   async rewrites() {
