@@ -1063,7 +1063,7 @@
     golden-fleece "^1.0.9"
     pkg-dir "^5.0.0"
 
-"@sanity/client@^6.7.0":
+"@sanity/client@^6.7.0", "@sanity/client@^6.7.1":
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.7.1.tgz#5a22570962d85a4239ccb69f5b1495de6db63c01"
   integrity sha512-rOnTg4MLAFTo8MkeZv2aL5RybHY1xl84L5KhfgKSU53jp0VAVikeCEbknyMJhavaMJmo8MYf1sEq2h4bmYiCKg==
@@ -3516,7 +3516,7 @@ groq-js@1.3.0, groq-js@^1.1.12:
   resolved "https://registry.yarnpkg.com/groq-js/-/groq-js-1.3.0.tgz#7fc03a41c0b5a4160edfd714735e756d653b637a"
   integrity sha512-J7+JcxM0OvoowSkhNZAabCLueldEMkKzd9ufCEDRjKvkD1PcBUwyfsGvxUI59UojRCqFqp0y76LLzPzwSZTetw==
 
-groq@^3.0.0, groq@^3.14.5:
+groq@^3.14.5, groq@^3.19:
   version "3.19.1"
   resolved "https://registry.yarnpkg.com/groq/-/groq-3.19.1.tgz#fb3070404611cca1b9c4c14df7339d6069cda1cc"
   integrity sha512-LL42fPvihtIvLyx4sPgS9KDLKc62H+xuPyZ41LPIcPoru8yT8k2GwmmkwvcXaRwOAz+xBxd+paqouhob2XjbDQ==
@@ -4470,15 +4470,15 @@ next-sanity-image@6.1.0:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@5.5.10:
-  version "5.5.10"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-5.5.10.tgz#ac6fd27b3e2ba7bda7d9d44fe2e0994cda2496d4"
-  integrity sha512-S/ZFq3xs3WTFl8awDjbcQI8TxzEqPfKEXFze2yTJEu3Ny0yAvSHxF6AysYyCvb8nAnpCMTJsxiHZX6OambVlpg==
+next-sanity@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-6.0.0.tgz#595d8481b9eb7806b400ad9e60ab2c44f1a07f8b"
+  integrity sha512-+t5hT5PUYRYXiREKYB4B53fUY8Z3+Pp+ADziCXiqhjoE+8P2iDey44azeuZSi5HKGQBjIlTXftk7srn4IqY+zg==
   dependencies:
-    "@sanity/client" "^6.7.0"
+    "@sanity/client" "^6.7.1"
     "@sanity/preview-kit" "3.2.6"
     "@sanity/webhook" "3.0.1"
-    groq "^3.0.0"
+    groq "^3.19"
 
 next@14.0.1:
   version "14.0.1"
