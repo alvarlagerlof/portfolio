@@ -4475,10 +4475,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-sanity-image@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-6.1.0.tgz#aebd41e2387e9d2ce68cb86f8f93eca5811aeb47"
-  integrity sha512-xSIMPqgRFsurZhNTp0d0q/8ZDjmOR3thhle7u0M9SHIKCYWMy3e3p9Q6Gx2f+CcY8TbE43OPZHVEsMrzt0yqNQ==
+next-sanity-image@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/next-sanity-image/-/next-sanity-image-6.1.1.tgz#d4b7dedae4f89df88bf4012cd15113e78dfc2576"
+  integrity sha512-mLRiatJW3TZoD3VlUCci4lOxW9lKOl0bxDsYtk/JRqKZo25QJqPXNV7aoD+lmjEFf6RO2eW7uJ57QeI20mPhOA==
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
