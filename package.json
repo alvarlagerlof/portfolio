@@ -34,7 +34,7 @@
     "eslint-plugin-prettier": "5.0.1",
     "htm": "3.1.1",
     "postcss": "8.4.32",
-    "prettier": "3.1.0",
+    "prettier": "3.1.1",
     "tailwindcss": "3.3.6",
     "typescript": "5.3.3",
     "vhtml": "2.2.0"
