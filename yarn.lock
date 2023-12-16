@@ -1082,16 +1082,6 @@
     get-it "^8.4.4"
     rxjs "^7.0.0"
 
-"@sanity/client@^6.9.3":
-  version "6.9.3"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.9.3.tgz#adba44b9936ae06641111ac197fd18ffa9be148b"
-  integrity sha512-ba8fHqsncuuPNCGs5qTynpQqWdyeQzXmPQ6UzaNCn4/JNKmoucrdSNfCijE+3CsA23OJpZe51RqkF9JRvOpkdw==
-  dependencies:
-    "@sanity/eventsource" "^5.0.0"
-    "@vercel/stega" "0.1.0"
-    get-it "^8.4.4"
-    rxjs "^7.0.0"
-
 "@sanity/code-input@4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@sanity/code-input/-/code-input-4.1.2.tgz#efa95097fc2f7446207c7ca1f032f6c3f087da93"
@@ -1639,10 +1629,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@vercel/og@0.5.20":
-  version "0.5.20"
-  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.5.20.tgz#dedd4b433bc3c1fec67d70a577b5ce8569a67838"
-  integrity sha512-zi+ZXSx/peXA+1lq7s/5Vzmm/TTfTSf/5P1qNYnh42+7X+pZmahWoXt0i7SWiq3WagfsNUNA4hUDapDiHRoXqA==
+"@vercel/og@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.6.1.tgz#1a08f9b154f7c1a7900d68689740a0f24e0dc878"
+  integrity sha512-o0ItpTQrn7TdBRiYLoBmATfunenfI87AZ5S/SvS9puxN4rjuNdDHSV6ND24WBt0FK2SljfM9LYowK/99ql2bEA==
   dependencies:
     "@resvg/resvg-wasm" "2.6.0"
     satori "0.10.9"
