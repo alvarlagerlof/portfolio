@@ -35,7 +35,7 @@
     "htm": "3.1.1",
     "postcss": "8.4.32",
     "prettier": "3.1.1",
-    "tailwindcss": "3.3.6",
+    "tailwindcss": "3.4.0",
     "typescript": "5.3.3",
     "vhtml": "2.2.0"
   }
