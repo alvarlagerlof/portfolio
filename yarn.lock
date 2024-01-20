@@ -1288,17 +1288,17 @@
     rxjs "^7.8.1"
     suspend-react "0.1.3"
 
-"@sanity/preview-kit-compat@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit-compat/-/preview-kit-compat-1.4.0.tgz#153ae7be33bf62946ff3013ed96832c8e3bd2dee"
-  integrity sha512-n5gwT79ZdoGuMMMU5qDSHRsqMl6XEW0gvaXQYR5kgx6tY9HCr8Mpd0iJ8NHr0sD+/aBU7Rw4/l4i6mB3Z+bS4Q==
+"@sanity/preview-kit-compat@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit-compat/-/preview-kit-compat-1.4.2.tgz#358c2e647d7d6eecb28c76bd32696219cfc6335c"
+  integrity sha512-5K35KJuvpzIwnyA5bj8GTRE8lT/lYmHLEUzDKdBlcJWWJXFyhAMWrvheqYFEaeRk/IPzQ1HGcy2+TZBFFCu5Rw==
 
-"@sanity/preview-kit@5.0.11":
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-5.0.11.tgz#9c17bc9a9b67c58fa57839aba962f671d061b3bc"
-  integrity sha512-xfLcrRDu5Smb9vTIn/2QXBDTQ0VIIy905CoqIADYHf40rrqJMx/Q2Iqs3lRSYeAFpUWcaE5nYfihmUzCG4npVg==
+"@sanity/preview-kit@5.0.12":
+  version "5.0.12"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-5.0.12.tgz#4fa1eb2f56a24fc487ee82550bab6297677a16fa"
+  integrity sha512-5Kg3n+wB1Cd1U3raHDn5E6GXHilIB2J7AK2Y2FRkCNlVC/5bjrcHJCR35zrNf3Mj0v3AcbYprqEFy9JkLMa94g==
   dependencies:
-    "@sanity/preview-kit-compat" "1.4.0"
+    "@sanity/preview-kit-compat" "1.4.2"
     "@vercel/stega" "0.1.0"
     lru-cache "10.1.0"
     mendoza "3.0.3"
@@ -4484,13 +4484,13 @@ next-sanity-image@6.1.1:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@7.0.10:
-  version "7.0.10"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-7.0.10.tgz#a1c5bc75cd1a02833fe114eb8c8d1b76c554b3cf"
-  integrity sha512-2X7uq2mYYbzV+S2SuZWvhpzw1gMqpBawXzXG1edQ2m8K3h4vUy2H8glm4zEw8YDiO4OiNJXvPF2AwGab4wAyvQ==
+next-sanity@7.0.12:
+  version "7.0.12"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-7.0.12.tgz#bd6039a9295a3423832769d80daeca079b5eedc7"
+  integrity sha512-9Lhg1dsWXHuIfyWOqrrCRjlo2EMEUdDwbBNgqjJy5RKux5wLfJmbqj6zw8f5kkyjltHFNhHgr8wKpU2Wa55S1w==
   dependencies:
     "@sanity/client" "^6.11.1"
-    "@sanity/preview-kit" "5.0.11"
+    "@sanity/preview-kit" "5.0.12"
     "@sanity/webhook" "4.0.0"
     groq "^3.19"
 
