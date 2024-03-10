@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import Script from "next/script";
 
 import "./global.css";
@@ -21,6 +21,10 @@ const spaceText = localFont({
 });
 
 export const revalidate = 600;
+
+export const viewport: Viewport = {
+  themeColor: "#16a34a",
+};
 
 export const metadata: Metadata = {
   openGraph: {
@@ -48,7 +52,6 @@ export const metadata: Metadata = {
       sizes: "192x192",
     },
   ],
-  themeColor: "#16a34a",
   alternates: {
     types: {
       "application/rss+xml": "https://alvar.dev/feed.xml",
