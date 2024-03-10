@@ -5,7 +5,7 @@ import { Pronunciation } from "./components/Pronunciation";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
 import { DraftIndicator } from "app/DraftIndicator";
 
-export const runtime = "edge";
+export const revalidate = 600;
 
 export const metadata = {
   title: "Alvar Lagerlöf",

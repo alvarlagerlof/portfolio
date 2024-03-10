@@ -52,21 +52,23 @@ export async function GET() {
           },
         }) + link;
 
-      feed.addItem({
-        title: post.title,
-        id: `https://alvar.dev/blog/${post.slug.current}`,
-        link: `https://alvar.dev/blog/${post.slug.current}`,
-        description: post.description,
-        author: [
-          {
-            name: "Alvar Lagerlöf",
-            email: "hello@alvar.dev",
-            link: "https://alvar.dev",
-          },
-        ],
-        content: content,
-        date: new Date(post.date.published),
-      });
+      if (post.date! !== null) {
+        feed.addItem({
+          title: post.title,
+          id: `https://alvar.dev/blog/${post.slug.current}`,
+          link: `https://alvar.dev/blog/${post.slug.current}`,
+          description: post.description,
+          author: [
+            {
+              name: "Alvar Lagerlöf",
+              email: "hello@alvar.dev",
+              link: "https://alvar.dev",
+            },
+          ],
+          content: content,
+          date: new Date(post.date.published),
+        });
+      }
     });
 
     const rss = feed.rss2();

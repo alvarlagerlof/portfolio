@@ -13,6 +13,11 @@ export function createClientWithDraftMode() {
     return client;
   }
 
+  if (!process.env.SANITY_READ_TOKEN) {
+    console.log("No read token found, not using draft mode");
+    return client;
+  }
+
   return client.withConfig({
     useCdn: false,
     ignoreBrowserTokenWarning: true,

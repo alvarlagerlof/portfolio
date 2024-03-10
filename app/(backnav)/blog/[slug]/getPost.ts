@@ -37,15 +37,7 @@ const query = groq`
 export const getPost = cache(async (slug: string) => {
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
-  return await createClientWithDraftMode().fetch<Post>(
-    query,
-    {
-      slug,
-    },
-    {
-      next: {
-        revalidate: 600,
-      },
-    },
-  );
+  return await createClientWithDraftMode().fetch<Post>(query, {
+    slug,
+  });
 });
