@@ -47,7 +47,11 @@ export default function BlogPage() {
 }
 
 const getSections = cache(async () => {
-  const posts: PostPreview[] = await createSanityClientWithDraftMode().fetch(query);
+  const posts: PostPreview[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+    next: {
+      revalidate: 600,
+    },
+  });
 
   const sections = posts.reduce((acc: Sections, curr: Post) => {
     if (curr.date === null) {
