@@ -6,17 +6,6 @@ import { notFound } from "next/navigation";
 import { getPost } from "./getPost";
 import { groq } from "next-sanity";
 
-const query = groq`
-*[_type == "post"] | order(date.published desc) {
-  _id,
-  slug,
-  title,
-  description,
-  date,
-  body
-}
-`;
-
 export const revalidate = 600;
 
 export async function generateMetadata({
