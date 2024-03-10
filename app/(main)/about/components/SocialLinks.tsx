@@ -34,7 +34,6 @@ export async function SocialLinks() {
 
       <ul className="flex flex-col space-y-2">
         <Suspense fallback={<SocialLinksListLoading />}>
-          {/* @ts-ignore */}
           <SocialLinksList />
         </Suspense>
       </ul>

@@ -27,7 +27,6 @@ export async function ExperienceSection() {
       <h3 className="font-heading text-4xl mb-8">Experience</h3>
       <ul className="space-y-8">
         <Suspense fallback={<ExperienceListLoading />}>
-          {/* @ts-ignore */}
           <ExperienceList />
         </Suspense>
       </ul>

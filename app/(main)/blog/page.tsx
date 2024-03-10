@@ -37,7 +37,6 @@ export default function BlogPage() {
       </header>
 
       <Suspense fallback={<Loading />}>
-        {/* @ts-ignore */}
         <Data />
       </Suspense>
     </WithDividers>

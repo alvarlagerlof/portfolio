@@ -32,7 +32,6 @@ export function FeaturedProjects() {
     <section className="md:w-1/2">
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Featured projects</h3>
       <Suspense fallback={<FeaturedProjectsListLoading />}>
-        {/* @ts-ignore */}
         <FeaturedProjectsList />
       </Suspense>
     </section>

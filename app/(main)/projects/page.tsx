@@ -21,7 +21,6 @@ export default function ProjectsPage() {
       </header>
 
       <section>
-        {/* @ts-ignore */}
         <Projects />
       </section>
     </WithDividers>
