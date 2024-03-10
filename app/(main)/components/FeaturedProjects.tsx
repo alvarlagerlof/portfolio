@@ -1,5 +1,5 @@
 import { ArrowLink } from "components/ArrowLink";
-import { sanityClient } from "lib/sanity/client";
+import { createSanityClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { NextSanityImage } from "components/NextSanityImage";
@@ -40,7 +40,9 @@ export function FeaturedProjects() {
 }
 
 async function FeaturedProjectsList() {
-  const projects: Project[] = await sanityClient.fetch(query);
+  const projects: Project[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+    next: { revalidate: 600 },
+  });
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 

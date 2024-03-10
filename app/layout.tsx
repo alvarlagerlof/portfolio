@@ -4,6 +4,7 @@ import { Metadata, Viewport } from "next";
 import Script from "next/script";
 
 import "./global.css";
+import { DraftIndicator } from "./DraftIndicator";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,8 +20,6 @@ const spaceText = localFont({
   src: "../assets/fonts/space-text-medium.woff",
   variable: "--font-space-text",
 });
-
-export const revalidate = 600;
 
 export const viewport: Viewport = {
   themeColor: "#16a34a",
@@ -64,6 +63,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <body>
+        <DraftIndicator />
         {children}
         <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
       </body>

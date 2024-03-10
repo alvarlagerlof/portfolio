@@ -1,4 +1,4 @@
-import { sanityClient } from "lib/sanity/client";
+import { createSanityClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
 import { Suspense } from "react";
 import { Project } from "types";
@@ -40,8 +40,9 @@ export async function Projects() {
 }
 
 async function ProjectsList() {
-  const projects: Project[] = await sanityClient.fetch(query);
-  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
+  const projects: Project[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+    next: { revalidate: 600 },
+  });
 
   return (
     <>

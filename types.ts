@@ -36,7 +36,7 @@ export type Post = SanityDefaults & {
   date: {
     published: string;
     updated: string;
-  };
+  } | null;
   body: PortableTextBlock[];
 };
 
