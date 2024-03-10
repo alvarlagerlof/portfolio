@@ -24,7 +24,6 @@ export function RecentBlogPosts() {
       <h3 className="font-heading text-2xl md:text-4xl mb-6 md:mb-8">Recent blog posts</h3>
       <ul className="space-y-4 md:space-y-8">
         <Suspense fallback={<RecentBlogPostsListLoading />}>
-          {/* @ts-ignore */}
           <RecentBlogPostsList />
         </Suspense>
       </ul>

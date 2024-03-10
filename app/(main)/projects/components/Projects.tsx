@@ -32,7 +32,6 @@ export async function Projects() {
   return (
     <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
       <Suspense fallback={<ProjectsListLoading />}>
-        {/* @ts-ignore */}
         <ProjectsList />
       </Suspense>
     </ul>

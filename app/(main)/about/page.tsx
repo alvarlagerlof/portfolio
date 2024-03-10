@@ -16,10 +16,10 @@ export default function AboutPage() {
       <Header />
       <WithDividers direction="horizontal">
         <Story />
-        {/* @ts-ignore */}
+
         <SocialLinks />
       </WithDividers>
-      {/* @ts-ignore */}
+
       <ExperienceSection />
     </WithDividers>
   );
