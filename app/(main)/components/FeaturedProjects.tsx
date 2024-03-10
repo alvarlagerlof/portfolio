@@ -43,8 +43,6 @@ async function FeaturedProjectsList() {
     next: { revalidate: 600 },
   });
 
-  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
-
   return (
     <>
       <ul className="space-y-6 md:space-y-8">
