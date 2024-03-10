@@ -37,7 +37,9 @@ export function RecentBlogPosts() {
 }
 
 async function RecentBlogPostsList() {
-  const posts: PostPreview[] = await createSanityClientWithDraftMode().fetch(query);
+  const posts: PostPreview[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+    next: { revalidate: 600 },
+  });
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 

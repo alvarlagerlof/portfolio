@@ -21,8 +21,6 @@ const spaceText = localFont({
   variable: "--font-space-text",
 });
 
-export const revalidate = 600;
-
 export const viewport: Viewport = {
   themeColor: "#16a34a",
 };

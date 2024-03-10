@@ -4,8 +4,6 @@ import { FeaturedProjects } from "./components/FeaturedProjects";
 import { Pronunciation } from "./components/Pronunciation";
 import { RecentBlogPosts } from "./components/RecentBlogPosts";
 
-export const revalidate = 600;
-
 export const metadata = {
   title: "Alvar Lagerlöf",
   description: "Developer and designer from Stockholm",

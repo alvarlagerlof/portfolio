@@ -36,7 +36,9 @@ export async function ExperienceSection() {
 }
 
 async function ExperienceList() {
-  const experience: Experience[] = await createSanityClientWithDraftMode().fetch(query);
+  const experience: Experience[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+    next: { revalidate: 600 },
+  });
 
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 

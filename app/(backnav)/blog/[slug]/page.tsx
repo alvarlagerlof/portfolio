@@ -5,8 +5,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPost } from "./getPost";
 
-export const revalidate = 600;
-
 export async function generateMetadata({
   params: { slug },
 }: {

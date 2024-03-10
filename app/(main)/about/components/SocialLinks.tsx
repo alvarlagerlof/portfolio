@@ -43,7 +43,9 @@ export async function SocialLinks() {
 }
 
 async function SocialLinksList() {
-  const socialLinks: Social[] = await createSanityClientWithDraftMode().fetch(query);
+  const socialLinks: Social[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+    next: { revalidate: 600 },
+  });
   await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
 
   return (

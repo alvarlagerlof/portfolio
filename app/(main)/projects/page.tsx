@@ -2,8 +2,6 @@ import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
 import { Projects } from "./components/Projects";
 
-export const revalidate = 600;
-
 export const metadata = {
   title: "Projects",
   description: "These are some of the projects I've worked on",
