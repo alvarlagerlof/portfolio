@@ -4,7 +4,6 @@ import { formatDate } from "lib/formatDate";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPost } from "./getPost";
-import { groq } from "next-sanity";
 
 export const revalidate = 600;
 
