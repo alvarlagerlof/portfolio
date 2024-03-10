@@ -67,8 +67,6 @@ const getSections = cache(async () => {
     };
   }, {});
 
-  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
-
   return sections;
 });
 

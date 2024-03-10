@@ -40,8 +40,6 @@ async function ExperienceList() {
     next: { revalidate: 600 },
   });
 
-  await new Promise(r => setTimeout(r, parseInt(process.env.NEXT_PUBLIC_ARTIFICIAL_DELAY)));
-
   return (
     <>
       {experience.map(item => (
