@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
 
+import { VercelToolbar } from "@vercel/toolbar/next";
+
 import "./global.css";
 import { draftMode } from "next/headers";
 
@@ -64,10 +66,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: React.PropsWithChildren) {
   const { isEnabled } = draftMode();
 
+  const shouldInjectToolbar = process.env.NODE_ENV === "development";
+
   return (
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <body>
         {isEnabled ? <p>draft mode</p> : <p>not draft mode</p>}
+        {shouldInjectToolbar && <VercelToolbar />}
         {children}
         <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
       </body>

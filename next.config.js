@@ -1,5 +1,7 @@
+const withVercelToolbar = require("@vercel/toolbar/plugins/next")();
+
 /** @type {import("next").NextConfig} */
-module.exports = {
+const nextConfig = {
   images: {
     domains: ["cdn.sanity.io"],
   },
@@ -23,3 +25,5 @@ module.exports = {
     ];
   },
 };
+
+module.exports = withVercelToolbar(nextConfig);
