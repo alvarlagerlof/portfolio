@@ -19,8 +19,6 @@ const query = groq`
 }
 `;
 
-export const revalidate = 600;
-
 export const metadata = {
   title: "Blog",
   description: "I try to put my thoughts into words sometimes",
