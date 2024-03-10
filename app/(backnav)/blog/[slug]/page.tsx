@@ -4,8 +4,31 @@ import { formatDate } from "lib/formatDate";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPost } from "./getPost";
+import { groq } from "next-sanity";
+import { createClientWithDraftMode, sanityClient } from "lib/sanity/client";
+import { Post } from "types";
+
+const query = groq`
+*[_type == "post"] | order(date.published desc) {
+  _id,
+  slug,
+  title,
+  description,
+  date,
+  body
+}
+`;
 
 export const revalidate = 600;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const posts: Post[] = await sanityClient.fetch(query);
+
+  return posts.map(post => ({
+    slug: post.slug.current,
+  }));
+}
 
 export async function generateMetadata({
   params: { slug },
