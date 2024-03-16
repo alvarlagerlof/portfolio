@@ -1115,7 +1115,7 @@
     semver "^7.3.5"
     validate-npm-package-name "^3.0.0"
 
-"@sanity/client@^6.15.1", "@sanity/client@^6.15.3":
+"@sanity/client@^6.15.1":
   version "6.15.3"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.3.tgz#5705250ef69877e7ee9124bb9dad4d7f8b6529f9"
   integrity sha512-7P6OMUeXr87aDzWHlXhP4QXYm02f9jc8f5xr736Er3RybuhSg+ZnetoxBFWhzlV6QA1F0fiC/8yGJKVJmrO+sg==
@@ -1123,6 +1123,16 @@
     "@sanity/eventsource" "^5.0.0"
     "@vercel/stega" "0.1.0"
     get-it "^8.4.10"
+    rxjs "^7.0.0"
+
+"@sanity/client@^6.15.5":
+  version "6.15.5"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.15.5.tgz#245c49e592b3e4b8868e61f3f0c91964483e11c6"
+  integrity sha512-IGJPfk0bHRASPxSWEq5jY4MxECLbMVPqT3Nz0dfyZp2Pw9sIeYp528I9BQXI4dlEVWE/fEHbyvluagHn/HFqWQ==
+  dependencies:
+    "@sanity/eventsource" "^5.0.0"
+    "@vercel/stega" "0.1.0"
+    get-it "^8.4.13"
     rxjs "^7.0.0"
 
 "@sanity/code-input@4.1.3":
@@ -1318,10 +1328,10 @@
   resolved "https://registry.yarnpkg.com/@sanity/preview-kit-compat/-/preview-kit-compat-1.4.12.tgz#ff57ac794c2332d26bd9e154a6800801eaa96591"
   integrity sha512-dqtzAadLIcPRydHvOp3+/GscSTBu0mdrykqFMEWYealYIHhK6Sit+CJFUmNO/K8jDN/qr5cIdV0WnODrHwDRKQ==
 
-"@sanity/preview-kit@5.0.31":
-  version "5.0.31"
-  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-5.0.31.tgz#871eb6b82753910838920f01c3518042e7e95b6e"
-  integrity sha512-wSkzZEakc0eIP0D3+tQplbjsFIqqhX+G3MzF4MzIpCGy/Ve2OnqEyZ/z79sCKG86BjTk+coJYgly2HDnmGA+qg==
+"@sanity/preview-kit@5.0.33":
+  version "5.0.33"
+  resolved "https://registry.yarnpkg.com/@sanity/preview-kit/-/preview-kit-5.0.33.tgz#89db4bb7c2a88fca2ac403fbf63edef2111a8fa0"
+  integrity sha512-FNBmWWuY0KOt7leydg/Fx3hsyytj+50Ninnk6iYPRdonEkL63BKz3Dnan4e5Q/DHGblnSnJQs93P2UY8uM7EXw==
   dependencies:
     "@sanity/preview-kit-compat" "1.4.12"
     "@vercel/stega" "0.1.0"
@@ -1412,10 +1422,10 @@
     "@types/uuid" "^8.0.0"
     uuid "^8.0.0"
 
-"@sanity/visual-editing@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@sanity/visual-editing/-/visual-editing-1.7.0.tgz#5fa5d9f456711165b74122b27d59bb4cc2906109"
-  integrity sha512-jQm5hKZs9+Bu/8nXDSMl3IQkyIJnu87Xjk4Ca/FHtnfJ2D3JY3TJgcHnUlaBJPKi45lwmqq1VcstcACvtLT5lw==
+"@sanity/visual-editing@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@sanity/visual-editing/-/visual-editing-1.8.1.tgz#bf7fe2def683f4b8b544e88a4bc0c67ae5cdfb7f"
+  integrity sha512-uapbaLbakVbJnzZTaU4oALURxQrQUkZjgns4CoMfJ2FIMF0twttOJB95ca8M8GKKKf4Ozp2uNzEBV/ysnG/hWg==
   dependencies:
     "@sanity/preview-url-secret" "^1.6.4"
     "@vercel/stega" "0.1.0"
@@ -3466,6 +3476,11 @@ follow-redirects@^1.15.4:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
   integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
 
+follow-redirects@^1.15.6:
+  version "1.15.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
+  integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
@@ -3593,6 +3608,22 @@ get-it@^8.4.10:
     debug "^4.3.4"
     decompress-response "^7.0.0"
     follow-redirects "^1.15.4"
+    into-stream "^6.0.0"
+    is-plain-object "^5.0.0"
+    is-retry-allowed "^2.2.0"
+    is-stream "^2.0.1"
+    parse-headers "^2.0.5"
+    progress-stream "^2.0.0"
+    tunnel-agent "^0.6.0"
+
+get-it@^8.4.13:
+  version "8.4.13"
+  resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.4.13.tgz#6d3085e3752e072adaf129d3f41e2bc1ddd3021a"
+  integrity sha512-uY9sMQmiG3RCXqzfpIwt7uI6FuL0XNHgO1U8DhWbpxWgOZ8cCNJOAwr+xkLZxpYRcQ6jFEwdr6oTG55l8u415g==
+  dependencies:
+    debug "^4.3.4"
+    decompress-response "^7.0.0"
+    follow-redirects "^1.15.6"
     into-stream "^6.0.0"
     is-plain-object "^5.0.0"
     is-retry-allowed "^2.2.0"
@@ -4749,16 +4780,16 @@ next-sanity-image@6.1.1:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-8.3.0.tgz#3f246f1bcd3cbbe764c4421c9b9bc662b42cb26d"
-  integrity sha512-Et4f4aFe57goOkIp21+l1vyi9eCLOVc0mG4qheZNq23WpHG7TODWF6dylGDqDisZz556rFJtY/oqm2ZdlZNwlQ==
+next-sanity@8.4.1:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/next-sanity/-/next-sanity-8.4.1.tgz#9468a1ce22ab433cb30ad379d6ea8d6bb5978988"
+  integrity sha512-J+DiLTR1os5ABgSv+4mirFfv7bqSQRlw2qpn2jqF2zmvJQg6+3TaGNsXJL1L5xU/Rm+0qXdEq92PFN7e6XHqRg==
   dependencies:
     "@portabletext/react" "^3.0.11"
     "@portabletext/types" "^2.0.8"
-    "@sanity/client" "^6.15.3"
-    "@sanity/preview-kit" "5.0.31"
-    "@sanity/visual-editing" "1.7.0"
+    "@sanity/client" "^6.15.5"
+    "@sanity/preview-kit" "5.0.33"
+    "@sanity/visual-editing" "1.8.1"
     "@sanity/webhook" "4.0.2-bc"
     groq "^3.19"
 
