@@ -1016,7 +1016,15 @@
   resolved "https://registry.yarnpkg.com/@pkgr/core/-/core-0.1.1.tgz#1ec17e2edbec25c8306d424ecfbf13c7de1aaa31"
   integrity sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==
 
-"@portabletext/react@3.0.11", "@portabletext/react@^3.0.0", "@portabletext/react@^3.0.11":
+"@portabletext/react@3.0.12":
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.12.tgz#dc905792f475a1088e2af90c6de759b474c89b74"
+  integrity sha512-XyvM9rad7JK9gVt+fg4eK/5LuqmoGSkSabqlEMiuoQ1sRd7dJrNiYAegmjNFuxHIQraDlz3fCrh5FbQP1hryIQ==
+  dependencies:
+    "@portabletext/toolkit" "^2.0.11"
+    "@portabletext/types" "^2.0.9"
+
+"@portabletext/react@^3.0.0", "@portabletext/react@^3.0.11":
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.11.tgz#c5f31d9ea990391a3850ba4dfd685373107d9a21"
   integrity sha512-LATQQRxvP3TlAnFayjYt7kPJcnpAtWH6XHl4RFU31pKb1G6gZlTWTB+chXXAv0uQG6Be7OEdRzCmsz9XFEVNew==
@@ -1046,7 +1054,14 @@
   dependencies:
     "@portabletext/types" "^2.0.8"
 
-"@portabletext/types@2.0.9":
+"@portabletext/toolkit@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.11.tgz#293e29f5198c7216524b06007e844d5393e6c93b"
+  integrity sha512-4xdn1jZUZzihTvtJJbtZDsuaHNw9aaf/WZqKriP9306SlSuLFYC8Lw1MzW+Xmh3ZSurIjs+L0M+lTflB2NfYSA==
+  dependencies:
+    "@portabletext/types" "^2.0.9"
+
+"@portabletext/types@2.0.9", "@portabletext/types@^2.0.9":
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.9.tgz#b1ee99b0cd3e3e4b2ed64415814d51e00401b98f"
   integrity sha512-1naiVZBrDTUSExPgaUPY8Ip1v9mboLBIsPHSAzvQraVsdj2dyHi6n9qwiXykY4W1JmpJAKz7jYp2rShCnKQ9JA==
