@@ -1046,15 +1046,20 @@
   dependencies:
     "@portabletext/types" "^2.0.8"
 
-"@portabletext/types@2.0.8", "@portabletext/types@^2.0.0", "@portabletext/types@^2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.8.tgz#34aec838701482f838bdd0ee07a9e31dc01a9230"
-  integrity sha512-eiq9/kMX2bYezS4/kLFk3xNnruCFjCDdw6aYEv5ECHVKkYROiuLd3/AsP5d7tWF3+kPPy6tB0Wq8aqDG/URHGA==
+"@portabletext/types@2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.9.tgz#b1ee99b0cd3e3e4b2ed64415814d51e00401b98f"
+  integrity sha512-1naiVZBrDTUSExPgaUPY8Ip1v9mboLBIsPHSAzvQraVsdj2dyHi6n9qwiXykY4W1JmpJAKz7jYp2rShCnKQ9JA==
 
 "@portabletext/types@^1.0.2":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-1.0.3.tgz#b23f832ae5331c1d864195a95eba34abf340597e"
   integrity sha512-SDDsdury2SaTI2D5Ea6o+Y39SSZMYHRMWJHxkxYl3yzFP0n/0EknOhoXcoaV+bxGr2dTTqZi2TOEj+uWYuavSw==
+
+"@portabletext/types@^2.0.0", "@portabletext/types@^2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.8.tgz#34aec838701482f838bdd0ee07a9e31dc01a9230"
+  integrity sha512-eiq9/kMX2bYezS4/kLFk3xNnruCFjCDdw6aYEv5ECHVKkYROiuLd3/AsP5d7tWF3+kPPy6tB0Wq8aqDG/URHGA==
 
 "@resvg/resvg-wasm@2.4.0":
   version "2.4.0"
