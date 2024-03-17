@@ -1,19 +1,19 @@
 import { ImageResponse } from "@vercel/og";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
 
-const getSpaceTextFont = async () => {
-  const response = await fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url));
-  const interSemiBold = await response.arrayBuffer();
+// const getSpaceTextFont = async () => {
+//   const response = await fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url));
+//   const interSemiBold = await response.arrayBuffer();
 
-  return interSemiBold;
-};
+//   return interSemiBold;
+// };
 
-const getMadeDillanFont = async () => {
-  const response = await fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url));
-  const interSemiBold = await response.arrayBuffer();
+// const getMadeDillanFont = async () => {
+//   const response = await fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url));
+//   const interSemiBold = await response.arrayBuffer();
 
-  return interSemiBold;
-};
+//   return interSemiBold;
+// };
 
 export async function defaultOg(title?: string, description?: string) {
   const adjustedTitle = title ? title.slice(0, 100) : "Alvar Lagerlöf";
@@ -77,18 +77,18 @@ export async function defaultOg(title?: string, description?: string) {
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: "Space Text",
-          data: await getSpaceTextFont(),
-          style: "normal",
-        },
-        {
-          name: "MADE Dillan",
-          data: await getMadeDillanFont(),
-          style: "normal",
-        },
-      ],
+      // fonts: [
+      //   {
+      //     name: "Space Text",
+      //     data: await getSpaceTextFont(),
+      //     style: "normal",
+      //   },
+      //   {
+      //     name: "MADE Dillan",
+      //     data: await getMadeDillanFont(),
+      //     style: "normal",
+      //   },
+      // ],
     },
   );
 }

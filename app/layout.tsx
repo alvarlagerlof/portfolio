@@ -2,9 +2,10 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
-
 import "./global.css";
 import { DraftIndicator } from "./DraftIndicator";
+import { Component } from "@rsc-parser/embedded";
+import "@rsc-parser/embedded/style.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     <html lang="en" className={`${inter.className} ${madeDillan.variable} ${spaceText.variable}`}>
       <body>
         <DraftIndicator />
+        <Component />
         {children}
         <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
       </body>
