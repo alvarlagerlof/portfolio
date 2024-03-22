@@ -1016,7 +1016,15 @@
   resolved "https://registry.yarnpkg.com/@pkgr/core/-/core-0.1.1.tgz#1ec17e2edbec25c8306d424ecfbf13c7de1aaa31"
   integrity sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==
 
-"@portabletext/react@3.0.12", "@portabletext/react@^3.0.0", "@portabletext/react@^3.0.12":
+"@portabletext/react@3.0.15":
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.15.tgz#a267cc467a7c330a179e060a75763fb163715c46"
+  integrity sha512-M4Yag/C+1k9jnBs9n+ciDz2sP3vuvohxlX4CL3VFIlnDOsjzFmkPhWjOO4HUhOl+YE1VABJv/q8MW7PYaKS7SQ==
+  dependencies:
+    "@portabletext/toolkit" "^2.0.13"
+    "@portabletext/types" "^2.0.11"
+
+"@portabletext/react@^3.0.0", "@portabletext/react@^3.0.12":
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/@portabletext/react/-/react-3.0.12.tgz#dc905792f475a1088e2af90c6de759b474c89b74"
   integrity sha512-XyvM9rad7JK9gVt+fg4eK/5LuqmoGSkSabqlEMiuoQ1sRd7dJrNiYAegmjNFuxHIQraDlz3fCrh5FbQP1hryIQ==
@@ -1046,6 +1054,13 @@
   dependencies:
     "@portabletext/types" "^2.0.9"
 
+"@portabletext/toolkit@^2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.13.tgz#4d98d60052d1c9a4028f95d7e633e33402644ddb"
+  integrity sha512-RH/jzwlWcsDPnpJBO1xEByUnweVVciD1OVLGyRUA8P++XedAc+fxY3RlUkgi5FyDEyEdisPflKtUU/GAXtMSig==
+  dependencies:
+    "@portabletext/types" "^2.0.11"
+
 "@portabletext/types@2.0.9", "@portabletext/types@^2.0.0", "@portabletext/types@^2.0.9":
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.9.tgz#b1ee99b0cd3e3e4b2ed64415814d51e00401b98f"
@@ -1055,6 +1070,11 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-1.0.3.tgz#b23f832ae5331c1d864195a95eba34abf340597e"
   integrity sha512-SDDsdury2SaTI2D5Ea6o+Y39SSZMYHRMWJHxkxYl3yzFP0n/0EknOhoXcoaV+bxGr2dTTqZi2TOEj+uWYuavSw==
+
+"@portabletext/types@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.11.tgz#558a9ffe76489898db90705aaca0d5fcf8f0d815"
+  integrity sha512-79Bj/tffVOV9mpMzQFLPMrxPpUXh4OKlUBG8eDJBirH/x1o28Qu8Tg2nO84/KAPmlCm4rC/TOGvDxqsP0apg5A==
 
 "@resvg/resvg-wasm@2.4.0":
   version "2.4.0"
