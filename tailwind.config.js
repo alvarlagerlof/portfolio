@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const colors = require("tailwindcss/colors");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const typographyPlugin = require("@tailwindcss/typography");
 
 const inflatePlugin = function ({ addComponents, theme, variants, e }) {
@@ -21,7 +23,7 @@ const inflatePlugin = function ({ addComponents, theme, variants, e }) {
           "&:last-child": { paddingBottom: 0 },
         },
       },
-      variants("inflate", ["responsive"])
+      variants("inflate", ["responsive"]),
     );
   });
 };

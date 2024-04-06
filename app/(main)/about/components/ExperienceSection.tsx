@@ -75,7 +75,7 @@ export function ExperienceItem({
   employmentType,
 }: Omit<Experience, "_id">) {
   const getDate = (): string => {
-    let format: Intl.DateTimeFormatOptions = {
+    const format: Intl.DateTimeFormatOptions = {
       year: "numeric",
       month: "short",
     };

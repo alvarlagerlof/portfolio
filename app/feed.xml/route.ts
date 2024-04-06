@@ -74,8 +74,10 @@ export async function GET() {
     const rss = feed.rss2();
 
     return new Response(rss);
-  } catch (e: any) {
-    console.log(`${e.message}`);
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      console.log(`${e.message}`);
+    }
     return new Response(JSON.stringify({ error: "failed generate feed" }), { status: 500 });
   }
 }

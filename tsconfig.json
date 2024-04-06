@@ -27,7 +27,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js",
+    "next.config.mjs",
     "postcss.config.js",
     "tailwind.config.js",
     "next-sitemap.js",
