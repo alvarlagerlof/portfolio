@@ -75,7 +75,7 @@ async function Data() {
   return (
     <WithDividers direction="vertical">
       {Object.entries(sections)
-        .sort((a: any, b: any) => {
+        .sort((a, b) => {
           if (a[0] === "Drafts") {
             return -1;
           }
@@ -84,6 +84,7 @@ async function Data() {
             return 1;
           }
 
+          // @ts-expect-error TODO: Fix type error
           return b[0] - a[0];
         })
         .map(([year, posts]) => {
