@@ -1893,20 +1893,20 @@
   dependencies:
     "@portabletext/types" "^2.0.12"
 
-"@portabletext/types@2.0.11", "@portabletext/types@^2.0.0", "@portabletext/types@^2.0.11":
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.11.tgz#558a9ffe76489898db90705aaca0d5fcf8f0d815"
-  integrity sha512-79Bj/tffVOV9mpMzQFLPMrxPpUXh4OKlUBG8eDJBirH/x1o28Qu8Tg2nO84/KAPmlCm4rC/TOGvDxqsP0apg5A==
+"@portabletext/types@2.0.12", "@portabletext/types@^2.0.12":
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.12.tgz#ad45069d152ac76244bec44399ba0b7ef45d5995"
+  integrity sha512-dk8CcVDg7Y3DCXhuCdEJeV1GYzIfjCdEgZhrODhIiz+Zd7iXQYsdoRJXoz5lsT5w0UFxYkG+1KhQpIXSlKvyhA==
 
 "@portabletext/types@^1.0.2":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-1.0.3.tgz#b23f832ae5331c1d864195a95eba34abf340597e"
   integrity sha512-SDDsdury2SaTI2D5Ea6o+Y39SSZMYHRMWJHxkxYl3yzFP0n/0EknOhoXcoaV+bxGr2dTTqZi2TOEj+uWYuavSw==
 
-"@portabletext/types@^2.0.12":
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.12.tgz#ad45069d152ac76244bec44399ba0b7ef45d5995"
-  integrity sha512-dk8CcVDg7Y3DCXhuCdEJeV1GYzIfjCdEgZhrODhIiz+Zd7iXQYsdoRJXoz5lsT5w0UFxYkG+1KhQpIXSlKvyhA==
+"@portabletext/types@^2.0.0", "@portabletext/types@^2.0.11":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.11.tgz#558a9ffe76489898db90705aaca0d5fcf8f0d815"
+  integrity sha512-79Bj/tffVOV9mpMzQFLPMrxPpUXh4OKlUBG8eDJBirH/x1o28Qu8Tg2nO84/KAPmlCm4rC/TOGvDxqsP0apg5A==
 
 "@resvg/resvg-wasm@2.4.0":
   version "2.4.0"
