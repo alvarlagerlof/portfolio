@@ -2688,16 +2688,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsc-parser/embedded@npm:0.2.3":
-  version: 0.2.3
-  resolution: "@rsc-parser/embedded@npm:0.2.3"
+"@rsc-parser/embedded@npm:0.2.4":
+  version: 0.2.4
+  resolution: "@rsc-parser/embedded@npm:0.2.4"
   dependencies:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/e9934a1e3753689f94e107998cacfdb0b57d7e489610b4f9596650c5211070f6f37d5fcce5fb52715b90145cdc586be2e1d7d950dc2f7fbfb950b9c9a1762641
+  checksum: 10c0/dc4b27b107803d96342f2e6e967357b606dd646085d42bba2cb90380c6339122dab2ecb91631a391a0235e9f6273f5211b2ce6a00b6be878dbdac1da4477415b
   languageName: node
   linkType: hard
 
@@ -9036,7 +9036,7 @@ __metadata:
     "@portabletext/react": "npm:3.0.18"
     "@portabletext/to-html": "npm:1.0.4"
     "@portabletext/types": "npm:2.0.13"
-    "@rsc-parser/embedded": "npm:0.2.3"
+    "@rsc-parser/embedded": "npm:0.2.4"
     "@sanity/code-input": "npm:4.1.4"
     "@tailwindcss/typography": "npm:0.5.12"
     "@types/eslint__eslintrc": "npm:2.1.1"
