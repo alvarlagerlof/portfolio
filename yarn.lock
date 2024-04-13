@@ -2784,9 +2784,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/code-input@npm:4.1.3":
-  version: 4.1.3
-  resolution: "@sanity/code-input@npm:4.1.3"
+"@sanity/code-input@npm:4.1.4":
+  version: 4.1.4
+  resolution: "@sanity/code-input@npm:4.1.4"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.11.1"
     "@codemirror/commands": "npm:^6.3.2"
@@ -2813,7 +2813,7 @@ __metadata:
     react-dom: ^18
     sanity: ^3
     styled-components: ^5.2 || ^6
-  checksum: 10c0/d4dc4607b5bd130cb77bf5a785203d950552ea16e609c04f006df2b690c2d779df47fafb9ba59dc63cc1f6f39dd398a1681a70999922ef4a27018f1dd97ac48c
+  checksum: 10c0/f242fb7461522efa41a02b97391f016ffbb391e9a58f4b9eb8d90b9a5ab4337c1e478341bb828cc64f0b7bde0c4a05249ddf53c20709330a862b4b823d9aeb47
   languageName: node
   linkType: hard
 
@@ -9037,7 +9037,7 @@ __metadata:
     "@portabletext/to-html": "npm:1.0.4"
     "@portabletext/types": "npm:2.0.12"
     "@rsc-parser/embedded": "npm:0.2.3"
-    "@sanity/code-input": "npm:4.1.3"
+    "@sanity/code-input": "npm:4.1.4"
     "@tailwindcss/typography": "npm:0.5.12"
     "@types/eslint__eslintrc": "npm:2.1.1"
     "@types/eslint__js": "npm:8.42.3"
