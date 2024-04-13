@@ -2558,15 +2558,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/react@npm:3.0.17, @portabletext/react@npm:^3.0.17":
-  version: 3.0.17
-  resolution: "@portabletext/react@npm:3.0.17"
+"@portabletext/react@npm:3.0.18":
+  version: 3.0.18
+  resolution: "@portabletext/react@npm:3.0.18"
   dependencies:
-    "@portabletext/toolkit": "npm:^2.0.14"
-    "@portabletext/types": "npm:^2.0.12"
+    "@portabletext/toolkit": "npm:^2.0.15"
+    "@portabletext/types": "npm:^2.0.13"
   peerDependencies:
     react: ^17 || ^18
-  checksum: 10c0/f23505be82d2d86b533e44530452f3348614b1cb2c7a32af157f553c5ea75314fbe9c44faeaa185983d4a60972baf66060d223316c0787e7ee908b1b859e883c
+  checksum: 10c0/be22f5d970977876e7bfed0304e00755a1b376124a8d3fd95863d023789198d8d341f84149c2b61e7d843aa9fb46788c99761358ba8b45c4cbcaefe1268df4c0
   languageName: node
   linkType: hard
 
@@ -2579,6 +2579,18 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18
   checksum: 10c0/4450b9996472677285e8f042518e047fb0147755ca33fa84293a3ab1ccb850631d526636e0aa5f2b74612a3a03874c3487866fddd0a09a5fdcff1d3faba25310
+  languageName: node
+  linkType: hard
+
+"@portabletext/react@npm:^3.0.17":
+  version: 3.0.17
+  resolution: "@portabletext/react@npm:3.0.17"
+  dependencies:
+    "@portabletext/toolkit": "npm:^2.0.14"
+    "@portabletext/types": "npm:^2.0.12"
+  peerDependencies:
+    react: ^17 || ^18
+  checksum: 10c0/f23505be82d2d86b533e44530452f3348614b1cb2c7a32af157f553c5ea75314fbe9c44faeaa185983d4a60972baf66060d223316c0787e7ee908b1b859e883c
   languageName: node
   linkType: hard
 
@@ -2619,6 +2631,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@portabletext/toolkit@npm:^2.0.15":
+  version: 2.0.15
+  resolution: "@portabletext/toolkit@npm:2.0.15"
+  dependencies:
+    "@portabletext/types": "npm:^2.0.13"
+  checksum: 10c0/d54375c56c026754004120d137cdb88de2f6cdeb3c92d5b32d914c6c8a7c378a4c046b1cd0d87fc03027367724ccd0e6c7fab87985647c96065658d2ea7deedb
+  languageName: node
+  linkType: hard
+
 "@portabletext/types@npm:2.0.12, @portabletext/types@npm:^2.0.12":
   version: 2.0.12
   resolution: "@portabletext/types@npm:2.0.12"
@@ -2637,6 +2658,13 @@ __metadata:
   version: 2.0.11
   resolution: "@portabletext/types@npm:2.0.11"
   checksum: 10c0/d7fd5183d733e76fec39c64d7e899227665f98a499740a1ecc6583002ed75b9c553cfb43f1609c3a7ef2829130a1fea4a05b342cb2220c62649478de65c42099
+  languageName: node
+  linkType: hard
+
+"@portabletext/types@npm:^2.0.13":
+  version: 2.0.13
+  resolution: "@portabletext/types@npm:2.0.13"
+  checksum: 10c0/0989d1141f00df1649feb99f0e8d2c124a02f6fe8213588ab35ff415b374592134727025abdf1421f243acaf744951d7c8af6f6ee1e49a90be840355398ff126
   languageName: node
   linkType: hard
 
@@ -9005,7 +9033,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@portabletext/react": "npm:3.0.17"
+    "@portabletext/react": "npm:3.0.18"
     "@portabletext/to-html": "npm:1.0.4"
     "@portabletext/types": "npm:2.0.12"
     "@rsc-parser/embedded": "npm:0.2.3"
