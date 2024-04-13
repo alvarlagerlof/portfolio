@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@portabletext/to-html": "1.0.4",
-    "@portabletext/types": "2.0.12",
+    "@portabletext/types": "2.0.13",
     "@rsc-parser/embedded": "0.2.3",
     "@types/eslint__eslintrc": "2.1.1",
     "@types/eslint__js": "8.42.3",
