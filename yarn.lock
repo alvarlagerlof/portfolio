@@ -2760,15 +2760,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/client@npm:^6.15.10":
-  version: 6.15.11
-  resolution: "@sanity/client@npm:6.15.11"
+"@sanity/client@npm:^6.15.11":
+  version: 6.15.13
+  resolution: "@sanity/client@npm:6.15.13"
   dependencies:
     "@sanity/eventsource": "npm:^5.0.0"
     "@vercel/stega": "npm:0.1.0"
-    get-it: "npm:^8.4.18"
+    get-it: "npm:^8.4.21"
     rxjs: "npm:^7.0.0"
-  checksum: 10c0/cdbea3c83ff38a21c16cb59437e03f60e45d8795e37742fff93c6746727439aef4871703e48a32baccd90d525a79bc4fa51c2f01122eff9c56e2f0cee6e4be79
+  checksum: 10c0/43bec40c9a1e28322f78772dff4e1d9fe7b8b9e649b772322056cce300d6ef41b0dcbf5f9cb49e2cf285d26a10f4f941dd0ba5c333950398f368a72fcab6fa14
   languageName: node
   linkType: hard
 
@@ -3051,33 +3051,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/preview-kit-compat@npm:1.4.14":
-  version: 1.4.14
-  resolution: "@sanity/preview-kit-compat@npm:1.4.14"
+"@sanity/preview-kit-compat@npm:1.4.15":
+  version: 1.4.15
+  resolution: "@sanity/preview-kit-compat@npm:1.4.15"
   peerDependencies:
-    "@sanity/client": ^6.15.10
+    "@sanity/client": ^6.15.11
     react: ^18.2.0
-  checksum: 10c0/357948a3736cf523ee8b97c0c0612fe59749984109dec25215bf9618f149ea4a5db94281aa236435764696f058fa2918c70e424b837c3c2aecf5bf6d2e771296
+  checksum: 10c0/95160f5ab45c50cc6759d532612fd5686ad592432982af1aebe74ad4007d65de61b3955541e42cacd2ad86be8b89a772a3cd27f1e0f958599a4511cf6775d95a
   languageName: node
   linkType: hard
 
-"@sanity/preview-kit@npm:5.0.39":
-  version: 5.0.39
-  resolution: "@sanity/preview-kit@npm:5.0.39"
+"@sanity/preview-kit@npm:5.0.41":
+  version: 5.0.41
+  resolution: "@sanity/preview-kit@npm:5.0.41"
   dependencies:
-    "@sanity/preview-kit-compat": "npm:1.4.14"
+    "@sanity/preview-kit-compat": "npm:1.4.15"
     "@vercel/stega": "npm:0.1.0"
     lru-cache: "npm:10.2.0"
     mendoza: "npm:3.0.6"
     react-fast-compare: "npm:3.2.2"
     use-sync-external-store: "npm:1.2.0"
   peerDependencies:
-    "@sanity/client": ^6.15.10
+    "@sanity/client": ^6.15.11
     react: ^18.0.0
   peerDependenciesMeta:
     react:
       optional: true
-  checksum: 10c0/718647a5cd589f56c9de097093a0c819804c8a746a8a07dff229c72351ed4801860ced08e412326c408c2cca18cb40f2430fe868f04fe2373b83daa1b22cd171
+  checksum: 10c0/a526f68bc0ab3bfb4deee21be8078f1595cdb924955be2e73d5938f6cb04fe6e7626f6ee53aa41e63da9818c803a4a1d1113ed600768f1e283ea533c88881118
   languageName: node
   linkType: hard
 
@@ -3092,7 +3092,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/preview-url-secret@npm:^1.6.6":
+"@sanity/preview-url-secret@npm:^1.6.7":
   version: 1.6.7
   resolution: "@sanity/preview-url-secret@npm:1.6.7"
   dependencies:
@@ -3203,11 +3203,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/visual-editing@npm:1.8.6":
-  version: 1.8.6
-  resolution: "@sanity/visual-editing@npm:1.8.6"
+"@sanity/visual-editing@npm:1.8.7":
+  version: 1.8.7
+  resolution: "@sanity/visual-editing@npm:1.8.7"
   dependencies:
-    "@sanity/preview-url-secret": "npm:^1.6.6"
+    "@sanity/preview-url-secret": "npm:^1.6.7"
     "@vercel/stega": "npm:0.1.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -3216,7 +3216,7 @@ __metadata:
     valibot: "npm:0.30.0"
   peerDependencies:
     "@remix-run/react": ">= 2"
-    "@sanity/client": ^6.15.10
+    "@sanity/client": ^6.15.11
     "@sveltejs/kit": ">= 2"
     next: ">= 13"
     svelte: ">= 4"
@@ -3231,7 +3231,7 @@ __metadata:
       optional: true
     svelte:
       optional: true
-  checksum: 10c0/0489c10848a290faab6ec3dd14ba12f3fa057a42fdaf2e747602a48662d50b8366070053885c605b6caabb2092582aa7ecaa4073a2f239867afbf5345c2458ee
+  checksum: 10c0/5b6d5c7ec8bcd023998064bfdd67de09049caed50e8663f9585389715a2002dd63533fd7a8d5163de84b9d9905a3bbc23a5001e38d1e9b13987589de9c87d8fa
   languageName: node
   linkType: hard
 
@@ -6548,9 +6548,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-it@npm:^8.4.18":
-  version: 8.4.18
-  resolution: "get-it@npm:8.4.18"
+"get-it@npm:^8.4.21":
+  version: 8.4.21
+  resolution: "get-it@npm:8.4.21"
   dependencies:
     debug: "npm:^4.3.4"
     decompress-response: "npm:^7.0.0"
@@ -6562,7 +6562,7 @@ __metadata:
     parse-headers: "npm:^2.0.5"
     progress-stream: "npm:^2.0.0"
     tunnel-agent: "npm:^0.6.0"
-  checksum: 10c0/919539392c135efc446869eb56a19b44f23fe242323c99cdfd399f18b9d7584681031202e57b7a302e48677a24f2fdcb27cccbce20e681ba8b2862bf0a82c2e2
+  checksum: 10c0/9f3e428a6d262a6991a50f188761d5e62128c11c6242fd86c91c804cb88090dba9678a44cf888f6f441aa63b6613dd5b0a2bb7b397a96d4da33ee44b87a8c728
   languageName: node
   linkType: hard
 
@@ -8354,19 +8354,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:8.5.3":
-  version: 8.5.3
-  resolution: "next-sanity@npm:8.5.3"
+"next-sanity@npm:8.5.5":
+  version: 8.5.5
+  resolution: "next-sanity@npm:8.5.5"
   dependencies:
     "@portabletext/react": "npm:^3.0.17"
-    "@sanity/client": "npm:^6.15.10"
-    "@sanity/preview-kit": "npm:5.0.39"
-    "@sanity/visual-editing": "npm:1.8.6"
+    "@sanity/client": "npm:^6.15.11"
+    "@sanity/preview-kit": "npm:5.0.41"
+    "@sanity/visual-editing": "npm:1.8.7"
     "@sanity/webhook": "npm:4.0.2-bc"
     groq: "npm:^3.19"
     history: "npm:^5.3.0"
   peerDependencies:
-    "@sanity/client": ^6.15.10
+    "@sanity/client": ^6.15.11
     "@sanity/icons": ^2.8
     "@sanity/types": ^3.25
     "@sanity/ui": ^1.8 || ^2.0.0-beta || ^2.0
@@ -8374,7 +8374,7 @@ __metadata:
     react: ^18.2
     sanity: ^3.25
     styled-components: ^5.2 || ^6.0
-  checksum: 10c0/42cdcf32af22a46297bfb8245747f0e0a7a45f495011fcd1206fc4a6005f927227f992a8ca6c91124583db76ae4ad2f7bb0f8cbbf6308f8bdd9d7c9d58baeab5
+  checksum: 10c0/9757a27195df5819d65ca8d9608fd9b45fe70f5b07a5fe707bbc1d0eb0a1f8a0a35783fff81928eef6aee73bf76afdd9465a8bf723a996ed303cf81665e9ced6
   languageName: node
   linkType: hard
 
@@ -9050,7 +9050,7 @@ __metadata:
     feed: "npm:4.2.2"
     htm: "npm:3.1.1"
     next: "npm:14.2.0-canary.61"
-    next-sanity: "npm:8.5.3"
+    next-sanity: "npm:8.5.5"
     next-sanity-image: "npm:6.1.1"
     postcss: "npm:8.4.38"
     prettier: "npm:3.2.5"
