@@ -2640,10 +2640,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/types@npm:2.0.12, @portabletext/types@npm:^2.0.12":
-  version: 2.0.12
-  resolution: "@portabletext/types@npm:2.0.12"
-  checksum: 10c0/419326668c46dc963056d343310c6fd17077f69aa55682373bbb90dbbf2a2981c523f2973b049a01fb6f7f29ba4b2a032a2991c80921f27271974ab345ba4409
+"@portabletext/types@npm:2.0.13, @portabletext/types@npm:^2.0.13":
+  version: 2.0.13
+  resolution: "@portabletext/types@npm:2.0.13"
+  checksum: 10c0/0989d1141f00df1649feb99f0e8d2c124a02f6fe8213588ab35ff415b374592134727025abdf1421f243acaf744951d7c8af6f6ee1e49a90be840355398ff126
   languageName: node
   linkType: hard
 
@@ -2661,10 +2661,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/types@npm:^2.0.13":
-  version: 2.0.13
-  resolution: "@portabletext/types@npm:2.0.13"
-  checksum: 10c0/0989d1141f00df1649feb99f0e8d2c124a02f6fe8213588ab35ff415b374592134727025abdf1421f243acaf744951d7c8af6f6ee1e49a90be840355398ff126
+"@portabletext/types@npm:^2.0.12":
+  version: 2.0.12
+  resolution: "@portabletext/types@npm:2.0.12"
+  checksum: 10c0/419326668c46dc963056d343310c6fd17077f69aa55682373bbb90dbbf2a2981c523f2973b049a01fb6f7f29ba4b2a032a2991c80921f27271974ab345ba4409
   languageName: node
   linkType: hard
 
@@ -9035,7 +9035,7 @@ __metadata:
   dependencies:
     "@portabletext/react": "npm:3.0.18"
     "@portabletext/to-html": "npm:1.0.4"
-    "@portabletext/types": "npm:2.0.12"
+    "@portabletext/types": "npm:2.0.13"
     "@rsc-parser/embedded": "npm:0.2.3"
     "@sanity/code-input": "npm:4.1.3"
     "@tailwindcss/typography": "npm:0.5.12"
