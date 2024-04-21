@@ -8577,7 +8577,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^14.3.0-canary.14":
+"next@npm:14.3.0-canary.14":
   version: 14.3.0-canary.14
   resolution: "next@npm:14.3.0-canary.14"
   dependencies:
@@ -9277,7 +9277,7 @@ __metadata:
     eslint-config-next: "npm:14.2.2"
     feed: "npm:4.2.2"
     htm: "npm:3.1.1"
-    next: "npm:^14.3.0-canary.14"
+    next: "npm:14.3.0-canary.14"
     next-sanity: "npm:9.0.7"
     next-sanity-image: "npm:6.1.1"
     postcss: "npm:8.4.38"
