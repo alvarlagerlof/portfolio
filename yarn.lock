@@ -3780,13 +3780,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.79":
-  version: 18.2.79
-  resolution: "@types/react@npm:18.2.79"
+"@types/react@npm:18.3.1":
+  version: 18.3.1
+  resolution: "@types/react@npm:18.3.1"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/c8a8a005d8830a48cc1ef93c3510c4935a2a03e5557dbecaa8f1038450cbfcb18eb206fa7fba7077d54b8da21faeb25577e897a333392770a7797f625b62c78a
+  checksum: 10c0/18d856c12a4ec93f3cda2d58ef3d77a9480818afd3af895f812896fb82cfca1f35a692ab1add4ce826a4eb58a071624c7d1c8c6c4ccfb81c100d2916dc607614
   languageName: node
   linkType: hard
 
@@ -9522,7 +9522,7 @@ __metadata:
     "@tailwindcss/typography": "npm:0.5.13"
     "@types/eslint__eslintrc": "npm:2.1.1"
     "@types/eslint__js": "npm:8.42.3"
-    "@types/react": "npm:18.2.79"
+    "@types/react": "npm:18.3.1"
     "@vercel/og": "npm:0.6.2"
     autoprefixer: "npm:10.4.19"
     bright: "npm:0.8.5"
@@ -9535,7 +9535,7 @@ __metadata:
     next-sanity-image: "npm:6.1.1"
     postcss: "npm:8.4.38"
     prettier: "npm:3.2.5"
-    react: "npm:18.2.0"
+    react: "npm:18.3.1"
     react-dom: "npm:18.2.0"
     sanity: "npm:3.38.0"
     styled-components: "npm:6.1.8"
@@ -9986,7 +9986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.3.0":
+"react@npm:18.3.1, react@npm:^18.3.0":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
