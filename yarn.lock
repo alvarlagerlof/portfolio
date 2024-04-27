@@ -9536,7 +9536,7 @@ __metadata:
     postcss: "npm:8.4.38"
     prettier: "npm:3.2.5"
     react: "npm:18.3.1"
-    react-dom: "npm:18.2.0"
+    react-dom: "npm:18.3.1"
     sanity: "npm:3.38.0"
     styled-components: "npm:6.1.8"
     tailwindcss: "npm:3.4.3"
@@ -9865,7 +9865,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.3.0":
+"react-dom@npm:18.3.1, react-dom@npm:^18.3.0":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
