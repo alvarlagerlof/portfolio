@@ -2614,10 +2614,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/env@npm:14.3.0-canary.29"
-  checksum: 10c0/b055c8c98355ff6533e46d55965661486cfa81424fb9faaedf17949194df5132b111c961dbc27b227e2b48c91f68a5f864245f98eecda60e4caa5371931a4a8a
+"@next/env@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/env@npm:14.3.0-canary.38"
+  checksum: 10c0/a6b49c4fdf681cfbeb812e4194ed8234af2b31b1069d2d3c4250b0c3c37cf8d4a1db63dd618f324f189d13bb1df8fcef25e63756c4f77def03a7dd2d428567f4
   languageName: node
   linkType: hard
 
@@ -2630,65 +2630,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-darwin-arm64@npm:14.3.0-canary.29"
+"@next/swc-darwin-arm64@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-darwin-arm64@npm:14.3.0-canary.38"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-darwin-x64@npm:14.3.0-canary.29"
+"@next/swc-darwin-x64@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-darwin-x64@npm:14.3.0-canary.38"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-linux-arm64-gnu@npm:14.3.0-canary.29"
+"@next/swc-linux-arm64-gnu@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.3.0-canary.38"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-linux-arm64-musl@npm:14.3.0-canary.29"
+"@next/swc-linux-arm64-musl@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-linux-arm64-musl@npm:14.3.0-canary.38"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-linux-x64-gnu@npm:14.3.0-canary.29"
+"@next/swc-linux-x64-gnu@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-linux-x64-gnu@npm:14.3.0-canary.38"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-linux-x64-musl@npm:14.3.0-canary.29"
+"@next/swc-linux-x64-musl@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-linux-x64-musl@npm:14.3.0-canary.38"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-win32-arm64-msvc@npm:14.3.0-canary.29"
+"@next/swc-win32-arm64-msvc@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.3.0-canary.38"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-win32-ia32-msvc@npm:14.3.0-canary.29"
+"@next/swc-win32-ia32-msvc@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.3.0-canary.38"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "@next/swc-win32-x64-msvc@npm:14.3.0-canary.29"
+"@next/swc-win32-x64-msvc@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "@next/swc-win32-x64-msvc@npm:14.3.0-canary.38"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -8828,20 +8828,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.3.0-canary.29":
-  version: 14.3.0-canary.29
-  resolution: "next@npm:14.3.0-canary.29"
+"next@npm:14.3.0-canary.38":
+  version: 14.3.0-canary.38
+  resolution: "next@npm:14.3.0-canary.38"
   dependencies:
-    "@next/env": "npm:14.3.0-canary.29"
-    "@next/swc-darwin-arm64": "npm:14.3.0-canary.29"
-    "@next/swc-darwin-x64": "npm:14.3.0-canary.29"
-    "@next/swc-linux-arm64-gnu": "npm:14.3.0-canary.29"
-    "@next/swc-linux-arm64-musl": "npm:14.3.0-canary.29"
-    "@next/swc-linux-x64-gnu": "npm:14.3.0-canary.29"
-    "@next/swc-linux-x64-musl": "npm:14.3.0-canary.29"
-    "@next/swc-win32-arm64-msvc": "npm:14.3.0-canary.29"
-    "@next/swc-win32-ia32-msvc": "npm:14.3.0-canary.29"
-    "@next/swc-win32-x64-msvc": "npm:14.3.0-canary.29"
+    "@next/env": "npm:14.3.0-canary.38"
+    "@next/swc-darwin-arm64": "npm:14.3.0-canary.38"
+    "@next/swc-darwin-x64": "npm:14.3.0-canary.38"
+    "@next/swc-linux-arm64-gnu": "npm:14.3.0-canary.38"
+    "@next/swc-linux-arm64-musl": "npm:14.3.0-canary.38"
+    "@next/swc-linux-x64-gnu": "npm:14.3.0-canary.38"
+    "@next/swc-linux-x64-musl": "npm:14.3.0-canary.38"
+    "@next/swc-win32-arm64-msvc": "npm:14.3.0-canary.38"
+    "@next/swc-win32-ia32-msvc": "npm:14.3.0-canary.38"
+    "@next/swc-win32-x64-msvc": "npm:14.3.0-canary.38"
     "@swc/helpers": "npm:0.5.11"
     busboy: "npm:1.6.0"
     caniuse-lite: "npm:^1.0.30001579"
@@ -8885,7 +8885,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/b37d06bbf5e5b1367dc3424e436ca0ed8b1c389a7a8db8e218b166677fb8af3a3a9527f384a3e081d69cc14952ff49babb6d0b230f6e9e5267c34d74c4645154
+  checksum: 10c0/3b109254c1440c88a7581a7785da98f060e81723ed0c1eb5f1cf5646fc8ff2eed53743a42524f80398574951c24d971b15d82e7bcb97f8c1f338746bbcca70a6
   languageName: node
   linkType: hard
 
@@ -9531,7 +9531,7 @@ __metadata:
     eslint-config-next: "npm:14.2.3"
     feed: "npm:4.2.2"
     htm: "npm:3.1.1"
-    next: "npm:14.3.0-canary.29"
+    next: "npm:14.3.0-canary.38"
     next-sanity: "npm:9.0.12"
     next-sanity-image: "npm:6.1.1"
     postcss: "npm:8.4.38"
