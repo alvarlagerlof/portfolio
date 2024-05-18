@@ -22,7 +22,7 @@
     "next-sanity-image": "6.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "sanity": "3.41.1",
+    "sanity": "3.42.1",
     "styled-components": "6.1.11"
   },
   "devDependencies": {
