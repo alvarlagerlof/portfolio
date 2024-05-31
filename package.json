@@ -18,7 +18,7 @@
     "bright": "0.8.5",
     "feed": "4.2.2",
     "next": "14.3.0-canary.39",
-    "next-sanity": "9.3.0",
+    "next-sanity": "9.3.10",
     "next-sanity-image": "6.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
