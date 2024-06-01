@@ -5,7 +5,7 @@ import Script from "next/script";
 
 import "./global.css";
 import { DraftIndicator } from "./DraftIndicator";
-import { Suspense, lazy } from "react";
+// import { Suspense, lazy } from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,11 +60,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://alvar.dev"),
 };
 
-const RscDevtoolsPanel = lazy(() =>
-  import("@rsc-parser/embedded").then(module => ({
-    default: module.RscDevtoolsPanel,
-  })),
-);
+// const RscDevtoolsPanel = lazy(() =>
+//   import("@rsc-parser/embedded").then(module => ({
+//     default: module.RscDevtoolsPanel,
+//   })),
+// );
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
@@ -73,12 +73,14 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         <DraftIndicator />
         {children}
         <Script defer data-domain="alvar.dev" src="/js/script.outbound-links.js"></Script>
+
+        {/* Causes TypeError: Cannot read properties of undefined (reading 'ReactCurrentDispatcher')
         {process.env.NODE_ENV === "development" ||
         process.env.NEXT_PUBLIC_VERCEL_ENV === "preview" ? (
           <Suspense>
             <RscDevtoolsPanel />
           </Suspense>
-        ) : null}
+        ) : null} */}
       </body>
     </html>
   );

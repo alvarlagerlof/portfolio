@@ -4,9 +4,9 @@ const nextConfig = {
     domains: ["cdn.sanity.io"],
   },
   experimental: {
-    serverComponentsExternalPackages: ["sanity", "next-sanity"],
     ppr: true,
   },
+  serverExternalPackages: ["sanity", "next-sanity"],
   async rewrites() {
     return [
       {
