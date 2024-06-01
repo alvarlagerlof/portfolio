@@ -20,7 +20,7 @@
     "next": "15.0.0-canary.5",
     "next-sanity": "9.3.10",
     "next-sanity-image": "6.1.1",
-    "react": "19.0.0-beta-26f2496093-20240514",
+    "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-beta-26f2496093-20240514",
     "sanity": "3.44.0",
     "styled-components": "6.1.11"
