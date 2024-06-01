@@ -2631,12 +2631,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.0.0-canary.5":
-  version: 15.0.0-canary.5
-  resolution: "@next/eslint-plugin-next@npm:15.0.0-canary.5"
+"@next/eslint-plugin-next@npm:15.0.0-rc.0":
+  version: 15.0.0-rc.0
+  resolution: "@next/eslint-plugin-next@npm:15.0.0-rc.0"
   dependencies:
     glob: "npm:10.3.10"
-  checksum: 10c0/e456be8edd6aee60fe24a5ca26bbf39dd93fb21fa0eb128ea16afcb9bc6d4d3187f0fd251a4711e5387d53a1078852f143b624f320814614a06823f351006522
+  checksum: 10c0/292c8fb39fc1fc9f0cf1c345196c6e971a8cadfbb57ac5fa279fcecbe0685f40a412fd7528c91322760a7f3a718c5d8670a01f35438888d23cb69b0de95c74a0
   languageName: node
   linkType: hard
 
@@ -6125,11 +6125,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:15.0.0-canary.5":
-  version: 15.0.0-canary.5
-  resolution: "eslint-config-next@npm:15.0.0-canary.5"
+"eslint-config-next@npm:15.0.0-rc.0":
+  version: 15.0.0-rc.0
+  resolution: "eslint-config-next@npm:15.0.0-rc.0"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.0.0-canary.5"
+    "@next/eslint-plugin-next": "npm:15.0.0-rc.0"
     "@rushstack/eslint-patch": "npm:^1.3.3"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0"
     eslint-import-resolver-node: "npm:^0.3.6"
@@ -6144,7 +6144,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/d83971e10e9c97a62618fc2e45390e9116e73eaa5cb5a7b96d16e4b1a5b66dee6eae26b9fcd802acee1dafe18b921d71bf43dfde478cc0b4e2bbd8d553d84e58
+  checksum: 10c0/1e8292810c41540ee0244f2c6e6f33e39a0225f22c80d7e6f2d8e3de47dfe3a222e36e0a3892f28cceb84a0a63106a3450a9932acfd336b256a82044fcecb5f3
   languageName: node
   linkType: hard
 
@@ -9531,7 +9531,7 @@ __metadata:
     autoprefixer: "npm:10.4.19"
     bright: "npm:0.8.5"
     eslint: "npm:9.4.0"
-    eslint-config-next: "npm:15.0.0-canary.5"
+    eslint-config-next: "npm:15.0.0-rc.0"
     feed: "npm:4.2.2"
     htm: "npm:3.1.1"
     next: "npm:15.0.0-canary.5"
