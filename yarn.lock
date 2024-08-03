@@ -9269,9 +9269,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:9.4.2":
-  version: 9.4.2
-  resolution: "next-sanity@npm:9.4.2"
+"next-sanity@npm:9.4.3":
+  version: 9.4.3
+  resolution: "next-sanity@npm:9.4.3"
   dependencies:
     "@portabletext/react": "npm:^3.1.0"
     "@sanity/client": "npm:^6.20.1"
@@ -9288,7 +9288,7 @@ __metadata:
     react: ^18.3 || ^19.0.0-0
     sanity: ^3.37.1
     styled-components: ^6.1
-  checksum: 10c0/804c2409e3950b15933b9ab16400a7ddaed7ef99bba6e24d71a6cfcfb715094bb7c3939baf1141b7b0bfd14544ccb21d207bf92a3e7ba705ec590b913e7af6f5
+  checksum: 10c0/0a7a859be0c04e94ded5d8626aae63be669281ee036abfd5119cfd75eb16749be329840c5ed8bc09d417e1a1c5d9c9cc2b6002e9ae203cfe22cafdcfcdeab0ee
   languageName: node
   linkType: hard
 
@@ -10056,7 +10056,7 @@ __metadata:
     feed: "npm:4.2.2"
     htm: "npm:3.1.1"
     next: "npm:15.0.0-canary.5"
-    next-sanity: "npm:9.4.2"
+    next-sanity: "npm:9.4.3"
     next-sanity-image: "npm:6.1.1"
     postcss: "npm:8.4.40"
     prettier: "npm:3.3.3"
