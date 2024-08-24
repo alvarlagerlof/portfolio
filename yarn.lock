@@ -7510,10 +7510,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq@npm:^3.37.1":
-  version: 3.38.0
-  resolution: "groq@npm:3.38.0"
-  checksum: 10c0/f726cda85dcf97fd35a78c751a5bed7b621305acf45968ad1128b7962902b73c8a0eac862e2ecf45f09bc6183da961e55b4cd5666798fe3a2e7ae898dcf55a32
+"groq@npm:^3.54.0":
+  version: 3.55.0
+  resolution: "groq@npm:3.55.0"
+  checksum: 10c0/4234a7896367e61b4a50974285d941831c8dea321c639a4aebc7e74b71799be54b79ae13522d7a94e7ee45b116a2cbd7fb0dc0c434e7b72fa92fb08a2529f38a
   languageName: node
   linkType: hard
 
@@ -9240,15 +9240,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:9.4.5":
-  version: 9.4.5
-  resolution: "next-sanity@npm:9.4.5"
+"next-sanity@npm:9.4.7":
+  version: 9.4.7
+  resolution: "next-sanity@npm:9.4.7"
   dependencies:
     "@portabletext/react": "npm:^3.1.0"
     "@sanity/client": "npm:^6.21.2"
     "@sanity/preview-kit": "npm:5.1.0"
     "@sanity/visual-editing": "npm:2.1.8"
-    groq: "npm:^3.37.1"
+    groq: "npm:^3.54.0"
     history: "npm:^5.3.0"
   peerDependencies:
     "@sanity/client": ^6.21.2
@@ -9259,7 +9259,7 @@ __metadata:
     react: ^18.3 || ^19.0.0-0
     sanity: ^3.37.1
     styled-components: ^6.1
-  checksum: 10c0/9c5e86cec1d060ab1fffa0b4cba3aace02248235809beb59f3a1094495736439dfa98a8f88fae6ff23bcc8819770218a94601d9fca1801aecaba76621b9126b5
+  checksum: 10c0/74cc24152c07f263e16aa34da72ca0599ba42ad8c7f8f288b55c385a6aa82bdc5ded4a8c56269a0c9f4cf592e15f99419f33f960e5d9c7ffca2c02da7c7ae6fa
   languageName: node
   linkType: hard
 
@@ -10027,7 +10027,7 @@ __metadata:
     feed: "npm:4.2.2"
     htm: "npm:3.1.1"
     next: "npm:15.0.0-canary.5"
-    next-sanity: "npm:9.4.5"
+    next-sanity: "npm:9.4.7"
     next-sanity-image: "npm:6.1.1"
     postcss: "npm:8.4.41"
     prettier: "npm:3.3.3"
