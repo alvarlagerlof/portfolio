@@ -7536,14 +7536,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq@npm:3.55.0":
-  version: 3.55.0
-  resolution: "groq@npm:3.55.0"
-  checksum: 10c0/4234a7896367e61b4a50974285d941831c8dea321c639a4aebc7e74b71799be54b79ae13522d7a94e7ee45b116a2cbd7fb0dc0c434e7b72fa92fb08a2529f38a
-  languageName: node
-  linkType: hard
-
-"groq@npm:^3.54.0":
+"groq@npm:3.55.0, groq@npm:^3.54.0":
   version: 3.55.0
   resolution: "groq@npm:3.55.0"
   checksum: 10c0/4234a7896367e61b4a50974285d941831c8dea321c639a4aebc7e74b71799be54b79ae13522d7a94e7ee45b116a2cbd7fb0dc0c434e7b72fa92fb08a2529f38a
