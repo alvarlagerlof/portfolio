@@ -43,5 +43,5 @@
     "typescript-eslint": "8.5.0",
     "vhtml": "2.2.0"
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.5.0"
 }
