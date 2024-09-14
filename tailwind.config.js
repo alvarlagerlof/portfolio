@@ -1,7 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const colors = require("tailwindcss/colors");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const typographyPlugin = require("@tailwindcss/typography");
+import colors from "tailwindcss/colors";
+import typographyPlugin from "@tailwindcss/typography";
 
 const inflatePlugin = function ({ addComponents, theme, variants, e }) {
   const spacing = theme("spacing", {});
