@@ -4325,14 +4325,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/og@npm:0.6.2":
-  version: 0.6.2
-  resolution: "@vercel/og@npm:0.6.2"
+"@vercel/og@npm:0.6.3":
+  version: 0.6.3
+  resolution: "@vercel/og@npm:0.6.3"
   dependencies:
     "@resvg/resvg-wasm": "npm:2.4.0"
     satori: "npm:0.10.9"
     yoga-wasm-web: "npm:0.3.3"
-  checksum: 10c0/96a445c30c5aee3dd20c0db3763a518ffd343f752236bedb705137c3278af119992ddb24ae5418091216a91ac434170507c6f5e89d364eb77edb9cef2b872b5a
+  checksum: 10c0/ed8d5a24aade307167d706537068cc6e83cbaf9de55d940683331d27cfed836c11bd28792757a0839b66f8e1d43c59c1e9f629020e5b8827ca07a06aa690df3a
   languageName: node
   linkType: hard
 
@@ -10077,7 +10077,7 @@ __metadata:
     "@types/eslint__eslintrc": "npm:2.1.2"
     "@types/eslint__js": "npm:8.42.3"
     "@types/react": "npm:18.3.8"
-    "@vercel/og": "npm:0.6.2"
+    "@vercel/og": "npm:0.6.3"
     autoprefixer: "npm:10.4.20"
     bright: "npm:0.8.5"
     eslint: "npm:9.10.0"
