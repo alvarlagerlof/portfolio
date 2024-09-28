@@ -31,7 +31,7 @@
     "@rsc-parser/embedded": "0.9.1",
     "@types/eslint__eslintrc": "2.1.2",
     "@types/eslint__js": "8.42.3",
-    "@types/react": "18.3.8",
+    "@types/react": "18.3.10",
     "autoprefixer": "10.4.20",
     "eslint": "9.11.0",
     "eslint-config-next": "15.0.0-canary.5",
