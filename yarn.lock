@@ -4006,13 +4006,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.3.10":
-  version: 18.3.10
-  resolution: "@types/react@npm:18.3.10"
+"@types/react@npm:18.3.11":
+  version: 18.3.11
+  resolution: "@types/react@npm:18.3.11"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/f5be1de1b0331c1fdb33d577f4cf7f1b949d4bded5347b2351a537f03c51dade5be115e21b161dcf1b37061954d320f6a0bdf8d7b70e24eda51071fdd614383d
+  checksum: 10c0/ce80512246ca5bda69db85b9f4f1835189334acfb6b2c4f3eda8cabff1ff1a3ea9ce4f3b895bdbc18c94140aa45592331aa3fdeb557f525c1b048de7ce84fc0e
   languageName: node
   linkType: hard
 
@@ -10071,7 +10071,7 @@ __metadata:
     "@tailwindcss/typography": "npm:0.5.15"
     "@types/eslint__eslintrc": "npm:2.1.2"
     "@types/eslint__js": "npm:8.42.3"
-    "@types/react": "npm:18.3.10"
+    "@types/react": "npm:18.3.11"
     "@vercel/og": "npm:0.6.3"
     autoprefixer: "npm:10.4.20"
     bright: "npm:0.8.5"
