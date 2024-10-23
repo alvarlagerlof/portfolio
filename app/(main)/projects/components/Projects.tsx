@@ -39,7 +39,9 @@ export async function Projects() {
 }
 
 async function ProjectsList() {
-  const projects: Project[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+  const projects: Project[] = await (
+    await createSanityClientWithDraftMode()
+  ).fetch(query, undefined, {
     next: { revalidate: 600 },
   });
 

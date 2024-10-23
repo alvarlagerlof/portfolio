@@ -4,10 +4,10 @@ import { draftMode } from "next/headers";
 
 export const sanityClient = createClient(config);
 
-export function createSanityClientWithDraftMode() {
+export async function createSanityClientWithDraftMode() {
   const client = createClient(config);
 
-  const { isEnabled } = draftMode();
+  const { isEnabled } = await draftMode();
 
   if (!isEnabled) {
     return client;

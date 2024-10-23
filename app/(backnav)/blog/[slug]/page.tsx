@@ -6,11 +6,11 @@ import { notFound } from "next/navigation";
 import { getPost } from "./getPost";
 
 export async function generateMetadata({
-  params: { slug },
+  params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = await getPost(slug);
+  const post = await getPost((await params).slug);
 
   if (!post) notFound();
 
@@ -20,8 +20,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function PostPage({ params: { slug } }: { params: { slug: string } }) {
-  const post = await getPost(slug);
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const post = await getPost((await params).slug);
 
   if (!post) notFound();
 
