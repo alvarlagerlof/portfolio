@@ -35,7 +35,7 @@ const query = groq`
 `;
 
 export const getPost = cache(async (slug: string) => {
-  return await createSanityClientWithDraftMode().fetch<Post>(
+  return (await createSanityClientWithDraftMode()).fetch<Post>(
     query,
     {
       slug,

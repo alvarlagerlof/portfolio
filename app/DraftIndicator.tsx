@@ -1,7 +1,7 @@
 import { draftMode } from "next/headers";
 
-export function DraftIndicator() {
-  const { isEnabled } = draftMode();
+export async function DraftIndicator() {
+  const { isEnabled } = await draftMode();
 
   if (!isEnabled) {
     return null;

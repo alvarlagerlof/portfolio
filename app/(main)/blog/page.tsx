@@ -44,7 +44,9 @@ export default function BlogPage() {
 }
 
 const getSections = cache(async () => {
-  const posts: PostPreview[] = await createSanityClientWithDraftMode().fetch(query, undefined, {
+  const posts: PostPreview[] = await (
+    await createSanityClientWithDraftMode()
+  ).fetch(query, undefined, {
     next: {
       revalidate: 600,
     },
