@@ -23,8 +23,10 @@ const getMadeDillanFont = async () => {
   return buffer;
 };
 
-export default async function Image({ params: { slug } }: { params: { slug: string } }) {
-  const { title, description } = await getPost(slug);
+export default async function Image(props: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await props.params;
+  console.log("slug", props);
+  const { title, description } = await getPost(resolvedParams.slug);
 
   return new ImageResponse(
     (
