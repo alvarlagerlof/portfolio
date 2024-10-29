@@ -1,6 +1,8 @@
 import { ImageResponse } from "@vercel/og";
 import { getPost } from "./getPost";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
+import { join } from "node:path";
+import { readFile } from "node:fs/promises";
 
 export const size = {
   width: 1200,
@@ -8,17 +10,17 @@ export const size = {
 };
 
 const getSpaceTextFont = async () => {
-  const response = await fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url));
-  const interSemiBold = await response.arrayBuffer();
+  const data = await readFile(join(process.cwd(), "/assets/fonts/space-text-medium.woff"));
+  const buffer = Uint8Array.from(data).buffer;
 
-  return interSemiBold;
+  return buffer;
 };
 
 const getMadeDillanFont = async () => {
-  const response = await fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url));
-  const interSemiBold = await response.arrayBuffer();
+  const data = await readFile(join(process.cwd(), "/assets/fonts/made-dillan.woff"));
+  const buffer = Uint8Array.from(data).buffer;
 
-  return interSemiBold;
+  return buffer;
 };
 
 export default async function Image({ params: { slug } }: { params: { slug: string } }) {
