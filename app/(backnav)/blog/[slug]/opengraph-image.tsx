@@ -2,9 +2,6 @@ import { ImageResponse } from "@vercel/og";
 import { getPost } from "./getPost";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
 
-export const revalidate = 600;
-
-export const runtime = "edge";
 export const size = {
   width: 1200,
   height: 630,
