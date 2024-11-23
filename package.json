@@ -43,7 +43,7 @@
     "typescript-eslint": "8.14.0",
     "vhtml": "2.2.0"
   },
-  "packageManager": "yarn@4.5.1",
+  "packageManager": "yarn@4.5.2",
   "resolutions": {
     "@types/react": "npm:types-react@19.0.0-rc.1"
   }
