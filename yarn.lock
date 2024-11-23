@@ -3925,14 +3925,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/og@npm:0.6.3":
-  version: 0.6.3
-  resolution: "@vercel/og@npm:0.6.3"
+"@vercel/og@npm:0.6.4":
+  version: 0.6.4
+  resolution: "@vercel/og@npm:0.6.4"
   dependencies:
     "@resvg/resvg-wasm": "npm:2.4.0"
-    satori: "npm:0.10.9"
+    satori: "npm:0.12.0"
     yoga-wasm-web: "npm:0.3.3"
-  checksum: 10c0/ed8d5a24aade307167d706537068cc6e83cbaf9de55d940683331d27cfed836c11bd28792757a0839b66f8e1d43c59c1e9f629020e5b8827ca07a06aa690df3a
+  checksum: 10c0/b99fe8f17157c538ca53f7f4f0a8ad219a5960216cfeb8ea54a3a47c3aa49caaa9b16a432c7d4cbf5a54eeb1592f6c20da951971928b8d913ccaf6a85d20cdd6
   languageName: node
   linkType: hard
 
@@ -5113,6 +5113,13 @@ __metadata:
   version: 1.0.0
   resolution: "css-color-keywords@npm:1.0.0"
   checksum: 10c0/af205a86c68e0051846ed91eb3e30b4517e1904aac040013ff1d742019b3f9369ba5658ba40901dbbc121186fc4bf0e75a814321cc3e3182fbb2feb81c6d9cb7
+  languageName: node
+  linkType: hard
+
+"css-gradient-parser@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "css-gradient-parser@npm:0.0.16"
+  checksum: 10c0/7f05794ad99927ed4dcb9b96571117eea5d4426366f6dc38932035f0e73729ed0edc2a4144576851b2987cdfe8acf9e8d9f2f08c9daf69d085ae2679779bbc5a
   languageName: node
   linkType: hard
 
@@ -9413,7 +9420,7 @@ __metadata:
     "@types/eslint__eslintrc": "npm:2.1.2"
     "@types/eslint__js": "npm:8.42.3"
     "@types/react": "npm:types-react@19.0.0-rc.1"
-    "@vercel/og": "npm:0.6.3"
+    "@vercel/og": "npm:0.6.4"
     autoprefixer: "npm:10.4.20"
     bright: "npm:0.8.5"
     eslint: "npm:9.14.0"
@@ -10481,13 +10488,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"satori@npm:0.10.9":
-  version: 0.10.9
-  resolution: "satori@npm:0.10.9"
+"satori@npm:0.12.0":
+  version: 0.12.0
+  resolution: "satori@npm:0.12.0"
   dependencies:
     "@shuding/opentype.js": "npm:1.4.0-beta.0"
     css-background-parser: "npm:^0.1.0"
     css-box-shadow: "npm:1.0.0-3"
+    css-gradient-parser: "npm:^0.0.16"
     css-to-react-native: "npm:^3.0.0"
     emoji-regex: "npm:^10.2.1"
     escape-html: "npm:^1.0.3"
@@ -10495,7 +10503,7 @@ __metadata:
     parse-css-color: "npm:^0.2.1"
     postcss-value-parser: "npm:^4.2.0"
     yoga-wasm-web: "npm:^0.3.3"
-  checksum: 10c0/efaaa67b248f54d0a6629deff8d75f6e8b97225623c8ad678e3a34057f7f8be300c5dda84ed895c7bac9dbb927853d3b874053e2723503797b404fe1650eebf1
+  checksum: 10c0/8ec7f76ac6ef5d01c357f31abf0f67a00ea682f4da329040b63c5cf1e3790da41c7e492ebf4a947f8ded6f329232459b6b945b4a54296b87bded21d76eb75439
   languageName: node
   linkType: hard
 
