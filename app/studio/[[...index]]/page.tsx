@@ -9,16 +9,23 @@
  * https://github.com/sanity-io/next-sanity
  */
 
-import { NextStudio } from "next-sanity/studio";
-
 import { studioConfig } from "../../../lib/sanity/studio";
 
 import "../../global.css";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+
+const NextStudioWithNoSSR = dynamic(
+  () => import("next-sanity/studio").then(module => module.NextStudio),
+  { ssr: false },
+);
 
 export default function StudioPage() {
   return (
     <div className="sanity">
-      <NextStudio config={studioConfig} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <NextStudioWithNoSSR config={studioConfig} />
+      </Suspense>
     </div>
   );
 }

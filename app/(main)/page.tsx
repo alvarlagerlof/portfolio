@@ -9,7 +9,7 @@ export const metadata = {
   description: "Developer and designer from Stockholm",
 };
 
-export default function IndexPage() {
+export default async function IndexPage() {
   return (
     <WithDividers direction="vertical">
       <header>

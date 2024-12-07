@@ -1,18 +1,20 @@
 import { ImageResponse } from "@vercel/og";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
+import { join } from "node:path";
+import { readFile } from "node:fs/promises";
 
 const getSpaceTextFont = async () => {
-  const response = await fetch(new URL("/assets/fonts/space-text-medium.woff", import.meta.url));
-  const interSemiBold = await response.arrayBuffer();
+  const data = await readFile(join(process.cwd(), "/assets/fonts/space-text-medium.woff"));
+  const buffer = Uint8Array.from(data).buffer;
 
-  return interSemiBold;
+  return buffer;
 };
 
 const getMadeDillanFont = async () => {
-  const response = await fetch(new URL("/assets/fonts/made-dillan.woff", import.meta.url));
-  const interSemiBold = await response.arrayBuffer();
+  const data = await readFile(join(process.cwd(), "/assets/fonts/made-dillan.woff"));
+  const buffer = Uint8Array.from(data).buffer;
 
-  return interSemiBold;
+  return buffer;
 };
 
 export async function defaultOg(title?: string, description?: string) {

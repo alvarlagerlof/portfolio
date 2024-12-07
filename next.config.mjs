@@ -5,6 +5,7 @@ const nextConfig = {
   },
   experimental: {
     ppr: true,
+    dynamicIO: true,
   },
   serverExternalPackages: ["sanity", "next-sanity"],
   async rewrites() {
