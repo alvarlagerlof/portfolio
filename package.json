@@ -15,7 +15,7 @@
     "@sanity/code-input": "4.1.4",
     "@tailwindcss/typography": "0.5.15",
     "@vercel/og": "0.6.4",
-    "bright": "0.8.5",
+    "bright": "0.8.6",
     "feed": "4.2.2",
     "next": "15.0.4-canary.46",
     "next-sanity": "9.5.0",

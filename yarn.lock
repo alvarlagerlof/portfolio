@@ -5200,15 +5200,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bright@npm:0.8.5":
-  version: 0.8.5
-  resolution: "bright@npm:0.8.5"
+"bright@npm:0.8.6":
+  version: 0.8.6
+  resolution: "bright@npm:0.8.6"
   dependencies:
     "@code-hike/lighter": "npm:0.8.1"
     server-only: "npm:^0.0.1"
   peerDependencies:
-    react: ^18
-  checksum: 10c0/b0b228debb9289fea75583838b891088c5a7ba1a8d6d48c87e7cacf7382e62f80d4aa9453cb5d17b9c6c079c9bb01bfab284b5adb998e5ba870df4302ec775fa
+    react: ^18 || ^19
+  checksum: 10c0/57288ffa1e1815b816223d77da30a0d1b912017af21c3279f295ecf4596e59310dc3a8ce32af67af7b117b6e344c669cb256403e5a6ccfe1abf643409c6e95cb
   languageName: node
   linkType: hard
 
@@ -10513,7 +10513,7 @@ __metadata:
     "@types/react-dom": "npm:19.0.2"
     "@vercel/og": "npm:0.6.4"
     autoprefixer: "npm:10.4.20"
-    bright: "npm:0.8.5"
+    bright: "npm:0.8.6"
     eslint: "npm:9.17.0"
     eslint-config-next: "npm:15.1.2"
     feed: "npm:4.2.2"
