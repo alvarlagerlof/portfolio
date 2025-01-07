@@ -1320,10 +1320,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-hike/lighter@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@code-hike/lighter@npm:0.8.1"
-  checksum: 10c0/5e4e78b9bf5eee601eb2fa8e421329eb1e059e0840964afeff759a9069a99195a68108680cbcd535d9b2c8cd2ed673424f02fd87aabbfc703fbcf583e3985a1a
+"@code-hike/lighter@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@code-hike/lighter@npm:1.0.2"
+  dependencies:
+    ansi-sequence-parser: "npm:1.1.1"
+    tm-grammars: "npm:^1.21.10"
+  checksum: 10c0/e4da8b9aef2169c786dd82fcd9f58eb17e05dd2423fdb059751a92f7c4e6d6b3785b72f062a7785ce406b92424f8a511b122a645c61f959730f1fd99e2bd2a07
   languageName: node
   linkType: hard
 
@@ -4718,6 +4721,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-sequence-parser@npm:1.1.1":
+  version: 1.1.1
+  resolution: "ansi-sequence-parser@npm:1.1.1"
+  checksum: 10c0/ab2259ccf69f145ecf1418d4e71524158828f44afdf37c7536677871f4cebaa8b176fcb95de8f94a68129357dddc59586597da25f9d4ebf9968f6ef022bf0b31
+  languageName: node
+  linkType: hard
+
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -5175,15 +5185,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bright@npm:0.8.6":
-  version: 0.8.6
-  resolution: "bright@npm:0.8.6"
+"bright@npm:1.0.0":
+  version: 1.0.0
+  resolution: "bright@npm:1.0.0"
   dependencies:
-    "@code-hike/lighter": "npm:0.8.1"
+    "@code-hike/lighter": "npm:^1.0.2"
     server-only: "npm:^0.0.1"
   peerDependencies:
     react: ^18 || ^19
-  checksum: 10c0/57288ffa1e1815b816223d77da30a0d1b912017af21c3279f295ecf4596e59310dc3a8ce32af67af7b117b6e344c669cb256403e5a6ccfe1abf643409c6e95cb
+  checksum: 10c0/d0dc65347fccfb89c012aa37a2bb79d06f75364e366938726eaa73c35e19d428802dbca807bca9287a566f4a04eb6fd81db2f2b213f34847293b9f4139024e0b
   languageName: node
   linkType: hard
 
@@ -10520,7 +10530,7 @@ __metadata:
     "@types/react-dom": "npm:19.0.2"
     "@vercel/og": "npm:0.6.4"
     autoprefixer: "npm:10.4.20"
-    bright: "npm:0.8.6"
+    bright: "npm:1.0.0"
     eslint: "npm:9.17.0"
     eslint-config-next: "npm:15.1.3"
     feed: "npm:4.2.2"
@@ -12915,6 +12925,13 @@ __metadata:
   bin:
     tldts: bin/cli.js
   checksum: 10c0/acfa49cab55242fe55ccb995e0a31d6bbed3cc1d52b0acd18c5ea0520fd44b3e85b850455dea566fbfca65cd9bce667f4922e827fbc216e4cd53585bcf633665
+  languageName: node
+  linkType: hard
+
+"tm-grammars@npm:^1.21.10":
+  version: 1.21.10
+  resolution: "tm-grammars@npm:1.21.10"
+  checksum: 10c0/cad2e85e7a9d7e7415b9ee6f50166935a8513375d82d3660fc8754271bca9d68453e61b5bbf4e0c6e42bd8beb5dc6123d0413e7af340f2a0c8ee17c7febd6912
   languageName: node
   linkType: hard
 
