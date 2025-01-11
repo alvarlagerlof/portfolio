@@ -13,7 +13,7 @@
   "dependencies": {
     "@portabletext/react": "3.2.0",
     "@sanity/code-input": "4.1.4",
-    "@tailwindcss/typography": "0.5.15",
+    "@tailwindcss/typography": "0.5.16",
     "@vercel/og": "0.6.4",
     "bright": "1.0.0",
     "feed": "4.2.2",
