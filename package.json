@@ -17,7 +17,7 @@
     "@vercel/og": "0.6.4",
     "bright": "1.0.0",
     "feed": "4.2.2",
-    "next": "15.0.4-canary.46",
+    "next": "15.1.4",
     "next-sanity": "9.5.0",
     "next-sanity-image": "6.1.1",
     "react": "19.0.0",
