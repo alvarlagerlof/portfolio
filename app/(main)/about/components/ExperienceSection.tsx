@@ -120,7 +120,7 @@ export function ExperienceItem({
 export function ExperienceItemLoading() {
   return (
     <div className="flex flex-row space-x-4 pb-8">
-      <Skeleton className="!w-6 h-6 !rounded-full" />
+      <Skeleton className="w-6! h-6 rounded-full!" />
       {/* hack, fix this later */}
       <div className="space-y-4 mt-0.5 max-w-[calc(100%-30px)]">
         <SkeletonText className="w-80 max-w-full h-[1.25rem]" />

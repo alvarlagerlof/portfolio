@@ -112,8 +112,8 @@ export function FeaturedProjectItemLoading() {
 
       {/* hacky, fix this */}
       <div className="-m-1 max-w-[calc(100%-130px)]">
-        <div className="block w-24 max-w-full h-[1.25rem] bg-skeleton rounded mb-3" />
-        <div className="block w-[300px] max-w-full h-[1rem] bg-skeleton rounded" />
+        <div className="block w-24 max-w-full h-[1.25rem] bg-skeleton rounded-sm mb-3" />
+        <div className="block w-[300px] max-w-full h-[1rem] bg-skeleton rounded-sm" />
       </div>
     </div>
   );

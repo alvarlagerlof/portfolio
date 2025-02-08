@@ -1,28 +1,25 @@
 import colors from "tailwindcss/colors";
 import typographyPlugin from "@tailwindcss/typography";
 
-const inflatePlugin = function ({ addComponents, theme, variants, e }) {
+const inflatePlugin = function ({ addComponents, theme }) {
   const spacing = theme("spacing", {});
 
   Object.entries(spacing).forEach(([name, padding]) => {
-    addComponents(
-      {
-        [`.${e(`inflate-${name}`)} > *`]: { padding },
-        [`.${e(`inflate-x-${name}`)} > *`]: {
-          paddingLeft: padding,
-          paddingRight: padding,
-          "&:first-child": { paddingLeft: 0 },
-          "&:last-child": { paddingRight: 0 },
-        },
-        [`.${e(`inflate-y-${name}`)} > *`]: {
-          paddingTop: padding,
-          paddingBottom: padding,
-          "&:first-child": { paddingTop: 0 },
-          "&:last-child": { paddingBottom: 0 },
-        },
+    addComponents({
+      [`.${`inflate-${name}`} > *`]: { padding },
+      [`.${`inflate-x-${name}`} > *`]: {
+        paddingLeft: padding,
+        paddingRight: padding,
+        "&:first-child": { paddingLeft: 0 },
+        "&:last-child": { paddingRight: 0 },
       },
-      variants("inflate", ["responsive"]),
-    );
+      [`.${`inflate-y-${name}`} > *`]: {
+        paddingTop: padding,
+        paddingBottom: padding,
+        "&:first-child": { paddingTop: 0 },
+        "&:last-child": { paddingBottom: 0 },
+      },
+    });
   });
 };
 
@@ -54,5 +51,9 @@ module.exports = {
       },
     },
   },
-  plugins: [inflatePlugin, typographyPlugin],
+  plugins: [
+    inflatePlugin,
+    // SEp
+    typographyPlugin,
+  ],
 };

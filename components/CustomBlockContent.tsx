@@ -63,17 +63,17 @@ export function CustomBlockContent({ blocks }) {
         block: {
           h1: ({ children }) => {
             return (
-              <h3 className="font-subheading font-semibold !text-2xl !md:text-4xl">{children}</h3>
+              <h3 className="font-subheading font-semibold text-2xl! !md:text-4xl">{children}</h3>
             );
           },
           h2: ({ children }) => {
             return (
-              <h4 className="font-subheading font-semibold !text-xl !md:text-3xl">{children}</h4>
+              <h4 className="font-subheading font-semibold text-xl! !md:text-3xl">{children}</h4>
             );
           },
           blockquote: ({ children }) => {
             return (
-              <blockquote className="py-2 px-4  !border-separator flex flex-col">
+              <blockquote className="py-2 px-4  border-separator! flex flex-col">
                 {children}
               </blockquote>
             );
