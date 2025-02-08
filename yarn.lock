@@ -11110,7 +11110,7 @@ __metadata:
     react-dom: "npm:19.0.0"
     sanity: "npm:3.74.1"
     styled-components: "npm:6.1.15"
-    tailwindcss: "npm:4.0.0"
+    tailwindcss: "npm:4.0.5"
     typescript: "npm:5.7.3"
     typescript-eslint: "npm:8.23.0"
     vhtml: "npm:2.2.0"
