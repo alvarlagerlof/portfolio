@@ -41,7 +41,7 @@
     "prettier": "3.5.2",
     "tailwindcss": "4.0.9",
     "typescript": "5.8.2",
-    "typescript-eslint": "8.24.1",
+    "typescript-eslint": "8.25.0",
     "vhtml": "2.2.0"
   },
   "packageManager": "yarn@4.6.0",
