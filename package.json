@@ -32,7 +32,7 @@
     "@tailwindcss/postcss": "4.0.15",
     "@types/eslint__eslintrc": "2.1.2",
     "@types/eslint__js": "8.42.3",
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "eslint": "9.22.0",
     "eslint-config-next": "15.2.2",
@@ -46,7 +46,7 @@
   },
   "packageManager": "yarn@4.7.0",
   "resolutions": {
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4"
   }
 }
