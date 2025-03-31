@@ -2091,7 +2091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:*, @eslint/eslintrc@npm:^3.3.1":
+"@eslint/eslintrc@npm:^3.3.1":
   version: 3.3.1
   resolution: "@eslint/eslintrc@npm:3.3.1"
   dependencies:
@@ -4642,15 +4642,6 @@ __metadata:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
   checksum: 10c0/69ba24fee600d1e4c5abe0df086c1a4d798abf13792d8cfab912d76817fe1a894359a1518557d21237fbaf6eda93c5ab9309143dee4c59ef54336d1b3570420e
-  languageName: node
-  linkType: hard
-
-"@types/eslint__eslintrc@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@types/eslint__eslintrc@npm:3.3.0"
-  dependencies:
-    "@eslint/eslintrc": "npm:*"
-  checksum: 10c0/870799be26149b1c26ea7a5af4daeb2c3845e08421425db3227c219268a165d1fdf00c70d18ba12e1c94240101b1044d667640c9a09b8e2e82b8b852dc92a4f4
   languageName: node
   linkType: hard
 
@@ -11525,7 +11516,6 @@ __metadata:
     "@sanity/code-input": "npm:5.1.2"
     "@tailwindcss/postcss": "npm:4.0.17"
     "@tailwindcss/typography": "npm:0.5.16"
-    "@types/eslint__eslintrc": "npm:3.3.0"
     "@types/eslint__js": "npm:8.42.3"
     "@types/react": "npm:19.0.12"
     "@types/react-dom": "npm:19.0.4"
