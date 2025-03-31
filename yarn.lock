@@ -4648,15 +4648,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint__eslintrc@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@types/eslint__eslintrc@npm:2.1.2"
-  dependencies:
-    "@types/eslint": "npm:*"
-  checksum: 10c0/ccbeb74886fbbee1b016ed9c920ad932cb0b970c42eec4cea27e04c2640d5a92c20e44d4610de73551c4c8f658963a769ddc9fd75eac72edf33f035129600637
-  languageName: node
-  linkType: hard
-
 "@types/eslint__js@npm:8.42.3":
   version: 8.42.3
   resolution: "@types/eslint__js@npm:8.42.3"
@@ -11570,7 +11561,6 @@ __metadata:
     "@sanity/code-input": "npm:5.1.2"
     "@tailwindcss/postcss": "npm:4.0.17"
     "@tailwindcss/typography": "npm:0.5.16"
-    "@types/eslint__eslintrc": "npm:2.1.2"
     "@types/eslint__js": "npm:8.42.3"
     "@types/react": "npm:19.0.12"
     "@types/react-dom": "npm:19.0.4"
