@@ -2108,7 +2108,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:*, @eslint/js@npm:9.23.0":
+"@eslint/js@npm:9.23.0":
   version: 9.23.0
   resolution: "@eslint/js@npm:9.23.0"
   checksum: 10c0/4e70869372b6325389e0ab51cac6d3062689807d1cef2c3434857571422ce11dde3c62777af85c382b9f94d937127598d605d2086787f08611351bf99faded81
@@ -4635,15 +4635,6 @@ __metadata:
   dependencies:
     "@babel/types": "npm:^7.20.7"
   checksum: 10c0/5386f0af44f8746b063b87418f06129a814e16bb2686965a575e9d7376b360b088b89177778d8c426012abc43dd1a2d8ec3218bfc382280c898682746ce2ffbd
-  languageName: node
-  linkType: hard
-
-"@types/eslint__js@npm:9.14.0":
-  version: 9.14.0
-  resolution: "@types/eslint__js@npm:9.14.0"
-  dependencies:
-    "@eslint/js": "npm:*"
-  checksum: 10c0/da5e315aaf17a3e038eff3a4e1b90e360d9d22319653f43f746ad4b7f90dca2d1f8e0ea08f4d02b1b426e7baeb15610be4a30b64d28d16ef06d2feb75c549dc1
   languageName: node
   linkType: hard
 
@@ -11551,7 +11542,6 @@ __metadata:
     "@sanity/code-input": "npm:5.1.2"
     "@tailwindcss/postcss": "npm:4.0.17"
     "@tailwindcss/typography": "npm:0.5.16"
-    "@types/eslint__js": "npm:9.14.0"
     "@types/react": "npm:19.0.12"
     "@types/react-dom": "npm:19.0.4"
     "@vercel/og": "npm:0.6.5"
