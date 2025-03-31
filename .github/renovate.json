@@ -37,6 +37,10 @@
       "lockFileMaintenance": {
         "automerge": true
       }
+    },
+    {
+      "packagePatterns": ["react", "react-dom"],
+      "groupName": "react",
     }
   ]
 }
