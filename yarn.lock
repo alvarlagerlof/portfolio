@@ -10719,7 +10719,7 @@ __metadata:
     react-dom: "npm:19.1.0"
     sanity: "npm:3.86.1"
     styled-components: "npm:6.1.17"
-    tailwindcss: "npm:4.1.4"
+    tailwindcss: "npm:4.1.5"
     typescript: "npm:5.8.3"
     typescript-eslint: "npm:8.31.0"
     vhtml: "npm:2.2.0"
@@ -12632,13 +12632,6 @@ __metadata:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 10c0/dfbe201ae09ac6053d163578778c53aa860a784147ecf95705de0cd23f42c851e1be7889241495e95c37cabb058edb1052f141387bef68f705afc8f9dd358509
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.1.4":
-  version: 4.1.4
-  resolution: "tailwindcss@npm:4.1.4"
-  checksum: 10c0/4927653b740861f0279b6b465c87e188652d3c0e311c633b4efe5d72bbb4dce12b9dddc674a386a3d0454ef4dd4951aac6fd7346dcd9b2b2b06952e431c1835d
   languageName: node
   linkType: hard
 
