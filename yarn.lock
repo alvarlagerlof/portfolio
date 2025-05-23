@@ -3468,7 +3468,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/image-url@npm:^1.0.2":
+"@sanity/image-url@npm:^1.0.2, @sanity/image-url@npm:^1.1.0":
   version: 1.1.0
   resolution: "@sanity/image-url@npm:1.1.0"
   checksum: 10c0/ae7bf95e79871f1d4673d74eab96e107bb60068878b80f0891b67708bd4683e525b8dfb5c97afdf6f0427529f1001acb2cb22b1d409315cce4a079d49f65e687
@@ -9883,16 +9883,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity-image@npm:6.1.1":
-  version: 6.1.1
-  resolution: "next-sanity-image@npm:6.1.1"
+"next-sanity-image@npm:6.2.0":
+  version: 6.2.0
+  resolution: "next-sanity-image@npm:6.2.0"
   dependencies:
-    "@sanity/image-url": "npm:^1.0.2"
+    "@sanity/image-url": "npm:^1.1.0"
   peerDependencies:
-    "@sanity/client": ^5.0.0 || ^6.0.0
-    next: ^13.0.0 || ^14.0.0
-    react: ^18.0.0
-  checksum: 10c0/9d14f78c1e803bc7761e561405c34963ab23761e9dc7512ccfeec04f80ae8796592e46a56ecb1344da8e78d102ce75b2a81e54455294fdd726c913ad6c464216
+    "@sanity/client": ^5.0.0 || ^6.0.0 || ^7.0.0
+    next: ^13.0.0 || ^14.0.0 || ^15.0.0
+    react: ^18.0.0 || ^19.0.0
+  checksum: 10c0/1e963fce4319ca45b645dc96effea5b8d75754a30cfb687c4edfb92150b8e0d514d2517b813b1f3b3180fcd94920188d1b7a96ee557458100a1f354f75340fdb
   languageName: node
   linkType: hard
 
@@ -10696,7 +10696,7 @@ __metadata:
     htm: "npm:3.1.1"
     next: "npm:15.3.2"
     next-sanity: "npm:9.11.1"
-    next-sanity-image: "npm:6.1.1"
+    next-sanity-image: "npm:6.2.0"
     postcss: "npm:8.5.3"
     prettier: "npm:3.5.3"
     react: "npm:19.1.0"
