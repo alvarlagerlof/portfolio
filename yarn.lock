@@ -2237,13 +2237,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inquirer/checkbox@npm:^4.1.6":
-  version: 4.1.6
-  resolution: "@inquirer/checkbox@npm:4.1.6"
+"@inquirer/checkbox@npm:^4.1.7":
+  version: 4.1.7
+  resolution: "@inquirer/checkbox@npm:4.1.7"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/figures": "npm:^1.0.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/figures": "npm:^1.0.12"
+    "@inquirer/type": "npm:^3.0.7"
     ansi-escapes: "npm:^4.3.2"
     yoctocolors-cjs: "npm:^2.1.2"
   peerDependencies:
@@ -2251,31 +2251,31 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/422d0b2ddf625b55ed3f5f72b094d7a26eecc810c50fdea3f395b88c32e07d43ad2a8b718319a9cb00fa637108665845b106f100020e6797a687c510a9211e96
+  checksum: 10c0/ee6572cb7e69eb27611dc203835f51de26db246221ad814bab63bb54267fe440eafab8d47179fe5019ab2ca56dd9a06382622039af64450aaf816f63aa23f946
   languageName: node
   linkType: hard
 
-"@inquirer/confirm@npm:^5.1.10":
-  version: 5.1.10
-  resolution: "@inquirer/confirm@npm:5.1.10"
+"@inquirer/confirm@npm:^5.1.11":
+  version: 5.1.11
+  resolution: "@inquirer/confirm@npm:5.1.11"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/71a1b1c1007b0edd06984c356a9e13764ca917bdbf947a59ce0f55084d36e653daffe56b3806fc9959337aae80ff7b37eeaf01a40746e5f60de86475fdf0502a
+  checksum: 10c0/e907850e866cbb3bf8e03b963e30bcb720f35903ecf987b0547f12b23b534c7605a8518610dc80cd295460f822881acac6f91231957c035c1b8ccd820d38a962
   languageName: node
   linkType: hard
 
-"@inquirer/core@npm:^10.1.11":
-  version: 10.1.11
-  resolution: "@inquirer/core@npm:10.1.11"
+"@inquirer/core@npm:^10.1.12":
+  version: 10.1.12
+  resolution: "@inquirer/core@npm:10.1.12"
   dependencies:
-    "@inquirer/figures": "npm:^1.0.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/figures": "npm:^1.0.12"
+    "@inquirer/type": "npm:^3.0.7"
     ansi-escapes: "npm:^4.3.2"
     cli-width: "npm:^4.1.0"
     mute-stream: "npm:^2.0.0"
@@ -2287,158 +2287,158 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/b71a71d527cf612b675a7b8db815ace31ba9db2df3bf00f4a1c1f4f396e9fb9ba32f4824e26a626191c5c50aaa4b53ed14b4c324714876f345fe630ca2d9432f
+  checksum: 10c0/daa12d95782f01c9a9a6191066f8c6b0c2a86b6e542a6330cf5520df66979c697f94cc8113d9a32d0ccde7d2d3db3abf4a6a0e8ea69afb442d3af4ef96645176
   languageName: node
   linkType: hard
 
-"@inquirer/editor@npm:^4.2.11":
-  version: 4.2.11
-  resolution: "@inquirer/editor@npm:4.2.11"
+"@inquirer/editor@npm:^4.2.12":
+  version: 4.2.12
+  resolution: "@inquirer/editor@npm:4.2.12"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
     external-editor: "npm:^3.1.0"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/5ba956b83e51223112bb896ebf7e39a87a14f0eb81a49e0453e64aabed80533483f74da80a8855b4adced123a2758cc6c73dac9aa9e4d5a7d80c4eb9b70db935
+  checksum: 10c0/724d716ee697bc63f2385b650efbf3231573c768a05a3641d5649b00e37a6ef0c20b04f0e6047aab30ae6497283025a2cc3b44fce4bc88f5cac97b7ccf0d903f
   languageName: node
   linkType: hard
 
-"@inquirer/expand@npm:^4.0.13":
-  version: 4.0.13
-  resolution: "@inquirer/expand@npm:4.0.13"
+"@inquirer/expand@npm:^4.0.14":
+  version: 4.0.14
+  resolution: "@inquirer/expand@npm:4.0.14"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
     yoctocolors-cjs: "npm:^2.1.2"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/b08ce6f7f5d61ce2d4696d18beb3769ab6be31bb139d806497304669d478393d28a91b69a0596e045f6b8a0f83f1da08e1b34a33ca71b23e78d60d32ddc103a6
+  checksum: 10c0/0cddc7520019700afbf6b39537a344bbccae7a384a01928e90d7f6154fe471b18d1e33ed9f8b861e333cb9070df885cfc1c560aac35a75695b84785703e3bda9
   languageName: node
   linkType: hard
 
-"@inquirer/figures@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "@inquirer/figures@npm:1.0.11"
-  checksum: 10c0/6270e24eebbe42bbc4e7f8e761e906be66b4896787f31ab3e7484ad271c8edc90bce4ec20e232a5da447aee4fc73803397b2dda8cf645f4f7eea83e773b44e1e
+"@inquirer/figures@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "@inquirer/figures@npm:1.0.12"
+  checksum: 10c0/08694288bdf9aa474571ca94272113a5ac443229519ce71447eba9eb7d5a2007901bdc3e92216d929a69746dcbac29683886c20e67b7864a7c7f6c59b99d3269
   languageName: node
   linkType: hard
 
-"@inquirer/input@npm:^4.1.10":
-  version: 4.1.10
-  resolution: "@inquirer/input@npm:4.1.10"
+"@inquirer/input@npm:^4.1.11":
+  version: 4.1.11
+  resolution: "@inquirer/input@npm:4.1.11"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/75f42ff1a55324d23be6aadb6ad323447c89e9265ce3be069c4c7d10c8ce0520797b52d19eba2334406d29abcc4052309a48a13f021a4d4269e961533d183c81
+  checksum: 10c0/b0a2094500c8249d2c882b664d651b4f1120e58c3de43763d46f7adb9cf0db248026f591543c628668375a421e0aaad553fcd3cd3feeceed35ec96f6f1bc23ec
   languageName: node
   linkType: hard
 
-"@inquirer/number@npm:^3.0.13":
-  version: 3.0.13
-  resolution: "@inquirer/number@npm:3.0.13"
+"@inquirer/number@npm:^3.0.14":
+  version: 3.0.14
+  resolution: "@inquirer/number@npm:3.0.14"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/9f0b7a3b3d78e426fbe21c739f318e0ecaa7633ed1b75bb05590c3d74ae447c92413e5c10bcdf1c6ff62e48d14cd01f7fbd29a2ade33fdb633caec8b21d61185
+  checksum: 10c0/ca10ae38d225673ea2c3f0eeb8f75014ab1100ff4d23ddb12b45d2cd3343bd4f674e412e86506dc79b1f493c3017d66f13eda6f4fbf45b543e5e6be703aaae7a
   languageName: node
   linkType: hard
 
-"@inquirer/password@npm:^4.0.13":
-  version: 4.0.13
-  resolution: "@inquirer/password@npm:4.0.13"
+"@inquirer/password@npm:^4.0.14":
+  version: 4.0.14
+  resolution: "@inquirer/password@npm:4.0.14"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
     ansi-escapes: "npm:^4.3.2"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/dfac1a87418bc51185b0932f6561fc5cf77134afacc9914b94b10d7fc19510e2a7449943ff71b2cdfe06a281ee26aaa565024520d6edf805e751f2543a13e60c
+  checksum: 10c0/4e1ae6727342602bb663d2c51cf6d64c0cd5f981f8795b9e314cf3054cd6529e9f5170bc0a2828c1e9fb5705c0059de963f82858dc2c09537afc372bdab74769
   languageName: node
   linkType: hard
 
-"@inquirer/prompts@npm:^7.5.1":
-  version: 7.5.1
-  resolution: "@inquirer/prompts@npm:7.5.1"
+"@inquirer/prompts@npm:^7.5.2":
+  version: 7.5.2
+  resolution: "@inquirer/prompts@npm:7.5.2"
   dependencies:
-    "@inquirer/checkbox": "npm:^4.1.6"
-    "@inquirer/confirm": "npm:^5.1.10"
-    "@inquirer/editor": "npm:^4.2.11"
-    "@inquirer/expand": "npm:^4.0.13"
-    "@inquirer/input": "npm:^4.1.10"
-    "@inquirer/number": "npm:^3.0.13"
-    "@inquirer/password": "npm:^4.0.13"
-    "@inquirer/rawlist": "npm:^4.1.1"
-    "@inquirer/search": "npm:^3.0.13"
-    "@inquirer/select": "npm:^4.2.1"
+    "@inquirer/checkbox": "npm:^4.1.7"
+    "@inquirer/confirm": "npm:^5.1.11"
+    "@inquirer/editor": "npm:^4.2.12"
+    "@inquirer/expand": "npm:^4.0.14"
+    "@inquirer/input": "npm:^4.1.11"
+    "@inquirer/number": "npm:^3.0.14"
+    "@inquirer/password": "npm:^4.0.14"
+    "@inquirer/rawlist": "npm:^4.1.2"
+    "@inquirer/search": "npm:^3.0.14"
+    "@inquirer/select": "npm:^4.2.2"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/7f9cf44e1caff3eb61939f8abc9906acfec0d955c25e860212dc9e0e7bd6b9fb046415731e2407eb8a0745d282bb73c03587481090720255c4b828d85b830a08
+  checksum: 10c0/daa1dd761ad696a5a1d98d673371f03cc084d76cb7d2c029387d0a62b7c01ceb01a756854f1b1a9daf1ce4be8ea0b1c164d581acceb87e119f3d023ad6b2da21
   languageName: node
   linkType: hard
 
-"@inquirer/rawlist@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "@inquirer/rawlist@npm:4.1.1"
+"@inquirer/rawlist@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "@inquirer/rawlist@npm:4.1.2"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/type": "npm:^3.0.7"
     yoctocolors-cjs: "npm:^2.1.2"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/14d14650afade03d25c818c7fac70f06ed9e1a58e2c8b966e70b6f55fdef7edd24bde1b25eecc927f82ae167d48c2bfacb1d53386cb988dff174f6b3a7ee4955
+  checksum: 10c0/d10631d5c7553e19d733e53af98c664c05e1d4a408b42f2c988219671c7e86a363fc7b316f063f2c4a6eb6e94ce641624428890dec1b0fb9ddaacdc702a57027
   languageName: node
   linkType: hard
 
-"@inquirer/search@npm:^3.0.13":
-  version: 3.0.13
-  resolution: "@inquirer/search@npm:3.0.13"
+"@inquirer/search@npm:^3.0.14":
+  version: 3.0.14
+  resolution: "@inquirer/search@npm:3.0.14"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/figures": "npm:^1.0.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/figures": "npm:^1.0.12"
+    "@inquirer/type": "npm:^3.0.7"
     yoctocolors-cjs: "npm:^2.1.2"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/1d57ead9d1f977671ef1726862f82a8690b870a159aa5e4292447b50fb59ca3d9958227d583edc074884d304774bbc92954aada4bb8634dfad638b5e5ae4c446
+  checksum: 10c0/ef5fcb22870f69cfcc5896d71da3eacdc6795c03d939bbbb0d20864b3bfbe96f8b7ffb9baef782a6e9884f6756eda1044eab18521afe0f235001fdfbdfb34fb0
   languageName: node
   linkType: hard
 
-"@inquirer/select@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "@inquirer/select@npm:4.2.1"
+"@inquirer/select@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "@inquirer/select@npm:4.2.2"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/figures": "npm:^1.0.11"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/figures": "npm:^1.0.12"
+    "@inquirer/type": "npm:^3.0.7"
     ansi-escapes: "npm:^4.3.2"
     yoctocolors-cjs: "npm:^2.1.2"
   peerDependencies:
@@ -2446,19 +2446,19 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/2e9c0ae80c872c6a5ea4406f3e8dbf54577fffdb72e3b460d61cffeda00b93b78a9c30a06c21575db533b493b597c0872777b66f0224a2f1611592c6e3bfc7c4
+  checksum: 10c0/815a09018ed4496a6ac1d6c9285a5bb8fe608b6d4fa5bfa2eca236917b4a0ed2fb7a506982e5f4ecd5a0460eff42825bd5b5e5d5369fa01c73412e5b00cd1f17
   languageName: node
   linkType: hard
 
-"@inquirer/type@npm:^3.0.6":
-  version: 3.0.6
-  resolution: "@inquirer/type@npm:3.0.6"
+"@inquirer/type@npm:^3.0.7":
+  version: 3.0.7
+  resolution: "@inquirer/type@npm:3.0.7"
   peerDependencies:
     "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/92382c1b046559ddb16c53e1353a900a43266566a0d73902e5325433c640b6aaeaf3e34cc5b2a68fd089ff5d8add914d0b9875cdec64f7a09313f9c4420b021d
+  checksum: 10c0/bbaa33c274a10f70d3a587264e1db6dbfcd8c1458d595c54870d1d5b3fc113ab5063203ec12a098485bb9e2fcef1a87d8c6ecd2a6d44ddc575f5c4715379be5e
   languageName: node
   linkType: hard
 
@@ -3257,23 +3257,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/cli@npm:3.88.3":
-  version: 3.88.3
-  resolution: "@sanity/cli@npm:3.88.3"
+"@sanity/cli@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/cli@npm:3.89.0"
   dependencies:
     "@babel/traverse": "npm:^7.23.5"
-    "@sanity/client": "npm:^7.2.1"
-    "@sanity/codegen": "npm:3.88.3"
-    "@sanity/runtime-cli": "npm:^6.1.1"
+    "@sanity/client": "npm:^7.2.2"
+    "@sanity/codegen": "npm:3.89.0"
+    "@sanity/runtime-cli": "npm:^7.3.2"
     "@sanity/telemetry": "npm:^0.8.0"
     "@sanity/template-validator": "npm:^2.4.3"
-    "@sanity/util": "npm:3.88.3"
+    "@sanity/util": "npm:3.89.0"
     chalk: "npm:^4.1.2"
     debug: "npm:^4.3.4"
     decompress: "npm:^4.2.0"
     esbuild: "npm:0.25.4"
     esbuild-register: "npm:^3.5.0"
-    get-it: "npm:^8.6.8"
+    get-it: "npm:^8.6.9"
     groq-js: "npm:^1.16.1"
     pkg-dir: "npm:^5.0.0"
     prettier: "npm:^3.3.0"
@@ -3281,7 +3281,7 @@ __metadata:
     validate-npm-package-name: "npm:^3.0.0"
   bin:
     sanity: ./bin/sanity
-  checksum: 10c0/dc95afe53dc44d872f9f8c1a09752c6daab20d18936a2723f6c8703bcf0211341846b58769abefa8938613c81854962f22821baba9a315320b743df114c059f2
+  checksum: 10c0/489583892de36265b417017dae0b56c309be18c505bc9b09967fdc318cb2f3a917c3168323f938cdc0dd2c2ec385437a2b9b78db52f5371b7f6ac75de67824cc
   languageName: node
   linkType: hard
 
@@ -3305,6 +3305,18 @@ __metadata:
     nanoid: "npm:^3.3.11"
     rxjs: "npm:^7.0.0"
   checksum: 10c0/80a16fe69c4dc28732929c03b2d4345fddeaeae834b45e8f6aa5c4e2ab2fd19441c1b2b4243cec4b7e23f45832b52f4c404f42fb1ef4548530ebd4718edfb80e
+  languageName: node
+  linkType: hard
+
+"@sanity/client@npm:^7.2.2":
+  version: 7.3.0
+  resolution: "@sanity/client@npm:7.3.0"
+  dependencies:
+    "@sanity/eventsource": "npm:^5.0.2"
+    get-it: "npm:^8.6.9"
+    nanoid: "npm:^3.3.11"
+    rxjs: "npm:^7.0.0"
+  checksum: 10c0/6bee0414d9095b303d4d62d42cd01fdc9316fdf50ce9c3d9ad8adc4135cfa616e2f342a8da1136e66307ffaeb65d4c08a1d781b53e23fc0c7a3ba609759b5fce
   languageName: node
   linkType: hard
 
@@ -3342,9 +3354,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/codegen@npm:3.88.3":
-  version: 3.88.3
-  resolution: "@sanity/codegen@npm:3.88.3"
+"@sanity/codegen@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/codegen@npm:3.89.0"
   dependencies:
     "@babel/core": "npm:^7.23.9"
     "@babel/generator": "npm:^7.23.6"
@@ -3356,12 +3368,12 @@ __metadata:
     "@babel/types": "npm:^7.23.9"
     debug: "npm:^4.3.4"
     globby: "npm:^11.1.0"
-    groq: "npm:3.88.3"
+    groq: "npm:3.89.0"
     groq-js: "npm:^1.16.1"
     json5: "npm:^2.2.3"
     tsconfig-paths: "npm:^4.2.0"
     zod: "npm:^3.22.4"
-  checksum: 10c0/b633c083198768a7e5ff6bd356cdbc45b7a9528b8ef40a2435ea7afcfa31cddb6eea2074ad74dd28050df804d3d83705c3c3b18404c75edcd3e2d489a47bc534
+  checksum: 10c0/5342ed056375b9b83467905139b957057c0b7405763f01578f8479206a5ffa8166669ee918bef5b63bdca71aa3730b8407f3d11022dd7205e3e47e4f94793e46
   languageName: node
   linkType: hard
 
@@ -3399,12 +3411,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/diff@npm:3.88.3":
-  version: 3.88.3
-  resolution: "@sanity/diff@npm:3.88.3"
+"@sanity/diff@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/diff@npm:3.89.0"
   dependencies:
     "@sanity/diff-match-patch": "npm:^3.1.1"
-  checksum: 10c0/cf96213350670e2ad4329d49d9f14e3a621ff2d4991b20da9e9dd277a9c535aa30b363cf20ee5547b909fa9c43a9be0666af9c9da47b386f6f3c860d0ca144c1
+  checksum: 10c0/60c5249de93552b112d7eeced187b467cbd03520a9ee906a80bb891fc66b0acf9f80f290a3c07f8747299a2d4963f86b6d4e766897fe320c2d82a162e85b447f
   languageName: node
   linkType: hard
 
@@ -3552,20 +3564,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/migrate@npm:3.88.3":
-  version: 3.88.3
-  resolution: "@sanity/migrate@npm:3.88.3"
+"@sanity/migrate@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/migrate@npm:3.89.0"
   dependencies:
-    "@sanity/client": "npm:^7.2.1"
+    "@sanity/client": "npm:^7.2.2"
     "@sanity/mutate": "npm:^0.12.4"
-    "@sanity/types": "npm:3.88.3"
-    "@sanity/util": "npm:3.88.3"
+    "@sanity/types": "npm:3.89.0"
+    "@sanity/util": "npm:3.89.0"
     arrify: "npm:^2.0.1"
     debug: "npm:^4.3.4"
     fast-fifo: "npm:^1.3.2"
     groq-js: "npm:^1.16.1"
     p-map: "npm:^7.0.1"
-  checksum: 10c0/54e7ad734bc7afbb39fcac68205e5c1a4a2e56e148502cfb1481c1752b0264c1cd32a4ab98f414d61c26b03ec5fbcd757abde49c34ee19c0d33cceadbec41c37
+  checksum: 10c0/0095ba1c38cb2f51f7b4c3c35977c985391608c392157b605b0198fb8870b6958a8b5f6689dbf1ddf83b2db28e722963d4ace2b50aad78abd748e423cf6ad309
   languageName: node
   linkType: hard
 
@@ -3605,7 +3617,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/mutator@npm:3.88.3, @sanity/mutator@npm:^3.59.1":
+"@sanity/mutator@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/mutator@npm:3.89.0"
+  dependencies:
+    "@sanity/diff-match-patch": "npm:^3.1.1"
+    "@sanity/types": "npm:3.89.0"
+    "@sanity/uuid": "npm:^3.0.1"
+    debug: "npm:^4.3.4"
+    lodash: "npm:^4.17.21"
+  checksum: 10c0/ab29d3f189e25340ef522a3e2b8bac20d47d393857d8672a5f845fb342a3d74104a1b0a8773a27c73777a3820d0d1b4f1d013297032e965ff7e7b68af68c2a37
+  languageName: node
+  linkType: hard
+
+"@sanity/mutator@npm:^3.59.1":
   version: 3.88.3
   resolution: "@sanity/mutator@npm:3.88.3"
   dependencies:
@@ -3674,9 +3699,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/runtime-cli@npm:^6.1.1":
-  version: 6.2.2
-  resolution: "@sanity/runtime-cli@npm:6.2.2"
+"@sanity/runtime-cli@npm:^7.3.2":
+  version: 7.6.1
+  resolution: "@sanity/runtime-cli@npm:7.6.1"
   dependencies:
     "@oclif/core": "npm:^4.3.0"
     "@oclif/plugin-help": "npm:^6.2.28"
@@ -3684,33 +3709,35 @@ __metadata:
     array-treeify: "npm:^0.1.5"
     chalk: "npm:^5.4.1"
     color-json: "npm:^3.0.5"
-    eventsource: "npm:^3.0.6"
+    eventsource: "npm:^4.0.0"
     find-up: "npm:^7.0.0"
-    inquirer: "npm:^12.6.0"
+    groq-js: "npm:^1.16.1"
+    inquirer: "npm:^12.6.1"
     mime-types: "npm:^3.0.1"
     ora: "npm:^8.2.0"
     vite: "npm:^6.3.5"
     vite-tsconfig-paths: "npm:^5.1.4"
+    ws: "npm:^8.18.2"
     xdg-basedir: "npm:^5.1.0"
   bin:
     sanity-run: bin/run.js
-  checksum: 10c0/ebe1468b5372fe4bed0461df4740f7ae6ad801b76d75757e9f19cc35e55b10d8f086db0893643d28b09fd420c34da281025032311df8421e766655c672aa0dbd
+  checksum: 10c0/e9453f93067166f4fa271c494ba83b2fd4fd24b453bad630c85949c4d46620cf6ec58de0a4a1f20c77b571c2a0716bf904f0b5cdb54d9ac7580701620f8c5baa
   languageName: node
   linkType: hard
 
-"@sanity/schema@npm:3.88.3":
-  version: 3.88.3
-  resolution: "@sanity/schema@npm:3.88.3"
+"@sanity/schema@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/schema@npm:3.89.0"
   dependencies:
     "@sanity/generate-help-url": "npm:^3.0.0"
-    "@sanity/types": "npm:3.88.3"
+    "@sanity/types": "npm:3.89.0"
     arrify: "npm:^2.0.1"
     groq-js: "npm:^1.16.1"
     humanize-list: "npm:^1.0.1"
     leven: "npm:^3.1.0"
     lodash: "npm:^4.17.21"
     object-inspect: "npm:^1.13.1"
-  checksum: 10c0/3dcd668cdd22e28ca15b4d067030371b338e3c0faf99d8f4ef3e7320916e4eadc8ecfce35db7c41d5af08d79ca1f42745d9850d5f66572ff1ca36d9df07e169f
+  checksum: 10c0/400dd38aa06d672056d508def5a1cd7ef044fee6bee0399e022e5028fc438122d67fd11e01c3437428fbc3f81fe28fac2a7c0da3722866d3b7f3629c2a7c8ce1
   languageName: node
   linkType: hard
 
@@ -3781,6 +3808,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sanity/types@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/types@npm:3.89.0"
+  dependencies:
+    "@sanity/client": "npm:^7.2.2"
+  peerDependencies:
+    "@types/react": 18 || 19
+  checksum: 10c0/de70d4be0177c642ac807cace36a50b30d0541bd2ea95f6ae98fd439dbb33194881dd6161e9cb1bd47bbf9944a75f24bd78b5ed07feaa8f43f3aaa48410bcb6f
+  languageName: node
+  linkType: hard
+
 "@sanity/ui@npm:^2.10.9, @sanity/ui@npm:^2.15.14, @sanity/ui@npm:^2.15.17":
   version: 2.15.17
   resolution: "@sanity/ui@npm:2.15.17"
@@ -3816,16 +3854,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/util@npm:3.88.3":
-  version: 3.88.3
-  resolution: "@sanity/util@npm:3.88.3"
+"@sanity/util@npm:3.89.0":
+  version: 3.89.0
+  resolution: "@sanity/util@npm:3.89.0"
   dependencies:
-    "@sanity/client": "npm:^7.2.1"
-    "@sanity/types": "npm:3.88.3"
+    "@sanity/client": "npm:^7.2.2"
+    "@sanity/types": "npm:3.89.0"
     get-random-values-esm: "npm:1.0.2"
     moment: "npm:^2.30.1"
     rxjs: "npm:^7.8.1"
-  checksum: 10c0/f99e153f2084c51bfbd595851f31424c9d8d179e97025814ffb3a7249c372d903c56c8e9fbb7fd837e99ca9cf331e92d03c49f454e28de7313b7a7ca0be6fcf2
+  checksum: 10c0/17b39629d5a941534633a5ad82035af56d703feb3c59d4cf86bbc93f5de85dab54916790c163f2ff3acb9b3a75f536ebdfa610f014c0de7ea54b0c280da85c81
   languageName: node
   linkType: hard
 
@@ -7166,12 +7204,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eventsource@npm:^3.0.6":
-  version: 3.0.7
-  resolution: "eventsource@npm:3.0.7"
+"eventsource@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "eventsource@npm:4.0.0"
   dependencies:
     eventsource-parser: "npm:^3.0.1"
-  checksum: 10c0/c48a73c38f300e33e9f11375d4ee969f25cbb0519608a12378a38068055ae8b55b6e0e8a49c3f91c784068434efe1d9f01eb49b6315b04b0da9157879ce2f67d
+  checksum: 10c0/908a3f64b60aadd053b9fd8ea8b6a896a4faf32dbbaf0150e91abbec179a9e2a3da261fb577ae296df8b744de91962d69a60b10e8d7092d7802e6e3e7a8b0f0e
   languageName: node
   linkType: hard
 
@@ -7675,7 +7713,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-it@npm:^8.4.21, get-it@npm:^8.6.2, get-it@npm:^8.6.7, get-it@npm:^8.6.8":
+"get-it@npm:^8.4.21, get-it@npm:^8.6.2, get-it@npm:^8.6.7":
   version: 8.6.8
   resolution: "get-it@npm:8.6.8"
   dependencies:
@@ -7686,6 +7724,20 @@ __metadata:
     through2: "npm:^4.0.2"
     tunnel-agent: "npm:^0.6.0"
   checksum: 10c0/9ce42bb83a6baf1076f041265c98aeaea76a54caac4db14263ac63b3c90c4dafc3cfa3b7bc7a0687bcc95fc884daf40756afc9efdd77cc5e1b99131b1129718f
+  languageName: node
+  linkType: hard
+
+"get-it@npm:^8.6.9":
+  version: 8.6.9
+  resolution: "get-it@npm:8.6.9"
+  dependencies:
+    "@types/follow-redirects": "npm:^1.14.4"
+    decompress-response: "npm:^7.0.0"
+    follow-redirects: "npm:^1.15.9"
+    is-retry-allowed: "npm:^2.2.0"
+    through2: "npm:^4.0.2"
+    tunnel-agent: "npm:^0.6.0"
+  checksum: 10c0/772c1ca553c2015b1c688b342874fa7f034bb229b03a59408a6835705b5cb16bfb0814f444986cc8a52b5a28797610285b81592b87ab80234099d5f2f66a3491
   languageName: node
   linkType: hard
 
@@ -7912,7 +7964,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq@npm:3.88.3, groq@npm:^3.88.2":
+"groq@npm:3.89.0":
+  version: 3.89.0
+  resolution: "groq@npm:3.89.0"
+  checksum: 10c0/acc188604abba30d18bdded7bff23cf6de25ed2e0bc3af7a30870ed7a1d2805e370ddfd225fe62c310fac1bab444558a38cc107d2239cc7be1f5baa929e938ac
+  languageName: node
+  linkType: hard
+
+"groq@npm:^3.88.2":
   version: 3.88.3
   resolution: "groq@npm:3.88.3"
   checksum: 10c0/aba792ff900ed75a7af24376ab11aa94da81bbd22bf92024188ba7b2b845f2eb891c664b3a26aae1e519997138cc4762ceab681a2daa30305c72bf628b358865
@@ -8228,13 +8287,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inquirer@npm:^12.6.0":
-  version: 12.6.1
-  resolution: "inquirer@npm:12.6.1"
+"inquirer@npm:^12.6.1":
+  version: 12.6.2
+  resolution: "inquirer@npm:12.6.2"
   dependencies:
-    "@inquirer/core": "npm:^10.1.11"
-    "@inquirer/prompts": "npm:^7.5.1"
-    "@inquirer/type": "npm:^3.0.6"
+    "@inquirer/core": "npm:^10.1.12"
+    "@inquirer/prompts": "npm:^7.5.2"
+    "@inquirer/type": "npm:^3.0.7"
     ansi-escapes: "npm:^4.3.2"
     mute-stream: "npm:^2.0.0"
     run-async: "npm:^3.0.0"
@@ -8244,7 +8303,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/e7be2371e5788e97f63c53ac7190578c79b04546e502da869edb2b239bc4723063ec91ac1eb5fcd8b40f2352c2863168dc4d4c302fe72330fb944f8702444890
+  checksum: 10c0/8ad2d4077777fc5588fa1a9c6e5f17df1d478b0c03aa9647dae806c8ee78cb32bc03115c41ecb44bd1f40f71d223e6137e61cabca525db7e07300aaa6de219ac
   languageName: node
   linkType: hard
 
@@ -10701,7 +10760,7 @@ __metadata:
     prettier: "npm:3.5.3"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
-    sanity: "npm:3.88.3"
+    sanity: "npm:3.89.0"
     styled-components: "npm:6.1.18"
     tailwindcss: "npm:4.1.7"
     typescript: "npm:5.8.3"
@@ -10962,6 +11021,15 @@ __metadata:
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
   checksum: 10c0/7bb644339464e0193dba15ac4f5324d10f31dcd1e1807d7fd156355154f5fa360b59b4ffd07dc1138c493c1eebf9ef27d695d833ebe1b1030b3a9201a99e0698
+  languageName: node
+  linkType: hard
+
+"react-compiler-runtime@npm:19.1.0-rc.2":
+  version: 19.1.0-rc.2
+  resolution: "react-compiler-runtime@npm:19.1.0-rc.2"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental
+  checksum: 10c0/4d5a78453c490457269741519040a9dc723fc0e3b83441ff6e225f71a35c5ea96da84cd86d464f5916f9a139ff73570db62e8d1d77c32221c9a93df5a00ef3f9
   languageName: node
   linkType: hard
 
@@ -11619,9 +11687,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanity@npm:3.88.3":
-  version: 3.88.3
-  resolution: "sanity@npm:3.88.3"
+"sanity@npm:3.89.0":
+  version: 3.89.0
+  resolution: "sanity@npm:3.89.0"
   dependencies:
     "@dnd-kit/core": "npm:^6.0.5"
     "@dnd-kit/modifiers": "npm:^6.0.0"
@@ -11635,11 +11703,11 @@ __metadata:
     "@rexxars/react-json-inspector": "npm:^9.0.1"
     "@sanity/asset-utils": "npm:^2.0.6"
     "@sanity/bifur-client": "npm:^0.4.1"
-    "@sanity/cli": "npm:3.88.3"
-    "@sanity/client": "npm:^7.2.1"
+    "@sanity/cli": "npm:3.89.0"
+    "@sanity/client": "npm:^7.2.2"
     "@sanity/color": "npm:^3.0.0"
     "@sanity/comlink": "npm:^3.0.3"
-    "@sanity/diff": "npm:3.88.3"
+    "@sanity/diff": "npm:3.89.0"
     "@sanity/diff-match-patch": "npm:^3.1.1"
     "@sanity/diff-patch": "npm:^5.0.0"
     "@sanity/eventsource": "npm:^5.0.0"
@@ -11651,16 +11719,16 @@ __metadata:
     "@sanity/insert-menu": "npm:^1.1.11"
     "@sanity/logos": "npm:^2.2.0"
     "@sanity/message-protocol": "npm:^0.13.0"
-    "@sanity/migrate": "npm:3.88.3"
-    "@sanity/mutator": "npm:3.88.3"
+    "@sanity/migrate": "npm:3.89.0"
+    "@sanity/mutator": "npm:3.89.0"
     "@sanity/presentation-comlink": "npm:^1.0.19"
     "@sanity/preview-url-secret": "npm:^2.1.11"
-    "@sanity/schema": "npm:3.88.3"
+    "@sanity/schema": "npm:3.89.0"
     "@sanity/sdk": "npm:0.0.0-alpha.25"
     "@sanity/telemetry": "npm:^0.8.0"
-    "@sanity/types": "npm:3.88.3"
+    "@sanity/types": "npm:3.89.0"
     "@sanity/ui": "npm:^2.15.17"
-    "@sanity/util": "npm:3.88.3"
+    "@sanity/util": "npm:3.89.0"
     "@sanity/uuid": "npm:^3.0.2"
     "@sentry/react": "npm:^8.33.0"
     "@tanstack/react-table": "npm:^8.16.0"
@@ -11692,7 +11760,7 @@ __metadata:
     fast-deep-equal: "npm:3.1.3"
     form-data: "npm:^4.0.0"
     framer-motion: "npm:^12.6.3"
-    get-it: "npm:^8.6.8"
+    get-it: "npm:^8.6.9"
     get-random-values-esm: "npm:1.0.2"
     groq-js: "npm:^1.16.1"
     gunzip-maybe: "npm:^1.4.2"
@@ -11727,7 +11795,7 @@ __metadata:
     pretty-ms: "npm:^7.0.1"
     quick-lru: "npm:^5.1.1"
     raf: "npm:^3.4.1"
-    react-compiler-runtime: "npm:19.1.0-rc.1"
+    react-compiler-runtime: "npm:19.1.0-rc.2"
     react-fast-compare: "npm:^3.2.0"
     react-focus-lock: "npm:^2.13.6"
     react-i18next: "npm:14.0.2"
@@ -11766,7 +11834,7 @@ __metadata:
     styled-components: ^6.1.15
   bin:
     sanity: ./bin/sanity
-  checksum: 10c0/e897e8ccd220227b1f3c36003bc1b677bf6605b1c9ca8f0a6d92071fdaefefa4d9848916c5af78baee5508ef305d8bb4a890564fbd757c6bade147d89046792f
+  checksum: 10c0/9b4d2a77a034a46d62d0616c6de264db7d1350c18a87828c56cda00345320effa80001492fcc41823c609badd27d85f6fb17eaa91ea0ba134b160cafee7134f3
   languageName: node
   linkType: hard
 
@@ -13812,7 +13880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.16.0, ws@npm:^8.18.0":
+"ws@npm:^8.16.0, ws@npm:^8.18.0, ws@npm:^8.18.2":
   version: 8.18.2
   resolution: "ws@npm:8.18.2"
   peerDependencies:
