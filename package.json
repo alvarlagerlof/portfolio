@@ -30,7 +30,7 @@
     "@portabletext/types": "2.0.13",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.1.8",
-    "@types/react": "19.1.5",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "eslint": "9.27.0",
     "eslint-config-next": "15.3.2",
@@ -44,7 +44,7 @@
   },
   "packageManager": "yarn@4.9.1",
   "resolutions": {
-    "@types/react": "19.1.5",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5"
   }
 }
