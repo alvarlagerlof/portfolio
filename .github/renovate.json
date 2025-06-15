@@ -43,7 +43,7 @@
       "groupName": "react"
     },
     {
-      "packagePatterns": ["*tailwind*"],
+      "packagePatterns": ["tailwind"],
       "groupName": "tailwind",
       "automerge": false
     }
