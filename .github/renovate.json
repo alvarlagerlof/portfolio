@@ -41,6 +41,11 @@
     {
       "packagePatterns": ["react", "react-dom"],
       "groupName": "react"
+    },
+    {
+      "packagePatterns": ["*tailwind*"],
+      "groupName": "tailwind",
+      "automerge": false
     }
   ]
 }
