@@ -3522,9 +3522,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/code-input@npm:5.1.2":
-  version: 5.1.2
-  resolution: "@sanity/code-input@npm:5.1.2"
+"@sanity/code-input@npm:5.1.3":
+  version: 5.1.3
+  resolution: "@sanity/code-input@npm:5.1.3"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.18.3"
     "@codemirror/commands": "npm:^6.7.1"
@@ -3550,9 +3550,9 @@ __metadata:
   peerDependencies:
     react: ^18 || >=19.0.0-0
     react-dom: ^18 || >=19.0.0-0
-    sanity: ^3
+    sanity: ^3 || ^4.0.0-0
     styled-components: ^5.2 || ^6
-  checksum: 10c0/0c7451a1e23b6bba03d5983146eac77d63d4e7f4e03430a4a97269a8061e09d5dfafcf502670da3277b0a3d30d9eed8882945d01931137bcb5065ab6a6e157f7
+  checksum: 10c0/e9eaa8dda71c9baf6eb06fe82f1097326e7e8a04c43c3a4cf5df84803475203907bbf056058a373a0aacf759523d5f512936d6244ef0b80363bab387f86520ab
   languageName: node
   linkType: hard
 
@@ -11068,7 +11068,7 @@ __metadata:
     "@portabletext/to-html": "npm:1.0.4"
     "@portabletext/types": "npm:2.0.13"
     "@rsc-parser/embedded": "npm:1.1.2"
-    "@sanity/code-input": "npm:5.1.2"
+    "@sanity/code-input": "npm:5.1.3"
     "@tailwindcss/postcss": "npm:4.1.6"
     "@tailwindcss/typography": "npm:0.5.16"
     "@types/react": "npm:19.1.8"
