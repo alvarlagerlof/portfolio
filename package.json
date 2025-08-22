@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@portabletext/to-html": "1.0.4",
-    "@portabletext/types": "2.0.13",
+    "@portabletext/types": "2.0.15",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.1.6",
     "@types/react": "19.1.10",
