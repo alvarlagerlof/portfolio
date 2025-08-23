@@ -3423,7 +3423,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/react@npm:3.2.1, @portabletext/react@npm:^3.2.1":
+"@portabletext/react@npm:3.2.4":
+  version: 3.2.4
+  resolution: "@portabletext/react@npm:3.2.4"
+  dependencies:
+    "@portabletext/toolkit": "npm:^2.0.18"
+    "@portabletext/types": "npm:^2.0.15"
+  peerDependencies:
+    react: ^17 || ^18 || >=19.0.0-0
+  checksum: 10c0/d20421180b43a5e8e0915f06ec1b57f5075080d208034a1daa3e2a70cd3c10e1d47b87755d011503c4bb22734704f50e2e75b869f720beb82859887575393e40
+  languageName: node
+  linkType: hard
+
+"@portabletext/react@npm:^3.2.1":
   version: 3.2.1
   resolution: "@portabletext/react@npm:3.2.1"
   dependencies:
@@ -3473,7 +3485,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/types@npm:2.0.15":
+"@portabletext/toolkit@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "@portabletext/toolkit@npm:2.0.18"
+  dependencies:
+    "@portabletext/types": "npm:^2.0.13"
+  checksum: 10c0/42778ad52d496a8956b1e4d10dcd3ce7d5f57f30a3c8a0ce8f8e73be91510227c5b68cbb19c31980c8ad99ae6b37ed267965ee381500019c52d5d12467510867
+  languageName: node
+  linkType: hard
+
+"@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.15":
   version: 2.0.15
   resolution: "@portabletext/types@npm:2.0.15"
   checksum: 10c0/383ca702340d69ba7355e2a02399c815d32f4e27b8d417aebfbd9bcd3fc49e5f15985f983913c1d0f3da8602297898e5704ed53f4adf5a446b9a3b132c25a8cb
@@ -4862,12 +4883,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.1.10":
-  version: 19.1.10
-  resolution: "@types/react@npm:19.1.10"
+"@types/react@npm:19.1.11":
+  version: 19.1.11
+  resolution: "@types/react@npm:19.1.11"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10c0/fb583deacd0a815e2775dc1b9f764532d8cacb748ddd2c2914805a46c257ce6c237b4078f44009692074db212ab61a390301c6470f07f5aa5bfdeb78a2acfda1
+  checksum: 10c0/639b225c2bbcd4b8a30e1ea7a73aec81ae5b952a4c432460b48c9881c9d12e76645c9032d24f15eefae9985a12d5cb26557fe10e9850b2da0fabfb0a1e2d16bd
   languageName: node
   linkType: hard
 
@@ -11389,14 +11410,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@portabletext/react": "npm:3.2.1"
+    "@portabletext/react": "npm:3.2.4"
     "@portabletext/to-html": "npm:1.0.4"
     "@portabletext/types": "npm:2.0.15"
     "@rsc-parser/embedded": "npm:1.1.2"
     "@sanity/code-input": "npm:5.2.1"
     "@tailwindcss/postcss": "npm:4.1.6"
     "@tailwindcss/typography": "npm:0.5.16"
-    "@types/react": "npm:19.1.10"
+    "@types/react": "npm:19.1.11"
     "@types/react-dom": "npm:19.1.7"
     "@vercel/og": "npm:0.8.5"
     bright: "npm:1.0.0"

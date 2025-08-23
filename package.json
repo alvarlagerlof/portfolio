@@ -11,7 +11,7 @@
     "format": "prettier . --check"
   },
   "dependencies": {
-    "@portabletext/react": "3.2.1",
+    "@portabletext/react": "3.2.4",
     "@sanity/code-input": "5.2.1",
     "@tailwindcss/typography": "0.5.16",
     "@vercel/og": "0.8.5",
@@ -30,7 +30,7 @@
     "@portabletext/types": "2.0.15",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.1.6",
-    "@types/react": "19.1.10",
+    "@types/react": "19.1.11",
     "@types/react-dom": "19.1.7",
     "eslint": "9.33.0",
     "eslint-config-next": "15.4.6",
@@ -44,7 +44,7 @@
   },
   "packageManager": "yarn@4.9.2",
   "resolutions": {
-    "@types/react": "19.1.10",
+    "@types/react": "19.1.11",
     "@types/react-dom": "19.1.7"
   }
 }
