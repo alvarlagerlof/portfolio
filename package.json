@@ -33,7 +33,7 @@
     "@types/react": "19.1.11",
     "@types/react-dom": "19.1.7",
     "eslint": "9.34.0",
-    "eslint-config-next": "15.4.6",
+    "eslint-config-next": "15.5.0",
     "htm": "3.1.1",
     "postcss": "8.5.6",
     "prettier": "3.6.2",
