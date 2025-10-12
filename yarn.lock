@@ -3699,9 +3699,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/code-input@npm:5.2.1":
-  version: 5.2.1
-  resolution: "@sanity/code-input@npm:5.2.1"
+"@sanity/code-input@npm:6.0.1":
+  version: 6.0.1
+  resolution: "@sanity/code-input@npm:6.0.1"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.18.3"
     "@codemirror/commands": "npm:^6.7.1"
@@ -3721,7 +3721,7 @@ __metadata:
     "@lezer/highlight": "npm:^1.2.1"
     "@sanity/icons": "npm:^3.5.2"
     "@sanity/incompatible-plugin": "npm:^1.0.4"
-    "@sanity/ui": "npm:^2.16.12"
+    "@sanity/ui": "npm:^3.0.5"
     "@uiw/codemirror-themes": "npm:^4.23.6"
     "@uiw/react-codemirror": "npm:^4.23.6"
   peerDependencies:
@@ -3729,7 +3729,7 @@ __metadata:
     react-dom: ^18 || >=19.0.0-0
     sanity: ^3 || ^4.0.0-0
     styled-components: ^5.2 || ^6
-  checksum: 10c0/bbbfc30cd05892c44038b1c0b53dbabaa1336922ae6b9b1f10f91a47e12cec9939d1961e16568c34ff5f803a0741f42d58640b2233fa1eb48480a26677681c1e
+  checksum: 10c0/37fd7fe1f8d86da2b4652d8d8673481cc59745b89c7f6f732f608fd618884c40623f3c57e406e83891dec603598c9202f86a0a24b5ba3127eb2c833f49a94749
   languageName: node
   linkType: hard
 
@@ -4294,7 +4294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:^2.16.12, @sanity/ui@npm:^2.16.7":
+"@sanity/ui@npm:^2.16.7":
   version: 2.16.19
   resolution: "@sanity/ui@npm:2.16.19"
   dependencies:
@@ -4316,7 +4316,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:^3.0.0, @sanity/ui@npm:^3.1.5":
+"@sanity/ui@npm:^3.0.0, @sanity/ui@npm:^3.0.5, @sanity/ui@npm:^3.1.5":
   version: 3.1.8
   resolution: "@sanity/ui@npm:3.1.8"
   dependencies:
@@ -9583,7 +9583,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^2.4.2, jiti@npm:^2.6.0":
+"jiti@npm:^2.6.0":
   version: 2.6.1
   resolution: "jiti@npm:2.6.1"
   bin:
@@ -11426,7 +11426,7 @@ __metadata:
     "@portabletext/to-html": "npm:1.0.4"
     "@portabletext/types": "npm:2.0.15"
     "@rsc-parser/embedded": "npm:1.1.2"
-    "@sanity/code-input": "npm:5.2.1"
+    "@sanity/code-input": "npm:6.0.1"
     "@tailwindcss/postcss": "npm:4.1.14"
     "@tailwindcss/typography": "npm:0.5.19"
     "@types/react": "npm:19.2.2"
