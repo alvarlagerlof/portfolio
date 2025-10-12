@@ -3357,32 +3357,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/to-html@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@portabletext/to-html@npm:1.0.4"
-  dependencies:
-    "@portabletext/toolkit": "npm:^1.0.5"
-    "@portabletext/types": "npm:^1.0.2"
-  checksum: 10c0/6d253a1c8930b19f8d84fb78bd0136ee0a56e993db2e9d3e7f3e355a71b724427a5916958caf0967a44289e46ca41753aa67f5272d3630aa9b74d2d30005c2dd
-  languageName: node
-  linkType: hard
-
-"@portabletext/to-html@npm:^3.0.0":
+"@portabletext/to-html@npm:3.0.0, @portabletext/to-html@npm:^3.0.0":
   version: 3.0.0
   resolution: "@portabletext/to-html@npm:3.0.0"
   dependencies:
     "@portabletext/toolkit": "npm:^3.0.0"
     "@portabletext/types": "npm:^2.0.15"
   checksum: 10c0/faeda1f4425bfff4fe2c4c9a9cb8a3b43a2818b31758f98493787a1eafa2f1478afdee565774a6af11f7ddd67bb0d05215de1a8ad377eec8a4a2d067624935dc
-  languageName: node
-  linkType: hard
-
-"@portabletext/toolkit@npm:^1.0.5":
-  version: 1.0.8
-  resolution: "@portabletext/toolkit@npm:1.0.8"
-  dependencies:
-    "@portabletext/types": "npm:^2.0.0"
-  checksum: 10c0/c041dbdaefef3e2a30ddaf25d28f06e5fb3a858430c79728ff0053fa9af2cc1578cd0a00ac7a955ce92b10fe7cee68f67b3cbe911215d4621161d8e8831b7fc0
   languageName: node
   linkType: hard
 
@@ -3404,17 +3385,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.0, @portabletext/types@npm:^2.0.13, @portabletext/types@npm:^2.0.15":
+"@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.13, @portabletext/types@npm:^2.0.15":
   version: 2.0.15
   resolution: "@portabletext/types@npm:2.0.15"
   checksum: 10c0/383ca702340d69ba7355e2a02399c815d32f4e27b8d417aebfbd9bcd3fc49e5f15985f983913c1d0f3da8602297898e5704ed53f4adf5a446b9a3b132c25a8cb
-  languageName: node
-  linkType: hard
-
-"@portabletext/types@npm:^1.0.2":
-  version: 1.0.3
-  resolution: "@portabletext/types@npm:1.0.3"
-  checksum: 10c0/1584329e9c8d853a9e4eb42177198bebf1f3e4b2a6d391af2d6c5cc27aaf37b3f1661102817b318b1a67e2985abd16863d2e273dfa192a6780ca3688b0a0f637
   languageName: node
   linkType: hard
 
@@ -11244,7 +11218,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@portabletext/react": "npm:3.2.4"
-    "@portabletext/to-html": "npm:1.0.4"
+    "@portabletext/to-html": "npm:3.0.0"
     "@portabletext/types": "npm:2.0.15"
     "@rsc-parser/embedded": "npm:1.1.2"
     "@sanity/code-input": "npm:6.0.1"
