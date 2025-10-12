@@ -3312,19 +3312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/react@npm:3.2.4":
-  version: 3.2.4
-  resolution: "@portabletext/react@npm:3.2.4"
-  dependencies:
-    "@portabletext/toolkit": "npm:^2.0.18"
-    "@portabletext/types": "npm:^2.0.15"
-  peerDependencies:
-    react: ^17 || ^18 || >=19.0.0-0
-  checksum: 10c0/d20421180b43a5e8e0915f06ec1b57f5075080d208034a1daa3e2a70cd3c10e1d47b87755d011503c4bb22734704f50e2e75b869f720beb82859887575393e40
-  languageName: node
-  linkType: hard
-
-"@portabletext/react@npm:^4.0.3":
+"@portabletext/react@npm:4.0.3, @portabletext/react@npm:^4.0.3":
   version: 4.0.3
   resolution: "@portabletext/react@npm:4.0.3"
   dependencies:
@@ -3367,15 +3355,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/toolkit@npm:^2.0.18":
-  version: 2.0.18
-  resolution: "@portabletext/toolkit@npm:2.0.18"
-  dependencies:
-    "@portabletext/types": "npm:^2.0.13"
-  checksum: 10c0/42778ad52d496a8956b1e4d10dcd3ce7d5f57f30a3c8a0ce8f8e73be91510227c5b68cbb19c31980c8ad99ae6b37ed267965ee381500019c52d5d12467510867
-  languageName: node
-  linkType: hard
-
 "@portabletext/toolkit@npm:^3.0.0, @portabletext/toolkit@npm:^3.0.1":
   version: 3.0.1
   resolution: "@portabletext/toolkit@npm:3.0.1"
@@ -3385,7 +3364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.13, @portabletext/types@npm:^2.0.15":
+"@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.15":
   version: 2.0.15
   resolution: "@portabletext/types@npm:2.0.15"
   checksum: 10c0/383ca702340d69ba7355e2a02399c815d32f4e27b8d417aebfbd9bcd3fc49e5f15985f983913c1d0f3da8602297898e5704ed53f4adf5a446b9a3b132c25a8cb
@@ -11217,7 +11196,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@portabletext/react": "npm:3.2.4"
+    "@portabletext/react": "npm:4.0.3"
     "@portabletext/to-html": "npm:3.0.0"
     "@portabletext/types": "npm:2.0.15"
     "@rsc-parser/embedded": "npm:1.1.2"
