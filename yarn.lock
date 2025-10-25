@@ -4449,9 +4449,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/visual-editing@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@sanity/visual-editing@npm:3.2.3"
+"@sanity/visual-editing@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "@sanity/visual-editing@npm:3.2.4"
   dependencies:
     "@sanity/comlink": "npm:^3.1.1"
     "@sanity/icons": "npm:^3.7.4"
@@ -4492,7 +4492,7 @@ __metadata:
       optional: true
     svelte:
       optional: true
-  checksum: 10c0/eee9ffc465944c24877996a2eda4ad296948b83fd116e936500f100d183ddcd9b1cc9db76bae3d1bb5db0b79ac9238d886af34f2e789df12d13fbec1c01877a6
+  checksum: 10c0/cb03e840f720d27856a9845c1ca78a2fd5a5c02065232fa46f42b534a078dc03ac2aa54f8d46a6070cee202ac526dce6dba7da2ae22bad31130e4d4aa526665e
   languageName: node
   linkType: hard
 
@@ -8743,10 +8743,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq@npm:4.10.3, groq@npm:^4.10.3":
+"groq@npm:4.10.3":
   version: 4.10.3
   resolution: "groq@npm:4.10.3"
   checksum: 10c0/a76cd2ca8de2186defbf481bf43bce977c49f44667208a562a186847212fd395f58badc47c89eead9d08562c5599d8e82e99d31257509fa5fe11b2032c2e551f
+  languageName: node
+  linkType: hard
+
+"groq@npm:^4.11.0":
+  version: 4.11.0
+  resolution: "groq@npm:4.11.0"
+  checksum: 10c0/94052ed9af12e2a1b387a6410db8189e792cfadf2c2224e46d0fe6c65cc33e7ecd107b13aa1c7013bbeacec1317231465f9cec52a7cb1beb5a483d72165efcfb
   languageName: node
   linkType: hard
 
@@ -10720,18 +10727,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:11.5.5":
-  version: 11.5.5
-  resolution: "next-sanity@npm:11.5.5"
+"next-sanity@npm:11.6.2":
+  version: 11.6.2
+  resolution: "next-sanity@npm:11.6.2"
   dependencies:
     "@portabletext/react": "npm:^4.0.3"
     "@sanity/client": "npm:^7.12.0"
     "@sanity/comlink": "npm:^3.1.1"
     "@sanity/presentation-comlink": "npm:^1.0.33"
     "@sanity/preview-url-secret": "npm:^2.1.15"
-    "@sanity/visual-editing": "npm:^3.2.3"
+    "@sanity/visual-editing": "npm:^3.2.4"
     dequal: "npm:^2.0.3"
-    groq: "npm:^4.10.3"
+    groq: "npm:^4.11.0"
     history: "npm:^5.3.0"
     server-only: "npm:^0.0.1"
     use-effect-event: "npm:^2.0.3"
@@ -10740,9 +10747,9 @@ __metadata:
     next: ^15.1.0-0 || ^16.0.0-0
     react: ^18.3 || ^19
     react-dom: ^18.3 || ^19
-    sanity: ^4.10.3
+    sanity: ^4.11.0
     styled-components: ^6.1
-  checksum: 10c0/703876942cfbce76fce2abaea3533729f311ea4c347a9d43976508a64c137656bb4f7de1168155753c49caf606fec19e39959ec0804bb150adf5aeed960e3732
+  checksum: 10c0/db0bdb2160530847975f92872f63974f2b1d73820af290cb24308c846b6e4c49af8bad637a821b0eccc42ed4625c8b2f85d254463afe1a33ba8e0f2a284fb188
   languageName: node
   linkType: hard
 
@@ -11494,7 +11501,7 @@ __metadata:
     feed: "npm:5.1.0"
     htm: "npm:3.1.1"
     next: "npm:15.5.6"
-    next-sanity: "npm:11.5.5"
+    next-sanity: "npm:11.6.2"
     next-sanity-image: "npm:6.2.0"
     postcss: "npm:8.5.6"
     prettier: "npm:3.6.2"
