@@ -42,7 +42,7 @@
     "typescript-eslint": "8.46.3",
     "vhtml": "2.2.0"
   },
-  "packageManager": "yarn@4.10.3",
+  "packageManager": "yarn@4.11.0",
   "resolutions": {
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2"
