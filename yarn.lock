@@ -3511,6 +3511,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@portabletext/react@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@portabletext/react@npm:5.0.0"
+  dependencies:
+    "@portabletext/toolkit": "npm:^4.0.0"
+    "@portabletext/types": "npm:^3.0.0"
+  peerDependencies:
+    react: ^18.2 || ^19
+  checksum: 10c0/04ed924e7c3cc63b92f9630a8fa47a7c68795e2aafe0d99bf33f66ea99e5f50b9f37a1dd81da201ffb99cb40d295e7899c807c5fae586795073b58b1e4b9bc74
+  languageName: node
+  linkType: hard
+
 "@portabletext/sanity-bridge@npm:^1.1.16":
   version: 1.1.16
   resolution: "@portabletext/sanity-bridge@npm:1.1.16"
@@ -3551,10 +3563,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@portabletext/toolkit@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@portabletext/toolkit@npm:4.0.0"
+  dependencies:
+    "@portabletext/types": "npm:^3.0.0"
+  checksum: 10c0/4d4bd55f1f12e9c297d48a3e8eb9de485ec78dc10004e91a7d2e6da936660d7cdc860b7734f352086238791af3b6d83813c9a51be2de7745ef7086816b166dc3
+  languageName: node
+  linkType: hard
+
 "@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.15":
   version: 2.0.15
   resolution: "@portabletext/types@npm:2.0.15"
   checksum: 10c0/383ca702340d69ba7355e2a02399c815d32f4e27b8d417aebfbd9bcd3fc49e5f15985f983913c1d0f3da8602297898e5704ed53f4adf5a446b9a3b132c25a8cb
+  languageName: node
+  linkType: hard
+
+"@portabletext/types@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@portabletext/types@npm:3.0.0"
+  checksum: 10c0/efc2a219d639c7d97a4943fca8bc5e259aea13377b4ecb96f4c150c3f3bd1361034b37b1b89f5001a39963104614aa68eb43e0a18514d0ad5a229f7db7f73e5a
   languageName: node
   linkType: hard
 
@@ -3836,6 +3864,18 @@ __metadata:
     nanoid: "npm:^3.3.11"
     rxjs: "npm:^7.0.0"
   checksum: 10c0/2b8695e01b2a4924dd491be308a9d7fef97bfd20ea5e850b7e77ece0de5cba6058fee58ce2ed1add3d1dc185a043d0b3a168e66a77a114c32bd43c4f3043713c
+  languageName: node
+  linkType: hard
+
+"@sanity/client@npm:^7.12.1":
+  version: 7.12.1
+  resolution: "@sanity/client@npm:7.12.1"
+  dependencies:
+    "@sanity/eventsource": "npm:^5.0.2"
+    get-it: "npm:^8.6.9"
+    nanoid: "npm:^3.3.11"
+    rxjs: "npm:^7.0.0"
+  checksum: 10c0/e3fd0d0166b5420e04d5b8375060569074ddf3fe40ee5522cc6d8395edbd60de7f8ff03a41692beba7340ac9e75feb91edbfdef6db7693ac33eddbfd462242a7
   languageName: node
   linkType: hard
 
@@ -8632,10 +8672,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq@npm:4.12.0, groq@npm:^4.12.0":
+"groq@npm:4.12.0":
   version: 4.12.0
   resolution: "groq@npm:4.12.0"
   checksum: 10c0/fd0ac8bbba71f687d5c548e440d30f2bd06d56f3240a75d0efeabac99c30ae6fbb6e397367ecc5ac09131042f03255f6bee4937f78591bb7dd4d5d117d9f2bfc
+  languageName: node
+  linkType: hard
+
+"groq@npm:^4.13.0":
+  version: 4.14.2
+  resolution: "groq@npm:4.14.2"
+  checksum: 10c0/9be0def2466bc956813f67019d11361cf9d5ed6127d7f000003a49d7149560fea63d498974e7fc79bf905b2447ff56b6fb74a795100c10906e8ac0cafeff3315
   languageName: node
   linkType: hard
 
@@ -10630,29 +10677,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:11.6.3":
-  version: 11.6.3
-  resolution: "next-sanity@npm:11.6.3"
+"next-sanity@npm:11.6.5":
+  version: 11.6.5
+  resolution: "next-sanity@npm:11.6.5"
   dependencies:
-    "@portabletext/react": "npm:^4.0.3"
-    "@sanity/client": "npm:^7.12.0"
+    "@portabletext/react": "npm:^5.0.0"
+    "@sanity/client": "npm:^7.12.1"
     "@sanity/comlink": "npm:^4.0.0"
     "@sanity/presentation-comlink": "npm:^2.0.0"
     "@sanity/preview-url-secret": "npm:^2.1.15"
     "@sanity/visual-editing": "npm:^4.0.0"
     dequal: "npm:^2.0.3"
-    groq: "npm:^4.12.0"
+    groq: "npm:^4.13.0"
     history: "npm:^5.3.0"
     server-only: "npm:^0.0.1"
     use-effect-event: "npm:^2.0.3"
   peerDependencies:
-    "@sanity/client": ^7.12.0
+    "@sanity/client": ^7.12.1
     next: ^15.1.0-0 || ^16.0.0-0
     react: ^18.3 || ^19
     react-dom: ^18.3 || ^19
-    sanity: ^4.12.0
+    sanity: ^4.13.0
     styled-components: ^6.1
-  checksum: 10c0/b91e1cd3147b15b27fb66b843674148952082d7df579d7c33714fd3e3e20ca09a35e92e3320e3caba198bf99bc16804ea06f9c4b6e21f02ed26fdb3ed223b3da
+  checksum: 10c0/f17419d601a68251275a6fbd63dde6c898a0671067cbc751b991d1aeb48e09c20b9f9b1952ddf1f4ec89e0e4716d69dff9b4da2934d9230ee37cb39311537626
   languageName: node
   linkType: hard
 
@@ -11404,7 +11451,7 @@ __metadata:
     feed: "npm:5.1.0"
     htm: "npm:3.1.1"
     next: "npm:15.5.6"
-    next-sanity: "npm:11.6.3"
+    next-sanity: "npm:11.6.5"
     next-sanity-image: "npm:6.2.0"
     postcss: "npm:8.5.6"
     prettier: "npm:3.6.2"
