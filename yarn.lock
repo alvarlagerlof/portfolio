@@ -3422,17 +3422,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/to-html@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@portabletext/to-html@npm:3.0.0"
-  dependencies:
-    "@portabletext/toolkit": "npm:^3.0.0"
-    "@portabletext/types": "npm:^2.0.15"
-  checksum: 10c0/faeda1f4425bfff4fe2c4c9a9cb8a3b43a2818b31758f98493787a1eafa2f1478afdee565774a6af11f7ddd67bb0d05215de1a8ad377eec8a4a2d067624935dc
-  languageName: node
-  linkType: hard
-
-"@portabletext/to-html@npm:^4.0.1":
+"@portabletext/to-html@npm:4.0.1, @portabletext/to-html@npm:^4.0.1":
   version: 4.0.1
   resolution: "@portabletext/to-html@npm:4.0.1"
   dependencies:
@@ -3442,7 +3432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/toolkit@npm:^3.0.0, @portabletext/toolkit@npm:^3.0.1":
+"@portabletext/toolkit@npm:^3.0.1":
   version: 3.0.3
   resolution: "@portabletext/toolkit@npm:3.0.3"
   dependencies:
@@ -11306,7 +11296,7 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@portabletext/react": "npm:4.0.3"
-    "@portabletext/to-html": "npm:3.0.0"
+    "@portabletext/to-html": "npm:4.0.1"
     "@portabletext/types": "npm:2.0.15"
     "@rsc-parser/embedded": "npm:1.1.2"
     "@sanity/code-input": "npm:6.0.3"
