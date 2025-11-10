@@ -3460,17 +3460,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/types@npm:2.0.15, @portabletext/types@npm:^2.0.15":
-  version: 2.0.15
-  resolution: "@portabletext/types@npm:2.0.15"
-  checksum: 10c0/383ca702340d69ba7355e2a02399c815d32f4e27b8d417aebfbd9bcd3fc49e5f15985f983913c1d0f3da8602297898e5704ed53f4adf5a446b9a3b132c25a8cb
-  languageName: node
-  linkType: hard
-
-"@portabletext/types@npm:^3.0.0":
+"@portabletext/types@npm:3.0.0, @portabletext/types@npm:^3.0.0":
   version: 3.0.0
   resolution: "@portabletext/types@npm:3.0.0"
   checksum: 10c0/efc2a219d639c7d97a4943fca8bc5e259aea13377b4ecb96f4c150c3f3bd1361034b37b1b89f5001a39963104614aa68eb43e0a18514d0ad5a229f7db7f73e5a
+  languageName: node
+  linkType: hard
+
+"@portabletext/types@npm:^2.0.15":
+  version: 2.0.15
+  resolution: "@portabletext/types@npm:2.0.15"
+  checksum: 10c0/383ca702340d69ba7355e2a02399c815d32f4e27b8d417aebfbd9bcd3fc49e5f15985f983913c1d0f3da8602297898e5704ed53f4adf5a446b9a3b132c25a8cb
   languageName: node
   linkType: hard
 
@@ -11307,7 +11307,7 @@ __metadata:
   dependencies:
     "@portabletext/react": "npm:4.0.3"
     "@portabletext/to-html": "npm:3.0.0"
-    "@portabletext/types": "npm:2.0.15"
+    "@portabletext/types": "npm:3.0.0"
     "@rsc-parser/embedded": "npm:1.1.2"
     "@sanity/code-input": "npm:6.0.3"
     "@tailwindcss/postcss": "npm:4.1.14"
