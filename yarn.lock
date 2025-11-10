@@ -3378,19 +3378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/react@npm:4.0.3":
-  version: 4.0.3
-  resolution: "@portabletext/react@npm:4.0.3"
-  dependencies:
-    "@portabletext/toolkit": "npm:^3.0.1"
-    "@portabletext/types": "npm:^2.0.15"
-  peerDependencies:
-    react: ^18.2 || ^19
-  checksum: 10c0/63374f0fba84fea983e3c9665f5fd149c3d0f7f4b64973cb461c6705f74f4c5c4fccbd50e4b60417a7bf3b9fad62b82582ecbd8fe36d113af10f6bff9eacc66a
-  languageName: node
-  linkType: hard
-
-"@portabletext/react@npm:^5.0.0":
+"@portabletext/react@npm:5.0.0, @portabletext/react@npm:^5.0.0":
   version: 5.0.0
   resolution: "@portabletext/react@npm:5.0.0"
   dependencies:
@@ -3442,7 +3430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@portabletext/toolkit@npm:^3.0.0, @portabletext/toolkit@npm:^3.0.1":
+"@portabletext/toolkit@npm:^3.0.0":
   version: 3.0.3
   resolution: "@portabletext/toolkit@npm:3.0.3"
   dependencies:
@@ -11305,7 +11293,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
-    "@portabletext/react": "npm:4.0.3"
+    "@portabletext/react": "npm:5.0.0"
     "@portabletext/to-html": "npm:3.0.0"
     "@portabletext/types": "npm:2.0.15"
     "@rsc-parser/embedded": "npm:1.1.2"
