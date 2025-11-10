@@ -11,7 +11,7 @@
     "format": "prettier . --check"
   },
   "dependencies": {
-    "@portabletext/react": "4.0.3",
+    "@portabletext/react": "5.0.0",
     "@sanity/code-input": "6.0.3",
     "@tailwindcss/typography": "0.5.19",
     "@vercel/og": "0.8.5",
