@@ -8474,10 +8474,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"groq@npm:4.14.2, groq@npm:^4.13.0":
+"groq@npm:4.14.2":
   version: 4.14.2
   resolution: "groq@npm:4.14.2"
   checksum: 10c0/9be0def2466bc956813f67019d11361cf9d5ed6127d7f000003a49d7149560fea63d498974e7fc79bf905b2447ff56b6fb74a795100c10906e8ac0cafeff3315
+  languageName: node
+  linkType: hard
+
+"groq@npm:^4.14.2":
+  version: 4.15.0
+  resolution: "groq@npm:4.15.0"
+  checksum: 10c0/0d945f4e03a42a2bca66d9f6fb4ff5b6e1028f79d325287ef581e7bdee29139035a7e00d46821ae470e6127573a3d138bf5367fc0749e6f9ca45ae79030b8b24
   languageName: node
   linkType: hard
 
@@ -10506,9 +10513,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-sanity@npm:11.6.5":
-  version: 11.6.5
-  resolution: "next-sanity@npm:11.6.5"
+"next-sanity@npm:11.6.6":
+  version: 11.6.6
+  resolution: "next-sanity@npm:11.6.6"
   dependencies:
     "@portabletext/react": "npm:^5.0.0"
     "@sanity/client": "npm:^7.12.1"
@@ -10517,7 +10524,7 @@ __metadata:
     "@sanity/preview-url-secret": "npm:^2.1.15"
     "@sanity/visual-editing": "npm:^4.0.0"
     dequal: "npm:^2.0.3"
-    groq: "npm:^4.13.0"
+    groq: "npm:^4.14.2"
     history: "npm:^5.3.0"
     server-only: "npm:^0.0.1"
     use-effect-event: "npm:^2.0.3"
@@ -10526,9 +10533,9 @@ __metadata:
     next: ^15.1.0-0 || ^16.0.0-0
     react: ^18.3 || ^19
     react-dom: ^18.3 || ^19
-    sanity: ^4.13.0
+    sanity: ^4.14.2
     styled-components: ^6.1
-  checksum: 10c0/f17419d601a68251275a6fbd63dde6c898a0671067cbc751b991d1aeb48e09c20b9f9b1952ddf1f4ec89e0e4716d69dff9b4da2934d9230ee37cb39311537626
+  checksum: 10c0/887a516b3eb94bb5a433eb1942f49056b185052481f969180fcae9644125ddffc0f4bbf78a59d38fe32b9bcfc0fe0cf485a580a6c96ab32bd534a493371b8647
   languageName: node
   linkType: hard
 
@@ -11321,7 +11328,7 @@ __metadata:
     feed: "npm:5.1.0"
     htm: "npm:3.1.1"
     next: "npm:15.5.6"
-    next-sanity: "npm:11.6.5"
+    next-sanity: "npm:11.6.6"
     next-sanity-image: "npm:6.2.0"
     postcss: "npm:8.5.6"
     prettier: "npm:3.6.2"
