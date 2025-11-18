@@ -26,7 +26,7 @@
     "styled-components": "6.1.19"
   },
   "devDependencies": {
-    "@portabletext/to-html": "3.0.0",
+    "@portabletext/to-html": "4.0.1",
     "@portabletext/types": "2.0.15",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.1.14",
