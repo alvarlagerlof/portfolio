@@ -1,10 +1,9 @@
 "use client";
 
 import { Speaker } from "components/Icons/Speaker";
-import { use, useRef, useState, useTransition } from "react";
+import { useRef, useState, useTransition } from "react";
 
 export function Pronunciation() {
-  const firstRender = useRef(true);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [hasClicked, setHasClicked] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -25,11 +24,6 @@ export function Pronunciation() {
     );
   }
 
-  async function wait() {
-    firstRender.current = false;
-    return undefined;
-  }
-
   return (
     <>
       <button
@@ -46,7 +40,6 @@ export function Pronunciation() {
       <audio ref={audioRef} aria-hidden preload="none" autoPlay>
         <source src="/name.mp3" type="audio/flac" />
         Your browser does not support the audio element.
-        {firstRender.current ? use(wait()) : undefined}
       </audio>
     </>
   );
