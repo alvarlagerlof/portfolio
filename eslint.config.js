@@ -9,7 +9,7 @@ import hooksPlugin from "eslint-plugin-react-hooks";
 
 export default [
   {
-    ignores: [".next/**", ".yarn/**"],
+    ignores: [".next/**"],
   },
   ...[eslint.configs.recommended, ...tseslint.configs.recommended].map(conf => ({
     ...conf,
