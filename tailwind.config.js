@@ -5,21 +5,25 @@ const inflatePlugin = function ({ addComponents, theme }) {
   const spacing = theme("spacing", {});
 
   Object.entries(spacing).forEach(([name, padding]) => {
-    addComponents({
-      [`.${`inflate-${name}`} > *`]: { padding },
-      [`.${`inflate-x-${name}`} > *`]: {
-        paddingLeft: padding,
-        paddingRight: padding,
-        "&:first-child": { paddingLeft: 0 },
-        "&:last-child": { paddingRight: 0 },
-      },
-      [`.${`inflate-y-${name}`} > *`]: {
-        paddingTop: padding,
-        paddingBottom: padding,
-        "&:first-child": { paddingTop: 0 },
-        "&:last-child": { paddingBottom: 0 },
-      },
-    });
+    if (name === "0.5") {
+      // lightningcss didn't undestand 0.5, and erroered on parsing .inflate-y-0 { &.5 > *
+    } else {
+      addComponents({
+        [`.${`inflate-${name}`} > *`]: { padding },
+        [`.${`inflate-x-${name}`} > *`]: {
+          paddingLeft: padding,
+          paddingRight: padding,
+          "&:first-child": { paddingLeft: "0px" },
+          "&:last-child": { paddingRight: "0px" },
+        },
+        [`.${`inflate-y-${name}`} > *`]: {
+          paddingTop: padding,
+          paddingBottom: padding,
+          "&:first-child": { paddingTop: "0px" },
+          "&:last-child": { paddingBottom: "0px" },
+        },
+      });
+    }
   });
 };
 
@@ -51,9 +55,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    inflatePlugin,
-    // SEp
-    typographyPlugin,
-  ],
+  plugins: [inflatePlugin, typographyPlugin],
 };

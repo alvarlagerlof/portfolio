@@ -4,6 +4,7 @@ import { groq } from "next-sanity";
 import { Suspense } from "react";
 import Link from "next/link";
 import { PostPreview } from "types";
+import { cacheLife } from "next/cache";
 
 const query = groq`
 *[_type == "post"] | order(date.published desc) [0..3] {
@@ -36,11 +37,12 @@ export function RecentBlogPosts() {
 }
 
 async function RecentBlogPostsList() {
+  "use cache";
+  cacheLife("minutes");
+
   const posts: PostPreview[] = await (
     await createSanityClientWithDraftMode()
-  ).fetch(query, undefined, {
-    next: { revalidate: 600 },
-  });
+  ).fetch(query, undefined);
 
   return (
     <>

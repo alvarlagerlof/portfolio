@@ -13,7 +13,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "incremental": true,
     "plugins": [
@@ -32,7 +32,8 @@
     "tailwind.config.js",
     "next-sitemap.js",
     ".next/types/**/*.ts",
-    "environment.d.ts"
+    "environment.d.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,9 +1,19 @@
 import { Studio } from "./Studio";
 import "../../global.css";
+import { connection } from "next/server";
+import { Suspense } from "react";
 
-export const dynamic = "force-dynamic";
+export default async function StudioPage() {
+  return (
+    <Suspense fallback={<div>Loading studio...</div>}>
+      <SanityStudio />
+    </Suspense>
+  );
+}
 
-export default function StudioPage() {
+async function SanityStudio() {
+  await connection();
+
   return (
     <div className="sanity">
       <Studio />

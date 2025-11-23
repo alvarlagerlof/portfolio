@@ -1,6 +1,6 @@
 import { createSanityClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
-import { cache } from "react";
+import { cacheLife } from "next/cache";
 import { Post } from "types";
 
 const query = groq`
@@ -34,16 +34,11 @@ const query = groq`
 }
 `;
 
-export const getPost = cache(async (slug: string) => {
-  return (await createSanityClientWithDraftMode()).fetch<Post>(
-    query,
-    {
-      slug,
-    },
-    {
-      next: {
-        revalidate: 600,
-      },
-    },
-  );
-});
+export const getPost = async (slug: string) => {
+  "use cache";
+  cacheLife("minutes");
+
+  return (await createSanityClientWithDraftMode()).fetch<Post>(query, {
+    slug,
+  });
+};
