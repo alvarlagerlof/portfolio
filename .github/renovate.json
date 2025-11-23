@@ -47,6 +47,11 @@
       "packagePatterns": ["tailwind"],
       "groupName": "tailwind",
       "automerge": false
+    },
+    {
+      "packagePatterns": ["@portabletext"],
+      "groupName": "portabletext",
+      "automerge": false
     }
   ]
 }
