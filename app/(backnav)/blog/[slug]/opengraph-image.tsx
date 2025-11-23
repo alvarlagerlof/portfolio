@@ -77,7 +77,6 @@ export default async function Image({ params: { slug } }: { params: { slug: stri
               alignItems: "center",
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://alvar.dev/profile.png"
               width="65px"
