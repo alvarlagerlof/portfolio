@@ -6,6 +6,7 @@ import { NextSanityImage } from "components/NextSanityImage";
 import { Skeleton } from "components/Skeleton";
 import { SkeletonText } from "components/SkeletonText";
 import Link from "next/link";
+import { cacheLife } from "next/cache";
 
 const query = groq`
 *[_type == "project"] {
@@ -39,11 +40,12 @@ export async function Projects() {
 }
 
 async function ProjectsList() {
+  "use cache";
+  cacheLife("minutes");
+
   const projects: Project[] = await (
     await createSanityClientWithDraftMode()
-  ).fetch(query, undefined, {
-    next: { revalidate: 600 },
-  });
+  ).fetch(query, undefined);
 
   return (
     <>

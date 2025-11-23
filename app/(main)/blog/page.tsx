@@ -2,11 +2,12 @@ import { ArrowLink } from "components/ArrowLink";
 import { WithDividers } from "components/WithDividers";
 import { createSanityClientWithDraftMode } from "lib/sanity/client";
 import { groq } from "next-sanity";
-import { cache, Suspense } from "react";
+import { Suspense } from "react";
 import { Post, PostPreview, Sections } from "types";
 
 import { Posts } from "./components/Posts";
 import { PostItemLoading } from "./components/Posts";
+import { cacheLife } from "next/cache";
 
 const query = groq`
 *[_type == "post"] | order(date.published desc) {
@@ -43,14 +44,13 @@ export default function BlogPage() {
   );
 }
 
-const getSections = cache(async () => {
+const getSections = async () => {
+  "use cache";
+  cacheLife("minutes");
+
   const posts: PostPreview[] = await (
     await createSanityClientWithDraftMode()
-  ).fetch(query, undefined, {
-    next: {
-      revalidate: 600,
-    },
-  });
+  ).fetch(query, undefined);
 
   const sections = posts.reduce((acc: Sections, curr: Post) => {
     if (curr.date === null) {
@@ -69,7 +69,7 @@ const getSections = cache(async () => {
   }, {});
 
   return sections;
-});
+};
 
 async function Data() {
   const sections = await getSections();

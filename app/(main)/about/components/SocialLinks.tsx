@@ -6,6 +6,7 @@ import { ArrowLink } from "components/ArrowLink";
 import { NextSanityImage } from "components/NextSanityImage";
 import { Skeleton } from "components/Skeleton";
 import { SkeletonText } from "components/SkeletonText";
+import { cacheLife } from "next/cache";
 
 const query = groq`
 *[_type == "social"] {
@@ -42,11 +43,12 @@ export async function SocialLinks() {
 }
 
 async function SocialLinksList() {
+  "use cache";
+  cacheLife("minutes");
+
   const socialLinks: Social[] = await (
     await createSanityClientWithDraftMode()
-  ).fetch(query, undefined, {
-    next: { revalidate: 600 },
-  });
+  ).fetch(query, undefined);
 
   return (
     <>
