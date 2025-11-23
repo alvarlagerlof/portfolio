@@ -1,5 +1,9 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
+    turbopackFileSystemCacheForBuild: true,
+  },
   images: {
     remotePatterns: [
       {
