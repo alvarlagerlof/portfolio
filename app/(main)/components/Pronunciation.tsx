@@ -38,7 +38,7 @@ export function Pronunciation() {
         <Speaker />
       </button>
       <audio ref={audioRef} aria-hidden preload="none" autoPlay>
-        <source src="/name.mp3" type="audio/flac" />
+        <source src="/name.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </>
