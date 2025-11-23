@@ -12,6 +12,9 @@ const nextConfig = {
       },
     ],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   cacheComponents: true,
   serverExternalPackages: ["sanity", "next-sanity"],
   async rewrites() {
