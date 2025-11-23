@@ -10,7 +10,8 @@ export const size = {
   height: 630,
 };
 
-export default async function Image({ params: { slug } }: { params: { slug: string } }) {
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const { title, description } = await getPost(slug);
 
   return new ImageResponse(

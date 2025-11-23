@@ -4,13 +4,13 @@ import { join } from "node:path";
 import { readFile } from "node:fs/promises";
 
 export const getSpaceTextFont = async () => {
-  const font = await readFile(join(process.cwd(), "assets/assets/fonts/space-text-medium.woff"));
+  const font = await readFile(join(process.cwd(), "./assets/fonts/space-text-medium.woff"));
 
   return font;
 };
 
 export const getMadeDillanFont = async () => {
-  const font = await readFile(join(process.cwd(), "assets/assets/fonts/made-dillan.woff"));
+  const font = await readFile(join(process.cwd(), "./assets/fonts/made-dillan.woff"));
 
   return font;
 };
