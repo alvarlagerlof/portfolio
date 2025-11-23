@@ -50,8 +50,7 @@
     },
     {
       "packagePatterns": ["@portabletext"],
-      "groupName": "portabletext",
-      "automerge": false
+      "groupName": "portabletext"
     }
   ]
 }
