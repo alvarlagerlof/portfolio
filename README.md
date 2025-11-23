@@ -5,11 +5,11 @@ Personal portfolio and blog
 ## Getting started
 
 ```bash
-yarn install
+bun install
 ```
 
 ```bash
-yarn dev
+bun dev
 ```
 
 ## License

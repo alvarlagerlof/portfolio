@@ -1,4 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "yarn format && yarn lint && yarn build"
+  "buildCommand": "bun format && bun lint && bun build"
 }
