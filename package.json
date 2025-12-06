@@ -20,8 +20,8 @@
     "next": "16.0.7",
     "next-sanity": "11.6.10",
     "next-sanity-image": "6.2.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "sanity": "4.19.0",
     "styled-components": "6.1.19"
   },
