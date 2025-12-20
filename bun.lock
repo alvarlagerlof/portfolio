@@ -8,7 +8,7 @@
         "@portabletext/react": "5.0.0",
         "@sanity/code-input": "6.0.3",
         "@tailwindcss/typography": "0.5.19",
-        "@vercel/og": "0.8.5",
+        "@vercel/og": "0.8.6",
         "bright": "1.0.0",
         "feed": "5.1.0",
         "next": "16.0.10",
@@ -999,7 +999,7 @@
 
     "@vercel/edge": ["@vercel/edge@1.2.2", "", {}, "sha512-1+y+f6rk0Yc9ss9bRDgz/gdpLimwoRteKHhrcgHvEpjbP1nyT3ByqEMWm2BTcpIO5UtDmIFXc8zdq4LR190PDA=="],
 
-    "@vercel/og": ["@vercel/og@0.8.5", "", { "dependencies": { "@resvg/resvg-wasm": "2.4.0", "satori": "0.16.0" } }, "sha512-fHqnxfBYcwkamlEgcIzaZqL8IHT09hR7FZL7UdMTdGJyoaBzM/dY6ulO5Swi4ig30FrBJI9I2C+GLV9sb9vexA=="],
+    "@vercel/og": ["@vercel/og@0.8.6", "", { "dependencies": { "@resvg/resvg-wasm": "2.4.0", "satori": "0.16.0" } }, "sha512-hBcWIOppZV14bi+eAmCZj8Elj8hVSUZJTpf1lgGBhVD85pervzQ1poM/qYfFUlPraYSZYP+ASg6To5BwYmUSGQ=="],
 
     "@vercel/stega": ["@vercel/stega@1.0.0", "", {}, "sha512-jyDUZEBjxmlh28J4y2wB6dBKayYOw1+9fRNRHWRN2oSO+LnooRHUe2z3JeTkCqXY2yrZ9dmtCl982YNIoIBeuw=="],
 
