@@ -11,7 +11,7 @@
     "format": "prettier . --check"
   },
   "dependencies": {
-    "@portabletext/react": "5.0.0",
+    "@portabletext/react": "6.0.2",
     "@sanity/code-input": "6.0.4",
     "@tailwindcss/typography": "0.5.19",
     "@vercel/og": "0.8.6",
@@ -26,8 +26,8 @@
     "styled-components": "6.3.9"
   },
   "devDependencies": {
-    "@portabletext/to-html": "4.0.1",
-    "@portabletext/types": "3.0.1",
+    "@portabletext/to-html": "5.0.1",
+    "@portabletext/types": "4.0.1",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.1.17",
     "@types/react": "19.2.14",
