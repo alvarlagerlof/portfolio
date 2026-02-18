@@ -29,7 +29,7 @@
     "@portabletext/to-html": "4.0.1",
     "@portabletext/types": "3.0.1",
     "@rsc-parser/embedded": "1.1.2",
-    "@tailwindcss/postcss": "4.1.17",
+    "@tailwindcss/postcss": "4.2.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.2",
@@ -37,7 +37,7 @@
     "htm": "3.1.1",
     "postcss": "8.5.6",
     "prettier": "3.8.1",
-    "tailwindcss": "4.1.17",
+    "tailwindcss": "4.2.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.55.0",
     "vhtml": "2.2.0"
