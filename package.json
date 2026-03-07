@@ -14,7 +14,7 @@
     "@portabletext/react": "5.0.0",
     "@sanity/code-input": "6.0.4",
     "@tailwindcss/typography": "0.5.19",
-    "@vercel/og": "0.9.0",
+    "@vercel/og": "0.11.1",
     "bright": "1.0.0",
     "feed": "5.2.0",
     "next": "16.1.6",
