@@ -23,7 +23,7 @@
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "sanity": "4.22.0",
-    "styled-components": "6.3.12"
+    "styled-components": "6.4.0"
   },
   "devDependencies": {
     "@portabletext/to-html": "4.0.1",
