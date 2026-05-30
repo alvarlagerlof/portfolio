@@ -6,7 +6,7 @@
       "name": "portfolio",
       "dependencies": {
         "@portabletext/react": "6.2.0",
-        "@sanity/code-input": "7.1.1",
+        "@sanity/code-input": "7.1.2",
         "@tailwindcss/typography": "0.5.19",
         "@vercel/og": "0.11.1",
         "bright": "1.0.0",
@@ -761,7 +761,7 @@
 
     "@sanity/client": ["@sanity/client@7.22.0", "", { "dependencies": { "@sanity/eventsource": "^5.0.2", "get-it": "^8.7.2", "nanoid": "^3.3.11", "rxjs": "^7.0.0" } }, "sha512-KqN9cowZwfZNCwCchRaz1B9WrZTThQxX/gfJhJO1uKJBuk/JcbYGBiSK9CSqocWoYDQ/QqANVXy1r7a8zognww=="],
 
-    "@sanity/code-input": ["@sanity/code-input@7.1.1", "", { "dependencies": { "@codemirror/lang-html": "^6.4.11", "@codemirror/lang-java": "^6.0.2", "@codemirror/lang-javascript": "^6.2.5", "@codemirror/lang-json": "^6.0.2", "@codemirror/lang-markdown": "^6.5.0", "@codemirror/lang-php": "^6.0.2", "@codemirror/lang-sql": "^6.10.0", "@codemirror/language": "^6.12.3", "@codemirror/legacy-modes": "^6.5.3", "@codemirror/state": "^6.6.0", "@codemirror/view": "^6.43.0", "@lezer/highlight": "^1.2.3", "@sanity/icons": "^3.7.4", "@sanity/lezer-groq": "^1.0.3", "@sanity/ui": "^3.2.0", "@uiw/codemirror-themes": "^4.25.8", "@uiw/react-codemirror": "^4.25.8" }, "peerDependencies": { "react": "^19.2", "sanity": "^5", "styled-components": "^6.1" } }, "sha512-qkIRmuHHCt4dXogZ6ZQNEE++XVU//AMIFYOKq/C1o9CQOjIB01WkhqamtPQ8charPzO27IuiNeDTQWjZltUy8w=="],
+    "@sanity/code-input": ["@sanity/code-input@7.1.2", "", { "dependencies": { "@codemirror/lang-html": "^6.4.11", "@codemirror/lang-java": "^6.0.2", "@codemirror/lang-javascript": "^6.2.5", "@codemirror/lang-json": "^6.0.2", "@codemirror/lang-markdown": "^6.5.0", "@codemirror/lang-php": "^6.0.2", "@codemirror/lang-sql": "^6.10.0", "@codemirror/language": "^6.12.3", "@codemirror/legacy-modes": "^6.5.3", "@codemirror/state": "^6.6.0", "@codemirror/view": "^6.43.0", "@lezer/highlight": "^1.2.3", "@sanity/icons": "^3.7.4", "@sanity/lezer-groq": "^1.0.3", "@sanity/ui": "^3.2.0", "@uiw/codemirror-themes": "^4.25.8", "@uiw/react-codemirror": "^4.25.8" }, "peerDependencies": { "react": "^19.2", "sanity": "^5 || ^6.0.0-0", "styled-components": "^6.1" } }, "sha512-5Ofk04jj2s0f1kX2dSJo4T6pwK9Wx3BrXoTphlUVnNYedVoz92hoL7oBMXWEC45+wc8t5nWAKdOh2UNJU5tjhg=="],
 
     "@sanity/codegen": ["@sanity/codegen@6.1.0", "", { "dependencies": { "@babel/core": "^7.29.0", "@babel/generator": "^7.29.1", "@babel/preset-env": "^7.29.2", "@babel/preset-react": "^7.28.5", "@babel/preset-typescript": "^7.28.5", "@babel/register": "^7.28.6", "@babel/traverse": "^7.29.0", "@babel/types": "^7.29.0", "@sanity/worker-channels": "^2.0.0", "chokidar": "^3.6.0", "debug": "^4.4.3", "globby": "^11.1.0", "groq": "^5.23.0", "groq-js": "^1.30.1", "json5": "^2.2.3", "lodash-es": "^4.18.1", "prettier": "^3.8.1", "reselect": "^5.1.1", "tsconfig-paths": "^4.2.0", "zod": "^4.3.6" }, "peerDependencies": { "@oclif/core": "^4.8.0", "@sanity/cli-core": "^1", "@sanity/telemetry": "^0.9.0", "oxfmt": "*" }, "optionalPeers": ["oxfmt"] }, "sha512-isrFJD6UtTqTCM9l7B8fm8l4kb4PPdet0+V/ldR7ghM0hKY6hdbVFD6qijauzwfUC6MSdA2UfgFCMXp/ogVXvg=="],
 
