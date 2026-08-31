@@ -23,7 +23,7 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "sanity": "5.28.0",
-    "styled-components": "6.4.2"
+    "styled-components": "6.5.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
