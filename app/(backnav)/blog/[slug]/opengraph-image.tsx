@@ -3,8 +3,6 @@ import { getPost } from "./getPost";
 import { OpenGraphImageStar } from "components/OpenGraphImageStar";
 import { getMadeDillanFont, getSpaceTextFont } from "app/(main)/default-og";
 
-export const revalidate = 600;
-
 export const size = {
   width: 1200,
   height: 630,
