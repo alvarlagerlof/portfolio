@@ -13,7 +13,7 @@
   "dependencies": {
     "@portabletext/react": "6.2.0",
     "@sanity/code-input": "7.1.2",
-    "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/typography": "0.5.20",
     "@vercel/og": "0.11.1",
     "bright": "1.0.0",
     "feed": "5.2.1",
@@ -30,7 +30,7 @@
     "@portabletext/to-html": "5.0.2",
     "@portabletext/types": "4.0.2",
     "@rsc-parser/embedded": "1.1.2",
-    "@tailwindcss/postcss": "4.3.0",
+    "@tailwindcss/postcss": "4.3.3",
     "@types/node": "^26.4.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
@@ -39,7 +39,7 @@
     "htm": "3.1.1",
     "postcss": "8.5.15",
     "prettier": "3.8.3",
-    "tailwindcss": "4.3.0",
+    "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
     "typescript-eslint": "8.60.0",
     "vhtml": "2.2.0"
