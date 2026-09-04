@@ -26,12 +26,12 @@
     "styled-components": "6.5.3"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@eslint/js": "10.0.1",
     "@portabletext/to-html": "5.0.2",
     "@portabletext/types": "4.0.2",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.3.3",
-    "@types/node": "^26.4.0",
+    "@types/node": "26.4.1",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "eslint": "10.9.1",
