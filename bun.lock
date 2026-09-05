@@ -21,7 +21,7 @@
       },
       "devDependencies": {
         "@eslint/js": "10.0.1",
-        "@portabletext/to-html": "5.0.2",
+        "@portabletext/to-html": "5.0.3",
         "@portabletext/types": "4.0.2",
         "@rsc-parser/embedded": "1.1.2",
         "@tailwindcss/postcss": "4.3.3",
@@ -685,7 +685,7 @@
 
     "@portabletext/schema": ["@portabletext/schema@2.2.0", "", {}, "sha512-Dun3sZv+Dp+qF9SSbxldQ+mpn7O7nqGVjq/5DFxFARGRoGlnNHmb9tXS/NV9pqlFZ5+d1GAgnDkMLy4qyU1JZw=="],
 
-    "@portabletext/to-html": ["@portabletext/to-html@5.0.2", "", { "dependencies": { "@portabletext/toolkit": "^5.0.2", "@portabletext/types": "^4.0.2" } }, "sha512-w59PcErj5JXUCv9tbV2npqJmcnORTAftCMLp0vc9FnWrXL3C9qYvuB2MQbdHsZEOesF3VmwqUsYUgjm7PX4JTw=="],
+    "@portabletext/to-html": ["@portabletext/to-html@5.0.3", "", { "dependencies": { "@portabletext/toolkit": "^5.0.2", "@portabletext/types": "^4.0.2" } }, "sha512-62xml8ywsBjsNHfaQsMEZbj5VvJhWcGq5e4PCZpyb5yWl5zxukBRKal42201t5nu2Vt+JEMj9ezKU776C0elrQ=="],
 
     "@portabletext/toolkit": ["@portabletext/toolkit@5.0.2", "", { "dependencies": { "@portabletext/types": "^4.0.2" } }, "sha512-Njc1LE1PMJkTx/wEPqZ6sOWGgFgX2B47fxpOQ/Ia4ByhsZoA5Sq8dNvvV5F052j/xE8TbOLiBEjS848FkKADDQ=="],
 
