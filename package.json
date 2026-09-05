@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@portabletext/to-html": "5.0.2",
+    "@portabletext/to-html": "5.0.3",
     "@portabletext/types": "4.0.2",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.3.3",
