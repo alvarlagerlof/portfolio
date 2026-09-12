@@ -20,8 +20,8 @@
     "next": "16.3.5",
     "next-sanity": "13.3.4",
     "next-sanity-image": "6.2.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "sanity": "5.31.2",
     "styled-components": "6.5.3"
   },
@@ -32,8 +32,8 @@
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "26.5.1",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.7",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "eslint": "10.10.0",
     "eslint-config-next": "16.3.5",
     "htm": "3.1.1",
@@ -45,7 +45,7 @@
     "vhtml": "2.2.0"
   },
   "resolutions": {
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.7"
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
   }
 }
