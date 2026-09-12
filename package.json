@@ -31,7 +31,7 @@
     "@portabletext/types": "4.0.2",
     "@rsc-parser/embedded": "1.1.2",
     "@tailwindcss/postcss": "4.3.3",
-    "@types/node": "26.4.1",
+    "@types/node": "26.5.1",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
     "eslint": "10.10.0",
