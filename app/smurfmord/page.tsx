@@ -4,10 +4,10 @@ import basilisk from "./images/basilisk.jpg";
 import blomsmufren from "./images/blomsmufren.jpg";
 import fiolsmurfen from "./images/fiolsmurfen.jpg";
 import kokettsmurfen from "./images/kokettsmurfen.jpg";
-import påsksmurfen from "./images/påsksmurfen.jpg";
-import bläckfisk from "./images/bläckfisk.jpg";
+import pasksmurfen from "./images/pasksmurfen.jpg";
+import blackfisk from "./images/blackfisk.jpg";
 import butternalle from "./images/butternalle.jpg";
-import häst from "./images/häst.jpg";
+import häst from "./images/hast.jpg";
 import ozelot from "./images/ozelot.jpg";
 import { FlipRedirectCard } from "./FlipRedirectCard";
 
@@ -55,13 +55,13 @@ export default function GåtaPage() {
         </li>
         <li>
           <FlipRedirectCard
-            front={{ title: "Påsksmurfen", image: påsksmurfen }}
+            front={{ title: "Påsksmurfen", image: pasksmurfen }}
             back={{ message: "Fel!", redirectUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }}
           />
         </li>
         <li>
           <FlipRedirectCard
-            front={{ title: "Bläckfisk", image: bläckfisk }}
+            front={{ title: "Bläckfisk", image: blackfisk }}
             back={{ message: "Fel!", redirectUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }}
           />
         </li>
