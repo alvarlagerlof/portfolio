@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function GåtaPage() {
   return (
-    <main className="flex flex-col items-center p-8 md:p-20 bg-green-950 min-h-screen gap-12 md:gap-16">
+    <main className="flex flex-col items-center p-4 lg:p-20 bg-green-950 min-h-screen gap-12 md:gap-16">
       <h1 className="text-white text-2xl font-medium text-center">
         Vem ville förstelna Kokettsmurfen?
       </h1>

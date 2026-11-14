@@ -31,7 +31,7 @@ export function FlipRedirectCard({
 
   return (
     <div
-      className="w-[220px] h-[180px] [perspective:1000px] cursor-pointer select-none"
+      className="w-[160px] h-[140px] [perspective:1000px] cursor-pointer select-none"
       onClick={() => {
         if (!flipped) {
           setFlipped(true);
