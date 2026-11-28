@@ -34,7 +34,7 @@
     "@types/node": "26.6.11",
     "@types/react": "19.3.3",
     "@types/react-dom": "19.3.0",
-    "eslint": "10.15.0",
+    "eslint": "10.16.0",
     "eslint-config-next": "16.4.6",
     "htm": "3.1.1",
     "postcss": "8.5.34",
